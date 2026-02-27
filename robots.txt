@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://savemightlife.com/sitemap.xml
