@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center; /* Center align content */
+    padding-top: 50px; /* Add some space at the top */
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em; /* Increased font size for the main heading */
+    margin-bottom: 30px; /* Increased bottom margin */
+}
+
+ul.book-list {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Increased space between grid items */
+    max-width: 900px; /* Limit the maximum width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+ul.book-list li {
+    margin-bottom: 0; /* Remove margin-bottom from list items */
+}
+
+ul.book-list li a {
+    display: block; /* Make links behave like blocks for padding/margin */
+    background-color: #007bff; /* Bootstrap primary blue color */
+    color: white;
+    padding: 12px 25px; /* Increased padding for bigger clickable area */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly smaller font size for book links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    height: 100%; /* Make the link fill the grid item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.book-list li a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
