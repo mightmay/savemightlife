@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for God will make the way - พระเจ้าจัดเตรียมหนทาง - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>God will make the way - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>God will make the way</h2>
+        <h3>พระเจ้าจัดเตรียมหนทาง</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเจ้าจัดเตรียมหนทาง ในระหว่างคืนวันที่มืดมน บนทางที่เราไม่อาจเข้าใจ แต่ทรงเตรียมทางไว้ให้เรา แล้วจะคอยชี้ทาง พาเราอยู่เคียงข้างพระองค์ ด้วยพลังความรัก สำหรับชีวี เพื่อพวกเราวันนี้ โปรดจัดเตรียมหนทาง</p><p><strong>CHORUS</strong><br>พระองค์นำเราบนถนน ในถิ่นสุดกันดาร และเราจะเจอธารน้ำในทะเลทราย สรรพสิ่งจะล่วงไป แต่คงไว้พระคำพระองค์ และโปรดทรงทำ สิ่งใหม่เพื่อเราวันนี้</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>God will make a way. Where there seems to be no way. He works in ways we cannot see. He will make a way for me. He will be my guide. Hold me closely to His side. With love and strength. For each new day. He will make a way. He will make a way.</p><p><strong>CHORUS</strong><br>By a roadway in the wilderness. He'll lead me. And rivers in the desert will I see. Heaven and earth will fade. But His Word will still remain. He will do something new today.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p><strong>VERSE1</strong><br>G D/F# C/F G/D C G/B Am7 C D G D/F# C/E G C G/B Em7 Am7 C D G</p><p><strong>CHORUS</strong><br>Bb F Eb Bb Eb F G C D/C Bm Em C D Bsus</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

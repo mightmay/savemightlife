@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Lost The Plot - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Lost The Plot - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Lost The Plot</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>When you come back again. would you bring me something from the fridge?. Heard a rumour that the end is near. but I just got comfortable here. sigh. Let's be blunt. I'm a little distracted. What do you want?</p><p><strong>SEGMENT2</strong><br>Headaches and bad faith. are all that I've got. First I misplaced the ending. then I lost the plot.</p><p><strong>SEGMENT3</strong><br>Out among the free-range sheep. while the big birds sharpen their claws. For a time we stuck with the shepherd. but you wouldn't play Santa Claus.</p><p><strong>SEGMENT4</strong><br>sigh. Let's be blunt. We're a little distracted. What do you want?</p><p><strong>SEGMENT5</strong><br>Once we could follow, now we cannot. You would not fit our image, so we lost the plot.</p><p><strong>SEGMENT6</strong><br>Once we could hear you, now our senses are shot. We've forgotten our first love. We have lost the plot.</p><p><strong>SEGMENT7</strong><br>When I saw you for the first time. you were hanging with a thief. And I knew my hands were dirty, and I dropped my gaze. Then you said I was forgiven. and you welcomed me with laughter. I was happy ever after. I was counting the days. when you'd come back again. we'll be waiting for you. When you comin' back again?. we'll be ready for you. Maybe we'll wake up when.. maybe we'll wake up when. you come back again.</p><p><strong>SEGMENT8</strong><br>lies. Let's be blunt. We're a little unfaithful. What do you want?</p><p><strong>SEGMENT9</strong><br>Are you still listening?. 'Cause we're obviously not. We've forgotten our first love. We have lost the plot.</p><p><strong>SEGMENT10</strong><br>And why are you still calling?. You forgave, we forgot. We're such experts at stalling. that we've lost the plot. lost the plot</p><p><strong>SEGMENT11</strong><br>When you come back again. would you bring me something from the fridge?. Heard a rumour that the end is near. but I just got comfortable here.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

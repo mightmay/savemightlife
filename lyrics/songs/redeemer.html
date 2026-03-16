@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Redeemer - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Redeemer - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Redeemer</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Who taught the sun where to stand in the morning?. and Who told the ocean you can only come this far?. and Who showed the moon where to hide 'til evening?. Whose words alone can catch a falling star?</p><p><strong>SEGMENT2</strong><br>Well I know my Redeemer lives. I know my Redeemer lives: Let all creations testify. Let this, life within me cry. I know my Redeemer lives, yeah.</p><p><strong>SEGMENT3</strong><br>The very same God that spins things in orbit. runs to the weary, the worn and the weak. And the same gentle hands that hold me when I'm broken. They conquered death to bring me victory</p><p><strong>SEGMENT4</strong><br>Now I know my Redeemer lives. I know my Redeemer lives. Let all creations testify. Let this life within we cry. I know my Redeemer, He lives. To take away my shame. And He lives forever, I'll proclaim</p><p><strong>SEGMENT5</strong><br>That the payment for my sin. Was the precious life He gave. But now He's alive and. There's an empty grave.</p><p><strong>SEGMENT6</strong><br>And I know my Redeemer lives. I know my Redeemer lives. Let all creations testify. Let this life within me cry. I know my Redeemer,</p><p><strong>SEGMENT7</strong><br>I know my Redeemer. I know my Redeemer lives. I know my Redeemer lives. I know that I know that I know that I know that I know my redeemer lives. Because He lives I can face tomorrow. I Know I know. He lives He lives yeah, yeah I spoke with him this morning. He lives He lives, the tomb is empty, He lives I gotta tell everybody</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

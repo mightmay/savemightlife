@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Lean on Me - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Lean on Me - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Lean on Me</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[oldie but a goodie]. [1, 2, 3, funky]. [true mc, true mc]. [everybody listens to the true mc]</p><p><strong>SEGMENT2</strong><br>True mc, no slack on the track. Here to tell the people that loves what we lack. In this family we gotta love like christ. So precise in your life so take this advice. Brother to brother we need to learn to love each other. So lean on me when youre in trouble. I cast my cares on christ cause he cares for me. So when you need a shoulder to cry on, just lean</p><p><strong>SEGMENT3</strong><br>[props to my man speedy, 1, 2, 3]</p><p><strong>SEGMENT4</strong><br>(chorus). Lean on me, when youre not strong. And Ill be your friend, Ill help you carry on. For it wont be long til. Im gonna need somebody to lean on</p><p><strong>SEGMENT5</strong><br>Sometimes in our lives. We all have pain, we all have sorrows. But, if we are wise. We know that theres always tomorrow</p><p><strong>SEGMENT6</strong><br>(repeat chorus)</p><p><strong>SEGMENT7</strong><br>Please, swallow your pride. If I have things that you need to borrow. For, no one can fill those of your needs. If you wont let them show</p><p><strong>SEGMENT8</strong><br>(repeat chorus)</p><p><strong>SEGMENT9</strong><br>You just call on your brother when you need a hand. We all need somebody to lean on. I just might have some problems that youd understand. We all need somebody to lean on</p><p><strong>SEGMENT10</strong><br>(repeat chorus)</p><p><strong>SEGMENT11</strong><br>Make it funky, make it funky. Make it funky, make it funky. Make it funky, make it funky</p><p><strong>SEGMENT12</strong><br>Cause Im housin this joint. Like a brother with an attitude. And comin straight so you best give me latitude. Leanin on my boys from the word get go. And bein there for them cause the lord said so. Many of us just dont know what to do. Well take it here and now from the boy named true. Dont dog a brother out when he stumbles and falls. Just be there to lean on yall</p><p><strong>SEGMENT13</strong><br>Call me, call me, just call me, Call me, call me, just call me, lean on me. Dont you know that Ill be there, you can lean on me. Dont you know that Ill be there, you can lean on me. Dont you know that Ill be there, you can lean on me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

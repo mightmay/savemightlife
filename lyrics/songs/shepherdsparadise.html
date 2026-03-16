@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Shepherd's Paradise - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Shepherd's Paradise - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Shepherd's Paradise</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Though I walk through the valley of the shadow of death, I will not fear for my life;. I realize that God's with. His rod and staff have been with me so long. He's been keepin' me from all the places where I might go wrong. But He's the shepherd, I'm the lamb, And dinner he serves me. Lets me eat it right in front of foes who would hurt me. They better not touch;. They watch me, But they can't touch me. They do and they know that they'll be fighting with God. He filleth up my cup and it overflows. It's no joke, Come see yourself, See my cup is so full. I'm the kind of sheep that's where the grass is always green. Still waters He leads me beside, Stayin' there is a sweet life. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. Look at the declaration that God is makin': I will give my own life in exchange for the sheep. And He's got it written down in the Good Book. Turn the television off a while and take a look. He's a shepherd who's good to everybody in His flock. Chapter 10, verse 11 in the Gospel of John. Yes, the Lord's my shepherd. What could be better?. And my home is a mansion in His house forever. Cool!. Death ain't nothing, so I'll not be afraid. His loving kindness will follow us all the way. Psalm 23 tells a little bit but there's plenty more. You may even know it, I don't know. Tell me why is He so kind to His sheep when we wander away so easily?. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. An hour is a-coming. Coming in a while where He will make divisions by His mighty power. Shepherd's gonna come and divide between the sheep and the goats. And we're all gonna listen as final words are spoken. He'll say you goats deserted Me when I was poor and needy. A naked, hungry, stranger. How did you treat Me?. I guess they failed. I guess they're goats. I guess they flunked. That's why I know I like it in the sheepfold. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. Tell me why is He so kind to His sheep when we wander away so easily?. Tell me why is He so kind to His sheep when we wander away so easily?. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. The Good Shepherd rules my life. I'm givin' Him the thanks for Paradise. You can spend eternal life livin' in the Shepherd's Paradise. Tell me why is He so kind to His sheep when we wander away so easily?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

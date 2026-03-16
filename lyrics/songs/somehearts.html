@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Some Hearts - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Some Hearts - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Some Hearts</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I've never been the kind that you'd call lucky. Always stumbling' around in circles. But I must have stumbled into something. Look at me. Am I really alone with you. I wake up feeling like my life's worth living. Can't recall when I last felt that way. Guess it must be all this love you're giving. Never knew never knew it could be like this. But I guess</p><p><strong>SEGMENT2</strong><br>Some hearts. They just get all the right breaks. Some hearts have the stars on their side. Some hearts, they just have it so easy. Some hearts just get lucky sometimes. Some hearts just get lucky sometimes</p><p><strong>SEGMENT3</strong><br>Now who'd have thought someone like you could love me. You're the last thing my heart expected. Who'd have thought I'd ever find somebody. Someone who someone who makes me feel like this. Well I guess</p><p><strong>SEGMENT4</strong><br>Some hearts. They just get all the right breaks. Some hearts have the stars on their side. Some hearts, they just have it so easy. Some hearts just get lucky sometimes. Some hearts just get lucky sometimes</p><p><strong>SEGMENT5</strong><br>Even hearts like mine. Get lucky, lucky sometimes</p><p><strong>SEGMENT6</strong><br>Some hearts. They just get all the right breaks. Some hearts have the stars on their side, yes. Some hearts. They just have it so easy. Some hearts just get lucky sometimes. Some hearts just get lucky sometimes</p><p><strong>SEGMENT7</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

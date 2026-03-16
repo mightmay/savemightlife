@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Joy to the World - ความสุขเปรมปรีดิ์มีแก่ชาวโลก - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Joy to the World - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Joy to the World</h2>
+        <h3>ความสุขเปรมปรีดิ์มีแก่ชาวโลก</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ชาวโลกทั้งหลายชื่นใจยินดี มีพระราชาประสูติ คือพระเยซูเสด็จลงมา ให้เราร้องเพลงสรรเสริญ (2) ให้เรา ให้เราร้องเพลงสรรเสริญ</p><p><strong>VERSE2</strong><br>ความสุขเปรมปรีดิ์มีแก่ชาวโลก พ้นทุกข์ พ้นโศก เบิกบาน พฤกษาไร่นาภูเขาลำธาร ประสานสำเนียงยินดี  (2) ประสาน ประสานสำเนียงยินดี</p><p><strong>VERSE3</strong><br>อย่าให้บาปชั่วและความเลวทราม เป็นหนามเสียดแทงในใจ ความรักเมตตาของพระเยซู บันดาลให้เรากลับใจ (2) บันดาล บันดาลให้เรากลับใจ</p><p><strong>VERSE4</strong><br>พระองค์ครองโลกด้วยความเที่ยงธรรม ทรงนำด้วยกรุณา รังสีชอบธรรมประจักษ์แก่ตา  ความรักประหลาดนักหนา (2) ความรัก ความรักประหลาดนักหนา.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Joy to the world, the Lord is come! Let earth receive her King; Let every heart prepare Him room, And Heaven and nature sing,(2) And Heaven, and Heaven, and nature sing.</p><p><strong>VERSE2</strong><br>Joy to the earth, the Savior reigns! Let men their songs employ;  While fields and floods, rocks, hills and plains Repeat the sounding joy,(2) Repeat, repeat, the sounding joy.</p><p><strong>VERSE3</strong><br>No more let sins and sorrows grow, Nor thorns infest the ground; He comes to make His blessings flow Far as the curse is found, (2) Far as, far as, the curse is found.</p><p><strong>VERSE4</strong><br>He rules the world with truth and grace, And makes the nations prove The glories of His righteousness,  And wonders of His love,(2) And wonders, and wonders, of His love.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

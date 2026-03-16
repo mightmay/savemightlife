@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Climb - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Climb - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Climb</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>BRIDGE 1. From in the middle of the room. She hears the conversation moving. Further from where she's going. Without even knowing. Now the vibrations in the floor. Are getting closer to the door. And is this the way you. Let your problems drift away to?</p><p><strong>SEGMENT2</strong><br>CHORUS. I climb so high. It blows me away sometimes. See through my holes. Into this place I call my own. This time I'll try. It's in the air tonight. Sleep tonight, no more cryin'. 'Cause I've got you on my side</p><p><strong>SEGMENT3</strong><br>BRIDGE 2. I don't want you to be anything at all. I just want you to say you love me. I don't care, just stop living like this. I don't want to be anything at all. I just want you to see who I am. And stop the violence. No more silence</p><p><strong>SEGMENT4</strong><br>BRIDGE 1. CHORUS. BRIDGE 2</p><p><strong>SEGMENT5</strong><br>I'm gonna show ya I'm alive. Breathing clearly for the first time. Hold me in your arms. Take me to the place where you are. I needed time to clear my mind. Keeping balanced on this line. Was impossible before I met you. I climb so high. It blows me away sometimes. Sleep tonight, no more cryin'. 'Cause I've got you on my side</p><p><strong>SEGMENT6</strong><br>BRIDGE 2</p><p><strong>SEGMENT7</strong><br>I'll shout from the top of the rooftop singing. I'm not afraid of the bed I lay in. Listen to the sound of voices ringing. I can't deny it, no more silence. Shout from the top of the rooftop singing. We're not afraid of the bed we lay in. Listen to the sound of the voices ringing. I can't deny it, no more silence</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

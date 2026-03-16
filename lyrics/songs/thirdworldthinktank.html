@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Third World Think Tank - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Third World Think Tank - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Third World Think Tank</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I walked into the room, and she was right there waiting. Leaning up against the bar, well she was perpertraitin'. Slick as snot her spandex, and blacker than some coal, she set her gaze upon my bootie, with disco in her soul. So much for indecision, so quick did she decide, the temptress with her doors open inviting me inside. "I want to take you home with me", said the sparkle in her eye. "I would like to honey, but I'm about to die."</p><p><strong>SEGMENT2</strong><br>I have got a time bomb, I strapped it to my chest. When it blows I'm out of here, you can have what's left.</p><p><strong>SEGMENT3</strong><br>The room got kind of quiet, and you could smell the fear. I only heard the jukebox play "A Tear is in My Beer". "So what's the verdict Mister?. When's it gonna blow?". I just winked at her and said, "Darlin' I don't know.". Time-bomb tickin' in the room, everybody goes someday, blows so quick you better be, somewhere where it's safe. Thin skinned thread-bare thinkin', now you're gonna die, don't try to rock the jukebox, just kiss this world good-bye. What's the deal, don't you feel, alone now in the silence?. Pushing up the daisies now, there's better ways for you to diet. Seeking after sucker wealth, suckers feel what suckers dealt, All your life you stuffed your face, now you're dead I rest my case. Got a story here to tell, so you better listen well. some old lady in a church, got a nickel in her purse. You were rich, she was poor. You dropped some fifties on the floor. She dropped her nickel with a clank, she was thinkin' Third World Think Tank.</p><p><strong>SEGMENT4</strong><br>The Karaoke master, the drunkard, and the jerk, ditch this sorry world and all its worth. Keep your candle burning, waiting for the time, ready to explode, the bomb is primed.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

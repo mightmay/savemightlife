@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Beneath the Cross of Jesus - ภายใต้กางเขนพระเยซู - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Beneath the Cross of Jesus - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Beneath the Cross of Jesus</h2>
+        <h3>ภายใต้กางเขนพระเยซู</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ภายใต้กางเขนพระเยซู ข้าฯอยู่ด้วยความเต็มใจ เป็นร่มพระคุณยิ่งใหญ่ไพศาล อยู่ในแดนดินเปลี่ยวเปล่า เหมือนบ้านพักร้อนกลางดงพงป่า  มรรคามีซุ้มอาศัย ใครร้อนอ่อนใจให้มา อย่ารอ  ใครขอประทานดังใจ</p><p><strong>VERSE2</strong><br>ที่ไม้กางเขนพระเยซู  บางทีเห็นด้วยตาใจ พระองค์ผู้ทรงทนทุกข์เพื่อข้าฯ พระกายถูกทรมาน จิตข้าฯแสนเศร้าน้ำตาหลั่งไหล ในใจข้าฯเห็นสองอย่าง คือความรักของพระเจ้าช่วยข้าฯ และตัวเองไร้ราคา</p><p><strong>VERSE3</strong><br>ขอพึ่งกางเขนเป็นร่มเย็น  เป็นที่ข้าฯได้อาศัย ข้าฯไม่พึ่งสิ่งอื่นใด  ข้าฯพอใจเห็นพระพักตร์ ยอมปล่อยให้โลกไปตามวิถี ข้าฯนี้ไม่ขอสิ่งใด บาปข้าฯหนักหนาอันน่าละอาย ตรึงไว้ที่ไม้กางเขน.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Beneath the Cross of Jesus I fain would take my stand, The shadow of a mighty rock within a weary land, A home within the wilderness,  A rest up on the way, From the burning of the noontide heat,  and the burden of the day.</p><p><strong>VERSE2</strong><br>Up on  that  cross  of  Jesus Mine  eye  at  times  can  see. The  very  dying  form  of  one Who  suffered  there  for  me, And from my stricken heart with tears two wonders I confess, The wonders of redeeming love and my unworthiness</p><p><strong>VERSE3</strong><br>I  take,  O  cross, thy  shadow for  my  abiding  place, I  ask  no other  sunshine  than the  sunshine  of  His  face, Content to let the world go by, To know no gain nor loss, My sinful self my only shame, My glory all the cross.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

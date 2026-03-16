@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Save Myself - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Save Myself - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Save Myself</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Stop. Take a minute take a breath, From the pressure that we need to know why, What makes you ali-i-i-ive</p><p><strong>SEGMENT2</strong><br>Why, Rely on ourselves. Putting God up on a shelf we depend, On what's left in our heads</p><p><strong>SEGMENT3</strong><br>It feels right and we believe, There won't be no sudden leave. But we keep running faster</p><p><strong>SEGMENT4</strong><br>Isn't it so nice to think, If we live in harmony. There'd be a happy ever after</p><p><strong>SEGMENT5</strong><br>(CHORUS). It doesn't matter if I. Had faith to move a mountain, Drink the Ocean Dry. Baby,I could never save myself. It Doesn't matter if I. Could reach into the deepest Corners of my mind. Baby, I could never save myself</p><p><strong>SEGMENT6</strong><br>Stop, Putting God in a box, Spend our time watching the clock While we wait. For a release that will take us away</p><p><strong>SEGMENT7</strong><br>Come down with a crash. Until we have another chance to go back. Is that gonna make it OK?</p><p><strong>SEGMENT8</strong><br>Hold your breath and you will see. In the end you'll have to breath, But we keep running faster</p><p><strong>SEGMENT9</strong><br>Fast. We forget reality. If you fall you're gonna bleed</p><p><strong>SEGMENT10</strong><br>There is no happy ever after</p><p><strong>SEGMENT11</strong><br>(CHORUS)</p><p><strong>SEGMENT12</strong><br>(BRIDGE). Falling out under sorrow. Glimpses of the past of what I used to think. and who I used to be. I'm realizing all that's real that I have in me</p><p><strong>SEGMENT13</strong><br>it doesn't matter. you better fight the laws of gravity. it doesn't matter. if i start it over</p><p><strong>SEGMENT14</strong><br>(Chorus). (Chorus)</p><p><strong>SEGMENT15</strong><br>save myself. save myself. save myself. save myself</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

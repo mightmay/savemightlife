@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Him Her He She - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Him Her He She - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Him Her He She</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Well I'm a John Reuben from the land or corn. Columbus, Ohio that's where I was born in. By mom Kathleen on January 14. 1979 I entered the scene lookin' like. Hello mother girl what's goin' on</p><p><strong>SEGMENT2</strong><br>One moment I'll be here and then the next I'll be gone. But while I'm chillin' out there's somethings I'd like to see. Like some sanity, some family and some diversity. Well look at me in a flash my time's passed and I've aged. Adrenaline within me has got me up on the stage. Lookin' for ways to amaze and light up. the place it was me and nine other mc's called the showcase. Ten immature young bucks run amuck, throwin' out whatever's clever and just hopin' it stuck. What what what's goin' on there moving. to the beat, I guess that's why we have no choice but to keep</p><p><strong>SEGMENT3</strong><br>Chorus: x 2. We makin' fresh vibes bringin' fresh songs. Man we keepin' it fresh hopin' that ya'll come along. Goin' with him, her, he or she</p><p><strong>SEGMENT4</strong><br>I'm sayin' him, her, he or she. A John Reuben gotta lotta somethin' for everybody. Step into the party tardy in fashion. Up in here this year quite clear with a passion. To make it happen and I'm loving life. fact see God is good and I won't backtrack. But move forward bendin' words in ways not thought possible. See any beat is rockable this feelin' is unstoppable</p><p><strong>SEGMENT5</strong><br>Because the mind is full of creative energy. I'm not leavin' tonight until my brain is empty. Thoughts pour out as I skillfully explore out. Routes n' patterns in which to flex. raps I'm gatherin' kids from all directions, multicomplexions. You feelin' this then add a pound to the collection. Another session yes I'm there move back. bring in the boom sti cat to boom ta boom cat. Like that we keep it simple n' fresh like yes ya'll yes</p><p><strong>SEGMENT6</strong><br>Chorus: x 2</p><p><strong>SEGMENT7</strong><br>I got eight bars to fill in. So it's time for me to start skillin'. N' it's time for me to start illin'. Party people in the back cold chillin'. All people get live n' all people get live n' energize with me. All people get live n' energize with me</p><p><strong>SEGMENT8</strong><br>Chorus: x 2</p><p><strong>SEGMENT9</strong><br>We go with him, her, he or she. Him, her, he or she ( x 5 ). Him, her, he</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

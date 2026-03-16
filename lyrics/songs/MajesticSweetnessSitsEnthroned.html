@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Majestic Sweetness Sits Enthroned - พระพักตร์พระเจ้าผุดผ่องแวววาม - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Majestic Sweetness Sits Enthroned - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Majestic Sweetness Sits Enthroned</h2>
+        <h3>พระพักตร์พระเจ้าผุดผ่องแวววาม</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระพักตร์พระเจ้าผุดผ่องแวววาม  ดูงามเลิศต้องนัยน์ตา พระเศียรทรงสวมมงกุฎโสภา พระโอษฐ์ตรัสคำการุณย์  พระโอษฐ์ตรัสคำการุณย์</p><p><strong>VERSE2</strong><br>ทั่วโลกแหล่งหล้าหาเปรียบฤามี มนุษย์เมธีไม่ปาน ทั่วฟ้าสวรรค์และจักรวาล ภูบาลทรงศักดิ์ยิ่งใหญ่  ภูบาลทรงศักดิ์ยิ่งใหญ่</p><p><strong>VERSE3</strong><br>ตัวข้าฯเป็นหนี้พระองค์มากมาย ชีวิต จิตใจ และกาย ความตายพระองค์ทรงให้มีชัย รอดจากหลุมมรณา รอดจากหลุมมรณา</p><p><strong>VERSE4</strong><br>ข้าฯวางใจว่าพระองค์ทรงนำ  ให้ข้าฯถึงแดนแมนสรวง ยามข้าฯเข้าเฝ้าแนบชิดพระทรวง ดวงจิตของข้าฯเบิกบาน  ดวงจิตของข้าฯเบิกบาน.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Majestic  Sweetness  Sits  Enthroned Up on  the Saviour's brow, His  head  with radiant  glories  crowned, His  lips  with grace o'erflow,  His  lips with grace o'erflow.</p><p><strong>VERSE2</strong><br>No mortal  can with  Him  compare , Among  the  sons of men, Fairer is  He  than all the fain. Who fill  the  heavenly train,  Who  fill  the heavenly train.</p><p><strong>VERSE3</strong><br>He  saw  me  plunged in deep  distress,  And  flew  to my relief, For  me  He bore  the  shameful  cross, And carried  all my grief,  And  carried  all  my  grief.</p><p><strong>VERSE4</strong><br>To  Him I owe my life and  breath, And all the joys  I  have, He  makes  me  triumph  over   death, And  saves  me from  the  grave,  And saves me from the grave.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

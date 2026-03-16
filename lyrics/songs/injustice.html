@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Injustice - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Injustice - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Injustice</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Injustice runs rampant in society. You can even find it in our own pretty democracy</p><p><strong>SEGMENT2</strong><br>Run!Well no!. Or hide in a 9 to 5 and don't care to know</p><p><strong>SEGMENT3</strong><br>Impoverished and homeless don't have a choice. Well, why should they? The money took their voice. And it flows</p><p><strong>SEGMENT4</strong><br>Only prepare at the next media scare.. Turn the TV on and tune out the sun. Opinions decisions seem so black and white. When we allow the media to chose our fight. Never talk of sex but condemn all abortion. Christian message is warped in transmitted distortion. Fell the sea sickening rush of the great capitalist flush. Spiraling down</p><p><strong>SEGMENT5</strong><br>The destruction of all that's in our way. When times get rough its time to pray</p><p><strong>SEGMENT6</strong><br>A Nation of greed. American apathy. A path and a blown away seed. Promoting self is the American way</p><p><strong>SEGMENT7</strong><br>Globalization of greed. Spiritual apathy. A path and a hollow seed. Structural collapse is on the way</p><p><strong>SEGMENT8</strong><br>We're living, survival of the richest. Echoes rise up from the pit. As the pendulum cuts them down. And our American world, spins around</p><p><strong>SEGMENT9</strong><br>Money makes money, while the poor can only get poorer. Our economic equations include the bottom mans horror. Some free men sit in prisons while some slaves sit in office. Prejudice issues manage to linger. We need reconciliation not pointing a finger. So what is our ticket out now. Where do we find truth?. Many have lost their minds or died. So we could indulge in our American pride. And now we glance at some at the corner. Who have been discarded and junked away. And forced they work up scams. To exist with me and you another day</p><p><strong>SEGMENT10</strong><br>Consume. Pollute. Hate. Destroy</p><p><strong>SEGMENT11</strong><br>Let go of possession, fear and pride. When witnessing injustice don't find a way to hide. Open our eyes to see every lie. Because you'll never find justice till the day. That you die.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Waste Of Time - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Waste Of Time - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Waste Of Time</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This troubled heartache. won't go away. I think there might be. something wrong with me. I take a deep breath and maybe. I'll stop this shaking. God please don't forsake me. I might be crazy</p><p><strong>SEGMENT2</strong><br>Am I losing my mind?. Sometimes I feel like. things are getting worse in time. If I try will you open my eyes?. And make me a part of you. like you're a friend of mine</p><p><strong>SEGMENT3</strong><br>Next time I'm losing my mind. I'll remember that to find my way out. is just a waste of time. In place of all my mistakes. You've seen through the shadows above me. No one could ever love me like you</p><p><strong>SEGMENT4</strong><br>If I finish what I started. and get swept under the carpet. I'll still be thankful for all you've done. Take a note to remind me. that you know where you can find me. I'll probably end up right back here again</p><p><strong>SEGMENT5</strong><br>Am I losing my mind?. Sometimes I feel like. things are getting worse in time. If I try will you open my eyes?. And make me a part of you. like you're a friend of mine</p><p><strong>SEGMENT6</strong><br>Next time I'm losing my mind. I'll remember that to find my way out. is just a waste of time. In place of all my mistakes. seen through the shadows above me. No one could ever love..</p><p><strong>SEGMENT7</strong><br>I'll be everything that you want me to. except for perfect. I'm trying hard just to understand. your plan for me. I'll be everywhere that you want me to. unless I fall. I'm just trying to get my life back again</p><p><strong>SEGMENT8</strong><br>Next time I'm losing my mind. I'll remember that to find my way out. is just a waste of time. In place of all my mistakes. You've seen through the shadows above me. No one could ever love me..</p><p><strong>SEGMENT9</strong><br>Next time I'm losing my mind. I'll remember that to find my way out. is just a waste of time. In place of all my mistakes. You've seen through the shadows above me. No one could ever love me like you.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

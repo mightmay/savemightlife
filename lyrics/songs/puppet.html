@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Puppet - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Puppet - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Puppet</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Gonna get this party started..</p><p><strong>SEGMENT2</strong><br>It's all around me, I can't wish this away, you so amaze me, you took my monster away,                                                      x2. and away, and away, and away..</p><p><strong>SEGMENT3</strong><br>Wake me, c'mon and wake me up now I. want to cut off my strings and break, loose of your control of me, cut your strings and be free with me, .                                                                         x2</p><p><strong>SEGMENT4</strong><br>Everybody, shake your body, lift your hands, stop frontin', you're just a puppet,                                              x2</p><p><strong>SEGMENT5</strong><br>To all the marionettes</p><p><strong>SEGMENT6</strong><br>If ya gonna run, how fast ya gonna run?, And if ya gonna jump, how high ya gonna jump?, . all you perpetrators be walkin' round frontin', what?, you fakers afraid to stand for somethin'?.                                                                                               x2                                                                                     . why don't ya stand up n' break me off. somethin'?</p><p><strong>SEGMENT7</strong><br>Ya wanna make it outta sight?, somebody wanna get live tonight?, we can hit that, flip that, settle the score, 'n' ain't nobody rock a crowd like this before, ya wanna make it outta sight?, somebody wanna get live tonight?, like an earthquake, let it shake, make the floor vibrate, Krutch y'all, back to set the record straight.</p><p><strong>SEGMENT8</strong><br>All y'all people, listen, it's on, Krutch marauders we on a mission, hittin' ya with the ill ammunition, at war with the puppet master, .. I'll bring it on if I had to, rip it 'n' leave the whole scene shattered, like chik, chik, blaow!, what ya think of me now, I'm lettin' my dawgs out, makin' it loud so hear me shout, what?, we be comin' laced with bass, hit the place with no trace, when we rock the space,</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

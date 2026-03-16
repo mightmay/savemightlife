@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I'm Gonna Feed (500 Mouths) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I'm Gonna Feed (500 Mouths) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I'm Gonna Feed (500 Mouths)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>When I bake stuff with the dough Im gonna knead. Im gonna be the man who makes some bread for you. When I go out in a boat upon the sea. Im gonna need a net and row a long way too. If I catch some fish that float under the deep. Im gonna be the man who gets some fish for you. And if theres flavor, yeah, I know Im gonna eat. Im gonna eat some and Ill save the rest for you. And I have watched five hungry mouths. And I have watched 500 more. But Ive seen a man who fed 5000 mouths at once. And thats the Lord. Well, I watched Him, yes, I know what I have seen. He was a teacher man who taught the whole day through. With so many comin forth to watch that dude. It would cost someone every penny just for food. Send em all home, Lord, you know they gotta eat. They told the teacher man, who said, Thats up to you. And with five loaves and two fish from Galilee. Im gonna feed em and theyre goin home renewed.. CHORUS. Have another (Have another) Pass the butter (Pass the butter). Da da da dum de de dum da lum de de lum da da. Have some water (Have some water) Pass the tartar (Pass the tartar). Da da da dum de de dum da lum de de lum da da. Well, Im only telling only what Ive seen. But when the teacher man was done they sent out food. And men were eating, well, I know they got a treat. They got a treat about the size of Timbuktu. Well, Ive no doubt that in Luke 9:17. Youre gonna read it and suppose the numbers skewed. But in the front row, dont you know I had a seat. I saw at least 12 baskets of leftover food. I got a B in math, so, son, I know   its true. CHORUS. Had a tough crowd (Had a tough crowd). Fattened up now (Fattened up now). Grab a rough count (Grab a rough count). Add em up now (Add em up now). Ya da la ta la ta la da la la la. Gather up now (Gather up now). Every crust now (Every crust now). Ya da la ta la ta la da la la la. Gavin McLeod (Gavin McLeod). From The Love Boat (From The Love Boat). Yeah I know that lines kind of dumb my minds kind of numb right now. CHORUS</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

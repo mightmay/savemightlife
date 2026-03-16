@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Fanmail - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Fanmail - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Fanmail</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>My arms are sliced up but Im not embarrassed. Its the only way I get attention now from my parents. Its not like they really take the time to be caring. They just use me to watch the baby when they run they errands. My name is ______ I got a friend named Karen. She gave me your CD with the track for Eminem. You wrote a song called #1 fan I listened and. I wanted to know if you can help me like you was helping them. She had something even harder to be mentioning. Like every single day I struggle just with fitting in. Plus the boys wont give me no attention and. I get teased and made fun of by all my friends and then. See Im feeling like Im wishing now that I could end. My life cuz Im sick and tired of all the time I spend. Trying to figure out how I could be worth anything. Can u help me KJ from your fan</p><p><strong>SEGMENT2</strong><br>Im writing this letter. Cause I have to tell ya. I need some help from you. Im writing this letter. I hope that you get it. I need some help from you</p><p><strong>SEGMENT3</strong><br>I live with my mom ever since my parents split. And At home I spend my time on the Internet. Looking at porn Im addicted and Im sick of it. Myspace dot com is mostly where Im getting it. On top of that theres videos that I can watch. And I really wanna quit but its like I cant stop. See Im scared that Im just gonna get caught. And when I see a girl all I think is dirty thoughts. And its not that I dont know that its really wrong. But its right there for me every time Im logging on. I got all your CDs I really like your songs. Well I downloaded em but anyway moving on. My screen name is KJ-52 is the bomb. I want to do a website KJ rocks dot com. I really some help cuz I cant tell my Mom. Oh by the way my real name is ________</p><p><strong>SEGMENT4</strong><br>Im writing this letter. Cause I have to tell ya. I need some help from you. Im writing this letter. I hope that you get it. I need some help from you</p><p><strong>SEGMENT5</strong><br>I took the time just to write you. We play you every Wednesday at my youth group. I love your music and we all think that yous cool. But I been struggling ever since I moved to a new school. See everybody thinks that Im the perfect Christian girl. I had a hard time trying to believe that God is real. Ive been on mission trips and camps the whole deal. My dad had cancer tho I prayed that God would heal. But he died anyway so its hard to feel. Like he cares about me so was it Gods will. To take away my dad I really got a raw deal. Sometimes I just want to swallow all my moms pills. When I pray I really doubt it. Ive lost my way or maybe Ive never found it. I been smoking and drinking nobody knows about it. By the way my name is _____ dont mispronounce it</p><p><strong>SEGMENT6</strong><br>If I could write to every kid thats out there. Every kid thats hurting feels like nobody cares. I would tell them that God can wipe away tear. And he's right near and I would say it quite clear. Your here for a reason youre not a mistake. You are a special creation that God himself made. To the victims of abuse to every girl that was raped. You can live you can be free from your pain. And find strength and no longer be ashamed. You can find peace and hope In Jesus name. You aint gotta live with this hurt every day. Christ came to give you life in a much better way. To every kid right now thats full of hate. And bitterness I'd tell em just to give it all away. To the one that came to take all the blame. Thats what Id write heres what Id say.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

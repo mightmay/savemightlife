@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for My Boyfriend - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>My Boyfriend - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>My Boyfriend</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Ladies!. Let me hear you say.. B-o-y-f-r-i-e-n-d x2. Talkin' to my girl the other day. She told me how she's tired of dealin' with all his games. She went through his phone. And found that somethin's wrong. Like unknown names and numbers and pictures all in his phone. I said: "Is that where you're supposed to be?". Cause' in you heart there's no peace. (Does he make you complete?). Alot of emptiness inside. "Have you ever gave God a chance?". (Jesus can't be my boyfriend!) To be your man.. Don't miss out cause I didn't.</p><p><strong>SEGMENT2</strong><br>He's my boyfriend. My best friend. My boo. He is(My everything)</p><p><strong>SEGMENT3</strong><br>. He's my boyfriend. My best friend. My boo. Have you tried..(My everything)</p><p><strong>SEGMENT4</strong><br>You seem to have a lot of problems. You're always hurting and fighting. Standin' strong and faithful. Afraid of being alone. But you can't love nobody else until you learn what true love is..</p><p><strong>SEGMENT5</strong><br>"Is that where you're supposed to be?". Cause' in you heart there's no peace. (Does he make you complete?). A lot of emptiness inside. "Have you ever gave God a chance?". (As if you're lovin' someone else.) To be your man.. Don't miss out cause I didn't.</p><p><strong>SEGMENT6</strong><br>He's my boyfriend. My bestfriend. My boo. He is(My everything)</p><p><strong>SEGMENT7</strong><br>He's my boyfriend. My bestfriend. My boo. Have you tried..(My everything)</p><p><strong>SEGMENT8</strong><br>Take sometime to breathe.. Just give your self somethime to breathe. No, I'm not sayin' be single. He is my boy friend.</p><p><strong>SEGMENT9</strong><br>He's my boyfriend. My bestfriend. My boo. My everything</p><p><strong>SEGMENT10</strong><br>And His name is Jesus. My savior, my redeemer, my everything.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

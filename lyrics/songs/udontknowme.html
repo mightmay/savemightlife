@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for U Don't Know Me - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>U Don't Know Me - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>U Don't Know Me</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Freestyles and Hooks, exiled like crooks, baggy jeans my style judge by the looks. Shook by parliament I mean society I in me starting this riot up inside of me. I could by my own suit, and switch up my Tim Boots. The funny thing is I make more money than you do, So classify me as a backpacker manufactured Ill spit on the mic to spite your laughter. Im only young once whats your rush. In God I trust dont mold me Ill never adjust</p><p><strong>SEGMENT2</strong><br>I think youve got the wrong person. So what makes a bad person rappin cursing skating rappin hurting. Whos a Saint? Im still learning. So take me to the hospital or just check yourself. You got enough wood in your eye to make a shelf. Cant say I aint done it, judged or got blunted. Next time confronted Ill shine my boxers out in public</p><p><strong>SEGMENT3</strong><br>Its not that I want your respect or need feel except. Through God I got rest I see you do reject. Huh, looking at me like you know me, judge me by my clothing skeptical, and all knowing. Step in a room now a days and all eye brows raise, is it my sexy face or my messy hair state, (I hope its) it must be the spirit on me saved by grace. Know apology constantly around like monopoly. Courtesy of your ignorance, and people looking different. I stay diligent, and tell my story over instruments. Im not your average adolescence arrogant or disrespecting parents. Hold your tongue in, say nothing ye mumbling the alphabet. Not accurate a false package I outta charge ye for harassment. So the next time I purchase clothes or someone serves me. Im showing love why dont you, show me some courtesy</p><p><strong>SEGMENT4</strong><br>I still remember this occasion back when I was teenaging raging like I lack the patience. Walk into a mall for a purchase, store clerk looking kind a nervous all hawk eyed, and merciless. Chill for a second what you dealing with I wasnt gonna steel it you freaking all serious, Easy on the judgment you gone blown your trumpet, kid looking rugged think Im tripping on some substance, Its not your fault you were born that way, gone astray thinking ever child teens a renegade, Let me shed some light on your blindness open up your iris, ya highness dont check the black or the whiteness, It all about equality word if you follow me, Love your neighbor as yourself what! Thats my policy</p><p><strong>SEGMENT5</strong><br>Chorus. You dont even know me you dont know me (echo). So insecure I guess you judging me (echo). Im not the type of guy that wants acceptance. Not influenced by what people say.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

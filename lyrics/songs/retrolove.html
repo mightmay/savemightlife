@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Retro Love - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Retro Love - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Retro Love</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Its been awhile now Ive been searching thinking about. Sin and drought, up and down spinning round, round, round. Round, Round I havent found it, truths alive dont doubt it. Pounding down the doors & hallowing ow, ow, ow. Slouched like a youth I found God in the room. He said yo I know you, I got a girl for ye dude. Am I high, am I dead, am I alive, is this real. Can I touch can I feel, pinch me, oww yeah, Sat me down daps & pounds, showed me style. Told me how, hold a second thats my girl. I think Ive figured out that a</p><p><strong>SEGMENT2</strong><br>Im down with ye, down with ye. Ill hit the town with ye. Can I get some love yo hommie show me love</p><p><strong>SEGMENT3</strong><br>Im down with ye, down with ye. Ill stick around with ye. Can I get some love yo hommie show me love</p><p><strong>SEGMENT4</strong><br>I, I, I want to show ye. I think Im ready for ye. Just let the party music play. Im down with ye down with ye. I got that sound for ye. Just let the music play</p><p><strong>SEGMENT5</strong><br>I see it clear now her and I Cali style. She is fine, she is mine, likes it when I drop a rhyme. Chilling by the beach home. Surfing or on skateboards. Doesnt hurt that shes model. Run way girl, Makes me holla. Well grow our family tree. Little Manas Melanies. Living free sipping drinks. Coke and Ice bubble teas. God is watching over this. Blessings is so obvious. Call it bliss, call it crisp. This is how I want to live. Its retro automatic, the love is so dynamic. Im dancing like an addict</p><p><strong>SEGMENT6</strong><br>Im down with ye, down with ye. Ill hit the town with ye. Can I get some love yo hommie show me love</p><p><strong>SEGMENT7</strong><br>Im down with ye, down with ye. Ill stick around with ye. Can I get some love yo hommie show me love</p><p><strong>SEGMENT8</strong><br>I, I, I want to show ye. I think Im ready for ye. Just let the party music play. Im down with ye down with ye. I got that sound for ye. Just let the music play</p><p><strong>SEGMENT9</strong><br>But if you dont think your down with me, Thats cool cause we can still be friends at least. And a, we could just play Monopoly youll see. Youll get to know me uh huh, youll get to know me, know me. But I, I think you really might be right. I think you might just be the guy for me, and you and maybe youll give me a ride, home</p><p><strong>SEGMENT10</strong><br>This is my song, glad you all came along, sing it now. Sing it loud.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

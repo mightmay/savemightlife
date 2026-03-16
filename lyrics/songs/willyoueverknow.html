@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Will You Ever Know? - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Will You Ever Know? - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Will You Ever Know?</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>What if what if what if what if what if what if you was transported in time. To the place and the spot where Christ had to die. What if you beheld with your own two eyes. Where his blood was spilled where he gave his life. When he came up the hill and he was barely alive. Could you tell who he was if he walked on by. Could you see what they had done to his back and his sides. Would you see all his love would you recognize. When they pierced his skull with the thorns and they tried to. Pull out his hair out his beard and then decide to. Pierce his bareback 39 times you. Get the real facts they're there besides you. What if you saw him die and got a real view. Would you keep living the life the way that you do. Or would you run and hide and just continue to. Live your life blind its up to you dude</p><p><strong>SEGMENT2</strong><br>Will you ever know will you ever see. What's he's done for you what he's done for me. Can you ever know can you ever see. What will it take for you to believe</p><p><strong>SEGMENT3</strong><br>What if today was the very day he died. What if you was standing right there by his side. As the people cheered and they screamed and they cried. But this time around see he wasn't crucified. What if he was lead from a jail cell this time. To be executed in the middle of the night. But you could view it and tune it in worldwide. On the internet and on the TV it was televised. What if you was standing right there. And you brought him down to the electric chair. You had to flip the switch now would you be aware. Would you understand his death would you even care. Would you change how you live would you shed a tear. Would you see what he did would you be prepared. To give your life to him right now and right there. Can u see what he did its quite clear</p><p><strong>SEGMENT4</strong><br>What if you held the very nails used to. Hold him on the cross then what would you do. You saw him beat up beat down then abused. Would you see how much it cost him now for you but. What would it take for him to prove. That he took the blame for everything that we do. It's still just the same man there aint nothing new. They still hate to change and come down to you but. What if you could gaze and just see. The last 5 minutes before he would leave. This earth and worse what if you saw him breathe. His last breath when death took his life you see. His head hang down he starts to heave. Cuz his death came slow its plain to see. That it's more painful then we could imagine it to be. Now you seen in plain view will you believe.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

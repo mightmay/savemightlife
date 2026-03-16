@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Lead on, O King Eternal - พระเจ้าผู้ทรงพระชนม์อยู่ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Lead on, O King Eternal - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Lead on, O King Eternal</h2>
+        <h3>พระเจ้าผู้ทรงพระชนม์อยู่</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเจ้าผู้ทรงพระชนม์อยู่ ขอนำทางที่เราไป เมื่อพญามารมาต่อสู้ พระองค์สามารถขับไล่ เมื่อเราเตรียมใจไว้ต่อสู้ พระคุณทำให้ใจกล้า พระเจ้าผู้ทรงพระชนม์ ขอให้มีชัยทุกเวลา</p><p><strong>VERSE2</strong><br>พระเจ้าผู้ทรงพระชนม์อยู่ ขอนำเราช่วยคนบาป ช่วยคนที่มีความทุกข์ สมกับเราเป็นผู้ประกาศ พระคริสต์ประทานชีวิตใหม่ แก่คนที่เชื่อรอดได้ พระองค์ทรงเปิดสวรรค์แล้ว ให้เราพ้นจากความตาย</p><p><strong>VERSE3</strong><br>พระเจ้าผู้ทรงพระชนม์อยู่ เป็นทางชีวิตสัจจา ยินดีไม่มีความกลัวเลย เพราะพระองค์ทรงนำหน้า กางเขนพระองค์คุ้มครองไว้ ให้เดินในความสว่าง มงกุฎสำรองไว้คอยท่า ให้แก่เราผู้มีชัย.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Lead on, O King eternal, the day of march has come; henceforth in fields of conquest your tents will be our home. Through days of preparation your grace has made us strong; and now, O King eternal, we lift our battle song.</p><p><strong>VERSE2</strong><br>Lead on, O King eternal, till sin's fierce war shall cease, and holiness shall whisper the sweet amen of peace. For not with swords' loud clashing or roll of stirring drums with deeds of love and mercy the heavenly kingdom comes.</p><p><strong>VERSE3</strong><br>Lead on, O King eternal; we follow, not with fears, for gladness breaks like morning where'er your face appears. Your cross is lifted o'er us, we journey in its light; the crown awaits the conquest; lead on, O God of might.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Safely through Another Week - ทุกเช้าค่ำพระเจ้าปรานี - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Safely through Another Week - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Safely through Another Week</h2>
+        <h3>ทุกเช้าค่ำพระเจ้าปรานี</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ทุกเช้าค่ำพระเจ้าปรานี  ทางชีวีพระองค์ทรงนำ  ข้าฯขอน้อมสดับพระคำ  พระทรงธรรมโดยใจยำเกรง บรรเลงเพลงโดยใจชื่นบาน  ทำสักการวันแห่งพระพร บรรเลงเพลงโดยใจชื่นบาน  ทำสักการวันแห่งพระพร</p><p><strong>VERSE2</strong><br>ข้าฯเสาะหาองค์พระการุณย์  โปรดเพิ่มพูนกำลังใจกาย ยกบาปโทษจิตใจผ่องใส ผองพาลภัยให้อยู่ห่างไกล กังวลใจข้าฯมีทุกวัน ขอวันนี้มีสุขอนันต์ กังวลใจข้าฯมีทุกวัน  ขอวันนี้มีสุขอนันต์</p><p><strong>VERSE3</strong><br>กิตติคุณพระคริสต์ประกาศ  เพื่อคนบาปกลับตั้งใจใหม่ โดยพระคุณพระเจ้ายิ่งใหญ่  มาดับทุกข์เกิดสุขในใจ วันประเสริฐวันทรงอวยพร  จนได้รับความสุขถาวร วันประเสริฐวันทรงอวยพร   จนได้รับความสุขถาวร.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Safely  Through  Another  Week  God has brought us on our way; Let us now a blessing seek,  Waiting in his courts today: Day  of all  the week the best,  Emblem of eternal rest. Day  of all  the week the best,  Emblem of eternal rest.</p><p><strong>VERSE2</strong><br>While  we seek supplies grace,  Through the dear Redeemer' s name, Show Thy reconciling face,  Take a way our sin and shame. From our wordly cares set free,  May we rest this day in thee. From our wordly cares set free, May we rest this day in thee.</p><p><strong>VERSE3</strong><br>May Thy Gospel's joyful sound Conquer sinners, comfort saints; Make the fruits of grace abound, Bring relief for all complaints. Thus may all our Sabbaths be Till we rise to reign with Thee. Thus may all our Sabbaths be Till we rise to reign with Thee.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for This is my Father’s World - โลกนี้พระเจ้าประทาน - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>This is my Father’s World - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>This is my Father’s World</h2>
+        <h3>โลกนี้พระเจ้าประทาน</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>โลกนี้พระเจ้าประทาน เป็นบ้านอาศัยชั่วคราว เมื่อถึงเวลาคราต้องจากไป ใครใครไม่พ้นความตาย โลกนี้เราอยู่ไม่นาน สวรรค์คือบ้านของเรา  และที่นั้นเราไม่ต้องพรากจากกัน เราอยู่สวรรค์นิรันดร์</p><p><strong>VERSE2</strong><br>โลกนี้เป็นที่สวยงาม พระเจ้าทรงสร้างเพื่อเรา คนโง่เขลาลืมว่าเขาต้องตาย จึงหลงงมงายหลายปี วันนี้เชิญท่านทั้งหลาย กลับใจเชื่อพระเยซู พระองค์ทรงยอมตายบนไม้กางเขน เพื่อล้างบาปเวรของเรา</p><p><strong>VERSE3</strong><br>โลกนี้ล้วนอนิจจัง ไม่ยั่งไม่ยืนเสมอ หลายคนละเมอว่าของจีรัง แต่ท่านจะหวังอะไร ความรักพระเจ้าแน่นอน ไม่สั่นไม่คลอนปรวนแปร ถ้าเราไว้ใจในองค์พระเยซู จิตใจเราสุขสบาย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>This is my Father’s world, And to my listening ears All nature sings, and round me rings, The music of the spheres. This is my Father’s world: I rest me in the thought Of rocks and trees, of skies and seas; His hand the wonders wrought.</p><p><strong>VERSE2</strong><br>This is my Father’s world. O let me ne’er forget That though the wrong Seems oft so strong, God is the ruler yet. This is my Father’s world: The battle is not done: Jesus who died shall be satisfied, And earth and Heav’n be one.</p><p><strong>VERSE3</strong><br>This is my Father’s world. I walk a desert lone. In a bush ablaze to my wondering gaze, God makes His glory known. This is my Father’s world, a wanderer I may roam Whate’er my lot, it matters not, My heart is still at home.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

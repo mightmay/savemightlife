@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rhime Animal - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rhime Animal - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rhime Animal</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Who woulda guessed. We'd be doin' it like this. Scandalous. For all the brothers who can't handle this. Thousand Foot takin' up mad space. Too much so that we could wipe out. We got that classic touch. Not in chains. Still representing that same boy. You betcha. The intellectual. It's all about smooth texture. We can be like hooligans and get it on quick. Slickw when the riff hits your. Eardrum and the word sticks. Like think quick. When in doubt who you goin to?. Who you owing to?. On the other end. Who's gonna be your friend?. Just a little something to think about no doubt. Thousand 'bout to let the rhime animal out. We be rocking on till dawn and back again. When you here to jam to the volume back up to ten. I love music. Can't imagine being here without it. Turn it up so your neighbors all hear about it</p><p><strong>SEGMENT2</strong><br>Thousand Foot with the sound to move ya. We got the rhythm that'll run right through ya. Throw your hands up if the music soothes yah. We rock on like a power booster. Thousand Foot with the sound to move ya. We got the rhythm that'll run right through ya. Never wasting moves never standing still come on. And make way for the rhime animal</p><p><strong>SEGMENT3</strong><br>Well it's the second verse and. No need for rehearsing. I be the rhime animal. Live and in person. Wanna give a shout to all the real hip hoppers. Who come to all of our shows and represent proper. Turning to those who understand what Thousand Foot do. Cause it ain't entirely easy. In this industry. To pick up a mic and start rapping. And put on guitar straps and start singing. We'll be like "What happened?!". And yo we just can't get the hang of it. When really it's you can't understand the slang of it. So what if a rock band were to throw a few. Ask a few rascals jumping around. And some finger snaps said uh. If you still don't get it man forget about it. By the time you accept it. We'll be makin a new record. It's all good though. It don't really matter. The Krutch don't care. We down for whatever</p><p><strong>SEGMENT4</strong><br>Yo everybody swing. Listen to the guitar sing. Check it</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

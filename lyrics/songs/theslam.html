@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Slam - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Slam - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Slam</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Gods in the spot you can like it or not. So rip the knob off the volume when you give this a shot. And raise your hands as the slam starts to thicken the plot. Openin eyes to the lies of the enemies lot. So run like the wind from the sin of your past. Keep your eyes on the prize when they put you on blast. Its the Christ on the cross, its humanitys shot. Its a worldwide call to everything that were not</p><p><strong>SEGMENT2</strong><br>This is the slam, this is the one. This is the slam, this is the one</p><p><strong>SEGMENT3</strong><br>This is the slam, this is the one. We gonna do it like it aint been done before. This is the slam, this is the one. We gonna bring it like it aint been brung. This is the slam, this is the one. We gonna do it like it aint been done before. This is the slam this is the one. We gonna spring you like you aint been sprung</p><p><strong>SEGMENT4</strong><br>They came from the cities and towns all around. To see the longhaired preacher from the desert get down. Waist high in water, never short on words, he said. Repent, the kingdom of heaven can be yours. But he stopped in the middle of his words and dropped. Down to his knees and said, behold the Lamb of God. Hes the one, the slam, dont you people understand?. Youre staring at the son, Gods reaching out his hand</p><p><strong>SEGMENT5</strong><br>The father slammed it like Shaq. For Latinos and Blacks. Packin them straps. And Caucasians hooked on Ecstasy and the crack. Stacked the sins of this world to his body. And conquered evil and hell. Then snatched the keys of death in one breath and unlocked the cell. He rose on the third. Im tellin you partner, its actual fact. Just like TOBYMAC and Boney Soprano up on this track. We slam dunkin and keep it jumpin like jumper cables. And keep the crowd rowdy like Jesus tossin them temple tables</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

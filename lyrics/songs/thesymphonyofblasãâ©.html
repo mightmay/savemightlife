@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for (The Symphony Of) BlasÃÂ© - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>(The Symphony Of) BlasÃÂ© - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>(The Symphony Of) BlasÃÂ©</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Are there no shadows where you are?. I can see everything as day. Problems that you try to hide away. Pushing me aside (You're pushing me aside)</p><p><strong>SEGMENT2</strong><br>Could the winter calm come twice?. Because your heart seems so cold tonight. Thirst for substance somehow isn't right. It's killing me inside (It's killing you inside). Killing me inside</p><p><strong>SEGMENT3</strong><br>I don't wanna be where you are. I don't wanna be here even now. I don't wanna be by your side. If something isn't right. If something isn't right</p><p><strong>SEGMENT4</strong><br>This is our last goodnight. Say what you will. Say all that you can. Words have no meaning. When I've seen where you've been</p><p><strong>SEGMENT5</strong><br>This is our last goodnight. Say what you will. Say all that you can. This is our last goodbye. This is where love ends</p><p><strong>SEGMENT6</strong><br>Are you so naive to right and wrong. How could you watch innocence forgone. Does what we've done ever really belong?. It wasted me away (I feel so wasted away)</p><p><strong>SEGMENT7</strong><br>God if you can hear me out alright. Please take these feelings for her inside. My chest hurts when I breathe tonight. It's wasting me away (You're wasting me away). You're wasting me away</p><p><strong>SEGMENT8</strong><br>I don't wanna be where you are. I don't wanna be here even now. I don't wanna be by your side. If something isn't right. If something isn't right</p><p><strong>SEGMENT9</strong><br>This is our last (This is our last)</p><p><strong>SEGMENT10</strong><br>This is our last goodnight. Say what you will. Say all that you can. Words have no meaning. When I've seen where you've been</p><p><strong>SEGMENT11</strong><br>This our last goodnight. Say what you will. Say all that you can. This is our goodbye. This is where love ends</p><p><strong>SEGMENT12</strong><br>This is our last goodnight. Say what you will. Say all that you can. Words have no meaning. When I've seen where you've been</p><p><strong>SEGMENT13</strong><br>This is our last goodnight. Say what you will. Say all that you can. This is our last goodbye. This is where love ends</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

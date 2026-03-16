@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Movie Stars and Super Models - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Movie Stars and Super Models - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Movie Stars and Super Models</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>How come my life ain't like this movie?. I should try to look some more like that. And maybe then I could be a movie star, And maybe then you'd always laugh at my jokes. Cuz life would be just like this movie, and I would never feel alone. In fact, all the problems that I have would go away, and I would forget how to feel sad.</p><p><strong>SEGMENT2</strong><br>Cuz this silver screen that I'm looking at. is making me a little bored of my life cuz. its not what I'm looking at, Cuz this has so much more of excitement, thrills, and adventurous things in every life. And a sparkle is the reflection in my eye.</p><p><strong>SEGMENT3</strong><br>Ba ba ba ba, ba ba ba ba. If only the shows were as real as the glows. then we'd never see the same, but I guess we'll never know. Ba ba ba ba, ba ba ba ba. Well they showed it, and we bought it. So you see it's not just me, its sweet - It's in the movie.</p><p><strong>SEGMENT4</strong><br>She wants a better body and some super model moves. Cuz in her head she's always been the ugly one. Well hey, we think we're ugle too. And it's true that we will never know. all of the things that she could have known. Well I wonder when she thought it was that she would win?. Cuz man she got so thin.</p><p><strong>SEGMENT5</strong><br>Every now and then she would start to pretend like she was a star. and in the movies they're in. But it's strange cuz it seems. there's never happy endings. Is it make believe?</p><p><strong>SEGMENT6</strong><br>Ba ba ba ba, ba ba ba ba. If only the shows were as real as the glows. then we'd never see the same, but I guess we'll never know. Ba ba ba ba, ba ba ba ba. Well they showed it, and we bought it. So you see it's not just me, its sweet - It's in the movie.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

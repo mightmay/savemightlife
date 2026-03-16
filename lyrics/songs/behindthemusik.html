@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Behind the Musik - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Behind the Musik - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Behind the Musik</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>June 26th 1975. In Miami Florida was the place where I first arrived. My parents smiled as I opened up my blue eyes. Cuz they was newly married and I was just their first child. My pop was from Jersey my mom was from Miami. They met in Bed Stuy Brooklyn New York City. At art college and yep they was hippies. So I guess that just makes me a child of the sixties. But anyway we didnt stay we moved to Plant City. Then to Lakeland then to Tampa then to Ybor City. Living in the hood where things are never ever pretty. The only white kid smack dab in the inner city. My playground is a parking lot plus a back alley. At times I would wake up in the dark with no electricity. On top of that we struggling cause we got no money. And going through this inside its killing me</p><p><strong>SEGMENT2</strong><br>Chorus. On and on. On and on. Your love goes (this is Behind the Musik). On and on. On and on. (And Im a take y all Behind the Musik)</p><p><strong>SEGMENT3</strong><br>I was about 6 when all this was going on. Things began to change everything I knew was up and gone. They separated on the weekends I would see my mom. Still living with my pops in the hood but not for too long. When I was nine they divorced and I was moving on. To the suburbs with mom cause the courts said its wrong. For me to live with dad in the hood so Im up and gone. Mom remarried had a baby we living in my grandmas home. We living in a neighborhood thats middle class. But I felt poor cause of some things that I didnt have. Time passed we moved out but things still aint right. Im slipping fast at home all I do is yell and fight. My grades start to crash plus I ran away twice. And almost got shot by the cops one single night. I started high school and I just party all the time. But little did I know what was gonna happen to my life</p><p><strong>SEGMENT4</strong><br>Chorus</p><p><strong>SEGMENT5</strong><br>At 15 I had a talk with my cousin got me thinking. Was there more to life than girls partying and drinking. I picked up his Bible and started reading Revelation. For some reason I was crying when I reached the ending. Now God was working on me and this was the beginning. The first time in long while when I started praying. I had to move again and say goodbye to everyone. My dad and my friends once again was all up and gone. Brand new school by myself sitting all alone. Feeling like a foot every single day Im coming home. But I would listen every night in my bedroom. To gospel radio preach about Christ and just then soon. I gave my life to him everything became new. I was born again Ive never been the same dude. Ya took my sin and my guilt and let them blame you. And on and on through the years you always came through</p><p><strong>SEGMENT6</strong><br>Chorus</p><p><strong>SEGMENT7</strong><br>It was November and the year was 1995. I still remember the very first date with my wife. And I was on my own doing shows part time. Twenty years old just trying to make something of my life. I moved away from home when I was only eighteen. Broke as a joke making music trying to chase the dream. And everybody seems to think Im crazy except for me. But God was there every time to supply my needs. I went on staff at a church in the inner city. Writing rhymes in my spare time for my CD. I mailed a demo to a label called Gotee. And out of nowhere Todd Collins up and called me. He said he heard my junk and plus he wanted to sign me. My heart jumped and plus I wanted to cry and scream. But all I did was hung up the phone quietly. And thanked God how he always provided for me</p><p><strong>SEGMENT8</strong><br>Chorus.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

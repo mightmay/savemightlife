@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Simp Liztik - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Simp Liztik - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Simp Liztik</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>He came into this world for the rejects. Look into the Bible - then you need to size up the facts. Dwell upon the facts - and learn about His grace. Everything's in First Corinthians Verse 1:28. Hey, i think about the day when the world He came to save. went astray and they nailed him to a tree. How He stuck with 'em though they did that stuff. And went on just to suffer and got lumped with us all. (Hey) like the chumps, like the tramps, like the drunks. Like the punks, like the bums, like the scum like us all. We've all been really bad (Oh?) No one is really good (No?). It's kinda sad - Christ's the laughin' stock of the neighbourhood. And you would think He'd try to prove 'em wrong. But Christ He suffered like I said, stuck up on the death cross. He said that they just made a mistake. And God should give 'em a break - we oughta praise Jesus' name. Saved us from Hell, what you want me to say?. I know why and I can't deny. He did it all for the crooked (Come on!) the hookers (Come on!). So you can be bad lookin' and still get up to Heaven!. Still get up to Heaven! Still get up to Heaven!. Why did He save those bums? Why did He save those scum, huh?. Can't figure it out, but He said it in Matthew 21:31. and still they didn't get it. He came to treat the guys who were diseased. Cause the well don't want a doctor's help or hospitality. He had to get 'em all better. Like tax collectors, harlots and lepers and self-righteous hecklers. (Hey) like the chumps. CHORUS. I'm goin' to Romans - just so you'll read verse 3:10. Religious Pharisees - They'll tell you - They're very good. That's easier said than done. Psalm verse 53:3 - Righteous? No not one. Jesus alone - Jesus alone - Just Jesus alone. What we wanna say is humans don't obey. And I could quote the same verse in Psalm 14 verse 3. All have gone astray but you can know the way. The righteous ones are scarce here - we're all in need of grace. What's it gonna take for you to go and pray. 'Cause Christ just wants to save you. and all you need is faith. CHORUS</p><p><strong>SEGMENT2</strong><br>Matthew 21:31b. Jesus said to them,"I tell you the truth, the tax collectors and the prositutes. are entering the kingdom of God ahead of you.".</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

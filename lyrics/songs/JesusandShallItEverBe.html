@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jesus, and Shall It Ever Be - เหตุไรจึงอายพระนามเยซู - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jesus, and Shall It Ever Be - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jesus, and Shall It Ever Be</h2>
+        <h3>เหตุไรจึงอายพระนามเยซู</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>องค์พระเยซู ทรงอยู่เป็นนิจ เหตุไรเราอาย พระนามพระคริสต์  เป็นนามศักดิ์สิทธิ์ มีเกียรตินักหนา ชาวฟ้ากราบไหว้ อยู่ทุกเวลา</p><p><strong>VERSE2</strong><br>เหตุไรจึงอาย พระนามพระเยซู  ผู้ได้ประทาน ความรักเอ็นดู  ทรงเป็นสว่าง กระจ่างดวงใจ  เหมือนดาวดวงใหญ่ส่องอยู่ทั่วไป</p><p><strong>VERSE3</strong><br>อายนามพระคริสต์ เป็นได้อย่างไร เพราะเรามีบาปซ่อนไว้ในใจ  พระนามเยซูงามยิ่งกว่าดาว ทรงส่องสกาว ความบาปศูนย์หาย</p><p><strong>VERSE4</strong><br>ควรหรืออายนาม ผู้เป็นสหาย ให้ข้าฯมีหวัง รอดพ้นอบาย  เมื่ออายพระนาม นั่นน่าอดสู  เพราะขาดความรัก ขาดกตัญญู</p><p><strong>VERSE5</strong><br>เชิดชูพระนาม ไม่เสียแรงเปล่า อวดในความตาย พระเยซูเจ้า พระองค์เป็นเกียรติ ข้าฯจึงปรีดา พระองค์ปรานีไม่ทรงอายข้าฯ.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Jesus, and shall it ever be A  mortal  man,  ashamed  of  Thee? Ashamed of  Thee, whom angels praise,   Whose glories shine through endless  days?</p><p><strong>VERSE2</strong><br>Ashame of Jesus! O as soon Let morning blush to own the sun! He  sheds  the  beams of light divine  O'er this benighted  soul of mine.</p><p><strong>VERSE3</strong><br>Ashamed of Jesus! sooner far Let night disown each radiant star! 'Tis midnight with my soul, till He, Bright Morning Star, bid darkness flee.</p><p><strong>VERSE4</strong><br>Ashamed  of  Jesus! That  dear  friend, On  whom  my  hopes  of  heav'n  depend! No! when  I  blush, be  this  my  shame,  That  I  no  more  revere  his  name.</p><p><strong>VERSE5</strong><br>Ashamed of Jesus! empty pride! I'll boast a Savior crucified, And O may this my portion be, My Savior not ashamed of me!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

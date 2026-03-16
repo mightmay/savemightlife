@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Fivetweezy - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Fivetweezy - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Fivetweezy</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy</p><p><strong>SEGMENT2</strong><br>Well, I've been gone but I'm back again. It's been too long, you wondering where I been. Well, I betcha I though I would pack it in. Since I got dissed on MTV for dear slim. Aw, man why'd yall play me?. TRL, you drive me crazy!. Now everybody really hates me!. I thought we were friends, Carson Daley?. So when I tried out for American Idol. I got up and sang for Simon Cowell. But he said I was 'absolutely horrible'. He said I was worse than William Hung, too. Now what do I do, please help me, could ya?. I keep getting punk'd like Ashton Kutcher. Since my name's still bashed and butchered. But I was just changing, so listen would yah</p><p><strong>SEGMENT3</strong><br>It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me. It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me</p><p><strong>SEGMENT4</strong><br>Now I don't know if I'm past my prime. I'm feeling old, I just turned 29. It's crazy; I think I lost my mind. Cause lately it shows I forget my uh: Sometimes I feel like my brain is missing. Sometimes I feel like Jessica Simpson. Don't know if tuna's fish or chicken. I told ya it's five two, nobody's listens. Okay, you don't believe that it's true. Even my mom still thinks it's fifty-two. Now I tried to explain but it's no use. At least the kids say 'man your cool, ha'. No, really man, I can't complain. Kids take puff paint and write my name. On their t-shirts and they be like WAH!!!. That's why it's time for me to change</p><p><strong>SEGMENT5</strong><br>It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me. It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me</p><p><strong>SEGMENT6</strong><br>Now I used to come through my system blasting. People couldn't miss it when I tried to pass them. In a Honda civic with the muffler dragging. Shoes off, hairy feet like Bilbo Baggins. Back when I was living wrong. I need to get tipsy like J-Kwon. But know a days all I need is God. And a mic and a DJ and my I-Pod. All righty put your dance shoes on. And everybody just get your groove on. We'll rock the party till the break of dawn. And even get your grandma to sing along. Now what I say, don't take this lightly. God runs things, not Bruce Almighty. He's Jesus, the only one I need. Now Fivetweezy, yall know what I mean</p><p><strong>SEGMENT7</strong><br>It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me. It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me</p><p><strong>SEGMENT8</strong><br>[Interlude]</p><p><strong>SEGMENT9</strong><br>It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me. It's Fivetweezy, KJ Fivetweezy, It's Fivetweezy. That's what my friends just call me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

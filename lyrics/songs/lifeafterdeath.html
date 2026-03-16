@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Life After Death - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Life After Death - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Life After Death</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>jim woke up on a wintry day. a beautiful red head stole his heart away. forever never would his life be the same again. she had a heavenly heart a spiritual mind. walking with Jesus all the time (all the time). i don't see a need to change,' he said i like the way i am'. she looked into his big blue eyes. and this is what she said to jim. it's on you until you give god a try. it's on you don't let this world pass you by. cuz it's on you until you give god a try. it's on you well it's on you it's on. ya can never ever ever ever do it on your own. when you do it all alone you will never make it home. ya can never ever ever ever do it on your own. when you do it all alone you will never make it home. ya can never ever ever ever do it on your own. when you do it all alone you will never make it home. ya can never ever ever ever do it on your. your life after you die. life after death. what's gonna happen when you die'. is there anything else'. fast forward sixty years (sixty years). jims time is drawing near. but he's not afraid to die (i'm not afraid to die). he has a heavenly heart a spiritual mind. talks with Jesus (talks with Jesus) all the time (all the time). and he says, (listen to what he said). oh heavenly father look at my daughter. and my son they gotta know the way. dear god i pray and to them i say'. never gonna die never gonna die never gonna die gonna live forever. never gonna die never gonna die god gave us life gonna live forever. never gonna die never gonna die never gonna die never gonna die die. never gonna die never gonna die god gave us life gonna live forever. he's watching you/ life after death. he loves you/ what's gonna happen when you. he's watching you/ is there anything else. he loves you/ and he died. eyes closed i know you know i want for you. eyes closed last breath is there anything else and he died. eyes closed i know i want so much more for you. eyes closed eyes closed last breath is there'. life after death. it's all been done for god so loved the world that he gave his one and only. son that whoever believes in his name shall never die but have eternal life.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Coal Black Horses - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Coal Black Horses - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Coal Black Horses</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Just as sure as that suns gonna shine. When he comes at his table I will dine. Just as sure as that dog's gonna whine. In my heart no longer will I pine</p><p><strong>SEGMENT2</strong><br>Just as sure as by evil you are torn. The sky will open up an an angel blow his horn. An down come Jesus lookin' so fine. Just as sure as that girl she is mine. An I say. Yes an I say</p><p><strong>SEGMENT3</strong><br>Hey hey hey it's always forever. Hey hey hey it's never or now. Hey hey hey it's always forever. Hey hey hey never or now</p><p><strong>SEGMENT4</strong><br>I dug a hole an hollowed it out. Yes an I fell in. Oh Lord I'm caught in the cord. The cord of my own sin</p><p><strong>SEGMENT5</strong><br>Shoot 'em up cowboy, I got away, I've been draggin' this chain the whole way. Lay it down boy by the tree. Leave it there yes, an no lookin' at me. An I say. I say</p><p><strong>SEGMENT6</strong><br>Hey hey hey it's always forever. Hey hey hey never or now. Hey hey hey it's always forever. Hey hey hey never or now</p><p><strong>SEGMENT7</strong><br>He who my Lord sets free. Yes he is truly free. No longer will I allow evil way to mock me. He who the Lord sets free. Yes he is free indeed. Oh yea, he is free indeed</p><p><strong>SEGMENT8</strong><br>Well yea boys I know an I am certain. In your heart of hearts ye all are hurtin'. No no no not that name not to me. It's too hard to get down on my knees</p><p><strong>SEGMENT9</strong><br>Just as sure as by evil you are torn. The sky will open up an an angel blow his horn. An down come Jesus lookin' so fine. Just as sure as that girl she is mine. An I say. Yes An I Say</p><p><strong>SEGMENT10</strong><br>Hey hey hey it's always forever. Hey hey hey never or now. Hey hey hey it's always forever. Hey hey hey never or now</p><p><strong>SEGMENT11</strong><br>Hey hey hey it's always forever. Hey hey hey never or now. Hey hey hey it's always forever. Hey hey hey never or now</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

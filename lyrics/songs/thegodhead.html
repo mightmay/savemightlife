@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Godhead - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Godhead - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Godhead</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Verse 1: God eternally exists/ as being three in His personages/ Father, Son, and Holy Spirit and each person is/ fully God and there is only one God who subsists/ so chew on this/ cause this is meat and Im certain of this/ His prerogative could have been to conceal Himself/ but we serve a God who has chose to reveal Himself/ to be certain of who we servin lets search the text/ because its urgent that we worship Him for who He is/ the topic of the Trinity should evoke some emotion/ for those who are chosen/ and also for those who oppose it/ examine close Hes distinctive in His entities/ thats why we contend for the Trinity in serenity/ we have no Christianity if God is not triune/ in that case we are were saved by whom/ then creation was made by whom/ then redemption was made by whom/ the consummation will take place by whom</p><p><strong>SEGMENT2</strong><br>Hook: Pastor Joe. /T-R-I-N-I-T-Y/ Its the trinity/ its the trinity/ oh blessed trinity</p><p><strong>SEGMENT3</strong><br>Verse 2: If we could peer in the past and see a system called dynamic monarchianism/ another system modalistic monarchianism/ before the session we gone focus on one of the isms/ modalistic monarchianism/ get to the core or the center where the belly is/ popularized by a guy named Sabellius/ trying to fight for the position of monotheism/ traditionally held by Jewish in they religion/ and thats true but he started trippin in his position/ and said that God manifested Himself in different/ modes at different times this is real twisted/ thats why a bishop named Athanasisus had resided/ in a meeting in Nicea in 325/ A.D. where they debated was Jesus God/ and if He was, was He the Father the first time/ Jesus the second/ and Holy Spirit the third time/ while affirmed that the Father is God/ that the Son is God/ and the Holy Spirit is God/ good that aint gone solve it/ cause the problem is this/ its the simultaneousness/ that he denied</p><p><strong>SEGMENT4</strong><br>Verse 3: Modalism is back and its now packaged as Oneness Pentecostalism/ and its growing in numbers now like the cost of living/ and when they hear this Ill be labeled a Pharisee/ but the Assemblies of God already labeled it heresy/ in the 20th century when it first emerged/ and ever since its birth its been hurting the church/ in conclusion a myriad of questions I ask/ cause its confusing and steering away at the masses/ I pose to you question number 1/ you mean to tell me that the Father is the Son/ well who was He praying to in the garden of Gethsemane/ I guess youll say He was prayin to His deity/ so you sayin that His human side/ is prayin to His divine side/ that is Father/ In that case then there are two beings/ in the person of Christ is that what you are seeing/ no thats not the scriptures thats confusion/ and it takes stabs at the hypostatic union/ and thats that the one Jesus/ is 100% man and 100% God/ not 100% Father and 100% Son.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

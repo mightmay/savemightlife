@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Heavenbound - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Heavenbound - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Heavenbound</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>(Chorus)</p><p><strong>SEGMENT2</strong><br>Heavenbound. Don't you know I'm heavenbound. Heavenbound. Reachin' for that higher ground. Heavenbound. Don't you know I'm heavenbound. Heavenbound. Reachin' for that higher ground</p><p><strong>SEGMENT3</strong><br>Cold rappin' for the king with a sting in my voice. Not condemmin' men or women, but relayin' a choice. Higher ground is the sound that I'm talkin' of. Opportunity knocks through a different love. Not love like we know it, like ya love your girl. It's a love from above not of this world. Kinda profound, a trump will sound. And all God's children are heavenbound</p><p><strong>SEGMENT4</strong><br>(Repeat Chorus)</p><p><strong>SEGMENT5</strong><br>Jump on the job and live for Him. Do you lie satisfied in a state of sin. Listen while I christen a serious sound. Rap cold revin' cause I'm heavenbound. Serious lyrics don't disregard. No treason, gotta reason that I rap so hard. Don't look down or stand around. But keep on reachin' for higher ground</p><p><strong>SEGMENT6</strong><br>(Repeat Chorus). Call us the heavenbound crew and you can be, too. If you only knew what he did for you. Christ died, don't cha see to set us free. Look in the Word unblurred, you can find the key. Gotta choice to be voiced, receive Him or not. Like right or left, cold on the spot. It seems kinda easy when ya break it down. As for me and my boys, we're heavenbound</p><p><strong>SEGMENT7</strong><br>(Bridge)</p><p><strong>SEGMENT8</strong><br>If you want eternal life. Choose my friend He's Jesus Christ. Only He can set you free. From your sin and misery. God has promised us a home in glory. Trust in Him. A trump will sound. And all God's children are heavenbound</p><p><strong>SEGMENT9</strong><br>(Repeat Chorus)</p><p><strong>SEGMENT10</strong><br>Don't look down, stand around. Keep on reachin' for higher ground. Kinda profound, a trump will sound. And all God's children are heavenbound</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

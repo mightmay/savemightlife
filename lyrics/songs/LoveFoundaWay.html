@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Love Found a Way - ความรักของพระเยซูฉุดข้าฯ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Love Found a Way - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Love Found a Way</h2>
+        <h3>ความรักของพระเยซูฉุดข้าฯ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ความรักของพระเยซูฉุดข้าฯ ขึ้นมาจากบาป  ชั่วช้าเลวทรามไม่มีความดีมีแต่แช่งสาป  เมื่อความหวังแห่งชีวิตหมดไป ข้าเห็นสว่าง  ความรักพระเจ้าทรงช่วยวิญญาณ ข้าฯรอดจากตาย  ข้าฯรอดจากบาป เพราะพระเจ้ารักข้าฯ ข้าฯขาวสะอาด เพราะพระเจ้ารักข้าฯ เพราะรักอย่างนั้น ทรงยอมมรณา ข้าฯรอดจากตาย จึงได้สรรเสริญพระนาม</p><p><strong>VERSE2</strong><br>ความรักชักนำผู้ไถ่ลงมาตายที่กางเขน  ล้างบาปล้างเวรคนชั่วอย่างข้าฯ เป็นเรื่องแปลกใจ   ความรักจึงเป็นสะพานให้ข้าม ไปถึงสวรรค์  ความรักพระเจ้าได้ทรงยกโทษ ให้พ้นอบาย</p><p><strong>VERSE3</strong><br>ความรักได้เปิดสวรรค์กว้างขวาง ช่วยชี้หนทาง  ที่พระเยซูครองอยู่ก่อนกาล ด้วยฤทธิ์อนันต์  ความรักช่วยข้าฯให้พ้นจากเหว ตลอดกัปกัลป์  ไม่มีใครช่วยในโลกนี้ได้   เว้นแต่พระเจ้า</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Wonderful love that rescued me, sunk deep in sin,  Guilty and vile as I could be-no hope within;   When every ray of light had fled, O glorious day!   Raising my soul from out the dead, love found a way. Love found a way, to redeem my soul, Love found a way, that could make me whole. Love sent my Lord to the cross of shame, Love found a way, O praise His holy Name!</p><p><strong>VERSE2</strong><br>Love brought my Savior here to die on Calvary,   For such a sinful wretch as I, how can it be?   Love bridged the gulf 'twixt me and heav'n, taught me to pray,   I am redeemed, set free, forgiv'n, love found a way.</p><p><strong>VERSE3</strong><br>Love opened wide the gates of light to heav'n's domain,  Where in eternal power and might Jesus shall reign.  Love lifted me from depths of woe to endless day,  There was no help in earth below;  love found a way.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

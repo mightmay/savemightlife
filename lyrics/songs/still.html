@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Still - ซ่อนข้าไว้ - เหฑียะ ฑี์ง เฮญี้ยว. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Still - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Still</h2>
+        <h3>ซ่อนข้าไว้</h3>
+        <h3>เหฑียะ ฑี์ง เฮญี้ยว</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p><strong>VERSE1</strong><br>ปี๋ง เจี๊ยน เยีย เยียม เม่ย ด๊าด-เดี๊ย หล่ง เม่ย เญย ปั์ว เฮ้น เว่ย เจี๊ยน เยีย โอ่</p><p><strong>CHORUS</strong><br>ต้ม ววม-หล่าง เจี์ย ต้าย แอ๋ง ป์อง ต้ม หฑยาว เยีย เหธา เม่ย ไฮ่ ได๋ เก้า ฮลัง ต้ม หฑยาว เฒี้ยว หฒั่ง เตี๋ย โหฒว ฮู่ง กุ๊น เหฑ่ง หญู่ง-หญู่ง เหฑียะ ฑี์ง เญย เหญี่ยม เม่ย โหฒว ทิน-ฮู่ง</p><p><strong>VERSE2</strong><br>เฒาะ เยีย เญย เฮญี้ยว หฒัน เจี๊ยน กี-ตู่ หฑียะ ฑี์ง เญย เฮญี้ยว ฮิ้ว ตุ๊ เหฌียว เฒี้ยว เญย ชะ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ซ่อนข้าไว้ ภายใต้ปีกพระองค์ ปกคลุมข้า ในพระหัตถ์อันยิ่งใหญ่</p><p><strong>CHORUS</strong><br>เมื่อพายุพัดมา และฟ้าคำราม ข้าจะบินขึ้นไปอยู่กับพระองค์ เพราะทรงเป็นราชาเหนือสิ่งใดๆ ข้ายืนอยู่ได้ เพราะทรงเป็นพระเจ้า</p><p><strong>VERSE2</strong><br>วิญญาณพักสงบ ในพระเยซู ด้วยฤทธิ์อำนาจ ข้ายอมและไว้วางใจ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Hide me now. Under your wings. Cover me. Within Your mighty hands</p><p><strong>CHORUS</strong><br>When the oceans rise and thunders roar. I will soar with You, above the storm. Father, You are king over the flood. I will be still and know You are God</p><p><strong>VERSE2</strong><br>Find rest my soul, in Christ alone. Know His power, in quietness and trust</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

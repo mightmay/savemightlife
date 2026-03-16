@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for And Can It Be? - ความรักประหลาดของพระเยซู - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>And Can It Be? - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>And Can It Be?</h2>
+        <h3>ความรักประหลาดของพระเยซู</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>โลหิตประเสริฐของพระเยซู ได้ฟอกล้างความผิดบาปของข้า ปวดร้าวพระกายวายชนม์เพื่อข้า พระองค์ยอมตายไถ่บาปประชา ความรักประหลาดเป็นได้อย่างไร ที่ผู้ไถ่วายพระชนม์เพื่อข้า</p><p><strong>VERSE2</strong><br>ความรักประหลาดของพระเยซู ยอมพลีความสุขจากฟ้าลงมา ความรักเช่นนี้ไม่มีใครเหมือน ซึ่งพลีทุกอย่างจนตายเพื่อข้า นี่คือพระคุณ  จงให้ชาวโลก และชาวสวรรค์สรรเสริญพระเจ้า</p><p><strong>VERSE3</strong><br>วิญญาณของข้าเคยถูกซาตาน ผูกมัดอยู่นานทำบาปหลายปี แต่พระเยซูประทานพระคุณ ทรงแก้ความบาปหลุดเป็นเสรี โซ่ตรวนหลุดหายความบาปหมดไป ใจข้ายินดีเป็นสุขเปรมปรีดิ์</p><p><strong>VERSE4</strong><br>ข้าไม่อยากทำความบาปอีกเลย ความบาปที่ได้เคยทำทำหลายปี เกิดเบื่อหน่ายหนี  โดยพระเยซู ความบาปน้อยใหญ่เลิกได้ทันที ขอโมทนาพระคุณซึ่งมี เมตตาช่วยเรารอดจากมือมาร...</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>And can it be that I should gain An interest in the Savior’s blood? Died He for me, who caused His pain For me, who Him to death pursued? Amazing love! How can it be, That Thou, my God, shouldst die for me?</p><p><strong>VERSE2</strong><br>He left His Father’s throne above So free, so infinite His grace Emptied Himself of all but love, And bled for Adam’s helpless race: ’Tis mercy all, immense and free, For O my God, it found out me!</p><p><strong>VERSE3</strong><br>Long my imprisoned spirit lay, Fast bound in sin and nature’s night; Thine eye diffused a quickening ray I woke, the dungeon flamed with light; My chains fell off, my heart was free, I rose, went forth, and followed Thee.</p><p><strong>VERSE4</strong><br>Still the small inward voice I hear, That whispers all my sins forgiven; Still the atoning blood is near, That quenched the wrath of hostile Heaven. I feel the life His wounds impart; I feel the Savior in my heart.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

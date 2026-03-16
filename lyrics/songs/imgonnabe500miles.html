@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I'm Gonna Be (500 Miles) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I'm Gonna Be (500 Miles) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I'm Gonna Be (500 Miles)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>When I wake up, yeah I know Im gonna be. Im gonna be the man who wakes up next to you. When I go out, yeah I know Im gonna be. Im gonna be the man who goes along with you</p><p><strong>SEGMENT2</strong><br>When Im lonely, well I know Im gonna be. Im gonna be the man whose lonely without you. When Im dreaming well I know Im gonna dream. Im gonna dream about the time when Im with you</p><p><strong>SEGMENT3</strong><br>Chorus: But I would walk 500 miles, and I would walk 500 more. Just to be the man who walked 1,000 miles. To fall down at your door</p><p><strong>SEGMENT4</strong><br>When Im working, yes I know Im gonna be. Im gonna be the man whos working hard for you. And when the money comes in for the work Ill do. Ill pass almost every penny on to you</p><p><strong>SEGMENT5</strong><br>When I come home, yeah I know Im gonna be. Im gonna be the man who comes back home to you. And if I grow old well I know Im gonna be. Im gonna be the man whos growing old with you</p><p><strong>SEGMENT6</strong><br>Chorus</p><p><strong>SEGMENT7</strong><br>Yeh-deh-eh-deh Yeh-deh-eh-dehdada dum duddle-um duddle-um da da da. Yeh-deh-eh-deh Yeh-deh-eh-dehdada dum duddle-um duddle-um da da da</p><p><strong>SEGMENT8</strong><br>When Im dreaming, well I know Im gonna dream. Im gonna dream about the time when Im with you. When I wake up, yeah I know Im gonna be. Im gonna be the man who wakes up next to you</p><p><strong>SEGMENT9</strong><br>When I go out, yeah I know Im gonna be. Im gonna be the man who goes along with you. When I come home, yes I know Im gonna be. Im gonna be the man who comes back home to you. Im gonna be the man whos coming home to you</p><p><strong>SEGMENT10</strong><br>Chorus</p><p><strong>SEGMENT11</strong><br>. . .</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

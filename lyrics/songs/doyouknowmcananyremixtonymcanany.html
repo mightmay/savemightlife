@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Do You Know: Mcanany Remix - Tony McAnany - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Do You Know: Mcanany Remix - Tony McAnany - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Do You Know: Mcanany Remix - Tony McAnany</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Do you know where you're going to. Do you like the things that life is showing you. Where are you going to. Do you know</p><p><strong>SEGMENT2</strong><br>This goes out to my man his name is True Blue. For all the nights that your Daddy spent away from you. For all the days that I told you "Maybe next time". Laid up in the studio consumed with my next rhyme. What kind of lyric can I drop to make you think twice. About the trials that you're gonna face in this life. I can lullaby even point you to the Most High. Prayin' every little thing is gonna be all right. Someday my love isn't gonna be fulfilling. Try as I may, human love it hits a ceiling. But I can sow the seeds, say a prayer, this I know. If faith can move a mountain. Surely God can make His spirit grow in you</p><p><strong>SEGMENT3</strong><br>[CHORUS]</p><p><strong>SEGMENT4</strong><br>This goes out to my little man t Mac. For all the junk you've been carrying on your back. My burden's easy and My yoke is a featherweight. And this you know yet you're still a man of little faith. What can I do to spring your knowledge into how you roll. Don't you have the Spirit and the letters that My people wrote. My love stretches farther than your mind can conceive. I've got a hand full of grace, a heart full of mercy. Someday My son, your gonna find My love fulfilling. Hope as I may, you've got to turn in when you're willing. I'll take you as you are and just to add a human touch. I gave to you a son so you can understand the Father's love for you</p><p><strong>SEGMENT5</strong><br>[CHORUS]</p><p><strong>SEGMENT6</strong><br>God will light your path if you want Him to. Just emphasize His lead and your dreams will come true. From the Father to the Son to the multitudes. He's the lover of you soul, spiritual, baby do you know</p><p><strong>SEGMENT7</strong><br>[CHORUS].</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

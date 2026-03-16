@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for If It Had Not Been - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>If It Had Not Been - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>If It Had Not Been</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>If it had not been for the Lord. I don't know. If it had not been for the Lord. I don't know</p><p><strong>SEGMENT2</strong><br>I can't take no credit for where I am today. That would be silly of me. But I've been guilty of getting beside myself. Doin things my way. Makin a mess I confess. That I'm so undeserving ya'll. No I'm not worthy at all. For some reason He chose me. To be a voice for Him. To make some noise for Him. Clearly He saw somethin I didn't see</p><p><strong>SEGMENT3</strong><br>If it had (had) not (not) been (been) for the Lord. (I don't know) I don't know (don't know). If it had (had) not (not) been (been) for the Lord (for the Lord). I don't know (Ohhhhh)</p><p><strong>SEGMENT4</strong><br>Could have been the topic of some breakin news. But He kept His hand on my life. And sometimes I forget to say thank you. For the things that He's done. Like giving His son. So undeserving ya'll. No I'm not worthy at all. For some reason He chose me. To be a voice for Him. To make some noise for Him. Clearly He saw somethin I didn't see</p><p><strong>SEGMENT5</strong><br>If it had (not) not (not been oooo) been for the Lord (for the Lord). I don't know (ehhhh). If it had (had not been) not been for the Lord (the Lord). I don't know (don't know)</p><p><strong>SEGMENT6</strong><br>I know what I'm talking bout. Take little voice and open your mouth. Tell Him have you waited for the Lord. Excuse me that's what I was made for</p><p><strong>SEGMENT7</strong><br>If it had (had) not (not) been (been) for the Lord (for the Lord). I don't know (don't know where I would be). If it had (had not been Ohhho) not been for the Lord. (I don't like to think about it don't know where I'd be without Him). I don't know. If it had (uh) not (oh) been (been) for the Lord (Oooo). I don't know (don't know where I would be). If it had (oo) not (oo) been (been) for the Lord (for the Lord). I don't know (I don't know but I'm glad he did)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

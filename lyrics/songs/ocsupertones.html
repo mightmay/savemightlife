@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for O.C. Supertones - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>O.C. Supertones - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>O.C. Supertones</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>(Where you from?..Orange County. That's right. Orange County SUPERTONES in the house. full of effect. ready to bust some rhymes out. We're a dance band from the Southland. So come up front and dance while we sing..)</p><p><strong>SEGMENT2</strong><br>We ain't got no place to go. Let's go to the rudeboy show. I wanna hear them play it rude. Gonna pop some rudeboy attitude</p><p><strong>SEGMENT3</strong><br>You know I get up when I hear and then He found me. You know I'm safe and sound with my rudeboyz all around me. Well the SUPERTONES are up, we gonna kick it to the burbs. And our purpose is to serve, in case you hadn't heard. Fater, Son, Spirit, hear it, near it, fear it. Father, Son and Holy Spirit. God's alive and He's here right now, here right now. He's in love with you. I hope that's clear right now, clear right now</p><p><strong>SEGMENT4</strong><br>That's just life down in Southern California. That's just life in Orange County California</p><p><strong>SEGMENT5</strong><br>Well if you used to be a Christian then you never was. Just sittin' up in Church and sayin' what a Christian does. The world's got the gun, but the devils' got the trigger. Stand strong with faith, deeper than a t-shirt or a sticker. You probably ask yourself, ";how'd this Jew boy get so crazy?";. Came from kickin' mad knowledge, didn't come from being lazy. We got the rhythm and the rhythms got roots. I'm a crazy little Hebrew on stage wearin' monkey boots. I love to be onstage and sing and bimskalabimmin'. I love to be out in the croud a skankin' and a swimmin'. King David, my great grandfather, was a dancer. King Solomon, my great grandfather, a romancer. Jesus came from Jesse, but Jesse came from Jesus. Now come to Lord Jesus 'cause Lord Jesus frees us!</p><p><strong>SEGMENT6</strong><br>(Orange County, huh?)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

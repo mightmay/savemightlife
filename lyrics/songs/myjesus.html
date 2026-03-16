@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for My Jesus - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>My Jesus - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>My Jesus</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Which Jesus do you follow?. Which Jesus do you serve?. If Ephesians says to imitate Christ. Then why do you look so much like the world?</p><p><strong>SEGMENT2</strong><br>Cause my Jesus bled and died. He spent His time with thieves and liars. He loved the poor and accosted the arrogant. So which one do you want to be?</p><p><strong>SEGMENT3</strong><br>Blessed are the poor in spirit. Or do we pray to be blessed with the wealth of this land. Blessed are they that hunger and thirst for righteousness. Or do we ache for another taste of this world of shifting sand</p><p><strong>SEGMENT4</strong><br>Cause my Jesus bled and died for my sins. He spent His time with theives and sluts and liars. He loved the poor and accosted the rich. So which one do you want to be?</p><p><strong>SEGMENT5</strong><br>Who is this that You follow. This picture of the American dream. If Jesus was here would you walk right on by on. the other side or fall down and worship at His holy feet</p><p><strong>SEGMENT6</strong><br>Pretty blue eyes and curly brown hair and a clear complexion. Is how you see Him as He dies for Your sins. But the Word says He was battered and scarred. Or did you miss that part. Sometimes I doubt we'd recognize Him</p><p><strong>SEGMENT7</strong><br>Cause my Jesus bled and died. He spent His time with thieves and the least of these. He loved the poor and accosted the comfortable. So which one do you want to be?</p><p><strong>SEGMENT8</strong><br>Cause my Jesus would never be accepted in my church. The blood and dirt on His feet might stain the carpet. But He reaches for the hurting and despises the proud. I think He'd prefer Beale St. to the stained glass crowd. And I know that He can hear me in I cry out loud</p><p><strong>SEGMENT9</strong><br>I want to be like my Jesus</p><p><strong>SEGMENT10</strong><br>Not a posterchild for American prosperity, but like my Jesus. You see I'm tired of living for success and popularity. I want to be like my Jesus but I'm not sure what that. means to be like you Jesus. Cause You said to live like You, love like You. but then You died for me. Can I be like You Jesus?. I want to be like my Jesus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

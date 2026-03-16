@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Have Been There - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Have Been There - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Have Been There</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>In a room without a view. A new mother smiles and holds the tiny fingers. Of her brand new baby girl. Her husband takes her by the hand. So unsure about the future and no money. Can they make it in this world. And they pray, Lord all we have to give is love. Then they heard a gentle voice. Like an echo from above</p><p><strong>SEGMENT2</strong><br>Oh I have been there. I know what fear is all about. Yes, I have been there. And I am standing with you now. I have been there. And I came to build a bridge oh so this road could. Lead you home. Oh I have been there</p><p><strong>SEGMENT3</strong><br>He'd been a pastor twenty years. But tonight he sits alone and brokenhearted. In the corner of the church. He's tried to change a fallen world. With his words and with his wisdom. But it seems like it is only getting worse. And he cries. Oh Lord I just don't understand. And then he felt the hand of grace, And he heard a voice that said</p><p><strong>SEGMENT4</strong><br>I have been there. I know what pain is all about. Yes, I have been there. And I am standing with you now. I have been there. And I came to build to a bridge oh so. This road could lead you home. Oh I have been there</p><p><strong>SEGMENT5</strong><br>An older man up on a hill. Holding flowers but he can't hold back the tears. He has come to say goodbye. He thinks about the life she lived. Thinks about how hard it's been. To live without her. Sixty years right by his side. And he cries, Oh Lord I loved her. til the end. Then he heard a gentle voice say you'll see her once again</p><p><strong>SEGMENT6</strong><br>I have been there. I know what sorrow is all about. Yes, I have been there. And I am standing with you now. I have been there. And I came to build a bridge. Oh so this road could lead her home. The road could lead her home. Oh I have been there</p><p><strong>SEGMENT7</strong><br>You know I overcame the cross. I have been there. So her life would not be lost. I have been there. And I came to build a bridge. Oh so this road could lead you home. The road could lead you home. Oh I have been there</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

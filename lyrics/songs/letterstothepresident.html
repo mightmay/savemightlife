@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Letters To The President - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Letters To The President - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Letters To The President</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>When we were younger we used to sit on my porch. And talk smack about girls and professional sports. There's a lot of things that I wanted to say. But never got a chance to find a way. (One) take a good look at all of your high schools. this is the first reason that I want to write you. it must be tough when society is messed up. Gotta save money, please don't take it out on us. Do they even know? Do they even know?. If I was brave I'd write a letter to the president. And have him pass it to the leaders of our parliament. But for now I won't say nothing. For all the kids who would stand in my residence. Who see this letter as a statement of our innocence. But for now I won't say nothing. Now that we're older a brand new story unfolds. About God and the laws that we've always been told. And there's a lot of things I wanted to say. But never got a chance to find a way. Same-sex marriage in a state where they don't care. Murder is wrong but the jail time's not fair. Not to mention date rape, felony and car theft. Break it down and tell me what we've got left. Do they even know? Do they even know?. If I was brave I'd write a letter to the president. And have him pass it to the leaders of our parliament. But for now I won't say nothing. For all the kids who would stand in my residence. Who see this letter as a statement of our innocence. As for now I'll start with something. Take a good look at Tommy, he's a track star. Good role model, had a chance to go real far. Then the school made a budget-cut. Cut out the track team. Now instead Tommy is a crack head. Same-sex marriage in a state where they don't care. Murder is wrong but the jail time's not fair. Not to mention date rape, felony, and car theft. Break it down and tell me what we've got left. If I was brave I'd write a letter to the president. And hove him pass it to the leaders of out parliament. But for now I won't say nothing. For all the kids who would stand in my residence. Who see this letter as a statement of our innocence. As for now I'll start with something. As for now I'll start with something!!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

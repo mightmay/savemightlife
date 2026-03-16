@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Come Out and Pray - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Come Out and Pray - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Come Out and Pray</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>And students, the thing to remember about church and state.. You gotta keep 'em separated!. Don't try to pray in the classroom. You can't be spreading your faith. They turn our classroom into an atheist vacuum. While they're separating church from the state. They can't stand God, so they took Him out. Started back in 62 and look at us now. They warn that government and God just don't mix. You're gonna have to stop, have to stop, have to stop, have to stop! Hey!. Hey man you talkin' 'bout your faith? Take him out!. You gotta keep 'em separated!. Hey! Hey man you mixin' church and state? Take him out!. You gotta keep 'em separated!. Hey! There's been a rise. In murder, rape, teenage pregnancies and suicides. Hey! Come out and pray!. Now it's sex, drugs and violence, The American way. Crumble the morals and the government fails. Once God's ousted, it's a matter of fate. We're going down the same path as others before. Everyone from Sodom to the U.S.S.R. They never ever see it 'til it's finally too late. You gotta find your own hope, find your own hope, find your own faith!. Hey man, is this what's left for me? Where to now?. You gotta keep 'em motivated!. Hey! When they all grow up to be criminals. You gotta keep incarcerated!. Hey! Hope you don't mind. Murder, rape, teenage pregnancies and suicides!. Hey! Come out and pray!. One two three four. The moral is the same because it's happened before. Go to Second Chronicles and turn to the Lord. In 7, verse 14, He says. If My people pray. They're gonna finally know hope, finally know hope, finally know faith!. Hey man, there's nothing to believe. Where to now?. You gotta keep 'em educated!. Hey! And the kids grow up to be. Animals!. You gotta keep 'em all sedated!. Hey! Hope you don't mind. Murder, rape, teenage pregnancies and suicides!. Hey! Come out and Pray!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

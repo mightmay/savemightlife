@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Always Here for You - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Always Here for You - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Always Here for You</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>To my unborn son this is for ya. This song that I've done it comes straight from your father. It's 2006 I've never saw ya. But I'm wondering what your gonna look like and what I'll call ya. Will you be like me or like your mother. Will you one day have another sister or a brother. The one thing that I know is that im gonna love ya. Can wait to pick you up kiss you and hug ya. A little scared just to be called a daddy. I wanna give you everything that I was never having. I want to make sure no thing you're ever lacking. I want you to know that no matter what happens. I'm a love you and you can count on. Anything you go through you can be strong. All you gotta do is trust Him and that's all. And I'll be right here for you to if you just call</p><p><strong>SEGMENT2</strong><br>Daddy's always here for you. Daddy's always here for you. In anything that you go through. Just remember I love you</p><p><strong>SEGMENT3</strong><br>Right now I promise that me and your mother. Will never split up we gone always stay together. Don't want you to doubt and never wonder. Cause we built this house on Christ and none other. At bedtime we'll gone pray for each other. Then I'll tuck you in at night and pull up the covers. Tell you sleep tight and that's when your mother. Will turn off the light we gone tell you we love ya. I'll watch you learn your abc's and your numbers</p><p><strong>SEGMENT4</strong><br>Cant wait to see all the things you'll discover. Fall turns to winter winter turns to summer. You'll grow so fast and so big then I'll wonder. How did time go by and then I'll tell ya. About this song that I wrote and then I'll show ya. What I was thinking of you just when I wrote ya. Cause I wish the best for you and this is what I told ya</p><p><strong>SEGMENT5</strong><br>I got the good news it's like yesterday. In 9 months you're gonna be on your way. I didn't know what to do or really what to say. See all I knew was to give thanks and pray. I feel nervous though about everything. I keep wondering what's gonna be your name. I'm gonna be a dad it's all gonna change. But I'm glad for the blessing God has gave. You'll be born soon sometime right around in may. The year 2007 will never be the same. Me and your mom we gone look back upon this day. Pull out this song and think about when you came. It won't be long now you see I can't wait. To hold you in my arms see your hands and face. Keep you safe from harm and what comes your way. Cause Daddy loves you and that will never change</p><p><strong>SEGMENT6</strong><br>Daddy's gonna love you no matter what you go through. Mommy's gonna love you no matter what you go through.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

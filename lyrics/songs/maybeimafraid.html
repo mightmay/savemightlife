@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Maybe I'm Afraid - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Maybe I'm Afraid - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Maybe I'm Afraid</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>There's no way I can hide. It's written on my face. All these complications</p><p><strong>SEGMENT2</strong><br>Maybe I'm afraid. To open up and let You in. Behind the curtain</p><p><strong>SEGMENT3</strong><br>Maybe I'm afraid. Of the questions. That I know You'd raise. What I thought was certain</p><p><strong>SEGMENT4</strong><br>Maybe I'm afraid. Of the mess that is sure to make. All I tried to simplify and organize. But I just can't deny</p><p><strong>SEGMENT5</strong><br>That there's no way I can hide. It's written on my face. And all these complications. Fumbling with my equations. Now they crumble to the ground. With everything I thought. To be without Your help. Cause if I let You in. I'll never be the same. So I try to escape. Maybe I'm afraid</p><p><strong>SEGMENT6</strong><br>Maybe I'm afraid. To let go and just accept. That love has spoken</p><p><strong>SEGMENT7</strong><br>Maybe I'm afraid. Of the way that I know You'll fix. Everything that's broken</p><p><strong>SEGMENT8</strong><br>Maybe I'm afraid. Cause I don't know who You are. That the more I get from You. The more I lose. So what am I holding onto</p><p><strong>SEGMENT9</strong><br>There's no way I can hide. It's written on my face. And all these complications. Fumbling with my equations. Now they crumble to the ground. With everything I thought. To be without Your help. Cause if I let You in. I'll never be the same. So I try to escape. Maybe I'm afraid</p><p><strong>SEGMENT10</strong><br>Afraid to be complete. I'm just so weak in Your hands. Maybe I'm afraid. Afraid it won't last. I'll only be half without You</p><p><strong>SEGMENT11</strong><br>Maybe I'm afraid. To let You change my heart. With all that's hiding</p><p><strong>SEGMENT12</strong><br>Maybe I'm afraid. That I just might fall apart. Unless Your beside me</p><p><strong>SEGMENT13</strong><br>And I know. That there's no way I can hide. It's written on my face. And all these complications. Fumbling with my equations. Now they crumble to the ground. With everything I thought. To be without Your help. Cause if I let You in. I'll never be the same. No I can't escape. Maybe I'm afraid</p><p><strong>SEGMENT14</strong><br>Maybe I'm afraid. Maybe I'm afraid. Maybe I'm afraid. Maybe I'm afraid. Maybe I'm afraid. Maybe, maybe, maybe. Maybe I'm afraid</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

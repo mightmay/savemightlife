@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for At Even ere the Sun was Set - สายัณห์วันหนึ่ง - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>At Even ere the Sun was Set - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>At Even ere the Sun was Set</h2>
+        <h3>สายัณห์วันหนึ่ง</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>สายัณห์วันหนึ่งมีคนได้พา บรรดาคนป่วยด้วยโรคนานา พระคริสต์รักษาด้วยพระวาจา โรคร้ายคลายหายสบายกายา</p><p><strong>VERSE2</strong><br>เหมือนกันวันนี้ของทรงปรานี ดับทุกข์หม่นหมองเพราะมารราวี แม้ตาไม่เห็น รู้แน่ว่ามี องค์พระเยซูประทับที่นี่</p><p><strong>VERSE3</strong><br>พระคริสต์โปรดช่วยกำจัดวิบาก บางคนทุกข์ยากเจ็บปวดนักหนา บางคนไม่เคยรักพระองค์มา ใจจึงทุกข์ร้อน ขาดรักเมตตา</p><p><strong>VERSE4</strong><br>ฤทธาพระองค์ไม่รู้เสื่อมถอย คำตรัสพระองค์ไม่เลื่อนไม่ลอย ยามค่ำวันนี้ ขอฟังคำวอน เมตตาเหล่าข้าฯ รักษาสั่งสอน.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>At even, ere the sun was set, The sick, O Lord, around Thee lay; O, with how many pains they met! O, with what joy they went away!</p><p><strong>VERSE2</strong><br>Once more 'tis eventide, and we, Oppressed with various ills, draw near; What if Thyself we cannot see? We know that Thou art ever near.</p><p><strong>VERSE3</strong><br>O Savior Christ, our woes dispel; For some are sick, and some are sad; And some have never loved Thee well, And some have lost the love they had.</p><p><strong>VERSE4</strong><br>Thy touch has still its ancient power. No word from Thee can fruitless fall; Hear, in this solemn evening hour, And in Thy mercy heal us all.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

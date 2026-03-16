@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Let Him In - เชิญเข้ามา - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Let Him In - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Let Him In</h2>
+        <h3>เชิญเข้ามา</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเยซูยืนนอกประตู เชิญเข้ามา เคยเสด็จมาบ่อยคอยอยู่ เชิญเข้ามา เปิดรับก่อนเสด็จไคลคลา เปิดรับองค์บริสุทธา พระเยซูพระราชบุตรา เชิญเข้ามา</p><p><strong>VERSE2</strong><br>จงเตรียมจิตด้วยความเต็มใจ เชิญเข้ามา ถ้าไม่เชิญก็ทรงผ่านไป เชิญเข้ามา เปิดต้อนรับพระผู้เป็นมิตร พระองค์ทรงคุ้มครองดวงจิต ทรงรักเราจนพลีชีวิต เชิญเข้ามา</p><p><strong>VERSE3</strong><br>ท่านได้ยินดำรัสเดี๋ยวนี้ เชิญเข้ามา จงต้อนรับพระองค์ทันที เชิญเข้ามา อย่าให้ยืนคอยนอกประตู เปิดไว้ให้พระองค์มาอยู่ จงถวายเกียรติพระเยซู เชิญเข้ามา</p><p><strong>VERSE4</strong><br>จงต้อนรับผู้เยี่ยมประเสริฐ เชิญเข้ามา จะประทานอาหารล้ำเลิศ เชิญเข้ามา ทรงชำระล้างบาปหมดโทษ ครั้นเมื่อถึงวันซึ่งทรงโปรด ทรงรับไปสวรรค์ปราโมทย์ เชิญเข้ามา</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>There’s a stranger at the door, Let Him in; He has been there oft before, Let Him in; Let Him in, ere He is gone; Let Him in, the Holy One, Jesus Christ the Father’s Son, Let Him in.</p><p><strong>VERSE2</strong><br>Open now to Him your heart, Let Him in; If you wait He will depart, Let Him in; Let Him in, He is your friend; He your soul will sure defend, He will keep you to the end, Let Him in.</p><p><strong>VERSE3</strong><br>Hear you now His loving voice? Let Him in; Now, oh, now make Him your choice, Let Him in; He is standing at your door; Joy to you He will restore, And His name you will adore, Let Him in.</p><p><strong>VERSE4</strong><br>Now admit the heav’nly guest, Let Him in; He will make for you a feast, Let Him in; He will speak your sins forgiv’n, And when earth ties all are riv’n, He will take you home to Heav’n, Let Him in.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

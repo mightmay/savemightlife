@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for This Is The Countdown - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>This Is The Countdown - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>This Is The Countdown</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Are you getting tired?. I think we've gone, and lost the fire. But I don't wanna fight anymore, I've had enough, of this town.</p><p><strong>SEGMENT2</strong><br>I can see the signs, and I can read between the lines. But I don't know what we were fighting for, I'm just trying, to breakout.</p><p><strong>SEGMENT3</strong><br>I've been waiting for something, I've been sitting for too long. I've been waiting but oh tonight, this one last try, goes on and on and on. [2x]</p><p><strong>SEGMENT4</strong><br>You put your nets out, but still you chose to do without. the only way to catch the butterfly, is never waiting for the wings, and</p><p><strong>SEGMENT5</strong><br>As seasons bring change, and as the seconds fade away. I still don't know why we were holding on, But I'm still trying, to breakout.</p><p><strong>SEGMENT6</strong><br>I've been waiting for something, I've been sitting for too long. I've been waiting but oh tonight, this one last try, goes on and on and on. [2x]</p><p><strong>SEGMENT7</strong><br>Should've known better than to listen. When the dreams and the words started falling apart.</p><p><strong>SEGMENT8</strong><br>Should've known i would've hit the ground running.</p><p><strong>SEGMENT9</strong><br>Did you think that the night would posses us, Take us over like the rain that's falling down.</p><p><strong>SEGMENT10</strong><br>Did you notice when the clock stopped running.</p><p><strong>SEGMENT11</strong><br>Running [3x]</p><p><strong>SEGMENT12</strong><br>This is the countdown; You see our time is running out. I tread to stay above the waterline, but never taking off the weights that. keep us stuck here. In the comfort, and the fear. I'll never know what we were fighting for, but I'm still looking to breakout.</p><p><strong>SEGMENT13</strong><br>I've been waiting for something, I've been sitting for too long. I've been waiting but oh tonight, this one last try, goes on and on and on. [2x]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

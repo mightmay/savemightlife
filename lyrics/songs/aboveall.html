@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Above All - - - เก้า ฮลัง เจี๋ย หม่าน หมวด. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Above All - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Above All</h2>
+        <h3>-</h3>
+        <h3>เก้า ฮลัง เจี๋ย หม่าน หมวด</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p><strong>VERSE1</strong><br>เก้า ฮลัง หัด ม์า เก้า ฮลัง ฮู่ง เก้า ฮลัง เจี๋ย นิ่น เหฒย ธ้วด ต้าย เญย หม่าน หมวด เก้า ฮลัง เมี่ยน เญย ธง-เม่ง เหธา นิ่น เญย หฒะเอ๋ย ไม้ แก้ง เหฒย ลู่ง เม่ย หย่า ฒู้ง เฒี่ยง เจี๊ยน</p><p><strong>VERSE2</strong><br>เก้า ฮลัง ฮู่ง เตี๋ย เก้า ฮลัง กวั๊ะ เก้า ฮลัง ลู่ง เดี๊ย เญย เหยียด ฒู้ง บัวะ ฮ่อง สี่ เก้า ฮลัง ป้าม เกน เญย จ๋าย ไห่ เญย กะน้าย เม่ย เก้ง จ๋าย ไม้ ม่าย หาย หญู่ง เป๊ย ตุ๊</p><p><strong>CHORUS</strong><br>เหฒียบ หฑั่ง จ๋า, เยียม วั้ว หฒุ ไต๋ ปย๊บ (เม่ย) ธ้วด เสย ต้าย เม่ย หฒุ ไต๋ หฒุ กวั่ง ฮนั้ง เปี้ยง เหฑ่วย เยีย ธ้าย ลิ์ว แอ๋ง เฒาะ กวั่ง เม่ย ตี๊ เยีย ไต่ เหว่ย เม่ย ฝุน เยีย…เก้า จ๋าย เจี๋ย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Above all powers, above all kings. Above all nature and all created things. Above all wisdom and all the ways of man. You were here before the world began</p><p><strong>VERSE2</strong><br>Above all kingdoms, above all thrones. Above all wonders the world has ever known. Above all wealth and treasures of the earth. There's no way to measure what You're worth</p><p><strong>CHORUS</strong><br>Crucified. Laid behind the stone. You lived to die, rejected and alone. Like a rose trampled on the ground. You took the fall and thought of me. Above all</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

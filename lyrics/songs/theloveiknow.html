@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Love I Know - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Love I Know - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Love I Know</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>He painted 'I love you' on the bridge. Then watched them burn. She bet all she had upon the love. Now she's holding her cards. And lost her turn. Two hearts in search of wholeness. Both willing to risk it all. Could true love have fled so easily. Leaving both broken from the fall</p><p><strong>SEGMENT2</strong><br>Not the Love i know</p><p><strong>SEGMENT3</strong><br>It knows no boundaries. Keeps no record of wrongs. ..That's the Love I know. It takes the good with the bad. And it fights to stay strong. ..That's the Love I know. This Love always finds a way. To carry on. That's the Love I know</p><p><strong>SEGMENT4</strong><br>He sits all alone. And stares into an empty sky. She goes through all her mixed emotions. Trying to find a reason why. Was their pride to big to swallow. Was their hurt to big to heal. Could they find some understanding. Find forgiveness that's real</p><p><strong>SEGMENT5</strong><br>That's the Love i know</p><p><strong>SEGMENT6</strong><br>It speaks in kindness. Its seeks only what's true. ..That's the Love I know. A love without condition. It looks to renew. ..That's the Love I know. It knows that when hope seems gone. Hope will come through. That's the Love I know</p><p><strong>SEGMENT7</strong><br>The Love I know comes from a holy God to man. Isn't it time that you received it. Are you starting to understand. The Love I know</p><p><strong>SEGMENT8</strong><br>That's the Love I know. It speaks in kindness. It seeks only what's true. ..That's the Love I know. A Love without condition. It looks to renew. ..That's the Love I know. It knows that when hope seems gone. Hope will come through. That's the Love I know</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

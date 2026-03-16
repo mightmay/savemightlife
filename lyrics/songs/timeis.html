@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Time Is... - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Time Is... - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Time Is...</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[It's, it's too short, it's too short]. [I have lots of time]. [They say time waits for no man]. [All the time]. [Waisted time, waisted time]. [Wait a minute]. [This'll just take a little time]. [Time out!]</p><p><strong>SEGMENT2</strong><br>Time is tickin' away, time is tickin'. [Tick tock!]. Time is tickin' away, time is tickin'. Tick, tick, tick, tock, tickin'</p><p><strong>SEGMENT3</strong><br>Here we go again. Straight up rock-n-roll. All that hip hop.. .. is.. Don't forget</p><p><strong>SEGMENT4</strong><br>Let's go. Here we go, everybody. Let's go. Here we go, everybody. Let's go. Here we go, everybody. Let's go, check it out</p><p><strong>SEGMENT5</strong><br>You got a gift and you best start using it. Cause if you don't you're gonna wind up losing it. Just like the brother who buried it deep. The task was simple but the price was steep. We got a mission while we're on this earth. We need to tell people 'bout our second birth. Get busy like a school boy makin' an "A". Cause time my brother is tickin' away</p><p><strong>SEGMENT6</strong><br>Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away</p><p><strong>SEGMENT7</strong><br>Right now is the time that we gotta get with it. The gift that He's given ain't just an exhibit. But a tool that He's given us to use for His sake. And just as He's given He can surely take. The signs of the times are dropping like flies. The cries of the people around us imply. They're lookin' for an answer that we already know. But time is definitely on the go</p><p><strong>SEGMENT8</strong><br>All the money in the world. Can never stop the hands of time. And a wasted day in your life. Is more than a crime</p><p><strong>SEGMENT9</strong><br>Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away</p><p><strong>SEGMENT10</strong><br>Time is tickin' away, time is tickin'. Time is tickin' away, time is tickin'. You got a gift and you best start using it. Cause if you don't you're gonna wind up losing it. Get busy like a school boy makin' an "A". Cause time my brother is tickin' away</p><p><strong>SEGMENT11</strong><br>Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away. Time is tickin' away, tick tick tickin' away</p><p><strong>SEGMENT12</strong><br>Time is tickin', it keeps on tickin'. Time is tickin' away (6x)</p><p><strong>SEGMENT13</strong><br>Whoa, wait a minute..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

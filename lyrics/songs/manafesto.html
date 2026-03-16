@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Manafesto - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Manafesto - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Manafesto</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Intro: Yeah huh what. Alright cool. Yeah huh what alright yeah what what, uh uh. M.A.N.A FESTO, exposing light, and take aim what yeah</p><p><strong>SEGMENT2</strong><br>Another cold night 360 flip swiftly down six hit me, is she busy?. Ill call her after Pass a Snapple, and a camera angle, Ledge vandal cant break my ankles. Im on point, but were running cops are fronting, Wanna stop something you loving, Ill pray about it. Ill maneuvers over sewers with back packs, And curved hat attachments freestyle my stats no accidents, Imagine that no security no Cops!. Visualize ills ciphers every corner block. I never sold rock or bust glock. My walk talks its own, I like to lick tones in your head phones. So whats the purpose to live life to the fullest. I serve Christ so I dont watch for bullets, Just live how I wanna respect heaven spit lava, Street philosopher raised up in Canada</p><p><strong>SEGMENT3</strong><br>Chorus. M.A.N.A FESTO exposing light, and take aim what come on. M.A.N.A FESTO exposing light, and take aim what come on</p><p><strong>SEGMENT4</strong><br>Exposing Light manafesto down town in the metro. Fill my car up with petro, I best go, Im already late, They call me speedy so Im easy on the breaks. Whats up yo, cool man chilling, Im dealing with this girl, yo man shes Illing. I learned to separate the girl from the rhyme, And skate sometimes my mind escapes lock it down to meditate. Concentration its a full occupation thought invasion, Its like my God verses Satan. Excuse me why Im doing this. To influence kids students of all ages all races. Give this rap scene a face lift dive inside my minds matrix. New school Christ Patriot. What I stand for the one they hold the banner for. I came with a board sword plus a stack of metaphors. Chorus</p><p><strong>SEGMENT5</strong><br>Hun yeah what alright cool cool, what yeah huh alright</p><p><strong>SEGMENT6</strong><br>This world almost had me kidnapped me back. Slapped me in the back seat choked me till I cant speak, I get up, and pull my head up develop my style I never swell up from the neck up I rock, Heavy metal to street styles in ghettos my dress code apparel is big on paths narrow, Barely made it out, my mentals a cracked house, I find myself passing out asking God for help.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

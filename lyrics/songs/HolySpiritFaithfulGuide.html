@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Holy Spirit, Faithful Guide - ขอพระวิญญาณโปรดนำทาง - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Holy Spirit, Faithful Guide - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Holy Spirit, Faithful Guide</h2>
+        <h3>ขอพระวิญญาณโปรดนำทาง</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ขอพระวิญญาณโปรดนำทาง  ขอประทับอยู่ใกล้เคียงข้าง ขอจูงข้าฯให้มีใจกล้า  เมื่อสัญจรเร่ร่อนไปมา   ใจเบื่อหน่ายกลายเป็นเบิกบาน  เมื่อได้ยินดำรัสอ่อนหวาน "เชิญมาเถิด จงตามเรามา เราจะพากลับบ้านเมืองฟ้า"</p><p><strong>VERSE2</strong><br>ทรงอยู่ใกล้เป็นเหมือนเพื่อนตาย  ทรงช่วยให้พ้นจากมารร้าย เมื่อเกิดกลัวหรือใจสงสัย  ทรงช่วยให้เกิดความแน่ใจ   คราวทุกข์โศกจิตใจมืดมัว ใจท้อถอยหมดหวังและกลัว ตรัสเบาๆ ว่า"เราอยู่ด้วย  เราช่วยพากลับบ้านเมืองฟ้า"</p><p><strong>VERSE3</strong><br>ความลำบากหมดแล้วเมื่อตาย เราก็มีที่พักสบาย ในหนังสือทะเบียนเมืองแก้ว  องค์พระคริสต์จดชื่อข้าฯแล้ว   ในโลกนี้ไม่มีอะไร เว้นแต่โลหิตพระผู้ไถ่ ตรัสเบาๆ ว่า "ตามเรามา เราจะพากลับบ้านเมืองฟ้า."</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Holy Spirit , Faithful Guide, Ever near the Christian's side. Gently lead us by the hand, Pilgrims in a desert land; Weary souls fore'er rejoice,  While they hear that sweetest voice, Whispring softly, Wand'rer,come! Follow me,I'll guide thee home.</p><p><strong>VERSE2</strong><br>Ever present, truest friend,  Ever near thine aid to lend, Leave us not to doubt and fear, Groping on in darkness drear;  When the storms are raging sore,  Hearts grow faint, and hopes give o'er, Whisper softly, Wand'rer, come! Follow me, I'll guide thee home</p><p><strong>VERSE3</strong><br>When our days of toil shall cease,  Waiting still for sweet release, Nothing left but heav'n and prayer,   Wond'ring if our names were there  Wading deep the dismal flood,   Pleading naught but Jesus' blood, Whisper softly, Wand'rer, come!  Follow me, I'll guide thee home.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

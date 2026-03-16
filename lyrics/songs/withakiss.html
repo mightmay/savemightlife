@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for With a Kiss - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>With a Kiss - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>With a Kiss</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>It's awfully quiet at the table tonight. In fact, it seems hard for you to look me straight in my eyes. Is there something wrong? Do you have someplace to go? Or can you tell - that I already know!. You have been with me it seems for quite some time. Though you call me Lord of Hosts, you still have so much to hide. And this is our last dinner, and you still want say. You're sorry or you'll regret the crime, that you're about to commit.</p><p><strong>SEGMENT2</strong><br>chorus. Yes i know, Why you would tell me that you love me. And i know, Why you would stay with me for so long. You got close to my heart so you could break it. And then you made a way, Close enough to my face. To betray me with a kiss.</p><p><strong>SEGMENT3</strong><br>. My Father told me there'd be men like you. Who would wine and dine, spend most of all the time, Tyring to confuse. I'm humble and Im meek. Doesn't mean that I'm helpless, or I'm weak. But a foolish men believes that, that he can walk right over Me.</p><p><strong>SEGMENT4</strong><br>chorus. Yes i know, Why you would tell me that you love me. And i know, Why you would stay with me for so long. You got close to my heart so you could break it. And then you made a way, Close enough to my face. To betray me with a...</p><p><strong>SEGMENT5</strong><br>Judas, you must start to know. Just who I am. Royality, you should not mess with me.</p><p><strong>SEGMENT6</strong><br>chorus. Yes i know, Why you would tell me that you love me. And i know, Why you would stay with me for so long. You got close to my heart so you could break it. And then you made a way, Close enough to my face. To betray me with a kiss.</p><p><strong>SEGMENT7</strong><br>Betrayed me with a kiss.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Through it all - พระองค์ทรงอยู่ในชีวิตฉัน - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Through it all - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Through it all</h2>
+        <h3>พระองค์ทรงอยู่ในชีวิตฉัน</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระองค์ทรงอยู่ในชีวิตฉัน ทรงเฝ้ามองอยู่ทุกเวลา พระหัตถ์พระองค์ล้อมชีวา</p><p><strong>VERSE1-2</strong><br>นำฉันให้อยู่ในความชอบธรรม และฉันจึงจับตา รอคอยพระศิลา</p><p><strong>CHORUS</strong><br>จะร้องเพลงสรรเสริญ เพราะรักพระองค์ เพราะความรักพระองค์มั่นคง</p><p><strong>CHORUS-2</strong><br>ประคองฉันให้อยู่ในอ้อมแขนนิรันดร์ ไม่เคยทอดทิ้งฉันไป ไม่ว่าอย่างไร</p><p><strong>OUTRO</strong><br>ฮาเลลูยา ฮาเลลูยา ฮาเลลูยา ฮาเลลูยา</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>You are forever in my life. You see me through the seasons. Cover me with Your hand.</p><p><strong>VERSE1-2</strong><br>And lead me in Your righteousness. And I look to You. And I wait on You.</p><p><strong>CHORUS</strong><br>I will sing to You, Lord. A hymn of love. For Your faithfulness to me.</p><p><strong>CHORUS-2</strong><br>I'm carried in everlasting arms. You'll never let me go. Through it all.</p><p><strong>OUTRO</strong><br>Hallelujah, hallelujah</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p><strong>VERSE1</strong><br>G D/F# Esus C9 D G D/F# Esus C9 D Bm C9 Bm C9 D</p><p><strong>CHORUS</strong><br>G C9 D Emsus C9 D G C9 D/F# G C9 D</p><p><strong>OUTRO</strong><br>G  D Em C9</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

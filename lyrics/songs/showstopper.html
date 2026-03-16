@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Show Stopper - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Show Stopper - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Show Stopper</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Yeah, He's in the buildin'. The Greatest Entertainer on earth, y'all ready</p><p><strong>SEGMENT2</strong><br>Jesus You're the star of the show. Eh yo, eh eh eh, eh eh eh. Yeah, eh, eh eh, eh yo. Jesus You're the star of the show</p><p><strong>SEGMENT3</strong><br>The arena is jammed, man. Packed with a sea of fans. Everybody wanna get a glimpse. They wanna see the man</p><p><strong>SEGMENT4</strong><br>I ain't talkin' 'bout the king of pop. I'm talkin' 'bout the King of Kings. He 'bout to show us somethin'. Something we ain't never seen</p><p><strong>SEGMENT5</strong><br>I'm in his Entourage, I ain't talkin' HBO. I'm talkin' real life, I follow everywhere He go. I'm taking megastar, yep, there's nobody hotter. His name is Jesus Christ, He's the show stopper</p><p><strong>SEGMENT6</strong><br>Ey oh, the crowd is gettin' out of control. Turn these lights up and let's go. On my intro give me something Pyro. Eh, eh, eh, eh</p><p><strong>SEGMENT7</strong><br>Ey oh, the speakers are 'bout to blow. Let's get this party started, let's go. I can hear the praise from way back stage. It's like a parade, you already know. Jesus is the star of the show</p><p><strong>SEGMENT8</strong><br>Jesus You're the star, Jesus You're the star. Jesus You're the star of the show. Jesus You're the star, Jesus You're the star. Jesus You're the star of the show</p><p><strong>SEGMENT9</strong><br>I'm just a roadie, man, I carry His word. I do His sound checks, make sure His voice is heard. I throw His name around, they put me in the VIP. And when I drive His car around, everybody wanna roll with me</p><p><strong>SEGMENT10</strong><br>He's the greatest entertainer that ever hit the stage. I'm rehearsin' all His moves wanna be like Him one day. He's waitin' backstage, waitin' for the right time. When He's comes in the room, He's gonna blow your mind</p><p><strong>SEGMENT11</strong><br>Ey oh, the crowd is gettin' out of control. Turn these lights up and let's go. On my intro give me something Pyro. Eh, eh, eh, eh</p><p><strong>SEGMENT12</strong><br>The speakers are 'bout to blow. Lets get this party started let's go. I can hear the praise from way backstage. It's like a parade, you already know. Jesus is the star of the show</p><p><strong>SEGMENT13</strong><br>Let's set this atmosphere. Before He appears, oh yeah</p><p><strong>SEGMENT14</strong><br>Jesus You're the star, Jesus You're the star. Jesus You're the star of the show. Jesus You're the star, Jesus You're the star. Jesus You're the star of the show</p><p><strong>SEGMENT15</strong><br>Ey oh, the crowd is gettin' out of control. Turn this light up and let's go. On my intro give me something Pyro. Eh, eh, eh, eh</p><p><strong>SEGMENT16</strong><br>The speakers are 'bout to blow. Let's get this party started, let's go. I can the praise from way backstage. It's like a parade, you already know. Jesus is the star of the show.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jesus Is Just Alright - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jesus Is Just Alright - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jesus Is Just Alright</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Do do do dupe dupe. Do do do dupe. Do do do dupe dupem dupe dopem do. [Check it for me one time]. [Ohhhh, yeah yeah]</p><p><strong>SEGMENT2</strong><br>(chorus). Jesus is still alright with me. Jesus is still alright, oh yeah. Jesus is still alright with me. Jesus is still alright</p><p><strong>SEGMENT3</strong><br>Toby Mac, and the Mac is back no slack. On a DC track that's jacked, beyond comprehension. I believe that I failed to mention that. There's a lack of recognition. When it comes to His position. Cause if Christ can't be crossed over, Then I'll keep my beat up nova</p><p><strong>SEGMENT4</strong><br>(repeat chorus 1)</p><p><strong>SEGMENT5</strong><br>(chorus 2). I don't care what they may say. I don't care what they may do. I don't care what they may say. Jesus is still alright</p><p><strong>SEGMENT6</strong><br>Back in place, and I'm all up in your face. With a rhyme that I embrace, like a mother to her child. I'm kickin' it Jesus style. To the ones that think they heard. I did use the "J" word. Cause I ain't too soft to say it. Even if DJ's don't play it</p><p><strong>SEGMENT7</strong><br>do do do dupe dupem dupe dopem do (3x). Jesus is still alright. [Oh, I'm hopin' and I'm praying]</p><p><strong>SEGMENT8</strong><br>Jesus is still alright. Jesus still alright, oh yeah. Jesus is still alright. Jesus is still alright. [oh yeah]</p><p><strong>SEGMENT9</strong><br>(breakdown). Jesus is alright, I know He's alright. Jesus is alright, you know He's alright. Jesus is alright, we know He's alright. Jesus is alright, we know He's alright</p><p><strong>SEGMENT10</strong><br>[Now we come to the pay off]</p><p><strong>SEGMENT11</strong><br>I'm down with the one that is known as the Son. Of the G to the O to the D never done. With the flow, in the know, on the go like a pro. Not for show cause I ain't in the biz for the dough. Or the me, or the ray, all the dough's gotta stay, Cause I can't, no I can't, take it home anyway. Never trite when I write cause the Lord is my light. And His Word is my bond so ya know, He's alright</p><p><strong>SEGMENT12</strong><br>(repeat choruses 1 and 2)</p><p><strong>SEGMENT13</strong><br>[think about it..]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

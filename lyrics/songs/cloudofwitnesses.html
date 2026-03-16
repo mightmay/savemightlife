@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Cloud Of Witnesses - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Cloud Of Witnesses - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Cloud Of Witnesses</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We watched them runnin' down the aisles, Children's time, Sunday morning. The preacher asked them who they loved, They all smiled and started pointing to their mom, Their dad, The teacher from their kindergarten class;. And each and every one. Had just come from</p><p><strong>SEGMENT2</strong><br>A cloud of witnesses. That would see them through the years. Cheer them with a smile. And pray them through the tears. A cloud of witnesses that would see them to the end, And shower them with love that never ends. A cloud of witnesses.</p><p><strong>SEGMENT3</strong><br>They stuck together through the years, The best of friends faith could foster. So when they found out one of them. Had heard the news. He'd lost his father, They ran to him. And prayed and put their hands upon his head, And slowly one by one. They'd all become</p><p><strong>SEGMENT4</strong><br>A cloud of witnesses. As they sent above a prayer. They took a hold of hands and. circled 'round a friend. A cloud of witnesses with a faith just like a rock, They helped him give his father back to God. As a cloud of witnesses</p><p><strong>SEGMENT5</strong><br>So when it comes the time. That heaven calls. They'll come running to see the. ones who've gone before, And made the journey home to find. waiting for them at the finish line, Cheerin happily they will run. and they will see</p><p><strong>SEGMENT6</strong><br>A could of witnesses. Lined up on a street of gold. As they run the final mile. That leads them to a throne. And through the cloud of witnesses. They see God upon the throne. And as they fall into His arms, They know they're home in. A cloud of witnesses, Surrounded by a could of witnesses.</p><p><strong>SEGMENT7</strong><br>We watched them runnin down the aisles. Children's time. Sunday morning.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

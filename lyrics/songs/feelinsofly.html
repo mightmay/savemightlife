@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Feelin' So Fly - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Feelin' So Fly - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Feelin' So Fly</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You got me feeling so fly. There ain't a day that goes by. A supernatural high. Oh my goodness - people I can't deny. You got me feeling so fly</p><p><strong>SEGMENT2</strong><br>Uh oh, here we go again. Talking 'bout that thing that so genuine. Uh huh, gonna make it known. So a freak like me get his cover blown. Can't help but glorify my Adonai. Gotta testify. Uh oh, here we go again. Talking 'bout His love, so genuine</p><p><strong>SEGMENT3</strong><br>This ain't no fire drill. It hits like Holyfield. Break out your freak appeal. You think you know the deal. I'm gonna show you what's for real</p><p><strong>SEGMENT4</strong><br>There ain't a day that goes by. That I'm not singing Your praise. There ain't a day that goes by. That I'm not lifting your name. A supernatural high. Your love is simply insane. You got me feeling so fly</p><p><strong>SEGMENT5</strong><br>So fly when it's You and I. And the way we hanging in the morning time. And it's so dope I can barely cope. When you make my joy go and overflow. I can't help but glorify my Adonai. It's so fly that it's blowing minds. So fly that they can't deny</p><p><strong>SEGMENT6</strong><br>There ain't a day that goes by. That I'm not singing Your praise. There ain't a day that goes by. That I'm not completely amazed. A supernatural high. Your love is simply insane. You got me feeling so fly</p><p><strong>SEGMENT7</strong><br>Knock, knock. Who's there?. Well it's me, TMac. Feeling fly as a kangol hat. Insecticides can't steal this shine 'cuz. The fly I feel is straight divine.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

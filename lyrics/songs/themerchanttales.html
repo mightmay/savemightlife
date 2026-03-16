@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Merchant Tales - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Merchant Tales - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Merchant Tales</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Theres something that Ive been dying to tell you. For a death in me is a death in you. Absorbed in the thought of doing my best. Everyone takes a staggering pleasure in proving their falseness.</p><p><strong>SEGMENT2</strong><br>You are the air I breath, you are the steps I take, you are the words I speak, you are the life in me.</p><p><strong>SEGMENT3</strong><br>Lets see Your mission for I am a warrior. Can I walk the plank and still hold composure. Sinking down to the ocean deep. Im moving forward, but Ive failed to see. Sinking down to the ocean deep. Im moving forward, but Ive failed to see.</p><p><strong>SEGMENT4</strong><br>I will not break, my feet are planted firmly on the ground. Take a look at me, its who I am. You try to change it, but youre pounding the sand. Close your eyes, let the light surround you. Dont look back, for youre now on your way. Close your eyes, let the light surround you. Dont look back, for youre now on your way.</p><p><strong>SEGMENT5</strong><br>Well light the match and burn this place to the ground. All misconceptions will be gone without a sound. Oh God the end is near before the time runs out. Lets save these hearts and minds, for soon You will come down. Ill be the filament and Youll be the fire. Youll be the truth, and Ill be the liar. Ill be the filament and Youll be the fire. Youll be the truth, and Ill be the liar.</p><p><strong>SEGMENT6</strong><br>Ill be the filament and Youll be the fire. Ill be the filament and Youll be the fire. Ill be the filament and Youll be the fire..</p><p><strong>SEGMENT7</strong><br>This place is burning down. This place is burning down. Oh, this place is burning down. Oh, this place is burning down. Oh..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

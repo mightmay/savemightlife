@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Breathe Babylon - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Breathe Babylon - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Breathe Babylon</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Babylon, Breathe Babylon 8x. I see you people babel on and on and on. Graven images, golden idols and false icons. I'm seeking wisdom like Solomon. but my antenae keeps on picking up evil transmissions at headquarters. I recieve my mission, blow up the ruler of the air. (Eph. 2:2) Like nuclear fission. so I analyze my weapons. laser guided rifles that shoot spiritual wisdom. I think I see my enemy warriors. fragile heathens tryin' to run stuff like mayors. So with brotha's that snuff punks. I set up time bombs to destroy the strongholds..of Babylon. Babylon, breath Babylon 8x. We be tribes under grace, a righteous minority decadent culture. make you forget your spirital priority. Back down by the movement, soldier who will serve ya. Open to be used by God, destroy you like Medo-Persia jewel of all kingdoms, live evil, purified hurrah take you down. Don't look back, overthrown you like Sodam & Gomarra. Strong arm of the law, guilty of all crimes. I be like that great prophet Isaiah, predict your fall over 150 times. Got rhymes that you could never use for the purpose you be using. I'll dance over your fields, present day Iraq still lies in ruins. Lies, schemes, backstab persuasions bumrushed, get crushed by us, this rescue invasion. Babylon, breath Babylon 8x. Look to the sky, heed the warning, the shadow is coming, the shadow is coming 8x. The plagues are coming, the plagues are coming, I feel the breath of the dead beast 4x. Misled bureaucracy, full of hipocracy, I gotta steel pulse, looking for a true democracy destruction, now your walls have fallen. Just sitting here, waiting for the train to Zion. "DIRT" representing "SHADOW OF LOCUSTS". Sit down in the dust Babylon without a throne to call your own (Is. 47:1). The city has fallen, she has fallen. Golden images of it's gods lie shattered on the ground. Babylon, breathe Babylon 8x.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

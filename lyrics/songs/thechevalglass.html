@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Cheval Glass - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Cheval Glass - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Cheval Glass</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Turn the cheval glass and find, corruption under my skin, and mine. You're so far from safety, put your fingers to your eyes. And steal yourself away</p><p><strong>SEGMENT2</strong><br>Repetition. Repetition. It will not be satisfied. It will not be satisfied. You can not accomplish this. You can not be satisfied</p><p><strong>SEGMENT3</strong><br>The worst isn't ever the curse of the cleverest lines. Sang the song of never, never believed that you meant it this time</p><p><strong>SEGMENT4</strong><br>It's time to back all your big words, so come on now, come on now. But you're all lipstick and cheap skirts, you're the shining light until it hurts. Tonight, I'll make this bleed light up the sky with my misdeeds. Cause I hate I hate I hate this, I hate this. I fell from the first time</p><p><strong>SEGMENT5</strong><br>Fall was upon us with all the leaves turning, you were so sure of yourself. You were asking me questions of us getting older. You hardly could catch your breath (I wanted anything else). And I've asked, for the after remorse (To stay). And still these hands, but it never takes, never takes. Old habits are so hard to break. So you fall, and circle through your life, that can't be seen. Avoid the brilliant lights that find you. Because when they do, you know you'll have to</p><p><strong>SEGMENT6</strong><br>It's time to back all your big words, so come on now, come on now. But you're all lipstick and cheap skirts, you're the shining light until it hurts. Tonight, I'll make this bleed light up the sky with my misdeeds. Cause I hate I hate I hate this, I hate this. I fell from the first time</p><p><strong>SEGMENT7</strong><br>There's not enough wisdom or perception. Judge this now, take back your life. You are dying and the time you spent was wasted. On all the sick dreams of the lie (the lie, the lie). Pull yourself out, made yourself in your own image. The praise you gave thousands of time. Lifted yourself up to the sky (the sky). Bow before all that you've done. The sky, the sky, bow before all that you've done</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

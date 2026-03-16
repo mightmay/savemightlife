@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Stories (Down To The Bottom) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Stories (Down To The Bottom) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Stories (Down To The Bottom)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We've been down to the bottom. Stories we got 'em, when we hit rock bottom. If you been there put your hands in the air. To let the lost know that someone cares. Cause we've been down to the bottom. Stories we've got 'em, when we hit rock bottom. If you been there put your hands in the air. And let somebody know that the Most High cares</p><p><strong>SEGMENT2</strong><br>I never knew that it would feel like this. When the two that raised you up and call it quits. Nobody told me 'bout the emptiness. When the place you call home is closed for business. I push the pain down, I gotta "get by". Always knowin' in my heart that it aint gonna fly. Rock bottom's never felt so near before. And if pain is God's megaphone it's loud and clear. So hold me now father, human love ain't enough. I've failed and been failed by the people I love. But your faithful arms they surround me. And any other soul who has to sail those seas. Of a broken family</p><p><strong>SEGMENT3</strong><br>Been so many times that I've been close to rock bottom. Tryin' to look for answers but nobody's got 'em. Like the time my mother looked me in the eye. Tryin' not to cry, tellin' me the cancer might cause her to die. How can this be, I thought that God loved me?. So why would he try to take my mother from me?. And as I cry myself to sleep at night, holding on my pillow tight. He spoke to me and said that everything gonna be alright. So I tried to fight all the pain that it caused. Try to move on and I try to stay strong. So put your hands up, hey, if y'all are feelin' me. And put your hands up for everyone to see. So put your hands up, we all a family. So put your hands up, in unity, in unity</p><p><strong>SEGMENT4</strong><br>I've been there too. When everything falls apart and the best you can do is. Get through each day wonderin' will this never end?. Is it always going to be this way?. And the greatest lie you've ever been told is that. You're the only one to ever walk on this road. And that you'll never see the light of dawn, so we came together to say. Hold on. Cause we've been there and found our way home. I promise you that you're not on your own. One day this will pass, God will see us all through. God will see us all through, God will see us all pass through</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

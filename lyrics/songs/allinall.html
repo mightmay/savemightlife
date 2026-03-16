@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for All In All - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>All In All - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>All In All</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Standing on top of the edge it feels like it's going down. Everything stays in my mind feeling in a daze on the ground. Feels like it's gonna give life's to hard to live anymore. I think I've had enough things too tough. I'm out the door</p><p><strong>SEGMENT2</strong><br>All in all it's just another day now. You're falling down. What you gonna do. Standing on top of the world tonight. No ones looking back at you</p><p><strong>SEGMENT3</strong><br>Stand tall. It's going on. It's going on. It's gonna be just fine. You're holding on. Holding on today</p><p><strong>SEGMENT4</strong><br>Things don't stop and the others announced they're moving on. Salt & tears in the minds in the mouths of a bad decision. Too late for another mistake it's bringing me down. With all your faults it isn't your fault. What's going on</p><p><strong>SEGMENT5</strong><br>All in all it's just another day now. You're falling down. What you gonna do. Standing on top of the world tonight. No ones looking back at you</p><p><strong>SEGMENT6</strong><br>Stand tall. It's going on. It's going on. It's gonna be just fine. You're holding on. Holding on today</p><p><strong>SEGMENT7</strong><br>So you lost yourself. So you lost your way. Found life through someone else. But you threw it all away</p><p><strong>SEGMENT8</strong><br>All in all it's just another day now. You're falling down. What you gonna do. Standing on top of the world tonight. No ones looking back at you</p><p><strong>SEGMENT9</strong><br>Stand tall. It's going on. It's going on. It's gonna be just fine. You're holding on. Holding on today</p><p><strong>SEGMENT10</strong><br>Times rolling on. Rolling on today. It's going on. Going on today</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

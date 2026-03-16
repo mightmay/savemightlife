@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Do Not - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Do Not - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Do Not</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>do not tell me what i can and cannot do when i rock. (wait, hold up, this is my favorite part). do not tell me what i can and cannot do when i rock. do not tell me what i can and cannot do when i rock</p><p><strong>SEGMENT2</strong><br>(you know what man? you pay five bucks to come in here. to just stand in the back and act like youre too "hard" to. enjoy yourself! Well actually I didn't have to pay)</p><p><strong>SEGMENT3</strong><br>to each his own correctin don't select my flavor. while see them in the back critiquin' my behavior now. tryin' to take creation and me to fit his mold. he yelled out sellout but maybe he wasn't told. so let me tell this shallow mind why we do what we do. I create for the creator but not to impress you ok. I'll challenge your thinkin' but not to test you. you might not like me, I'll still say "God bless you". and this trust issue, it's all love n' respect</p><p><strong>SEGMENT4</strong><br>and honestly bro I don't think that 's too much to expect. but too many times your shallow mind will keep you caught. you can't escape your thinkin' all you've ever been taught. is that you walk this way. you talk this way. you front this way. you pose this way. you react this way. na, na that ain't me. I got to be who God created me to be</p><p><strong>SEGMENT5</strong><br>semichorus:do not tell me what I can and cannot do when I rock</p><p><strong>SEGMENT6</strong><br>why is it as humans we cling on to only what we know. never expanding and stepping out our comfort zone (uhhh). we walk alone and then roam in ignorance. they turn back around and use it as a defense. for shallowness this seems to be a concern. cuz not knowin' is an excuse for those who willin' to learn</p><p><strong>SEGMENT7</strong><br>Alright I need all people in the front to the back, the back to the front, Lets get down, we gon do it like this</p><p><strong>SEGMENT8</strong><br>chorus: do not tell me what I can and cannot do when I rock. original material my crew nonstop. we're keepin' it fly we'll turn it out. ya'll feelin' some of that? no doubt!</p><p><strong>SEGMENT9</strong><br>do not stereotype the individual. cuz what you hear in your stereo is not the typical. stereoypes get broken now when I'm provokin'. new levels of thought so leave the shallow minds open. cats approachin' me without no lack or no clue. I understand though bro, see someone's been training you. to think like you think and act like you do. its' getting old not like it should have ever been new. but as long as shallowness exists I shall assist. to rip apart the whole structure and expose the nucleus. shallowness exists I shall persist to rip. apart the whole structure and expose it for what it is</p><p><strong>SEGMENT10</strong><br>lack of understanding lack of communication. lack of a desire for expanding education. lack of inspiration lack of innovation. the fact you can't respect another mans creation. lack of motiviation lack of restoration. the fact we lack unity and enjoy separation. lack of destination because you know what I feel. I feel that humans lack the ability to be real. yes yes yessss yesssss yessss yesssss!!!!. (chorus 'till fade)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

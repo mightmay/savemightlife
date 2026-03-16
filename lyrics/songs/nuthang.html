@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Nu Thang - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Nu Thang - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Nu Thang</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>(intro). Ya know He's doin' it. God is doin' a nu thang. Ya know He's doin' it. God is doin' a nu thang. Ya know He's doin' it. God is doin' a nu thang. Ya know He's doin' it. God is doin' a nu thang</p><p><strong>SEGMENT2</strong><br>My God is doin' a brand nu thang. But, since time began, He remains the same. Faithful, forever to His word. And solid, a cornerstone unstirred. But, look down through the ages and you will find. God doesn't change, but He knows the time. From harp to piano, and song to rap. Ya know, God's wit us, so we can not lack and so</p><p><strong>SEGMENT3</strong><br>(chorus). God is doin' a nu thang. In our lives so.. We're doin' a nu thang. Through Jesus Christ. God is doin' a nu thang. Through our music. We're doin' a nu thang. So He can use it</p><p><strong>SEGMENT4</strong><br>God's usin' this music and we're comin' strong. DC Talkin', often singin' a song. To make ya think twice 'bout the way thatcha live. And, let ya know Christ is the one that'll give. Peace in ya heart, a nu start. Call on the Lord, and he'll do His part. A brand nu thang to ya raggedy walk. He might just match it up to that big ol' talk</p><p><strong>SEGMENT5</strong><br>(repeat chorus)</p><p><strong>SEGMENT6</strong><br>(bridge-repeat intro)</p><p><strong>SEGMENT7</strong><br>Like an MC, I'm here to boast. I rap about Christ, yo here's a dose. So loud and proud of the God I serve. Try to say He ain't wit it..huh, ya got nerve. Christ is the reason for dc Talk. He's the focus of our daily walk, y'all. Without him, we ain't nothin' but names. But through God, we're doin' brand nu thangs</p><p><strong>SEGMENT8</strong><br>(repeat chorus)</p><p><strong>SEGMENT9</strong><br>God is doin' a nu thang. We're doin' a nu thang [5x]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

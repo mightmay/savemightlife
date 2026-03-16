@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bullet to Binary (pt. two) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bullet to Binary (pt. two) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bullet to Binary (pt. two)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>let us die, let us die!. in dying we reply. and lower our baskets down. into the open bed. of the fruit truck passing by. and we can smile at each other again. me and my cantelope friend. cast our cares at the couple of pears. put a blueberry garland on an apple bed. the apple threw our half baked fears. like a wooden shoe in the windmill gear. the turning stopped and we clearly saw. the flaws in that which finds the flaw. the strawberry said to the tangerine. "my face is red but our hats are green". be it orchard or a curling vine. the son of yours is the Son that's my. God.. ..</p><p><strong>SEGMENT2</strong><br>lettuce grows, lettuce grows. in neatly sectioned beds and rows. but one day asked the gardener. to be moved to where the eggplant goes. "reason being, i must confess. i adore her shining purple dress". as the eggplant listened in. she wasn't offended but she wasn't impressed. the potato called from underground. "you've got it all turned upside down!. does the rain that sent each spring anew. to fall on her not fall on you?. you project on her your inward scene. she's a blank external movie screen. but the One who looks out from your eyes. looks through hers and looks through mine</p><p><strong>SEGMENT3</strong><br>we all well know. we're gonna reap what we sow. we all well know. we're all gonna reap what we sow. so may we old fashionably suggest. the unmarried not undress. we well know. we're gonna reap what we sow. we all well know. we're gonna reap what we so. we all well know. what kind of crops are gonna grow. from each time you disrespect your parents. you better hope we don't hear it. we who know. you're gonna reap what you sow. we all well know. we're gonna reap what we sow. but grace, we all know. can take the place of all we owe. so why not, let's forgive everyone everywhere everything. all the time everyone everywhere everything</p><p><strong>SEGMENT4</strong><br>all the time everyone everywhere everything</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

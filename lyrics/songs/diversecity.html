@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Diverse City - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Diverse City - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Diverse City</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>They call us Diverse City, were colorful good. Its like a freak show in your neighborhood. So, if you wanna praise you can come on down. Cause this freak shows leaving the ground</p><p><strong>SEGMENT2</strong><br>Up, up and away, baby we dont play, maybe you thought you was done for the day. He said, she said, I said this, that you cant get away from your moment of bliss. Stirring, well lure you in and well make room for the shade of skin. Short ones, tall ones, skinny ones, bigger, love is the gun and we pullin that trigger. So you send me and Ill send you hope in the form of a new tattoo. Mine is the shiny city on a hill and yours, of course, is the colors that fill it. Well take you high, well take you higher</p><p><strong>SEGMENT3</strong><br>Now come to the city where you can praise. If youre black, if youre white, if youre yellow or grey. In the morning, in the night, anytime of day. Whats that place  Diverse City. With curls in your hair and braids on the side. Straight shakeem loose, just come on and ride. Were a body with parts, like you and me. Together we make diversity</p><p><strong>SEGMENT4</strong><br>Welcome to Diverse City, were colorful good. Its like a freak show in your neighborhood. So, if you wanna praise you can come on down. Cause this freak shows leaving the ground</p><p><strong>SEGMENT5</strong><br>Said were Diverse City, were colorful goods. Its just a state of mind, we gonna shine the way that we should, baby. So, if you wanna praise you can come on down. Cause this freak shows leaving the ground</p><p><strong>SEGMENT6</strong><br>You bring the heart, Ill bring the soul. Ill bring the flag, you bring the pole. Well fly it high so the whole world knows. The dream of a king bout to unfold</p><p><strong>SEGMENT7</strong><br>We bout to do this thing for real. Diverse City got mass appeal. So put your hand in the hand of mine. And well spread this love like dandelions.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

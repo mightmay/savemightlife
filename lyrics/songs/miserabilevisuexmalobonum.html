@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Miserabile Visu (Ex Malo Bonum) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Miserabile Visu (Ex Malo Bonum) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Miserabile Visu (Ex Malo Bonum)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>A red priest broke into our classroom. Caught us children by attention. "Listen closely to the words I speak. Lord knows if we'll ever, ever again meet"</p><p><strong>SEGMENT2</strong><br>Spoke such words never spoken before. On the way he declared there were. Miracles like you've never seen. From a man who was raised up in the sea</p><p><strong>SEGMENT3</strong><br>A man is coming in thirteen-one. To charm the daughters and the sons. Scared for our lives, I turned to your hand. Hold this tight while we run, if we still can</p><p><strong>SEGMENT4</strong><br>What disasters may come. Whatever it may be. At the end of the age. It will land you and me. What tragedy may bring. Whatever may fall. The end of the world. You'll still belong</p><p><strong>SEGMENT5</strong><br>Before the red priest took his last breath. He told me, "Child, now don't forget. The sun will turn dark very soon. Your days are numbered when there's blood on the moon</p><p><strong>SEGMENT6</strong><br>"The earth will shake and the sky will fall. The eyes will open of those involved. Don't take this son, but you'll be killed. By the man from seven hills"</p><p><strong>SEGMENT7</strong><br>A man is coming in thirteen-one. To charm the daughters and the sons. Scared for our lives, I turned to your hand. Hold this tight while we run, if we still can</p><p><strong>SEGMENT8</strong><br>What disasters may come. Whatever it may be. At the end of the age. It will land you and me. What tragedy may bring. Whatever may fall. At the end of the world. You'll still belong</p><p><strong>SEGMENT9</strong><br>Look children to the eastern sky. When you hear the voice say your last goodbyes. Look there to the eastern skies. When the ghosts take hold of the men who died. Look children to the eastern sky. When your fathers weep and your mothers cry. Look children to the eastern sky</p><p><strong>SEGMENT10</strong><br>What disasters may come. Whatever it may be. At the end of the age. It will land you and me. What tragedy may bring. Whatever may fall. At the end of the world. You'll still belong</p><p><strong>SEGMENT11</strong><br>Look children to the eastern sky. When you hear the voice say your last goodbyes. Look there to the eastern skies. When the ghosts take hold of the men who died. Look children to the eastern sky. When your fathers weep and your mothers cry. Look children to the eastern sky. Look children to the eastern sky.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

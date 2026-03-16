@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for While Shepherds Watched Their Flocks - เมื่อพวกเลี้ยงแกะเฝ้าแกะกลางคืน - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>While Shepherds Watched Their Flocks - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>While Shepherds Watched Their Flocks</h2>
+        <h3>เมื่อพวกเลี้ยงแกะเฝ้าแกะกลางคืน</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เมื่อพวกเลี้ยงแกะเฝ้าแกะกลางคืน นั่งอยู่พื้นดินกลางนา มีทูตสวรรค์องค์หนึ่งลงมา มีแสงประจักษ์กับตา มีแสงประจักษ์กับตา</p><p><strong>VERSE2</strong><br>พวกเลี้ยงแกะนั้นตกใจนักหนา แต่ทูตนั้นว่าอย่ากลัว เพราะเรานำข่าวดีมาประกาศ ชาวโลกชื่นใจยินดี ชาวโลกชื่นใจยินดี</p><p><strong>VERSE3</strong><br>เหตุว่าวันนี้ที่เมืองดาวิด พระคริสต์ผู้ไถ่ประสูติ  ทรงรับร่างกายอย่างคนทั่วไป ในรางหญ้าผ้าพันกาย ในรางหญ้าผ้าพันกาย</p><p><strong>VERSE4</strong><br>เมื่อทูตองค์นั้นเสร็จการบรรยาย มีชาวสวรรค์มากมาย ปรากฏแก่พวกเลี้ยงแกะทั้งหลาย ร้องเพลงสรรเสริญพระเจ้า  ร้องเพลงสรรเสริญพระเจ้า</p><p><strong>VERSE5</strong><br>รัศมีจงมีแด่พระเป็นเจ้า  ความสุขมีแก่เหล่าชน  บนแผ่นดินโลกเกษมสำราญ อยู่ตลอดนิรันดร์กาล  อยู่ตลอดนิรันดร์กาล.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>While shepherds watched their flocks by night, All seated on the ground;  The angel of the Lord came down, And glory shone around, And glory shone around.</p><p><strong>VERSE2</strong><br>Fear not!  said he, for mighty dread Had seized their troubled mind.   Glad tidings of great joy I bring To all of humankind, to all of humankind.</p><p><strong>VERSE3</strong><br>To you, in David's town, this day Is born of David's line   A Savior, who is Christ the Lord, And this shall be the sign, and this shall be the sign:</p><p><strong>VERSE4</strong><br>Thus spake the seraph and forthwith Appeared a shining throng Of angels praising God on high, Who thus addressed their song, Who thus addressed their song</p><p><strong>VERSE5</strong><br>All glory be to God on high, And to the earth be peace;   Good will henceforth from heaven to earth Begin and never cease, Begin and never cease!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bethlehemian Rhapsody - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bethlehemian Rhapsody - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bethlehemian Rhapsody</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Is this a real guy?  Is he just fantasy?. 'Cause of his grand size, no one's safe from fatality. Open your eyes, look up at Goliath, and see: GOLIATH. Im dressed for war, boys.  I need no infantry. Because I'll meet the one you propose. Israelites, pick my foe. Anyway, I'll win, so it doesnt really matter to me. DAVID. Mama, there's still no man who can come against this threat. You might figure now we're dead. Mama, Goliath is testing us. And know he's gonna know we're all afraid. Mama, ooh ooh ooh, he's a mean and crazy guy. He'll come right back again this time tomorrow. Scaring us, scaring us cause he wants to meet in battle. Hooray! My time has come. Been a shepherd all my life but I'm taking on this giant. Goodbye, everybody but not for long. God will lead me all the while I face this brute. C'mon! Ooh ooh ooh!. (David youre a wimp though). I'm not gonna die. The One who wins my battles is Lord of all. GOLIATH. I see a little silly shepherd not a man. What are you tryin' to prove?. Youll be chewed up and mangled!. Send a boy to fight me?. Very, very tiny flea!. DAVID. Gol-la-liath! Gol-la-liath! Gonna die you big galoot!. I'll kick your butt!. I trust the Lord but nobody trusts me. CROWD. He trusts the Lord, but suffers from insanity. Daring to fight 'gainst this monstrosity. DAVID. Evil comes, evil goes. You will get deposed. GOLIATH. I will not, no! I will not get deposed. DAVID. Yes, you will (Repeat). Your head will roll. Oh! Oh! Oh!. GOLIATH. No, no, no, no, no, no, no!. Come-to-me-a! Come-to-me-a!. Let the eagles pick your bones. Beelzebub and his devils gonna fight for me for me for me. DAVID. So you think you can scorn me and spit at my tribe?. So you think youre above me just based on your size?. Oh, baby you ain't just duelin' David. You're gonna get it now. Cause God'll win my battle here. CROWD. Oh yeah! Oh yeah! Oh yeah!. DAVID. Guys Im really flattered. Yet it wasnt me. God wins every battle. God wins every battle for me. VOICE. David will be king soon</p><p><strong>SEGMENT2</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

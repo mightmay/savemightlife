@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Cross of Christ, Lead Onward - พระเจ้าผู้ทรงพระชนม์อยู่ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Cross of Christ, Lead Onward - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Cross of Christ, Lead Onward</h2>
+        <h3>พระเจ้าผู้ทรงพระชนม์อยู่</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>กางเขนของพระเยซู นำต่อสู้กับมาร ด้วยเครื่องหมายแห่งกางเขน มีชัยตลอดกาล ไม่อาศัยอำนาจคน หรือเพื่อเกียรติตนเอง แต่เราต้องอาศัยฤทธิ์เดช ของพระเยซูเจ้า</p><p><strong>CHORUS</strong><br>กางเขนของพระเยซู นำต่อสู้กับมาร ด้วยเครื่องหมายแห่งกางเขน มีชัยตลอดกาล</p><p><strong>VERSE2</strong><br>ไม่ใช่เกียรติหรือศักดา หรือโมหะดึงดัน แต่สู้เยี่ยงพระเยซู ผู้ถูกตรึงจนตาย ชนะด้วยความทนทุกข์ ถึงแพ้แต่มีชัย เราต้องถูกพิสูจน์ทุกวัน เหมือนถูกหลอมภายใน</p><p><strong>CHORUS</strong><br>กางเขนของพระเยซู นำต่อสู้กับมาร ด้วยเครื่องหมายแห่งกางเขน มีชัยตลอดกาล</p><p><strong>VERSE3</strong><br>พระเยซูเป็นผู้ช่วย เดินอยู่คู่กับเรา ทรงเป็นผู้นำชำนาญ เคยผ่านมาก่อนเรา วางใจในพระเยซู จนตลอดชีพวาย ให้กางเขนนำเราขึ้นไป จนได้มงกุฎงาม</p><p><strong>CHORUS</strong><br>กางเขนของพระเยซู นำต่อสู้กับมาร ด้วยเครื่องหมายแห่งกางเขน มีชัยตลอดกาล</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Cross of Christ! lead onward, Through the holy war; In this sign we conquer, Now and evermore. Not of man the power, Not to man the fame; We are victors only In our leader’s name.</p><p><strong>CHORUS</strong><br>Cross of Christ! lead onward, Through the holy war; In this sign we conquer Now and evermore.</p><p><strong>VERSE2</strong><br>Not with pomp and pageant, Not in earthly pride; We must fight our battles Like the Crucified. Overcome by suff’ring, Conquer through defeat; Tried and tested daily In the furnace heat.</p><p><strong>CHORUS</strong><br>Cross of Christ! lead onward, Through the holy war; In this sign we conquer Now and evermore.</p><p><strong>VERSE3</strong><br>Marching in the pathway That the Master trod, Walks One daily with us Like the Son of God. To the end enduring, Armor ne’er laid down Till the cross leads upward To the blood bought crown.</p><p><strong>CHORUS</strong><br>Cross of Christ! lead onward, Through the holy war; In this sign we conquer Now and evermore.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

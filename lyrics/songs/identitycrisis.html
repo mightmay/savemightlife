@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Identity Crisis - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Identity Crisis - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Identity Crisis</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Intro]. This is for the girls that used to diss me. Now they all just..wanna diss me</p><p><strong>SEGMENT2</strong><br>[Chorus]. It's an identity crisis (repeat 3X). I do not know what to do. Grow dreads or sport a bald head. I don't know. It's an identity crisis (repeat 3X). I do not know what to do. Wear Nikes or be Dick Van Dike. I don't know</p><p><strong>SEGMENT3</strong><br>[Verse]. I was walking down the street. To a funky beat. Feeling real nice. Feeling real neat. Had a little money so I had something to eat. Sitting alone so I kicked up my feet. And what do you know another freakazoid. Had a little confidence and didn't feel void. Stood up slow to dust myself off. Not too hard, not too soft. She was shopping at Miller's Outpost dude. She looked 14, I was that plus two. I was kinda dusty cause I just finished skatin'. Went over to her and she started hesitatin'. I tried to ignore it, then I kicked my game. And ever since then I never been the same. She looked me up and down to check my stilo. Before I said a word, she said she had to go. I said "Can I come?" Started kicking my drag. She paused for a minute, listened to what I had. I said, "Can we talk over the phone or something. Instead of in the mall, be all alone or something". She said "No thanks, it just don't feel right. Cause you walk black and act white" (say word?). And as she walked away. I could hear the ricochet. And it's effect on my whole dang life</p><p><strong>SEGMENT4</strong><br>[Chorus]</p><p><strong>SEGMENT5</strong><br>So I grew out my hair, switched up my clothes. Down with LA Symph and I rocked some shows. Dancing and acting a fool and stuff. But in the back of their mind is it all a bluff. Am I doin' all of this just to cover it up. All of my insecurities is hovering up-ac.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

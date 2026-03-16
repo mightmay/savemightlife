@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rolling Stone - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rolling Stone - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rolling Stone</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Sitting on the front porch, Waiting for you to come home. Visions of reuniting in my head. Only bitter-sweet memories, no holidays, no Christmas trees. Broken promises I've got instead.</p><p><strong>SEGMENT2</strong><br>How I used to wonder, 'Where did I go wrong?. How you could have stayed away so long?'. Thank God for my mother, Her's was no easy song. Thank God that He showed me how to get along.</p><p><strong>SEGMENT3</strong><br>My papa was a rolling stone. Abandon us and left us 'lone. And how he broke my heart and hope; had me loose my faith. Somebody knows what I've been through. I've understood, I've been there too. So let me introduce you to my father, Father.</p><p><strong>SEGMENT4</strong><br>Your story sounds alot like mine. It's a story heard a thousand times. Someone hurting leaves in disaray. Don't you know that God made you more valuable than they ever knew?. You know you can live past their mistakes.</p><p><strong>SEGMENT5</strong><br>Oh, how I used to wonder 'How could all this be?. Someone that you loved so much just turns their back and leaves.'. Oh, you need the lover of you soul and. He is able to take care of you annd. He will never leave.</p><p><strong>SEGMENT6</strong><br>Your papa was a rolling stone. Abandoned you and left you 'lone. And how he broke your heart and hope. He had me loose my faith. I'm seeing what you're going through. I understand, I've been there too. So let me introduce you to my father, Father.</p><p><strong>SEGMENT7</strong><br>I was lost and out of controle. Then He found me and saved my soul. Let me lead you to the one I know. He can make you whole.</p><p><strong>SEGMENT8</strong><br>No longer I wonder, Solid ground under my feet. I know what my life is worth, No longer incomplete. I just want to tell you, You are truly loved, By the Maker of the Heavens, the Creator of the Earth. You know He's got His hands on you and. That is more than enough.</p><p><strong>SEGMENT9</strong><br>My papa was a rolling stone. Abandoned us and left us 'lone. And how he broke my heart and hope; had me loose my faith. Somebody saw what I've been through. They understood, They've been there too. They gladly introduced me to my father, Father.</p><p><strong>SEGMENT10</strong><br>Your papa was a rolling stone. Abandoned you and left you 'lone. And how he broke your heart and hope. He had me loose my faith. I'm seeing what you're going through. I understand, I've been there too. So let me introduce you to my father, Father.</p><p><strong>SEGMENT11</strong><br>Tell me what you're going through. I understand, I've been there too. So let my introduce you to my father, Father.</p><p><strong>SEGMENT12</strong><br>God..</p><p><strong>SEGMENT13</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

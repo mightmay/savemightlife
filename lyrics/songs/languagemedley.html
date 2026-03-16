@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Language Medley - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Language Medley - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Language Medley</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>As the deer panteth for the water. So my soul longth after Thee. You alone are my heart's desire. And I long to worship Thee. You alone are my strength, my shield. To you alone may my spirit yield. You alone are my heart's desire. And I long to worship Thee. Japanese. Tani-gawa no nagare wo shitau, shika no yoni, Shu yo, wata tamashii, anata wo shitau. Anata koso waga tate, Anata koso waga chikara, Anata koso waga nozomi, ware wa Shu wo aogu.</p><p><strong>SEGMENT2</strong><br>Great is thy faithfulness, great is thy faithfulness, morning by morning new mercy I see all i have need in my hand that provide great is thy faithfulness dear lord unto me. Dutch. Groot is uw trouw, groot is uw trouw, elke morgen nieuwe genade zie ik alles wat ik nodig hebben in mijn hand die grote zorgen is Uw trouw Lieve Heer tot mij: South Africa. Nkosi Sikeleli Afrika, Mali phakanyiswe U Dumo lwakho;. Izwa imithandazo yethu, Nkosi Sikelela, thina lozapholwayo;</p><p><strong>SEGMENT3</strong><br>And all all the Zulu Women Would say:</p><p><strong>SEGMENT4</strong><br>Woza moya. Surinamese. Gado di wang boeng gado, so a de 4x. one, two ,three. a opo mi, a drai mi lontu. a pot mi futu tap he grong 2x. God is a good god [Yes he is]4x. He picked me, he turned me around, placed my feet on higher ground 2x. higher ground[repeat]. Spanish. Yo tengo gozo en mi alma!. Gozo en mi alma!. Gozo en mi alma!. Y en mi ser, aleluya, gloria a Dios!. Es como rios de agua viva!. Rios de agua viva, Rios de agua viva. En mi alma y en mi ser.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

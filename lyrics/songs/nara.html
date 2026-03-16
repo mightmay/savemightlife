@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Nara - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Nara - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Nara</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[swedish]</p><p><strong>SEGMENT2</strong><br>Hennes hjrta slog hrdare fr varje sekund. Skalet hll emot som aldrig frut. En vgran till var allt detta har sin grund. Skalet hll emot men stora bucklor buktar ut</p><p><strong>SEGMENT3</strong><br>Inte nu, kanske senare och aldrig frut. Som en blomma som aldrig slagit ut. Om en lngtan som aldrig ftt ett beslut. Om en lngtan som aldrig tagit slut</p><p><strong>SEGMENT4</strong><br>Med ftterna s lngt under markytan. Och nd brare av ett rotlst hjrta. Fr svrt att ta sig upp och nd veta. Att sknhet kommer ur smrta</p><p><strong>SEGMENT5</strong><br>Och jag nskar jag kunde dra dig upp drifrn. Men ingen annan utom den ende kan. Och jag nskar jag kunde dra dig upp drifrn. Min tunga kan aldrig kl i ord att min lga r sann</p><p><strong>SEGMENT6</strong><br>Och jag ska aldrig mer vara rdd att visa mig vek. Aldrig mer med hot frska bevisa min krlek</p><p><strong>SEGMENT7</strong><br>S lt dig trffas i hjrtat lt det blda. Om jag kunde skulle jag ta tillbaks de ord som var dda. Om hans liv fick bli din fda. Om ditt hjrta fick blda. Frsk inte vinna tid. Fr jag ser ingenting av den varan. Trots att jag kommer att st kvar dr jag r</p><p><strong>SEGMENT8</strong><br>Vilket val du n tar. Str jag kvar</p><p><strong>SEGMENT9</strong><br>Mt mig vid fridsfurstens ftter. Jag har ingenting utom det som r mina rtter. Mt mig p kn framfr hans ftter</p><p><strong>SEGMENT10</strong><br>(TRANSLATION]</p><p><strong>SEGMENT11</strong><br>[Title: Close]</p><p><strong>SEGMENT12</strong><br>Her heart was beating harder for every second. The shell was holding up like never before. A refusal to where all this has it's foundation. The shell hold up, but big dents bulge</p><p><strong>SEGMENT13</strong><br>Not now, maybe later and never before. Like a flower that never blossomed. About a longing that never given birth to a decision. About a longing that never ended</p><p><strong>SEGMENT14</strong><br>With the feet so far below the ground surface. And yet carrier of a rootless heart. Too hard to get up and still knowing. That beauty comes out of pain</p><p><strong>SEGMENT15</strong><br>And I wish I could pull you up from there. But no one else than The Only One can. And I wish I could pull you up from there. My tongue can never dress in words that my flame is true</p><p><strong>SEGMENT16</strong><br>And I shall never again be afraid of showing my weak self. Never again with threat try to prove my love</p><p><strong>SEGMENT17</strong><br>So let yourself get hit in the heart, let it bleed. If I could I would take back the words that were dead. If you could be fed through His life. If your heart would bleed. Whatever choice you make. I remain. Meet me at the feet of the Prince of Peace. I have nothing except what are my roots. Meet me on your knees before His feet</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

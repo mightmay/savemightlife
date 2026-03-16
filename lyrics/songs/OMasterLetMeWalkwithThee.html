@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for O Master, Let  Me  Walk  with  Thee - ขอพระเยซูให้ข้าฯเดินตาม - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>O Master, Let  Me  Walk  with  Thee - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>O Master, Let  Me  Walk  with  Thee</h2>
+        <h3>ขอพระเยซูให้ข้าฯเดินตาม</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ขอพระเยซูให้ข้าฯเดินตาม  ถ่อมตัวรับใช้ทุกโมงทุกยาม  เคล็ดลับซ่อนเร้นเปิดให้ข้าฯเห็น  วิธีเอาชัยเหนื่อยยากลำเค็ญ</p><p><strong>VERSE2</strong><br>โปรดช่วยสอนข้าฯรักคนเฉื่อยชา  ด้วยคำอ่อนหวานอย่างกรุณา  ช่วยผู้ตกอยู่ในความชั่วนั้น  นำเขากลับมาสู่ทางสวรรค์</p><p><strong>VERSE3</strong><br>ให้ขันติธรรมของผู้เป็นเจ้า  อยู่ชิดกับเราตลอดเวลา  ให้ความศรัทธาเข้มแข็งเพิ่มพูน  ให้ชัยชนะความบาปเสื่อมสูญ</p><p><strong>VERSE4</strong><br>ทรงให้ความหวังภายหน้ามีแสง  ด้วยฤทธิ์พระเจ้าส่องให้แจ่มแจ้ง  ความสุขยินดีพระเจ้าประทาน  ให้มีมากมายสุดที่ประมาณ.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>O Master, let me walk with Thee,In lowly paths of service free;Tell me Thy secret; help me bearThe strain of toil, the fret of care.</p><p><strong>VERSE2</strong><br>Help me the slow of heart to moveBy some clear, winning word of love;Teach me the wayward feet to stay,And guide them in the homeward way.</p><p><strong>VERSE3</strong><br>Teach me Thy patience; still with TheeIn closer, dearer, company,In work that keeps faith sweet and strong,In trust that triumphs over wrong.</p><p><strong>VERSE4</strong><br>In hope that sends a shining rayFar down the future’s broad’ning way,In peace that only Thou canst give,With Thee, O Master, let me live.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

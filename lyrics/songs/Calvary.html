@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Calvary - บนไม้กางเขน - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Calvary - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Calvary</h2>
+        <h3>บนไม้กางเขน</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เมื่อวันพระคริสต์ได้ทรงยอมตาย เขาตรึงพระองค์ให้รับความอาย ที่ไม้กางเขน พระโลหิตไหล เพื่อล้างบาปข้าฯ และเป็นค่าไถ่</p><p><strong>CHORUS</strong><br>) บนไม้กางเขน ทรงมรณา โลหิตพระองค์ ได้ไหลเพื่อข้าฯ ที่ไม้กางเขนเป็นความเมตตา ที่นั่นผู้ช่วยได้ตายเพื่อข้าฯ</p><p><strong>VERSE2</strong><br>ศิลาแตกร้าว อากาศมืดมน พระองค์น้อมเศียร แล้วสิ้นพระชนม์ ม่านในวิหารขาดเป็นสองตอน เปล่งเสียงความสุข เต็มด้วยพระพร</p><p><strong>CHORUS</strong><br>) บนไม้กางเขน ทรงมรณา โลหิตพระองค์ ได้ไหลเพื่อข้าฯ ที่ไม้กางเขนเป็นความเมตตา ที่นั่นผู้ช่วยได้ตายเพื่อข้าฯ</p><p><strong>VERSE3</strong><br>เมื่อท่านอยากได้ มีชัยต่อมาร อย่าพึ่งตัวเอง จะไม่ได้การ ต้องพึ่งพระเจ้า ผู้อภิบาล พระเจ้านำท่าน สู่ทิพย์วิมาน</p><p><strong>CHORUS</strong><br>) บนไม้กางเขน ทรงมรณา โลหิตพระองค์ ได้ไหลเพื่อข้าฯ ที่ไม้กางเขนเป็นความเมตตา ที่นั่นผู้ช่วยได้ตายเพื่อข้าฯ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>On Calvary's brow my Savior died, ’Twas there my Lord was crucified; ’Twas on the cross He bled for me,  And purchased there my pardon free.</p><p><strong>CHORUS</strong><br>O Calvary! dark Calvary! Where Jesus shed His blood for me; O Calvary! blest Calvary!  ’Twas there my Savior died for me.</p><p><strong>VERSE2</strong><br>’Mid rending rocks and dark’ning skies  My Savior bows His head and dies;  The opening veil reveals the way To Heaven’s joys and endless day.</p><p><strong>CHORUS</strong><br>O Calvary! dark Calvary! Where Jesus shed His blood for me; O Calvary! blest Calvary!  ’Twas there my Savior died for me.</p><p><strong>VERSE3</strong><br>O Jesus, Lord, how can it be,  That Thou shouldst give Thy life for me,  To bear the cross and agony  In that dread hour on Calvary!</p><p><strong>CHORUS</strong><br>O Calvary! dark Calvary! Where Jesus shed His blood for me; O Calvary! blest Calvary!  ’Twas there my Savior died for me.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

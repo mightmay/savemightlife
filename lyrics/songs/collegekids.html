@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for College Kids - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>College Kids - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>College Kids</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>someone please save us, us college kids!. what my parents told me is what i did. they said go to school and be a college kid. but in the end i question why i did</p><p><strong>SEGMENT2</strong><br>i'm poor, i'm starving, i'm flat broke, i've got no cash to spend. sell all my books for front row tickets to dave matthews band. my girlfriend's at another school, i know this year will test her. i called, found out she had three other boyfriends last semester</p><p><strong>SEGMENT3</strong><br>and that's why i say. oh no! not for me, not for me. call it torture, call it university. no! arts and crafts is all i need. i'll take calligraphy and then i'll make a fake degree</p><p><strong>SEGMENT4</strong><br>80 grand later i found out that all that i had learned. is that you should show up to take your finals and your midterms. the party scene is kinda mean, i think it's sick and twisted. the navy showed up at my dorm and claimed that i enlisted</p><p><strong>SEGMENT5</strong><br>and that's why i say. oh no! not for me, not for me. call it torture, call it university. no! arts and crafts is all i need. i'll take calligraphy and then i'll make a fake degree</p><p><strong>SEGMENT6</strong><br>don't get excited. she'll say "no" without a doubt you see. and i've decided college girls just won't go out with me. they make me nervous and they always catch me off my guard. like cell phone services i drop out cause college is too hard</p><p><strong>SEGMENT7</strong><br>it's time to call my father. cause it's his alma mater. good grades aren't what they seem. i think he knows the dean. it's time to call my father. cause it's his alma mater. he says he's proud of me. but college always was his dream. and i would always say it's not for me</p><p><strong>SEGMENT8</strong><br>oh no! not for me, not for me. call it torture, call it university. no! arts and crafts is all i need. i'll take calligraphy and then i'll make a fake degree</p><p><strong>SEGMENT9</strong><br>someone please save us, us college kids!. what my parents told me is what i did. they said go to school and be a college kid. but in the end i question why i did</p><p><strong>SEGMENT10</strong><br>do what will make you happy. do what you feel is right. only but one thing matters. learn how to live your life</p><p><strong>SEGMENT11</strong><br>[in background:]. (phi, beta, delta, cappa. someone please save us, us college kids!. what my parents told me is what i did. they said go to school and be a college kid. but in the end i question why i did)</p><p><strong>SEGMENT12</strong><br>do what will make God happy. do what you feel is right. only but one thing matters. learn how to live your life</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

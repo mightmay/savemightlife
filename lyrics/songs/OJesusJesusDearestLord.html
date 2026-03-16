@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for O Jesus, Jesus, Dearest Lord - พระเยซูผู้ประเสริฐ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>O Jesus, Jesus, Dearest Lord - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>O Jesus, Jesus, Dearest Lord</h2>
+        <h3>พระเยซูผู้ประเสริฐ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเยซูผู้ประเสริฐ ผู้เป็นที่รักอย่างสูงของข้าฯ พระนามของพระเยซู ข้าฯอยากพูดถึงตลอดเวลา  ร้องรับ  พระองค์เจ้าข้าดีร้ายอย่างไร ขอโปรดเมตตาประทับในใจ เมื่อทรงพระสรวลข้าฯรู้แน่นอน ข้าฯรักยิ่งกว่าแต่ก่อน</p><p><strong>VERSE2</strong><br>แม้ข้าฯเลวทรามแต่เพราะเหตุไร รักข้าฯมากมายเช่นนี้ ความรักของพระเยซู ติดใจข้าฯอยู่ดุจเปลวอัคคี</p><p><strong>VERSE3</strong><br>สว่างในมืดยินดีในโศก สวรรค์เริ่มมีในโลก เมื่อนั้นโลกีย์หนีออกจากใจ ความรักเกิดขึ้นภายใน</p><p><strong>VERSE4</strong><br>พระองค์ทรงเป็นทุกอย่างแก่ข้าฯ ทรงเป็นธนาราศี เป็นผู้ปลอบโยนเป็นที่ลี้ภัย ความเชื่อให้เพิ่มทวี</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>O Jesus, Jesus, dearest Lord! Forgive me if I say, For very love, Thy sacred name A thousand times a day. O Jesus, Lord, with me abide; I rest in Thee, whate'er betide; Thy gracious smile is my reward; I love, I love Thee, Lord!</p><p><strong>VERSE2</strong><br>I love Thee so I know not how My transports to control; Thy love is like a burning fire Within my very soul.</p><p><strong>VERSE3</strong><br>O light in darkness, joy in grief, O heaven's life on earth; Jesus, my love, my treasure, who Can tell what Thou art worth?</p><p><strong>VERSE4</strong><br>For Thou to me art all in all; My honor and my wealth; My heart's desire, my body's strength, My soul's eternal health.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

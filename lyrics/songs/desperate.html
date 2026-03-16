@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Desperate - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Desperate - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Desperate</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Seek and you will find, they say. but I've been looking everyday. for a way past this wall that's in front of my face. I'm on hands and knees searching for my faith.</p><p><strong>SEGMENT2</strong><br>I know there's so much at stake. but I don't know if I can take one more pat on the back saying I'll be okay. Can't you see me whole life is in disarray?</p><p><strong>SEGMENT3</strong><br>You've got me desperate.</p><p><strong>SEGMENT4</strong><br>I know You hear me, Would You give me a sign?. Reel me in before I've fallen in line. You've put me on a path I don't understand. I'm standing on a ledge waving my hands.</p><p><strong>SEGMENT5</strong><br>You've got me desperate (do You see me?). Desperate (do You hear me?). Desperate (will You help me?). You've got me desperate.</p><p><strong>SEGMENT6</strong><br>I know You're my only hope. The only One who truly knows how it feels, what it's like when it all starts to fall. You're the One I can trust who hears when I call.</p><p><strong>SEGMENT7</strong><br>You've got me desperate.</p><p><strong>SEGMENT8</strong><br>I know You hear me, Would You give me a sign?. Reel me in before I've fallen in line. You've put me on a path I don't understand. I'm standing on a ledge waving my hands.</p><p><strong>SEGMENT9</strong><br>You've got me desperate (do You see me?). Desperate (do You hear me?). Desperate (will You help me?). You've got me desperate.</p><p><strong>SEGMENT10</strong><br>Some things I'll never figure out. Until I let hope erase my doubt.</p><p><strong>SEGMENT11</strong><br>You've got me desperate.</p><p><strong>SEGMENT12</strong><br>I know You hear me, Would You give me a sign?. Reel me in before I've fallen in line. You've put me on a path I don't understand, I'm standing on a ledge waving my hands.</p><p><strong>SEGMENT13</strong><br>You've got me desperate (do You see me?). Desperate (do You hear me?). Desperate (will You help me?). You've got me desperate.</p><p><strong>SEGMENT14</strong><br>You've got me desperate. (Oh do You see me?). Desperate (do You hear me?). Desperate (will You help me?). You've got me desperate!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

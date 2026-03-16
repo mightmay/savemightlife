@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Righteous - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Righteous - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Righteous</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. As I rightly divide, between truth and lies. I can present with proof how He knew these guys. Were goin' to cry on Him, spit on Him and gonna lie on Him. Third day from layin' away was gonna rise on them. Took His righteousness purged my sin. Blood drippin' from the cross as He urges men. Some servin' Him, puttin' position to come and bird with Him. I mean to fly, most definitely want to fly. If I draw nigh to Him He'll draw nigh to me. I see God through Him that d-e-a-t-h settin' me. Straight from all angles, givin' charge to all angels the star spangled. Banner doesn't have anything on Hosanna. Cause the manner, in which He does things for His offspring. As awesome as it seems, it's right and good. Cause I'm flossin' the King tonight in 'hoods</p><p><strong>SEGMENT2</strong><br>[Chorus]. Brothers in the front we don't stunt cause we livin' righteous. Homies on my left ain't no death cause we livin' righteous. Shorties in the back we don't slack cause we livin' righteous. Righteous livin' righteous livin'. Homies on my right we alright cause we livin' righteous. Brothers in the front we don't stunt cause we livin' righteous. Shorties on my left ain't no death cause we livin' righteous. Righteous livin' righteous livin'</p><p><strong>SEGMENT3</strong><br>[Verse Two]. First I was unclean, it was so dark I was unseen. Now my light beams, runnin' to Christ or it might seem. That I might cling, to the righteousness of the King. Or I might fiend, for the dream of the bigger things. Cause the earth is His, castin' in my cares cause my hurt is His. Writin' my songs and my verse is His. The body of Christ or the church is His. I search the Scriptures of God to see what my purpose is. To give Him glory now I recognize, I testified. Then I blessed the God that rectified. My wickedness when I was petrified, edified. The body of Christ for them kingdom lies. Or kingdom livin' all of us Christians are forgiven for that awful livin'. To the beginners don't assemble yourself with the sinners. All of us and Jesus are winners, now I look right. Cause of the blood now I look white. I'm goin' higher in Christ so now I book flight</p><p><strong>SEGMENT4</strong><br>[Chorus]</p><p><strong>SEGMENT5</strong><br>[Verse Three]. All of a sudden His righteousness is like a lifestyle. Callin' my brothers come outta strugglin' to Christ now. All of you cluckers put down the drugs and throw the pipe down. Get rid of the sinful livin' and come into life now. Take a look at the bigger picture and see mistakes made. Be a witness for Christians and see Christ has the way made. Way paved, the daybreak bru I stay saved. My wave praise, we set free from them slave days. Fightin' with givin', when you can be ignited and get righteous livin'. And right with God I take a look back into history. I'm seein' the death no longer a mystery. Seein' Him resurrect, my righteousness is that of a filthy rag. My righteousness is that of a filthy rag. My righteousness is that of a filthy rag. I confess I was guilty Dad. But then you cleansed me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

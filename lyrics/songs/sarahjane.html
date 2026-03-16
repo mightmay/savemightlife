@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Sarah Jane - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Sarah Jane - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Sarah Jane</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Do you hear me, can you see me. Walking down the street watching you. You could help me, but you're not looking. I bet you would if only you knew. You could make a difference. Do you hear me, can you see me. Walking down the street needing you. I want to make it, how do I get there. If you show me that you cared, you know. You could make a difference</p><p><strong>SEGMENT2</strong><br>Little Sarah Jane ran away from home. Fourteen and pregnant, she was all alone. Couldn't run from wrong and was going to be sent away. Walking with her friends blackened her blue eyes full of tears. The burden that she carries much too old for her years. Looking at her face would confirm your worst fears. But instead she goes unnoticed. Sarah Jane another girl who is dying inside. You'd think that someone would stop but we hide. Too intent on completing our day, and she's left there to say</p><p><strong>SEGMENT3</strong><br>He's left to watch the world from the fifteenth floor. Alone with the reminder, "Don't go out anymore. You know those boys are trouble here in our neighborhood. But you're my boy and you've got the chance to be something good". Still the call of the streets was too much to ignore</p><p><strong>SEGMENT4</strong><br>Now he's caught up in the game and can't find an open door. He's a good boy gone bad and he's trying to get out. But everybody's too afraid to hear what he's talking about. Marcus Brown, lives a life much too old for his age. If no one responds he'll be words on a page. Another statistic cause no calls were made. To check on the boy who was missing from the fifth grade</p><p><strong>SEGMENT5</strong><br>Everywhere you turn there's hurting people passing by. It's such a shame that we could change a life but we don't try. To look outside our world and delve. Into the problems in this place. The children need an answer, and God needs your face</p><p><strong>SEGMENT6</strong><br>Rap by Lisa Kimmey Bragg: Well I really want to know if you're feeling me. The situation is real to me</p><p><strong>SEGMENT7</strong><br>Rap by Bonafide: You got me feelin' you under my skin. Like Stevie got me wandering blind again and again</p><p><strong>SEGMENT8</strong><br>Rap by Lisa Kimmey Bragg: Do you really have a heart for the least of these. And understand that we really need to teach to these. Or keep living in a world where death is a fact. Little kids asking, "Why my daddy got to die like that". Don't want to send my kids to school when they feel they got. To pack heat to survive the walk in the streets. Where young women aren't alive because they still believe the</p><p><strong>SEGMENT9</strong><br>Lies and never recognize who God made them inside. God help us if we don't help them find their way. God help us if we don't change our living today. God help us if we hide in our corner and ignore the cries of the. Street, do you hear what they say. God please help them make it through the thunder and the rain. God please send somebody to ease the pain. You know they need a way up out the game. I know You hear her God, her name is Sarah Jane</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

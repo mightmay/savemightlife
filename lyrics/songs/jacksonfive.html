@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jackson Five - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jackson Five - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jackson Five</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Coming at you like the Jackson 5. Live in effect, respect due. You knew we drew lines to make it through. Completely submerged on the verge I'm thinkin'. I want to urge and encourage and you know we bringin'. Second level on the devil minded ego. And going strong it's the God anoninted cinco. Even though up here and appear to please. Stay on my knees with the greatest of these. Love made of pureintention. Let me mention it's like if it wasn't for Christ then I'd drop this mic. And walk away stray minded and annoyed. Pray every night that it fuill my void. So what you want to do?</p><p><strong>SEGMENT2</strong><br>Watch this escalate to more than you hoped for. Can you feel the same?</p><p><strong>SEGMENT3</strong><br>We know the words you say. They reinvent the lies, but we're the same in the time. This time, He will wash away the tears you cry</p><p><strong>SEGMENT4</strong><br>One mic, one night, one chance to get it right. Open up the show, stepping in to the spotlight. Well, who am I now?. Watch me control the crowd. people wondering how, they see the freestyle. We'll set up the set, we'll show up the show. We're out to bow, it's time to go. Fill up the tank and let's hit the road. Working uphill until we explode. So give me the mic and let me rock. I will rock it. The Spirit inside like Mr. T-N-T. There ain't no stoppin' it. So let's take it to the world that's full of stars. And introduce them to the one who made them. Who they are. Cause I represent the heaven send oh so lovely. Only when G-O-D be the one inside of me. Rockin' it, not in the flesh. Come listen to the sound coming out the northwest now</p><p><strong>SEGMENT5</strong><br>Our hearts in places mending. you know this moves through your endings</p><p><strong>SEGMENT6</strong><br>We hold strong through suffering eyes. You'll see the fear within us die. We belong here side by side. I'll be the one to life you high. They cast me out. I can't go on without feeling in doubt. We need the place that only you can give us</p><p><strong>SEGMENT7</strong><br>J-5 what you want?. Collaborate for real. We lockin' down from the compound on Capitol Hill. Fittin' the bill. Tell me what you'd do if i said:  I still believe Christ is God. And rose from the dead, fillin' your head. Dance with the songs I found. With this sound, put it down west coast underground. So really, where would we be if not free?. I know we rise again through Romans 3:23. Falling up to race in places you all fall. And all I did would be the same like Paul Wright. Back to you into peace and hope and you are standing there. Arms wide open</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

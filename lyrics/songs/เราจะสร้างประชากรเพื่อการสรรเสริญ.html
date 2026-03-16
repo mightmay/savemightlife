@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for - - เราจะสร้างประชากรเพื่อการสรรเสริญ - บัว อ๋อย เหธย แปะ ฝีง ต้าย เธง เฒี้ยว ทิน-ฮู่ง. Find the full lyrics and chords for this Mien Christian song.">
+      <title>- - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>-</h2>
+        <h3>เราจะสร้างประชากรเพื่อการสรรเสริญ</h3>
+        <h3>บัว อ๋อย เหธย แปะ ฝีง ต้าย เธง เฒี้ยว ทิน-ฮู่ง</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p><strong>VERSE1</strong><br>บัว อ๋อย เหธย แปะ ฝีง ต้าย เธง เฒี้ยว ทิน-ฮู่ง, ปุน จิว-ปัง ปวั๊ง เหฑ่ง ทิน-ฮู่ง เญย ชะ. ปุน สีง ลี่ง เญย ต้ม ชะ ปวั๊ง เหฑ่ง ป้าม เกน. ปุน ทิน-ฮู่ง เญย เม่ง โห่ ตุ๊ ฌัง หล่าง. โท้ เฒี้ยว เหธย  เยีย เสียน ว้วน หม่าน นิน. ล่ม ฑ่อย จวั่ง เยียม เฒี้ยว เย-ซู. เป๋น เฒี้ยว เญย ติ่น. หฒะเก้ง เหฑว่ย ไห่. ปุน ธีง เหฑ่ง เญย สีง ลี่ง เยียม.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เราจะสร้างประชากรเพื่อการสรรเสริญ คริสตจักรที่ประกอบด้วยฤทธิ์เดช ให้แพร่หลายทั่วแผ่นดินโดยพระวิญญาณ เพื่อพระเกียรติ แห่งพระนามบริสุทธิ์ ขอทรงสร้างเราให้มั่นคงเถิด ให้เราร่วมอยู่ในพระบุตร เป็นพระวิหารอันสง่างาม ของพระวิญญาณบริสุทธิ์</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p>No lyrics available for English.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p><strong>VERSE1</strong><br>D            G         D G            D G        D Em               A7       D G              D            Em-A7    D    D7 G          D            Em-A7       D</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

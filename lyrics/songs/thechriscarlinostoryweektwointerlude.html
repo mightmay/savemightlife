@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Chris Carlino Story: Week Two (Interlude) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Chris Carlino Story: Week Two (Interlude) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Chris Carlino Story: Week Two (Interlude)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I was like dag if I hear somebody brag. one more time in they rhyme all about they tight swag. Im a write back and tell them what they might lack. I aint mad I just had to find where they minds at. so if its time to shine and the lights flash. holding out my fingers to the sky in a tight grasp. then run like Jerry Rice on a nice pass. put a spotlight right on Jesus when the mics passed. I got a white tag plus a bright bag. that matches w/ my sneakers and the jeans got a slight sag. that aint the meanings where my lifes at. its only found when I be proceeding down the right path. so if I speak I know they might laugh. but they never seeing what Im seeing so I ride past. if I stop my breathing he decides that. until that day just happens I keep leaning now in spite of that</p><p><strong>SEGMENT2</strong><br>(swagged out w/ my tags out with my tags out). oh you think you getting?. oh you swagged out you think you bad now. you getting swagged out just with youre tags out. you think you swagged you on that cash route. you better change now you gonna get mashed out</p><p><strong>SEGMENT3</strong><br>Da' T.R.U.T.H:</p><p><strong>SEGMENT4</strong><br>hopped up out the bed turned ya swag on. took a look at ya mirro on ya dads wall. said whats up feel good about what you have on. skinny jeans listening to youre favorite rap songs. all black on fitted cap on. culture really is who you are dont think thats wrong. uh uh thats how ye were shaped. but when swagger so thick we cant see youre faith then. thats when God has got a problem. bragging about yourself in the contents of ya album. swagger is really arrogance hiding behind rhyming. coolness eclipses the glory of God the father. thats inherently wrong. when the glory of our God gets buried in youre songs. so the next time you be on stage. faith up swagger down so we can seek his face</p><p><strong>SEGMENT5</strong><br>these dudes content man is so sinful. I made it so simple put it on a slow tempo. they think they pimps but they more like pimples. they making little sense like a pennies and 4 nickels. you grow little you live in compromise. so when you live yo lives you living lies. the only way they big macking was the very time. you combined youre fries with a number one supersized. Im shooting for the skies so if I land on mars. I let him guide me like the grips on some handlebars. his hands were scarred so heres a battle call. to stand out like hot pink on some camouflage. Im standing strong in fact Im standing on. the very rock whether off or the cameras on. yall can try and knock and go and slam the song. but did you ever stop to think man before you sing along</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Devil Went Down to Jordan - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Devil Went Down to Jordan - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Devil Went Down to Jordan</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>The devil went down to the Jordan. He was lookin' for a show to steal. He was in a bind 'cause Jesus came to find. The people willing to make it real. And he came upon the Son of Man. Saw Him in a desert prayin' to God. Then the devil jumped upon the chance to tempt Him. Said "Boy, let me tell ya, it's hot!". "I guess you wouldn't show it but I can tell you're cravin' food. "And kid I'm scared this desert air might get the best of you. "Now you ain't been eatin' your vittles boy. "But now your dinner is due. "So if you're really God's son, then turn these stones. To bread and I'll butter it for you.". The Lord said, "I am hungry, but that would be a sin. "Cause it ain't by bread man's gonna be fed. "But by the Word God's given him.". John the Baptist washed the Lord and there's where it all starts. Cause Jesus left the Jordan and the devil hit Him hard. And if He wins we get to walk on Heaven's streets of gold. But if He sins, the devil gets your soul. The devil took Him up in space and said, "Christ, why don't you throw. "Yourself off of this temple top as I'm watch you below?. "Cause I'm sure You know that God will send. All His angels to assist. And then men would believe that You're Him. If they saw You did something like this"    . When the devil finished, Jesus said. "Well, you're temptin' God, old son. And it's written down in that book right there. That thing shouldn't ever be done. Shout from the mountain what God's done. The devil ain't a match for the rising Son. You can never tempt God, did you not know. Man, he doesn't live by bread alone  . The devil finally said, "Jesus, if You'll just worship me. Then Ill give you gold that glitters. Every crown, and all You see". Jesus said, "Devil, just turn on back. Cause I'm never gonna buy your scam. I love God too much, I'm gonna resist. I'd suggest you'd better scram!". And we say. Shout from the mountain what God's done. The devil ain't a match for the rising Son. You can never tempt God, did you not know. Man, he doesn't live by bread alone</p><p><strong>SEGMENT2</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

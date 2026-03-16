@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Decoy - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Decoy - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Decoy</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Close your eyes and make believe. This is where you wanna be. Forgetting all the memories. Try to forget love 'cause love's forgotten me</p><p><strong>SEGMENT2</strong><br>Well, hey, hey, baby, it's never too late. Pretty soon you won't remember a thing. And I'll be as distant as stars. Reminiscing, your heart's been wasted on me</p><p><strong>SEGMENT3</strong><br>[Chorus]</p><p><strong>SEGMENT4</strong><br>You've never been so used as I'm using you, abusing you. My little decoy, don't look so blue. You should have seen right through. I'm using you. My little decoy. My little decoy!</p><p><strong>SEGMENT5</strong><br>Living life inside a dream. Time is changing everything. Forgetting all the memories. And I'm forced into you. Just cause you're into me</p><p><strong>SEGMENT6</strong><br>Well, hey, hey, baby, it's never too late. When I'm gone you won't remember a thing. But I can't stay and no, I won't wait. I was gone from the very first day</p><p><strong>SEGMENT7</strong><br>[Chorus]</p><p><strong>SEGMENT8</strong><br>You've never been so used as I'm using you, abusing you. My little decoy, don't look so blue. You should have seen right through. I'm using you. My little decoy</p><p><strong>SEGMENT9</strong><br>I'm not sorry at all. (Not sorry at all, not sorry). No, I won't be sorry at all. (Not sorry at all, not sorry, no). I'd do it over again</p><p><strong>SEGMENT10</strong><br>(Don't look so blue). My little decoy. (You should have seen right through). My little decoy. (You've never been so used)</p><p><strong>SEGMENT11</strong><br>My little decoy. (As I'm using you). My little decoy</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The War Inside - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The War Inside - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The War Inside</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Put your hands up open up wide.  Put your hands up side by side.  Age dont matter like.  Race dont matter like.  Place dont matter like whats inside</p><p><strong>SEGMENT2</strong><br>Let the kick drum kick one time.  Breathe out let your mind unwind.  Eyes on the ceiling.  Looking for the feeling.  Wide open let your own eyes shine</p><p><strong>SEGMENT3</strong><br>Yeah, its where the fight begins.  Yeah, underneath the skin.  Between these hopes and where weve been.  Every fight comes from the fight within</p><p><strong>SEGMENT4</strong><br>- Chorus .  I am the war inside.  I am the battle line.  I am the rising tide.  I am the war I fight</p><p><strong>SEGMENT5</strong><br>Eyes open open wide.  I can feel it like a crack in my spine.  I can feel it like the back of my mind.  I am the war inside</p><p><strong>SEGMENT6</strong><br>I get the feeling that were living in sci-fi.  I get the the feeling that our weapons are lo-fi.  Aint no killer like pride.  No killer like I.  No killer like whats inside</p><p><strong>SEGMENT7</strong><br>Yeah, its in the air we breathe.  Yeah, its in the blood we bleed.  Beneath these dreams and what weve seen.  We are the kids of the in-between</p><p><strong>SEGMENT8</strong><br>Put your hands up open up wide.  put your hands up side by side.  Age dont matter like.  Race dont matter like.  Place dont matter like whats inside</p><p><strong>SEGMENT9</strong><br>Yeah, every thought or deed.  Yeah, every tree or seed.  The big things come from the little dreams.  Every world is made by make believe</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

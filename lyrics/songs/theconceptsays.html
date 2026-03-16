@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Concept Says - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Concept Says - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Concept Says</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Follow them, bowing out. Throw me the flag, I'll take the opportunity. Stuck in the moment. I'd pay the price if there's a possibility</p><p><strong>SEGMENT2</strong><br>I've been caught in the standard. I dragged it through the gutter. And what I left there doesn't mean a thing. Follow them, bowing out. I'll pay the price if there's a possibility</p><p><strong>SEGMENT3</strong><br>I won't stay here. I won't stay here. I won't stay here. I've got to make the most of mine</p><p><strong>SEGMENT4</strong><br>Now we hold the key. And no doubt we always have. Don't you remember telling me. That's there a lifetime to make these mistakes</p><p><strong>SEGMENT5</strong><br>And when it's almost over. We'll wish we would've made more. And when the storm is over. We wish we would've made more</p><p><strong>SEGMENT6</strong><br>I won't stay here. I won't stay I'll take the opportunity. Flat out I'll stick it out. Senses awake, accept responsibility</p><p><strong>SEGMENT7</strong><br>Taking it farther. I'll weed right through the clutter. What's left behind there doesn't mean a thing. Follow them, bowing out. I'll pay the price if there's a possibility</p><p><strong>SEGMENT8</strong><br>Never easy to mend. When all the pieces stand so far away</p><p><strong>SEGMENT9</strong><br>. Well, I've been spending a long time looking in. Feel the pulse and it's aggravating. Push and pull while the concept stays</p><p><strong>SEGMENT10</strong><br>And I can't get a peace of mind. And my head keeps racing. And I can't get a peace of mind. And my head keeps racing</p><p><strong>SEGMENT11</strong><br>I fear my options are running out. Why isn't it getting easier to cope without?. To cope without?. And I can't get a peace of mind. And my head keeps racing</p><p><strong>SEGMENT12</strong><br>Inventory, I throw it away. I'd rather mistake, I'd rather not stay</p><p><strong>SEGMENT13</strong><br>I won't stay here. I won't stay if there's a possibility. I won't stay here. I won't stay if there's a possibility</p><p><strong>SEGMENT14</strong><br>I won't stay here. I won't stay, I'll take the opportunity. I won't stay here. I won't stay, I'll take the op, the opportunity</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

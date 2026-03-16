@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Emily - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Emily - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Emily</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I met you at the age of 21. Lookin so fine like a young ripe plum. I was the gardener, you were the nun. I was maverick, you were the girl on top gun. I pursued you with young freshman eyes. Stomach too small for what the eyes realized. Thought I can handle it, I took you by the hand. And I asked you to marry me, I knelt on the sand. You said yes, never a second guess. Wait a few years to have babies was the plan. Made my dream's hope, got a 8 to 4. Workin' as a stock clerk at Nabisco. But I loved you, I put you first above all. Raised you high, so that you would never fall. We got more close sexually, daily, slipped up. And got you pregnant with a baby. Upset your parents, didn't tell mine. I told you it would be okay in time</p><p><strong>SEGMENT2</strong><br>I looked in your eyes, pretend to grin. Said that I love you and your my best friend. Told you to trust me until the end. 'Til death do us part, that was the start. But I'm leaving, (I told you I would never lie). I'm sorry but I'm leaving, (But I'm not that type of guy). I'm sorry my dear..</p><p><strong>SEGMENT3</strong><br>I had to have a meeting with your dad. I was very nervous, he was very sad. You were going joggin, I was very glad. I knew what I did and I knew what I had. It was your attention, I had time to stall. I told him I'd get a second job at the mall. He said okay but filled with disbelief. I said good-bye, filled with relief. Cuz I knew I didn't want to, knew I didn't plan this. Knew I had to give all of my goals just to stand this. And that really sucked, I was so young. All I ever wanted was to rap and have fun. Now I had to work, then I really thought about it. Did I really have to? Or would he have thought about it?. I thought I had to do it for myself. It was my life, it belonged to no one else. So I planned to leave a thief in the night. Disappear with a trace, let them know I felt like</p><p><strong>SEGMENT4</strong><br>I looked in your eyes, pretend to grin. Said that I love you and your my best friend. Told you to trust me until the end. 'Til death do us part, that was the start. But I'm leaving, (I told you I would never lie). I'm sorry but I'm leaving, (But I'm not that type of guy). I'm sorry my dear..</p><p><strong>SEGMENT5</strong><br>Four years past, I'm still spending my wills. Still making demos, looking for a record deal. You found my act, was bumped into my friend. Sent me a letter told me silence had to end. You had a daughter, named her Emily. And everytime she looked at you felt like me. She was asking questions, "Where is my dad?. And what did he do mommy to make you so mad?". You said I had to come and finally meet my girl. I said that I would if, only I could. Showed up at the door it was answered by her. I knew by her eyes that I was her father. I knelt to your level, said, "Who are you?". You said, "Emily", I said, "How cute". I walked you in, holding your hand. You showed me your bedroom, I took us slow and. You said "Daddy, where have you been?. I hope you never ever have to leave again"</p><p><strong>SEGMENT6</strong><br>I looked in your eyes, pretend to grin. Said that I love you and your my best friend. Told you to trust me until the end. 'Til death do us part, that was the start. But I'm leaving. I'm sorry but I'm leaving. I'm sorry my dear..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

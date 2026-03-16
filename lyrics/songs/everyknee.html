@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Every Knee - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Every Knee - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Every Knee</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Wherefore, God had highly exalted Him and given Him a name. Which is above every name. And at the feet of Jesus every knee shall bow. Of things of heaven, of things of earth and things under this earth. And at the name of Jesus every tongue shall confess that he is King. Under God the father. Christ is king, He is God. Who do you seek, you deny. That in the beginning was the word the word was with God. The word was God, so why do you fight. Which were born, not of blood. Nor of the will flesh, nor of the will of man. But of God the word became flesh. And dwelt among us and we beheld his glory. Full of grace and truth. Who's gonna bow down? Every knee!. Who's gonna confess? Every tongue!. Who's gonna bow down? Every knee!. Who's gonna confess? Every tongue!</p><p><strong>SEGMENT2</strong><br>Prophets of the past. Claim the son of man would come with their hands lifted up. And their eyes to the sky. They proclaim the name of Jesus Christ. People may ask why, who do you choose to live this life. But they know the truth, for he is the truth, desperate is their life. So what's the use. Here's one for the phunky drummer. Keep the rhythm rolling in your face. I got the bass, without a trace he's going. He's gone and I'm on the microphone and I'm known to get rough. So take some time out my rhyme bro and strut your stuff. Prophets we're four, I show you what's in store. Give praises to my ring so now, can I get an encore?. And keep clapping, keep clapping, keep clapping, keep clapping. Hey, yo what's happening, brothers are getting jacked. When you step to me with that disrespect. I think it's time for us to put you evil butt in check. And if you don't believe me, tell me who is next. And somebody tell the devil, that his match is met. From the word of God so you know it's the truth. And I tell you with power chump, what you gonna do?. I'll make it known again, that we're just spreading the good news. And we'll have you crews saying your Jesus is one smooth dude</p><p><strong>SEGMENT3</strong><br>Who's gonna bow down? Every knee!. Who's gonna confess? Every tongue!</p><p><strong>SEGMENT4</strong><br>Wherefore, God had highly exalted Him and given Him a name. Which is above every name, and at the feet of Jesus every knee shall bow. Of things of heaven, of things of earth and things under this earth. And at the name of Jesus every tongue shall confess that he is King. Under God the father.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

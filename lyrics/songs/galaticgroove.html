@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Galatic Groove - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Galatic Groove - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Galatic Groove</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Here's a little story I got to tell. about my Father up in heaven who you know so well. But let me start off by settin' the record straight from the years past. lettin' all those people know that used to poke fun and used to laugh. There's only one reason why we do what we do. That's to serve our God. let His love shine through. We're here to be bold, do what we're told, of Him we are a mold. If it's His will keep rockin' til we're 101 years old. Not once throughout my years will I ever not be the same. I never fell into the trap of the whole east coast west coast thing. 'Cause we're all under the reign of one King it's time we realize. One thing Jah people all around the world it's time we all sing. A song of unity cause that's the way it should be. It's time we come together so we can let the world see. From the beaches of Cali to the wheatlands of the plains. His love is yesterday today, forever the same. Captains Log star date 2003. A Range Rover hovercraft in high pursuit of me. They're all blacked out with chrome rims and tinted windows. Sending me death threats with murderous innuendoes. Chase this space renegade with pins and mics. Burshin off stardust from galaxies and nebulae. La vida loca translates to livin' the rap life. And a wrong turn and a runaway truck can jacknife. Pay attention to the road as God watches and He files it. Or get grounded like imported coffee or bad pilots. I used to think I knew a lot so on goes the story. I couldn't see decepticons on the move to transforming. I found the world boring wasted time in my exploring. Dug deeper in excavating into the glory to glory. Writing the Lordship committed to one on one. Solar powered and energetic while running off the Sun. Big God third rock He created all that. Knowdaverbs and Pillar we bound to bless tracks. So step back out the way and watch the Lord move. He rules the territory as the Galaxy Grooves</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

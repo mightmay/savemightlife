@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Hello Ego - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Hello Ego - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Hello Ego</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>hello there ego why it's a displeasure to meet ya. to be honest bro I really don't know how to treat ya. greet ya with a pound but you want more than dat. and to be honest I really don't know how to act. i hear the blah blah blahblah blah blah blah. blah blah blah blah blah. man I watch your ego spoil for thinkin you're. fresher than all else</p><p><strong>SEGMENT2</strong><br>face full of perspiration from sweatin yourself. lettin yourself act like a fool man look. i don't care about your personalized hip-hop rule book. took another man's thoughts on rules for the microphone. how can I respect your opinion when it's not your own. known fact you have an ego you need to lose it. cuz if you're so real why you tryin so hard to prove it. it should just be and if it is then we don't need. a constant reminder that you're the dopest mc</p><p><strong>SEGMENT3</strong><br>chorus. so you're the illest - so you're the dopest. so you're the slickest man why you tellin me this. in one ear and out the next all i keep on hearing is. blah blah blah ..........</p><p><strong>SEGMENT4</strong><br>hello there ego can I call you out for what you are. john doe status but you're fronting superstar. more like super far from reality. but I guess it's trendy to make it look like actuality. now let me see too many claim where they want to be. and not where they're at. i'll call your front and all those who got your back. let it be known clone mimicks nah you won't last. you don't have a future cuz you didn't have a past. so in the present please don't get perturbed</p><p><strong>SEGMENT5</strong><br>if I pay no attention to you and your pointless idle words. cuz time is precious and I have better things to do. than waste my energy on hearing you brag about you. recyclin hip-hop the same old same old. how you're so fresh and all else is stale n' old. it's getting old plus man I've heard it all before. pointless verses covered up in metaphors. now catchin rec is one thing that's cool to express. but there's only so many ways that you can tell me. you're the best</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

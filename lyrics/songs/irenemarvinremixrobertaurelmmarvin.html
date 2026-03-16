@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Irene: Marvin Remix - Robert 'Aurel M' Marvin - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Irene: Marvin Remix - Robert 'Aurel M' Marvin - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Irene: Marvin Remix - Robert 'Aurel M' Marvin</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Hush little baby baby don't you cry. Daddy's gonna sing you a lullaby. Everything's gonna be alright. The Lord's gonna answer your prayer tonight. Hush little baby don't you cry. Daddy's gonna sing you a lullaby. Everything's gonna be alright. The Lord's gonna answer your prayer</p><p><strong>SEGMENT2</strong><br>Last night I had a dream you was the homecoming queen. Today you're 18, happy birthday Irene. Quit school you had to drop out to raise your little child. Doesn't seem to be anyone around. You got to reach up to touch rock bottom. The powers that be keep you downtrodden. Daughter of Zion, I heard your prayer. Just cast your cares and please beware of snakes. They come in all shapes and sizes. Tempt you, put scales on your eyelids. Don't waste your sorrows. They'll give you strength .. tomorrow. Your Calvary's about to come so. Keep your head up, don't you ever let up. This storm will pass you be ready for the next one</p><p><strong>SEGMENT3</strong><br>Hey little girl with the pressures of the world on your shoulders. Don't say that it's over. I heard your prayers, just cast your cares. And I'll be there so don't you fear</p><p><strong>SEGMENT4</strong><br>[CHORUS]</p><p><strong>SEGMENT5</strong><br>Irene I carried you when you was too weak to walk. I took to you when you gave your heart to God. Faithful and true, that's what I'll always be to you. Believe in you, believe in Me and these mountains have to move. You have dreams and aspirations. I knew you before creation. Your foundation's solid. I will give you a palace, restore your soul. You'll be up for any challenge. Many storms are on the way better sharpen your faith. Count the cost, take up your cross. And wear it every day. Rest in Me and I will give you strength. Blessed is she, Irene who seeks my face</p><p><strong>SEGMENT6</strong><br>[CHORUS]</p><p><strong>SEGMENT7</strong><br>Father I'm stronger than when I first believed.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

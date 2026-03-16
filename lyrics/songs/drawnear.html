@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Draw Near - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Draw Near - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Draw Near</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Chorus: Death wispers words of defeat in my ear. My God I draw near, my God I draw near</p><p><strong>SEGMENT2</strong><br>God of creation here I stand. I've left babylon to find out who I am. I've traveled I've struggled I've failed in vain. My own ability will never see eternal gain. God of creation it's you whom I seek. Lord I feel strapped n tied down and my strenght is weak. Oh Lord when I cry out please hear what I speak. Bring life to my body awaken this sleep</p><p><strong>SEGMENT3</strong><br>Chorus</p><p><strong>SEGMENT4</strong><br>When all vanishes and I stand in this. place to face the truth for what it is. With no human esacpe to hide behind. just my soul n God and I find it mind blowing. Knowin that humanity and a mere mortal man like me. Can have my slate cleaned of mistakes and. the chance to put on immortality. Even though darkness has hardened us in. deception and spoken otherwise. Man I refuse to take in that nonsense, and. i refuse to buy into these lies. These lies of pain, these lies of shame, these lies of complete disfunction</p><p><strong>SEGMENT5</strong><br>This lie of hopelessness that will make a. person feel like they're nothing. This lie that will make me feel like my. struggle is one too much to fix'n. Isn't that what darkness wants for me to. play the role of a victim. But I'm a child of light and no longer. am I bound by slavery. I say oh death were is your sting. And oh hades where's your victory?</p><p><strong>SEGMENT6</strong><br>Hear my cry oh God. Attend to my prayer. From the end of the earth I will cry to you. When my heart's overwhelmed I will cry to you. Leave it to the rock that is higher than I. For you have been a shelter for me. I will abide in your time forever. My God I draw near, my God I draw near</p><p><strong>SEGMENT7</strong><br>Chorus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

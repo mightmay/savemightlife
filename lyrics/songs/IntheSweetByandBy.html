@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for In the Sweet By and By - มีสถานอันงดงามเลิศนักหนา - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>In the Sweet By and By - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>In the Sweet By and By</h2>
+        <h3>มีสถานอันงดงามเลิศนักหนา</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>มีสถานอันงดงามเลิศนักหนา ถ้าเราเชื่อจึงจะเห็นได้แก่ตา พระบิดาประทับคอยทุกเวลา และเดี๋ยวนี้ยังเตรียมที่ไว้คอยท่า</p><p><strong>CHORUS</strong><br>ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ</p><p><strong>VERSE2</strong><br>เราจะร้องเพลงบรรเลงโมทนา ในสวรรค์เราพากันเปรมปรีดา ไม่เป็นทุกข์มีแต่สุขชั่วกัลป์ปา เพราะได้อยู่กับพระเจ้าบนเมืองฟ้า</p><p><strong>CHORUS</strong><br>ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ</p><p><strong>VERSE3</strong><br>ขอบพระคุณพระบิดาผู้ประทาน สรรเสริญด้วยบทเพลงอันสำราญ เพื่อเป็นการสำแดงความกตัญญู แด่พระองค์เจ้าผู้ทรงพระชนม์อยู่</p><p><strong>CHORUS</strong><br>ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ ในเวลาไม่ช้านาน จะได้ไปถึงที่พักอันสำราญ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>There’s a land that is fairer than day,And by faith we can see it afar;For the Father waits over the wayTo prepare us a dwelling place there.</p><p><strong>CHORUS</strong><br>In the sweet by and by,We shall meet on that beautiful shore;In the sweet by and by,We shall meet on that beautiful shore.</p><p><strong>VERSE2</strong><br>We shall sing on that beautiful shoreThe melodious songs of the blessed;And our spirits shall sorrow no more,Not a sigh for the blessing of rest.</p><p><strong>CHORUS</strong><br>In the sweet by and by,We shall meet on that beautiful shore;In the sweet by and by,We shall meet on that beautiful shore.</p><p><strong>VERSE3</strong><br>To our bountiful Father above,We will offer our tribute of praiseFor the glorious gift of His loveAnd the blessings that hallow our days.</p><p><strong>CHORUS</strong><br>In the sweet by and by,We shall meet on that beautiful shore;In the sweet by and by,We shall meet on that beautiful shore.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

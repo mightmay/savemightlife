@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Deep Enough to Dream [Live] - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Deep Enough to Dream [Live] - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Deep Enough to Dream [Live]</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Lazy summer afternoon. Screened-in porch and nothin' to do. I just kicked off my tennis shoes. Slouchin' in a plastic chair. Rakin' my fingers through my hair. I close my eyes and I leave 'em there. And I yawn, and sigh, and slowly fade away</p><p><strong>SEGMENT2</strong><br>Deep enough to dream in brilliant colors I have never seen. Deep enough to join a billion people for a wedding feast. Deep enough to reach out and touch the face of the One who made me. And oh, the love I feel, and oh the peace. Do I ever have to wake up</p><p><strong>SEGMENT3</strong><br>Awakened by a familiar sound. A clumsy fly is buzzin' around. He bumps the screen and he tumbles down. He gathers about his wits and pride. And tries again for the hundredth time. 'Cause freedom calls from the other side. And I smile and nod, and slowly drift away</p><p><strong>SEGMENT4</strong><br>Deep enough to dream in brilliant colors I have never seen. Deep enough to join a billion people for a wedding feast. Deep enough to reach out and touch the face of the One who made me. And oh, the love I feel, and oh the peace. Do I ever have to wake up</p><p><strong>SEGMENT5</strong><br>'Cause peace is pouring over my soul. See the lambs and the lions playin'. I join in and I drink the music. Holiness is the air I'm breathin'. My faithful heroes break the bread and answer all of my questions. Not to mention what the streets are made of. My heart's held hostage by this love</p><p><strong>SEGMENT6</strong><br>And these brilliant colors I have never seen. I join a billion people for a wedding feast. I reach out and touch the face of the One who made me. I'm deep enough to dream in brilliant colors I have never seen. Deep enough to join a billion people for a wedding feast. Deep enough to reach out and touch the face of the One who made me. And oh, the love I feel, and oh the peace. Do I ever have to wake up. Do I ever have to wake up. Do I really have to wake up now</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

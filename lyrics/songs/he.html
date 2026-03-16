@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for He - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>He - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>He</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Heaven is a place.. Where mothers don't have to cry for their babies. Wonderin' if they'll live to see 16. Fighting in the street for some money. wonderin' if they'll ever make ends meet. Heaven is a place that everyone dreams. of, filled with kindness flowing with the real love. One day I'm gonna climb those golden stairs. But until I get there,</p><p><strong>SEGMENT2</strong><br>(He) is working on me. (He) never leaves me. (He) lets me know that I am not alone in the darkness. (He) wants me to be happy. (He) smiles when I'm laughing. (He) makes me believe. Heaven's a place</p><p><strong>SEGMENT3</strong><br>Here, in my soul if I listen. There, even when I think it isn't. Building everywhere that I go. Calling out so that I can follow. Love is a place and it's all around us. Like a circle, it's around us. Where I wanna be, until I learn to fly. Until I reach the sky</p><p><strong>SEGMENT4</strong><br>(He) is working on me. (He) never leaves me. (He) lets me know that I am not alone in the darkness. (He) wants me to be happy. (He) smiles when I'm laughing. (He) makes me believe. Him, He knows Ohh Ohh</p><p><strong>SEGMENT5</strong><br>You know, He knows you Oh Oh He knows me too yeah</p><p><strong>SEGMENT6</strong><br>(He) is working on me (He's working on me). (He) never leaves me (He never leaves me). (He) lets me know that I am not alone in the darkness. (He) wants me to be happy. (He) smiles when I'm laughing. (He) makes me believe. Him, Ohhh</p><p><strong>SEGMENT7</strong><br>He's working on me. He never leaves me Oh Oh Oh. He's working on me. Yeah, HE never leaves, He always listens. Oh he loves me, Yeah Yeah</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

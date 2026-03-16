@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Anchors - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Anchors - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Anchors</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>And it hurt just to touch. On the words I said too much. I was just a kid. I thought that I could not be caught and much less by a moment. But the words came flooding from my mouth</p><p><strong>SEGMENT2</strong><br>Some things will never surface. They capsized so long ago. I didnt want to still be sinking. But the anchor, wont let me go</p><p><strong>SEGMENT3</strong><br>Those things that we thought, were never there. Those ghosts we brought with us everywhere</p><p><strong>SEGMENT4</strong><br>From your birth you were born in to this. Never knowing when the walls would crack. In your defense you were so unprepared you. Said the things that you cant take back</p><p><strong>SEGMENT5</strong><br>Those things that we thought were never there. Those ghosts we brought with us everywhere</p><p><strong>SEGMENT6</strong><br>I want to explain this. But nothings making sense. Theres poison in my blood. (Theres poison in my blood)</p><p><strong>SEGMENT7</strong><br>It claimed both of our lives. That world we thought important. Crumbled into nothing</p><p><strong>SEGMENT8</strong><br>Will words define me? I am more than a moment. Will words define me? I am more than a moment. That day behind me, but I cannot shake it. I am more than a moment, more than a moment</p><p><strong>SEGMENT9</strong><br>And the beauty left my eyes. I was standing there with the rest of my life. Knowing I would never be the same. Knowing I had changed. I had become more than what I had dreamed. The look of the youth but with hands stained. The look of the youth but with my hands stained</p><p><strong>SEGMENT10</strong><br>Tell her I'm sorry. Tell her I'm sorry. Does she know I'm sorry?. Guilty, guilty, I am guilty</p><p><strong>SEGMENT11</strong><br>How were those words in my head? (I am so sorry for what I have done). For somebody else, somebody else. I wish that I could have said (they all asked me why and I know). Anything else, anything else (I know I still cant stop myself)</p><p><strong>SEGMENT12</strong><br>I want to explain this. But nothings making sense. Theres poison in my blood. (Theres poison in my blood)</p><p><strong>SEGMENT13</strong><br>It claimed both of our lives. That world we thought important. Crumbled into nothing</p><p><strong>SEGMENT14</strong><br>But the bitter treasures so elementary</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

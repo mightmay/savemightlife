@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for You Get Me (Radio Mix) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>You Get Me (Radio Mix) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>You Get Me (Radio Mix)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Wonderful is what I perceived, This life would be,  pain and problem free, But over time, I found reality. And through it all I see, That You're the Only One who gets me</p><p><strong>SEGMENT2</strong><br>Chorus: I may be misunderstoood 'cause I wouldn't ever fake it. You're the Only One who understands my pain. You get me, You get me. It doesn't matter what they do, what they think, what they say, At the end of the day, I'm okay anyway. 'Cause Lord, You get me.</p><p><strong>SEGMENT3</strong><br>No more tears; it's a silent night. You've broken down all fear, 'Cause You invaded all of me. You know me better than I know myself. The key to my security. There is no one else who gets me.</p><p><strong>SEGMENT4</strong><br>I may be misunderstoood 'cause I wouldn't ever fake it. You're the Only One who understands my pain. You get me, You get me. It doesn't matter what they do, what they think, what they say, At the end of the day, I'm okay anyway. 'Cause Lord, You get me. Lord, You get me.</p><p><strong>SEGMENT5</strong><br>I don't care what the world may say. I hear You call me by name, And I'll reach for You, reach for You. There is nothing that I'd rather do, Than just worship You, Lord. I'm gonna worship You, worship You.</p><p><strong>SEGMENT6</strong><br>(I'm okay, I'm okay, I'm okay, I'm okay)*repeats again throughout the rest of the song</p><p><strong>SEGMENT7</strong><br>I may be misunderstoood 'cause I wouldn't ever fake it. You're the Only One who understands my pain.(You're the Only One, You're the only One on second time around). You get me, You get me. It doesn't matter what they do, what they think, what they say, At the end of the day, I'm okay anyway. 'Cause Lord, You get me. Lord, You get me.  (2x)</p><p><strong>SEGMENT8</strong><br>You understand me, so completely. When no gets me, Lord, You get me.(2x)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

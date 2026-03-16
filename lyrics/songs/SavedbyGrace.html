@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Saved by Grace - รอดเนื่องด้วยพระคุณ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Saved by Grace - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Saved by Grace</h2>
+        <h3>รอดเนื่องด้วยพระคุณ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ไม่ช้าไม่นานข้ามรณา แล้วข้าจะไปพบองค์พระคริสต์ จะได้รับความสบายวิญญาณ ที่ในเมืองฟ้าวิมานเป็นนิจ  จะไปเข้าเฝ้า องค์ผู้การุณย์ ทูลเรื่องความรอดเนื่องด้วยพระคุณ จะไปเข้าเฝ้า องค์พระบิดา ถวายสรรเสริญผู้ทรงเมตตา</p><p><strong>VERSE2</strong><br>ไม่ช้าไม่นานสังขารร่างกาย ต้องแตกสลายเป็นดินเป็นทราย แล้วพระองค์เจ้าจะได้ประทาน  ร่างกายงดงามไม่รู้จักตาย</p><p><strong>VERSE3</strong><br>ไม่ช้าไม่นานแสงสุริยัน จะลับเหลี่ยมโลกไปไกลจากเรา แล้วพระองค์เจ้ามีดำรัสว่า เชิญเข้ามาพักกับพระบิดา</p><p><strong>VERSE4</strong><br>ให้เราทั้งหลายคอยพระองค์อยู่ เตรียมจิตใจไว้รับพระเยซู เมื่อพระองค์เจ้าเสด็จลงมา  ทรงพาไปไว้สวรรค์ชั้นฟ้า</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Some day the silver cord will break, And I no more as now shall sing, But Oh the joy when I shall wake   within the palace of the king, And I shall see Him face to face, And tell the story saved by grace, And I shall see, Him face to face And tell the story saved by grace,</p><p><strong>VERSE2</strong><br>Some day my earthly house will fall, I cannot tell how soon’ twill be, But this I know my all in all Has now a place in Heav’n for me</p><p><strong>VERSE3</strong><br>Some day when fades the golden sun Beneath the rosy tinted west, My blessed Lord will say,Well done, And I shall enter into rest.</p><p><strong>VERSE4</strong><br>Some day till then I’ll watch and wait, My lamp all trimmed and burning bright, That when my Savior opens the gate, My soul to Him may take its flight.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

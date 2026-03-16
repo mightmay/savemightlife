@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Glory (You Are) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Glory (You Are) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Glory (You Are)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Sometimes I dont even wanna leave my house. These fake fears wrestle me to the flipping ground. Im not scared of dying maybe scared of failing. So I stop trying evil thoughts start prevailing. Theres a devil out there seeking to take me out. I see him in my nightmares when I scream and shout. Even though its a dream it sure feels real. I know I got an angel watching in the rear near. In the midst of triumph seems theres a tragedy. I know Ive won even though they want to battle me. Adamantly down on my knees pray fervently. White hot never stop till Im in the heavenly</p><p><strong>SEGMENT2</strong><br>So beautiful so powerful, so wonderful. Undeniable you you you are, you you, you are, you are you are. So beautiful so powerful, omnipotent. Undeniable you you you are, you you, you are, you are you are</p><p><strong>SEGMENT3</strong><br>Theres something different, magnificent. About these Christians who talk and live in this. Lifestyle of putting pride down, it hasnt died out, Its widely spread out and I. Cant deny its power, people getting healed every hour. How do we explain this, cure for aids and patients?. They said he wouldnt walk now hes racing, tell me whats changing. Im pointing fingers at the sky, Cause some things I cant deny no matter if I try. Im a walk in faith. Cause I can see you even if its not your face. You Are</p><p><strong>SEGMENT4</strong><br>So beautiful so powerful, so wonderful. Undeniable you you you are, you you, you are, you are you are. So beautiful so powerful, omnipotent. Undeniable you you you are, you you are, you are you are</p><p><strong>SEGMENT5</strong><br>Glory and honor the father well give him. The glory and honor the father rejoice in him</p><p><strong>SEGMENT6</strong><br>Ive read a lot of books, turned all sorts of pages. But only one where the letters all illuminated. Its like its jumping out at me speaking right to me. You see right through me theres no fooling. I cant hide from you why do I hide under?. Lies come I stutter cry out I love ye. The greatest gift so many are oblivious. You sent your kid to die only so that I could live. They bringing me down you lifting me up. Im living your word hearing your sound, feeling a rush. Just the way I am, come as you are. Dont change a thing, use a superstar.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

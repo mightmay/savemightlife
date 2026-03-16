@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Hype Man (Trudog '07) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Hype Man (Trudog '07) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Hype Man (Trudog '07)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Tru Dog:]. Tru Dog's back. Player from another layer?. [tobyMac:]. Alright, I'm going to show how this thing works. I'll be your height man. We're going to start out like this. Tru D-O-G what you got for me. Tru D-O-G what you got boy. [Tru Dog:]. What I got?. [tobyMac:]. Tru D-O-G make it hot for me. Tru D-O-G make it hot.. [Tru Dog:]. Like this? Tru D-O-G that's who I am. With the sun in my eyes and the mic in my hand. I'm gonna rock this party like an old school jam. Tru D-O-G, that's what I got Pops. [tobyMac:]. Nice, Tru D-O-G what you got for me. Tru D-O-G what you got boy. Tru D-O-G make it hot for we. Tru D-O-G make it hot boy. [Tru Dog:]. I got to get this off my chest so like recess. And I like it the best when I'm bawling. Shock-calling, bouncing off the walls. [tobyMac:]. What you know about shock-calling man. Cause everybody gonna move when I rock the mic. [Tru Dog:]. Yo hold up dad. Don't you have 11 of the joints on this record?. [tobyMac:]. yeah. [Tru Dog:]. What's the name of this track anyway. [tobyMac:]. Tru Dog. [Tru Dog:]. Cause everybody gonna move when I rock the mic. I keep it lyrically smooth like I'm riding a bike. And everyonce in awhile just to see if they feel me. I'm gonna pop a wheelie!. I'm gonna pop a wheelie!. [tobyMac:]. Man what you talkin' about. You can't pop no wheelie. [Tru Dog:]. Yes I can. Ask momma. [tobyMac:]. Hold on, you said something about old school. what you know about old school. [Tru Dog:]. Check this. Shake it, don't break it. It took your momma nine months to make it. [tobyMac:]. This songs getting out of control. [Tru Dog:]. But Dad. That's not a very good hype man. [tobyMac:]. hey, I heard that. busted. [Tru Dog:]. Oh snap.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Have No Opinion - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Have No Opinion - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Have No Opinion</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>go ahead, grab your picket signs. and you can find out what you're protestin later on. it sure feels good to be a part of something doesn't it. just as long as you belong. hey look at this little revolutionists. tryin to start a revolution with nothing to revolt against. is it the truth that you're defending. or the chance for you grab some attention? . Well hey, there's the pedestal stand up straight. don't it feel great everyone can see your face. what's the cause again why are you arguin. it'll soon be forgotten so why are you botherin?. You'll be on to the next thing that'll keep your short fickle attention span stimulated. we're the products of a spoiled society. so naturally spoiled products are generated</p><p><strong>SEGMENT2</strong><br>You see I have no opinion I don't. I could but I won't. I'm tired of arguin so. don't begin what cannot end. because I'm tired</p><p><strong>SEGMENT3</strong><br>You're defined by having an open mind. yet you close me out every time I speak mine. we could agree to disagree and move on (we could). but humans love provin each other wrong. forget it religion, cultural differences, politics. this could go on forever if we let it. this repetitive rhetoric is pathetic. back to nowhere is where the argument's headed. you are who you are ,who am I to end it?. Hey I can't make you think past your mental limit. I'm not God, I do not set the standard</p><p><strong>SEGMENT4</strong><br>do not look to me if you want to expand yours. you see me and you we didn't create the truth. without the grace of God our views are construed. and at best just a good attempt. heck it wasn't until I surrendered my opinion that life made sense</p><p><strong>SEGMENT5</strong><br>I have no opinion I don't. I could but I won't. I'm tired of arguin. I have no opinion nor do I need to win. see I'm tired, I'm tired of arguin so. don't begin what cannot end. because I'm tired, I'm tired of arguin. I have no opinion actually I do. I just don't want to dispute with you</p><p><strong>SEGMENT6</strong><br>I'm only so many years old. raised in Columbus Ohio what do I know? . Midwest perspective, Midwest approach to life. American church, American Jesus Christ. the dos and don'ts, the wrongs and rights. the facts of life aren't always black and white. but when it's all said and done at the end of the day. I'm trustin God to guide me through the gray</p><p><strong>SEGMENT7</strong><br>See I have no opinion I don't. I could but I won't. I'm tired of arguin. I have no opinion nor do I need to win. see I'm tired, I'm tired of arguing so. don't begin what cannot end. because I'm tired, I'm tired of arguin. I have no opinion actually I do. I just don't want to dispute with you. you see I have no opinion I don't. I could but I won't. I'm tired of arguin. I have no opinion nor do I need to win. see I'm tired, I'm tired of arguing so. don't begin what cannot end. because I'm tired, I'm tired of arguin. I have no opinion actually I do. I just don't want to dispute with you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

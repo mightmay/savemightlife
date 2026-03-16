@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rise Above It - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rise Above It - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rise Above It</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Another couple kids with their heads on top.  Just another stranger just another plot.  Another track home where the city streets stop.  Just another kid with another bored cop</p><p><strong>SEGMENT2</strong><br>Just another lemon into lemonade job.  Just another rust and dust facade.  Just another key stuck broken in the lock.  Just another scarecrow choking on a cough.  Oh come on!</p><p><strong>SEGMENT3</strong><br>It all feels so typical.  Guess I'm looking for a miracle.  Rise above it.  I don't care what their telling me.  We could be what we want to be</p><p><strong>SEGMENT4</strong><br>Rise above it. [ Lyrics from: http://www.lyricsmode.com/lyrics/s/switchfoot/rise_above_it.html ].  Listen up loud listen up listen here.  Just because you're running.  Doesn't mean that you're scared.  Just because it's law doesn't mean it is fair.  Never let another tell your soul what to fear</p><p><strong>SEGMENT5</strong><br>Here we go again give it one more try.  Don't believe the system's on your side.  Just another lover turned enemy fight</p><p><strong>SEGMENT6</strong><br>Just another blood and nicotine sky.  Oh come on!</p><p><strong>SEGMENT7</strong><br>It feels so difficult.  Guess I'm looking for a miracle.  I get so sick of it.  It feels so counferfeit.  I rise above it.  Rise above it</p><p><strong>SEGMENT8</strong><br>Hear our voices rise.  Hear our battle cry.  We've been under the curse.  With our arms raised high.  Hear us sing tonight.  Like the last night on earth.  We will rise like the tide.  Like dead men.  Coming back to life.  We are rising.  Rising.  Turn it up now, listen loud and clear.  Just because you're present.  Doesn't mean you're here.  Oh come on!</p><p><strong>SEGMENT9</strong><br>Let's rise above it.  We can rise above it</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

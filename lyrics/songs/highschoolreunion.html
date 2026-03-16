@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for High School Reunion - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>High School Reunion - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>High School Reunion</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Intro]. Just bang with it. Dedicated to Hawthorne High. Just bang with it</p><p><strong>SEGMENT2</strong><br>[Verse]. I'm just another rapper trying to make the hands clapper. Be in Teen Bop magazine that's what I'm after. But lately things ain't doing to well. Trying to excel but still in my Tercel. And one light's broke the other don't work. So I can't take my girl out at night yo what a jerk. Well anyway I got a brand new demo. A hit song that's takes me to Jay Leno. Then I can finally treat my girlfriend right. And go swing dancing in the middle of the night. Cause I've been shopping my little demo for three years. And I'm tired of hanging out with the same peers. I wanna sow and grow and plow with my rhymes. But most of my friends love to waste time. I'm speaking on the real. I'm sick of basing my whole life on a record deal</p><p><strong>SEGMENT3</strong><br>[Chorus]. I should've known yo I should've known. Should've got a real job and digital phone. My highschool reunion is soon from now. And I only got two dollars in my checking account boy. I should've known yo I should've known. Should've got a real job and digital phone. Maybe a wife and some kids and picket fence. But now I get by trying to scrape up rent</p><p><strong>SEGMENT4</strong><br>[Verse]. My most people my age is in a corporation. Not in the Inglewood jail for a citation. With my girl out there she bailing me out. Most of you niggies don't know what I'm talking about. You got a pretty wife and two kids up in the crib. I'm eating canned chili with no shirt showing my ribs. What I'm gonna say when they ask "what I been up to?". I'm looking for a record deal and looking for work too. They say they got a PHD. Ni***s I'm eating chili burritos at Taco.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

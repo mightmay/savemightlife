@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Soldiers - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Soldiers - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Soldiers</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I see you watching me. Yeah you know I'm on it. See how I'm living. You know I'm too strong. All they throw at me. I'm not fallin for it. They think I'm alone. They've got it all wrong</p><p><strong>SEGMENT2</strong><br>Everybody on the left and everybody on the right. Who's not scared to testify (willing to testify). Gotta let the world know it. That you're not afraid to show it. If you're not afraid to show it, let me hear you tonight</p><p><strong>SEGMENT3</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT4</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT5</strong><br>The world's watching you. Whatcha you gonna do now. Will you make a move. Will you show and prove. In all that you do. Gotta represent. The life that we've been given. The reason why we're living so</p><p><strong>SEGMENT6</strong><br>Everybody on the left and everybody on the right. Who's not scared to testify (willing to testify). Gotta let the world know it. That you're not afraid to show it. If you're not afraid to show it, let me hear you tonight</p><p><strong>SEGMENT7</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT8</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT9</strong><br>All my people in the place (repeat)</p><p><strong>SEGMENT10</strong><br>Well you know there's a reason. We're here to change the world. And you know I'm believing. We can do it, but it's up to you. The request of the maker. Of the ocean and the sky so blue. It's a call for some soldiers. So if you're not afraid to take a stand. Then let me see you raise your hand</p><p><strong>SEGMENT11</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT12</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT13</strong><br>All my people in the place. you're looking good with style and grace. But here's my question listen clear. Where my soldiers (right here). Say hey (hey). If you know you keep it tight. Say hey (hey). Where my soldiers at (right here)</p><p><strong>SEGMENT14</strong><br>All my people in the place (repeat)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

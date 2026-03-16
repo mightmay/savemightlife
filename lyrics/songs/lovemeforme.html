@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Love Me For Me - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Love Me For Me - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Love Me For Me</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>La da da da. La da da da. La da da da da da da da. La da da da. La da da da. La da da da da da da da</p><p><strong>SEGMENT2</strong><br>Spotlight glaring down. Silence from the crowd. The circus is just beginning</p><p><strong>SEGMENT3</strong><br>I tremble, looking around. I would hate to fall and hit the ground. In front of all these people. That wouldn't be pleasant</p><p><strong>SEGMENT4</strong><br>So the music plays. And the trapeze sways. And my heart is beating faster. But all I hear is laughter. From the crowd. Cause they see right through my gaze</p><p><strong>SEGMENT5</strong><br>Would you please tell me. What I gotta be. For you to want me. For you to want me, yeah. Cause I am. Just trying to understand. Why you don't love me. Why you don't love me for me</p><p><strong>SEGMENT6</strong><br>There is someone who loves you for you</p><p><strong>SEGMENT7</strong><br>I keep lying to myself. Trying to be somebody else. In front of all these people. I feel really foolish. And when the main attraction at the masquerade. If I keep goin' like this, I'm gonna go insane. Is this circus act all I'll ever be?. Yeah..</p><p><strong>SEGMENT8</strong><br>Would you please tell me. What I gotta be. For you to want me. For you to want me, yeah. Cause I am. Just playing a losing hand. If you don't love me. If you don't love me for me</p><p><strong>SEGMENT9</strong><br>There is someone who loves you for you</p><p><strong>SEGMENT10</strong><br>God loves you and me. Let me tell you it's the kind of love that's given free. And it doesn't fake. And it doesn't flake. And it doesn't play those games. God loves me and you. Let me tell you it's the kind of love. It's real, it's true. And it doesn't lie. And it's doesn't cheat. After it takes you off your feet</p><p><strong>SEGMENT11</strong><br>So just.. tell me. What I gotta be. For you to want me. For you to want me, yeah. Cause I am. Just trying to understand. Why you don't love me. Why you don't love me for me</p><p><strong>SEGMENT12</strong><br>Tell me. What I gotta be. For you to want me. For you to want me, yeah. Cause I am. Just playing a losing hand. If you don't love me. If you don't love me for me</p><p><strong>SEGMENT13</strong><br>(x2). La da da da. La da da da. La da da da da da da da. La da da da. La da da da. La da da da da da da da</p><p><strong>SEGMENT14</strong><br>God is someone who loves you for you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

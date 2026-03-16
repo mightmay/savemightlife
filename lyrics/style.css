@@ -1,0 +1,289 @@
+/* General Body & Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f8fa;
+    color: #3D4351;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6DD5FA, #2980B9);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Search Bar on Main Page */
+main .search-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+#search-bar {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px 0 0 24px; /* Rounded on the left */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+    border-right: none;
+}
+
+#search-bar:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#search-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid #2980B9;
+    background-color: #2980B9;
+    color: white;
+    border-radius: 0 24px 24px 0; /* Rounded on the right */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #2471A3;
+}
+
+
+/* Table */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+th,
+td {
+    padding: 1.25rem 1rem;
+    text-align: left;
+}
+
+thead th {
+    background-color: #f9fafb;
+    font-weight: 500;
+    color: #7A818F;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+th .sort-indicator {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    opacity: 0.4;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="%237A818F" d="M7 14l5-5 5 5z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+th.sorted-asc .sort-indicator {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+th.sorted-desc .sort-indicator {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+td a {
+    color: #3D4351;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+td a:hover {
+    color: #2980B9;
+}
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-controls button {
+    background: white;
+    border: 1px solid #dfe1e5;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #f2f2f2;
+}
+
+.pagination-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination-controls .page-number.active {
+    background-color: #2980B9;
+    color: white;
+    border-color: #2980B9;
+}
+
+/* Items Per Page */
+.items-per-page-container {
+    margin-top: 1rem;
+}
+
+#items-per-page {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #dfe1e5;
+}
+
+
+/* Song Page Specific Styles */
+.lyrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.lyrics-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.lyrics-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+main > h2,
+main > h3 {
+    text-align: center;
+    font-size: 1.75rem; /* Equal font size */
+    margin: 0.5rem 0;
+}
+
+main > h2 { /* English Name */
+    color: #333333;
+    /* Darkest */
+}
+
+main > h3:nth-of-type(1) { /* Thai Name */
+    color: #555555;
+    /* Mid-dark */
+}
+
+main > h3:nth-of-type(2) { /* Mien-Thai Name */
+    color: #777777;
+    /* Lighter */
+}
+
+.view-controls {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#change-view-btn {
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#change-view-btn:hover {
+    background-color: #2471A3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    main > h2,
+    main > h3 {
+        font-size: 1.5rem;
+    }
+
+    .pagination-container {
+        flex-direction: column;
+    }
+
+    .items-per-page-container {
+        margin-top: 1.5rem;
+    }
+}

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for A Stick, a Carrot & String - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>A Stick, a Carrot & String - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>A Stick, a Carrot & String</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>the horse's hay beneath his head. our Lord was born to a manger bed. that all whose wells run dry. could drink of his supply</p><p><strong>SEGMENT2</strong><br>to keep him warm, the sheep drew near. so grateful for His coming here. come with news of grace. come to take my place. the donkey whispered in his ear. "child, in 30-some-odd years. you'll ride someone who looks like me. untriumphantly"</p><p><strong>SEGMENT3</strong><br>the cardinals warbled a joyful song. he'll make right what man made wrong. bringing low the hills. that the valleys might be filled</p><p><strong>SEGMENT4</strong><br>then "child", asked the birds. "well, aren't they lovely words we sing?". the tiny baby layed there. without saying anything</p><p><strong>SEGMENT5</strong><br>at a distance stood a mangy goat. with the crooked teeth and a matted coat. weary eyes and worn. chipped and twisted horns</p><p><strong>SEGMENT6</strong><br>thinking "maybe I'll make friends someday. with the cows and the hens in the rambouillet. but for now, I'll keep away. I've got nothing smart to say"</p><p><strong>SEGMENT7</strong><br>there's a sign on the barn. in the cabbage town. "when the rain picks up. and the sun goes down. sinners, come inside. with no money, come and buy</p><p><strong>SEGMENT8</strong><br>no clever talk, nor a gift to bring. requires our lowly, lovely king. come now empty handed, you don't need anything"</p><p><strong>SEGMENT9</strong><br>and the night was cool. and clear as glass. with the sneaking snake in the garden grass. deep cried out to deep. the disciples fast asleep</p><p><strong>SEGMENT10</strong><br>and the snake perked up. when he heard You ask. "if you're willing that. this cup might pass. we could find our way back home. maybe start a family all our own"</p><p><strong>SEGMENT11</strong><br>"but does not the Father guide the Son?. not my will, but yours be done. what else here to do?. what else me, but You?"</p><p><strong>SEGMENT12</strong><br>and the snake who'd held the world. a stick, a carrot and a string. was crushed beneath the foot. of your not wanting anything</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

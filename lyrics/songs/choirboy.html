@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Choirboy - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Choirboy - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Choirboy</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Well Im uh back in the fourth grade and Im uh 10 I guess. When weird women thought we kids all lived to take tests. Kinda kept to myself  real shy kid. I liked old rock songs and the pop'lar hits. There was a kid talkin' 'bout a choir they got. Said a lot of the spots were not locked because. The guy who taught with the choir was still fillin' the rows. And lots of kids couldn't sound the notes. And he told me it's fun to sing with the choir. Get known as a kid that God set apart. Said to me you wanna? I'm gonna go. Try out for the choir fella you should come along. Start attendin' church service in robes just like Jesus. And get a spot in the Four Tops or Four Seasons. That rocks! Cause I'm a real good voice. And I'm takin' that test, sucka, because. I'm gonna be a choirboy baby. With a top 10 smash and the nuns all smiling. (Choirboy baby) Guess whos chillin with the boys choir. (Im gonna be a choirboy baby). Shinin my light while the people pray . (Choirboy baby) A cappella singer from a higher plane. I let him hear my little vocals and he said, "Youre in". I go "Ah ah ah ah ah"  I dusted my friend. Told him "You wont do  theres no gown in your size". Well thats his loss  my gown it fits fine. They told me "Believe in Jesus Christ". I'll get Him after this part of my exciting life. Cause if I time this right I'm gonna make like a Beach Boy. And let California girls know why they all need a choirboy baby. Better stop that act everyones not buyin. (Choirboy baby) Just like Dylan with a good voice . (Im gonna be a choirboy baby). Hidin my life while I seem O.K. . (Choirboy baby) I can tell a fib with a smiley face. Yeah it rocked  you can call me "blessed". Only somethings missin and I gotta confess. Seems the sin thats in my head is growin wild and fast. And itd get this kid kicked right out of Mass. No kidding Im sittin in church gettin real bored. Call the cops cause Im lost. Wheres the cross and the Lord?. Felt remorse and embarrassed and I tried to get right. Felt like hangin down my head and hangin up my life (Huh!). Got famous  rocked the eleventh grade cause. Director picked me for my senior play yes. Got to wear make-up  rock band came up. They told me sing lead but then the band breaks up. Pride had got a grip on me. Robbed me of the sort of faith Id need. I didnt know Jesus  I just would beg Him for favors. Finally straight out of college I made Him my Savior. Now lifes a pleasure  this guys legit. Id always heard that Christians were radical idiots. I make it my biz to dispel that notion. And keep on trustin Him with all my devotion. (Choirboy) with a rock band thats into song rewritin. (Choirboy) spend all my time at finding words that rhyme. (Choirboy) ridin at night cause the gigs I play. (Choirboy) might be held at 800 miles away. (Choirboy) with ApologetiX backin the songs Im rhymin. (Choirboy) with a top 10 smash and the Sons inside</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

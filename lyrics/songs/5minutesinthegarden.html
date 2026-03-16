@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for 5 Minutes (In the Garden) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>5 Minutes (In the Garden) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>5 Minutes (In the Garden)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I got 5 minutes 5 minutes left. Five minutes till the soldiers till they bring me to my death. So very close just to breathe my last breath. As I'm here in the garden I felt the heave of my chest. My disciples are asleep and they rest. And they can't seem to see just what be coming next. Through the trees the soldiers speed from the west. Getting closer and closer for me to arrest. I see blood drops like beads in my sweat. They run down like a crown right down on my head. I'm laid on the ground face down like I'm dead. Crying out to you Father let me pass what's ahead. They pound the nails in my hands the hands and my legs. As the time runs outs then I hang and I bled. They are coming down I understand what you said. So with 4 minutes left this is now what I did saying.</p><p><strong>SEGMENT2</strong><br>Not my will but let your will be done</p><p><strong>SEGMENT3</strong><br>I got 3 minutes 3 minutes left. 3 minutes till the soldiers bring me to my death. I can hear them loud and clear closer then I guessed. While Judas is coming down with the crowd and the rest. They don't even understand right now what this is. They don't know who I am what I have just to give. For ever man every girl every child every kid. See my death has been planned so many can come to live. See I know that I got just a few minutes then. Then they'll come and they'll grab me its the beginning of the end. See I wont make a sound see I won't even defend. Myself to the crowd now I'll go just with them. Cuz I came for this now I came for they sin. I came to lay my life down then I'll take it up again. 2 minutes I'll be bound and I'll face what's ahead. With the words from my mouth came out then I said</p><p><strong>SEGMENT4</strong><br>I got 1 minute 1 minute left. 1 minute till the soldiers gone bring me to my death. I can hear all there voices its like a 100 feet ahead. I can see all the torches now I know what is next. I'll be beat and tortured then struck on my head. Forced to carry the cross and I'll be lead. Up a hill to be killed then I'm left now for dead. But now it's not my will Father I want yours now instead. And so I pray won't you please let this cup pass from me. See I want what you want that's all I want for me. Now I was just betrayed for some fast money. But the ones that you gave they could never snatch from me. Now my life that I gave see I gave it all away. And I'll be buried in a grave but I'll come back Sunday. I was born in a cave but I'll come back one day. But the time's now up they coming now for me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Been Redeemed - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Been Redeemed - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Been Redeemed</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[HOOK]. Jesus did it - I been I been I been redeemed. Jesus did it - Every time I think about it I get amped</p><p><strong>SEGMENT2</strong><br>[VERSE (FLAME)]. I'm bout to snap. Man this feeling's medicinal. This redemption's got me flipping. I can feel it in my physical. It's like adrenaline venom. It's got me feeling so missional. Blood dripping while they whip Him, can you picture my visual?. Yet it scriptural the commission to come and be giving to Roman's Centurions to cure me and you from my sinfulness. This is nothing but the provisions for forgiveness He's given to sinners like us. Cause His grace is just so irresistible (YES! ). When I think about that I'm saved. When I'm thinking back to that day. When I see 'em spit in His face. When I see Him get in that grave. When I think about the 3 days. When I think about that He raised. When I think how death had got played. I just want to give Him the praise. See all I know Jehovah carries sins weight on His shoulders. He holds the controllers and regenerated some soldiers. The Holy Ghost played His role and see now we get it. Romans 116 ain't afraid to admit it</p><p><strong>SEGMENT3</strong><br>[HOOK]. Jesus did it - I been I been I been redeemed. Jesus did it - Every time I think about it I get amped</p><p><strong>SEGMENT4</strong><br>[VERSE]. Already listen up a minute. Hold up give me just a minute. I'm tripping off redemption from the risen and His Blood that did it. I was sinning bro I must admit it. Evil I would come and get it. It was all I knew until He drew me to the Son and switched it. I'm accepted protected God is my refuge. I ain't in danger the Savior came to my rescue. He's been erasing the habits that's known to wreck dudes. So my flesh I gotta check like a chess move. He purchased me gave birth to me. He paid the price for worthless me. Was hurt man would flirt with flames. He flipped that like a circus man. I'm so amazed His holy ways He bought me now I know and praise. The one who overflows with grace. Jehovah bro I'm blown away. Yea, what a relief it is. His wrath is satisfied. And through belief in this. I'm bought by Adonai. And when I think on this. That since the master died. I'm redeeming and His. I just break down inside</p><p><strong>SEGMENT5</strong><br>[HOOK]. Jesus did it - I been I been I been redeemed. Jesus did it - Every time I think about it I get amped</p><p><strong>SEGMENT6</strong><br>[VERSE]. Already bro it's hard to grasp. Couldn't have been a harder task. To give us life the Risen Christ. He made a way that all could have. Salvation from His father's wrath. He bought us now we offer back. The lives He bought we die to thoughts and actions if they not for Dad. We saved from the old lives. We changed from them old guys. We switched from them chicks that used to flirt in they low rise. And all because the Father's love was demonstrated to all of us. We've been freed from our deeds we was bought with Blood</p><p><strong>SEGMENT7</strong><br>[VERSE (FLAME)]. From the Abrahamic Covenant back to Noah's Flood. Back to Genesis 1, back before the world was. Before the serpent was even lurking in Eden's grass. Before Eve and Adam ate in eternity past. There was a covenant made between the Father and Son. And Holy Spirit this was even before Genesis 1. Within the Godhead they all had a plan to redeem. So receive the redemption, be apart of the team</p><p><strong>SEGMENT8</strong><br>[HOOK]. Jesus did it. I been I been I been redeemed. Jesus did it. Every time I think about it I get amped</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

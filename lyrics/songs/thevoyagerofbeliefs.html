@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Voyager Of Beliefs - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Voyager Of Beliefs - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Voyager Of Beliefs</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I have 2 brothers and a sister, and a mother, And a father who taught us that we should. All love one another, We go to church on Sunday, In a little green hyundai, Have some grape juice and crackers, Then we start again on Monday</p><p><strong>SEGMENT2</strong><br>And it's all fine, and it's all well, I really want to find what I believe for myself, 'Cause when you're gone, And I'm still here, I won't have you to tell me that I should be there</p><p><strong>SEGMENT3</strong><br>I'm tired of making excuses(oh oh oh), Need to decide for myself..</p><p><strong>SEGMENT4</strong><br>What if I stumble? What if I fall?. When I'm on my way to You, What if I need You? Who do I call?. How do I know I'll get through?. Because I don't wanna ride the fence anymore. I wanna stand up, and shout it, And let it be known</p><p><strong>SEGMENT5</strong><br>I have 2 fathers, and a sister and a brother, And a mother who taught us that we should. All do unto others, My homeroom teacher, always talks about her preacher. And she says she talks to God, But I don't know if I believe her</p><p><strong>SEGMENT6</strong><br>And it's all fine, and it's all well, I really want to find what I believe for myself, 'Cause when you're gone, And I'm still here, I won't have you to tell me that I should be there</p><p><strong>SEGMENT7</strong><br>I'm tired of making excuses(oh oh oh), Need to decide for myself..</p><p><strong>SEGMENT8</strong><br>What if I stumble? What if I fall?. When I'm on my way to You, What if I need You? Who do I call?. How do I know I'll get through?. Because I don't wanna ride the fence anymore. I wanna stand up, and shout it, And let it be known</p><p><strong>SEGMENT9</strong><br>And you can tell me, That I can't make a difference 'cause I'm just one, But one is all it takes to start it. And you can tell me, That I can't change the world, Because I'm too young, But I won't stand here and be your target. And you can push me, And try to knock me down, but I won't listen, 'Cause I've got nothing left to lose and, You can hate me, for everything I'm not, But it won't change this, 'Cause now that I'm here, I'm not moving</p><p><strong>SEGMENT10</strong><br>I'm tired of making excuses(oh oh oh), Need to decide for myself..</p><p><strong>SEGMENT11</strong><br>What if I stumble? What if I fall?. When I'm on my way to You, What if I need You? Who do I call?. How do I know I'll get through?. Because I don't wanna ride the fence anymore. I wanna stand up, and shout it, And let it be known</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

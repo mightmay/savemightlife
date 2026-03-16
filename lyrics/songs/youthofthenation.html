@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Youth of the Nation - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Youth of the Nation - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Youth of the Nation</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Last day of the rest of my life. I wish I would've known. Cause I didn't kiss my mama goodbye</p><p><strong>SEGMENT2</strong><br>I didn't tell her that I loved her and how much I care. Or thank my pops for all the talks. And all the wisdom he shared</p><p><strong>SEGMENT3</strong><br>Unaware, I just did what I always do. Everyday, the same routine. Before I skate off to school</p><p><strong>SEGMENT4</strong><br>But who knew that this day wasn't like the rest. Instead of taking a test. I took two to the chest</p><p><strong>SEGMENT5</strong><br>Call me blind, but I didn't see it coming. Everybody was running. But I couldn't hear nothing</p><p><strong>SEGMENT6</strong><br>Except gun blasts, it happened so fast. I don't really know this kid. Even though I sit by him in class</p><p><strong>SEGMENT7</strong><br>Maybe this kid was reaching out for love. Or maybe for a moment. He forgot who he was. Or maybe this kid just wanted to be hugged. Whatever it was. I know it's because</p><p><strong>SEGMENT8</strong><br>[chorus:]. We are, We are, the youth of the nation</p><p><strong>SEGMENT9</strong><br>Little Suzy, she was only twelve. She was given the world. With every chance to excel</p><p><strong>SEGMENT10</strong><br>Hang with the boys and hear the stories they tell. She might act kind of proud. But no respect for herself</p><p><strong>SEGMENT11</strong><br>She finds love in all the wrong places. The same situations. Just different faces</p><p><strong>SEGMENT12</strong><br>Changed up her pace since her daddy left her. Too bad he never told her. She deserved much better</p><p><strong>SEGMENT13</strong><br>Johnny boy always played the fool. He broke all the rules. So you would think he was cool</p><p><strong>SEGMENT14</strong><br>He was never really one of the guys. No matter how hard he tried. Often thought of suicide</p><p><strong>SEGMENT15</strong><br>It's kind of hard when you ain't got no friends. He put his life to an end. They might remember him then</p><p><strong>SEGMENT16</strong><br>You cross the line and there's no turning back. Told the world how he felt. With the sound of a gat</p><p><strong>SEGMENT17</strong><br>[chorus]</p><p><strong>SEGMENT18</strong><br>Who's to blame for the lives that tragedies claim. No matter what you say. It don't take away the pain</p><p><strong>SEGMENT19</strong><br>That I feel inside, I'm tired of all the lies. Don't nobody know why. It's the blind leading the blind</p><p><strong>SEGMENT20</strong><br>I guess that's the way the story goes. Will it ever make sense. Somebody's got to know</p><p><strong>SEGMENT21</strong><br>There's got to be more to life than this. There's got to be more to everything. I thought exists</p><p><strong>SEGMENT22</strong><br>[chorus]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

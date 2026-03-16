@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Machinist - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Machinist - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Machinist</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We're approaching the gloating. Of another dealer's winning hand. The inspiring delusions. Living up to the dreams of modern man. And I swear we put our lives into everything, giving all we have. But we're lacking the reaping, Slaughtering the weakest of society's hard working calves</p><p><strong>SEGMENT2</strong><br>Trying to bring us down again. But we're still having the times of our lives. What we've lost we'll gain back again. The machine is tearing out our insides. (Repeat)</p><p><strong>SEGMENT3</strong><br>We're picking up all the pieces, all life's thesis, that you've cast aside. Insuring our victory from mighty death's harvesting clock of time. You're breathing down the neck of all our selfish insecurities. Birthing the fate of the hate that's been breeding all our perfect impurities</p><p><strong>SEGMENT4</strong><br>We're climbing, still climbing this mountain that you've set before us. We'll do whatever it takes not to make the mistakes, But still this pressure's killing us. We're picking up all the pieces, all life's thesis, that you've cast aside. Insuring our victory from mighty death's harvesting clock of time. Only time will tell if this hard life meant anything. We'll do whatever it takes not to make the mistakes, But still this pressure's killing us</p><p><strong>SEGMENT5</strong><br>If all we have still isn't good enough, then what's left to give?. Breaking apart the nothing that's become our only incentive. So mark our words and build our graves. You're the excuse for all of our mistakes. The very reason that we turned out this way. All the failure and all the heartache. Asking, pulling, taking all that's left in our lives. The machine is tearing out our insides. So mark our words, and build our graves. You're the excuse for all of our mistakes. The very reason that we turned out this way. All the failure and all the heartache. So mark our words, and build our graves. You're the excuse for all of our mistakes</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

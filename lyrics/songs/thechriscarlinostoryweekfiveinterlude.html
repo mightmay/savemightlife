@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Chris Carlino Story: Week Five (Interlude) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Chris Carlino Story: Week Five (Interlude) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Chris Carlino Story: Week Five (Interlude)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>we are we are broken people (we are some broken people). just trying to make it on our own (yet we try to make it). we are we are broken people (we are some broken people). and yet we are not alone (only cause of you were not alone)</p><p><strong>SEGMENT2</strong><br>now this aint how its supposed to be. cause mom and dad really wasnt supposed to leave. but now divorce what they chose to seek. and now they see the kids every other week. and this aint how it supposed to end. cause when they started out they was best friends. but how it begins aint how it ends. sometimes thats how the story spins. what do you do now what do you say. when people drift apart and they walk away. starting over make us all afraid. dealing w/ remorse plus a ton of shame. but theres a cure for ya ton of pain. theres hope and healing now in his grace. and theres a place where you see his face. where he makes beauty out our mistakes</p><p><strong>SEGMENT3</strong><br>this aint the way the way she went and planned it. but little by little she they took it all for granted. just another story on our little planet. a little compromise break a few commandments. so the babys coming she starts to panic. contemplates all her choices and then examines. all the voices trying to tell her just to take advantage. of the fact she could abort it like it never mattered. but she struggles just to understand it. feeling lost confused and a little damaged. she knew his life was the thing that matters. so he grows kind of like a seed thats planted. it was hard but she always managed. even when the problems never seem to vanish. she looks at his fingers and the little hand prints. she might be broken but shes gonna manage</p><p><strong>SEGMENT4</strong><br>we are broken cause we are sinful. we are a messed up type of people. just living in a world thats quite deceitful. but theres a way out if you let Him lead you. you see he promises to never leave you. everything youre facing he would be through. its blatant that we really need you. even in our storms we can see you.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

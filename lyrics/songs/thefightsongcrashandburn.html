@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Fight Song (Crash And Burn) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Fight Song (Crash And Burn) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Fight Song (Crash And Burn)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>he minute you walk into the room. It's like you're headed to the ring and you're ready to swing. You jump to your conclusions too soon. How can you disagree before understanding me?. I've avoided your confrontations too. But here on the inside it's growing and growing and I've..</p><p><strong>SEGMENT2</strong><br>Been waiting for our worlds to collide. Not interest for the other side. I'm wrong, you're wrong, I'm right. When I wait for another fight</p><p><strong>SEGMENT3</strong><br>Do you always have to have the last word?. Does this end for us with just another crash and burn?</p><p><strong>SEGMENT4</strong><br>So here we meet in the ring. Where no one officiates and no one to mediate. You play the offender I take my heed. I feel your strain and the pain and the sting. The way you're looking into me. Has me thinking that you and I will not let this end in a tie</p><p><strong>SEGMENT5</strong><br>Do you always get to have the last word?. Does this end for us with just another crash and burn</p><p><strong>SEGMENT6</strong><br>Oh I know that there can be redemption. Inside I know you just need my attention that's for sure. And I think that we can make concession. Patience is such a priceless lesson. Won't you learn it with me?. Oh won't you learn it with me?. Will you ever learn?. You will never learn..</p><p><strong>SEGMENT7</strong><br>(We are foot to foot in the ring, bruised and bloodied, guards up and winded. We have not heard a bell and we haven't stopped to listen, and after all the blows we've thrown, I don't even know who's winning. All the doors have been opened and closed just as fast. Remember when we were so gracious and enlightened, turning the other cheek?. Oh pointless diplomacy. Trading punches with our knuckles bleeding, we lost the gloves long ago, we are far past apologies. Stuck on the canvas with only our own reasons, Our eyes are too swollen to see anything differently.)</p><p><strong>SEGMENT8</strong><br>You will never learn</p><p><strong>SEGMENT9</strong><br>Do you always have to have the last word?. You will swing and miss and hit the ground and then you'll crash and burn</p><p><strong>SEGMENT10</strong><br>Waiting for our worlds to collide. No interest for the other side. I'm wrong, you're wrong, now I'm right. For getting out before the fight</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

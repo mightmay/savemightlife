@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Guide the Way - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Guide the Way - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Guide the Way</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Standing with lions beneath the floor tonight. And there's a lion-here we go. Right away I try to pray, I kneel there, waiting, Lord. "Daniel don't go and pray," they said to me. They made a mockery of you, Lord</p><p><strong>SEGMENT2</strong><br>Save life! Claws sharp! C'mon God! Move quick!</p><p><strong>SEGMENT3</strong><br>This cat thinks I'm such a little beefcake. Get here quick I think I'm on the meat tray. Point and click to make your bid on eBay. Teach that king that's not the way that we pray</p><p><strong>SEGMENT4</strong><br>Don't allow! Blood bath! In cave! Stop them!</p><p><strong>SEGMENT5</strong><br>Standing with lions beneath the floor tonight. And there's a lion-help me, Lord. Guide the way, when lions prey, they feed there, tame Him, Lord!</p><p><strong>SEGMENT6</strong><br>Meow (x16)</p><p><strong>SEGMENT7</strong><br>Bad cat! Don't sic! Paws off! Open!</p><p><strong>SEGMENT8</strong><br>Kit cat's nice but, no, don't want to hold one. Not gonna strike but I'm a not-so-bold one. Might not bit, I know, you never know but. God I like this story though it's no fun</p><p><strong>SEGMENT9</strong><br>Stop there! Mean lion! Get back! Hard stop!</p><p><strong>SEGMENT10</strong><br>Standing with lions I see them show their whites. And there's a lion-every hole. Find a way, my life's at stake I see their great big jaws. "Daniel, don't go and pray," they said to me. Beneath them I'll be on the floor. By the way, I find it strange I'll be here praying more</p><p><strong>SEGMENT11</strong><br>Ooh ah, kittens better listen. Ooh ah, kittens can't resist Him. Ooh ah, kittens kept their distance. Ooh ah, kittens never bit me. Ooh ah, kittens lost their mittens. Ooh, I guess I'm not a victim. Ooh, I'm gettin' out of prison--Hoo hah!</p><p><strong>SEGMENT12</strong><br>Daniel 6:19 stayed here overnight. And there's a light on-early show. By the way, it's light of day, I see that breaking dawn. "Daniel," the Persian king he calls to me. And he's remarking, "Oh poor soul". By an angel I was saved, I know You love me Lord</p><p><strong>SEGMENT13</strong><br>Standing with lions I've seen You show Your might. That I relied on to get me home. Right away I cried, You saved, I beat them, Thank You, Lord</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

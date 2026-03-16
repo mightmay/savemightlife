@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Be My Escape - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Be My Escape - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Be My Escape</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I've given up on giving up slowly. I'm blending in so you won't even know me. Apart from this whole world that shares my fate</p><p><strong>SEGMENT2</strong><br>And this one last bullet you mention. Is my one last shot at redemption. Cause I know to live you must give your life away</p><p><strong>SEGMENT3</strong><br>And I've been housing all this doubt. And insecurity. And I've been locked inside that house. All the while you hold the key. And I've been dying to get out. And that might be the death of me. And even though there's no way of knowing where to go. I promise I'm going</p><p><strong>SEGMENT4</strong><br>Because I got to get out of here. I'm stuck inside this rut that I fell into by mistake. I got to get out of here. And I'm begging you. I'm begging you. I'm begging you to be my escape</p><p><strong>SEGMENT5</strong><br>I've given up on doing this alone now. Cause I've failed and I'm ready to be shown how. You've told me the way, and now I'm trying to get there</p><p><strong>SEGMENT6</strong><br>And this life sentence that I'm serving. I admit, that I'm every bit deserving. But the beauty of grace is that it makes life not fair</p><p><strong>SEGMENT7</strong><br>'Cause I've been housing all this doubt. And insecurity. And I've been locked inside that house. All the while you hold the key. And I've been dying to get out. And that might be the death of me. And even though there's no way of knowing where to go. I promise I'm going</p><p><strong>SEGMENT8</strong><br>Because I got to get out of here. Cause I'm afraid that this complacency is something I can't shake. I got to get out of here. And I'm begging you. I'm begging you. I'm begging you to be my escape</p><p><strong>SEGMENT9</strong><br>And I am a hostage to my own humanity. Self detained and forced to live in this mess I've made. And all I'm asking is for you to do what you can with me. But I can't ask you to give what you already gave</p><p><strong>SEGMENT10</strong><br>'Cause I've been housing all this doubt. And insecurity. And I've been locked inside that house. All the while you hold the key. And I've been dying to get out. And that might be the death of me. And even though there's no way of knowing where to go. Promise I'm going</p><p><strong>SEGMENT11</strong><br>Because I got to get out of here. I'm stuck inside this rut that I fell into by mistake. I got to get out of here. And I'm begging you. I'm begging you. I'm begging you to be my escape</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

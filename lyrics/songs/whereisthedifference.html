@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Where Is The Difference - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Where Is The Difference - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Where Is The Difference</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Hello, my bride.  How are you doing?It's been a while causeYou've been busyIdols have turned your heart from meOh my hands and feetMy love, how can it beBody of Christ, more like a whoreYou love this world and youCall me LordI shed my blood for your sinsThe ones you're living inWhen are you gonna repentDo you still love meYeah cause it don%u2019t really showOH, WHERE IS YOUR HEART?YOU SAY THAT YOU%u2019RE SET APARTIF YOU REALLY LOVE MEWHERE IS THE DIFFERENCE?Light of the world, why aren%u2019t You shining?Salt of the earth, have youBecome tasteless?Fragrance of Mine, in the worldBut not of the worldNo you're not of this worldOH, WHERE IS THE LIGHT?THE HOPE YOU ARE HOARDING INSIDEIF YOU REALLY LOVE MEWHERE IS THE DIFFERENCE?If you love me, keep My commandsIf you follow me, deny yourselfIf you love this world, then youDon%u2019t love MeIf you are lukewarm, youMake Me sickIf you don%u2019t speak, how Will they know?If you don%u2019t preach, howWill they believe?If you don't go, how will theyCall My name?Oh I long for them toCall My nameBut you gotta go, gotta goIt's up to you, yeahIt'9s up to youMy hands and feet yeahIt's up to youThe victory%u2019s sure but I%u2019ve chosen you nowGO INTO ALL THE EARTHDECLARING THE FATHER%u2019S LOVEIF YOU REALLY LOVE MEWHY DON'T YOU SHARE IT?WHERE IS THE DIFFERENCE?WHERE IS THE DIFFERENCE?IS THERE A DIFFERENCE?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

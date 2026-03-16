@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Snuff The Punk - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Snuff The Punk - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Snuff The Punk</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Snuff the punk. I'm gettin' tired of you chump. Bass in your face. You'll get a taste fo the P.O.D. funk. When I say punk or chump I don't mean you. Talkin' 'bout the devil and his crew. Listen. You came to rob and steal from the helpless. Warriors in Christ we stand up for the defenseless. So can you get with this, then please step to this. And if you say yes, sign the P.O.D. checklist. This is a spiritual war, we take no prisoners. Live a life of sin, you don't know what you're getting into. You picked a winner, love the sinner, hate the sin dude. We got a plan, understand, here's what we're gonna do. Snuff the punk, snuff the punk. Snuff 'em, snuff 'em. Snuff the punk, snuff the punk</p><p><strong>SEGMENT2</strong><br>Snuff the punk, snuff the punk. Snuff 'em, snuff 'em. Snuff the punk, snuff the punk</p><p><strong>SEGMENT3</strong><br>P.O.D. hit me one more time for those that don't be known. Merrily, merrily, merrily, down the streams is how I'm flowin'. Keep goin' don't stop, all props to my pops. P.O.D. the gospel, the gospel, that rocks. Rock you, we did it, I think it's time to quit it. And when my king is speaking, yo you better take a seat kid. The shield of God ain't nothin' gonna hurt me. And like too ruff, we're gettin' down and dirty. I told you once before homie, this is the real deal. No time to win your soul, it's too late, we gotta steal it. Blinded by ignorance, use some common sense. It's too close to the end to be walking on the fence. Rough so tough, God challenged my bluff "G". I thank the Lord the day he snuffed a punk like me</p><p><strong>SEGMENT4</strong><br>Snuff the punk, P.O.D. snuff the punk. Snuff the punk, P.O.D. snuff the punk. Snuff the punk, P.O.D. snuff the punk. Snuff the punk, P.O.D. snuff the punk</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

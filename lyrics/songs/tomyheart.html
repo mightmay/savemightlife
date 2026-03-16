@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for To My Heart - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>To My Heart - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>To My Heart</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Verse 1: Flame. I thought I could trust you but dawg Im disgusted/. I thought you were innocent/. Til I read the 5th verse in the 6th chapter of Genesis/. Since its been nothin but inconsistency in my life/. I hate you I wish I can take you and break you tonight/. Because Im tired of your suggestions/. Im tired of all your reflections/. Im tired of you sayin sex is the best way to ease pain/. Insinuating I should sin in a situation you similar to Satan ever since Eve came/. And Adam sinned now within I enter a battlefield/. Injured filled up with sin and Im bound to bust like a bladder will/. Why do you torture me/. Often caught up in forgery/. Signing my name on sins that I knew I shouldnt have committed/. Feel like Im losin Im choosin all of the foolishness/. Disturbing my peace like you ludicrous/. Feel like forget it/. But Im a fight you because I really dont really like you/. Invite you? Ill never trust you again</p><p><strong>SEGMENT2</strong><br>Hook: Ill never trust you again/. And if I ever trust you again just know its just the lust thats within/. Its just the wrestle within/. But when He comes to rescue His men/. Youll never ever sucker me in/. No never ever again/. My greatest enemy pretends to be friends/. But its the inner me that needs to be cleansed/. Since weve seen the second person with in the Trinity win/. Marked the day of my enemies end/. Ill never trust you again</p><p><strong>SEGMENT3</strong><br>Verse 2: shai linne. Chill with the sob story and give God glory/. Im feelin your conviction but what you spittin is really fiction/. Inaccurate depiction not based on holy inscription/. So listen to my diction to get my proper description/. Imagine a cave and there your mind, emotion, and desire/. After your saved is where youll find devotion to Messiah/. Conflicted desires collided inside its divided/. But God can unite it provided you desire to fight it/. You actin all surprised you got a wretchedly mind/. Like you aint read Jeremiah 17:9/. We both know what Adam did to us in the garden B/. Your still suppose to love the Lord your God with all of me/. Im called a heart but see Im not a bodily artery/. Pardon me but honestly you were improperly guarding me/. Cause whether its the T.V. or CD/. Or DVD easily Id speedily greedily eat what you feedin me/. If you aint buildin me up you knockin me down/. Which makes your deeds come from a heart of darkness like apocalypse now/. The best advice I can give you is learn about mortification/. The Lord is so patient Hell bring you to glorification/. You ought to respect the grace the architect the plan/. If water reflects the face the heart reflects the man/. So to sum it up the point Im comin to Flame/. Not trustin me is not trustin you because were one in the same/</p><p><strong>SEGMENT4</strong><br>Verse 3: Flame. Yeah, yeah I know we one in the same/. And I know that Im wrong for shiftin the blame/. But what Im sayin is if you tell me to sin/ never again will I trust you again.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

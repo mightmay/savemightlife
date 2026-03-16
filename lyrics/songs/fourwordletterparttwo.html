@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Four Word Letter (Part Two) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Four Word Letter (Part Two) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Four Word Letter (Part Two)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I wrote a four word letter, with post-script, in crooked lines, "tho I'd lived I'd never been alive.". You know who I am. you held my hem as I traveled blind listening to the whispering in my ear, soft but getting stronger, telling me the only purpose of.  my being here is to stay a bit longer. stealing a bicycle chain, as the handlebars crashed to the ground, the back wheel detached from the frame, it kept rolling, yea, but aimlessly drifting around. Oh, doubters, let's go down, let's go down. won't you come on down, oh doubters,  let's go down , down to the river to pray?. "But I'm so small I can barely be seen. How can this great love be inside of me?". Look at your eyes - they're small in size, but they see enormous things. Wearing black canvas slippers in our frog-on-a-lily-pad pose we sewed. buttons and zippers to chinese pink silk and olive night clothes. if you can someday stop by.  somehow we'll show you the pictures and fix you some tea. (see, my dad's getting a bit older now, and just unimaginably lonelier). oh, pretenders, let's go down, let's go down. won't you come on down, oh pretenders, lets go down, down to the river and pray?. "But I'm so afraid," or "I'm set in my ways". but he'll make the rabbits and rocks sing his praise. "oh, but I'm so tired, I won't last long.". No, hell use the weak to overcome the strong!. Oh, Amanda, let's go down, let's go down,  wont you come on down. Mama, Nana, lets go down, down in the dirt, or the river to pray. you strike the match. Why not be utterly changed to fire?. To sacrifice the shadow and the mist of a brief life you never much liked. So if you'd care to come along we're gonna curb all our never-ending, clever complaining (as who's ever heard of a singer criticized by his song?). We hunger,  but through all that we eat brings us little relief. we don't know quite what else to do, we have all our beliefs, but we don't want our beliefs, God of peace, we want You.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

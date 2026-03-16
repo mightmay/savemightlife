@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Strong Enough - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Strong Enough - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Strong Enough</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You must. You must think I'm strong. To give me what I'm going through</p><p><strong>SEGMENT2</strong><br>Well, forgive me. Forgive me if I'm wrong. But this looks like more than I can do. On my own</p><p><strong>SEGMENT3</strong><br>I know I'm not strong enough to be. everything that I'm supposed to be. I give up. I'm not stong enough. Hands of mercy won't you cover me. Lord right now I'm asking you to be. Strong enough. Strong enough. For the both of us</p><p><strong>SEGMENT4</strong><br>Well, maybe. Maybe that's the point. To reach the point of giving up</p><p><strong>SEGMENT5</strong><br>Cause when I'm finally. Finally at rock bottom. Well, that's when I start looking up. And reaching out</p><p><strong>SEGMENT6</strong><br>I know I'm not strong enough to be. Everything that I'm supposed to be. I give up. I'm not stong enough. Hands of mercy won't you cover me. Lord right now I'm asking you to be. Strong enough. Strong enough</p><p><strong>SEGMENT7</strong><br>Cause I'm broken. Down to nothing. But I'm still holding on to the one thing. You are God. and you are strong. When I am weak</p><p><strong>SEGMENT8</strong><br>I can do all things. Through Christ who gives me strength. And I don't have to be. Strong enough. Strong enough</p><p><strong>SEGMENT9</strong><br>I can do all things. Through Christ who gives me strength. And I don't have to be. Strong enough. Strong enough</p><p><strong>SEGMENT10</strong><br>Oh, yeah</p><p><strong>SEGMENT11</strong><br>I know I'm not strong enough to be. Everything that I'm supposed to be. I give up. I'm not stong enough. Hands of mercy won't you cover me. Lord right now I'm asking you to be. Strong enough. Strong enough. Strong enough</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

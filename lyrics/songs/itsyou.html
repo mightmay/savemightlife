@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for It's You - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>It's You - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>It's You</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[INTRO]. Just think- just think about it. Won't you just think about it. Repeat</p><p><strong>SEGMENT2</strong><br>[VERSE]. J-E-S-U-S is more powerful than the whole U-S is. Can't do Him like Judas did. Cause if I did, that would be what foolish is. I don't need all the fancy cars. I don't need to win the Grammy Awards. Lord I need You. Cause when I'm low and need a battery charge. All the Grammy on the wall will offer me will be feeble. I need You like a coat in the winter time. You're always faithful. Sure have been a friend of mine. I love Your table Ooo like it's dinnertime. Grace on the plate I sure have got a sinner's mind. You bring life I presume with dying. Now I follow behind You like a funeral line. Never knew what love was. But a, sending Your Son was a beautiful sign</p><p><strong>SEGMENT3</strong><br>[HOOK]. You (It's You, It's You). I never wanna live another day without You. (It's You, It's You). I thought my way and my life was lost without you. (It's You, It's You). No love, no breath, no me without you. (It's You, It's You). It's true I need you</p><p><strong>SEGMENT4</strong><br>[VERSE]. Yes, J-U-S-T-I-F-I-E-D that's what we need to be. That'll get You in the presence of God. Then Heaven's like VIP only better though, O!. Nothing to compare to. Not even that feeling when you get a new hairdo. He spared you if you're still alive. The perfect opportunity to spill to God. I need You to get the props and praise. And never stop you're the Rock of Ages. I attest to nothing you made was cropped or pasted. Creation jaw dropping amazing we imitate You. We need You just to see our way. Jesus Christ is our V-I-A. Cause we all gotta. Get ready for the bridegroom to come. We're kind of like the fiancée</p><p><strong>SEGMENT5</strong><br>[HOOK]. You (It's You, It's You). I never wanna live another day without You. (It's You, It's You). I thought my way and my life was lost without you. (It's You, It's You). No love, no breath, no me without you. (It's You, It's You). It's true I need you</p><p><strong>SEGMENT6</strong><br>[VERSE]. Been so good gotta bless my God. Can't keep quiet gotta testify. He's good to my heart like exercise. We must bow, we're in the presence of God. Now, He's flawless. He's perfect. He's awesome. Let's worship. Let's praise the ancient of days. And give our life as an offering and reasonable service. So you can keep the Benzo. We're much more pleased being Jesus' kinfolk. We're much more pleased being free from sins hold. We finally see what we need within most. I can't hold back. I gotta run this. Nothing healthy in the hood like Sun Chips. The Son dripped blood from a cross. While thugs spill blood in the street. We all need Him</p><p><strong>SEGMENT7</strong><br>[HOOK]. You (It's You, It's You). I never wanna live another day without You. (It's You, It's You). I thought my way and my life was lost without you. (It's You, It's You). No love, no breath, no me without you. (It's You, It's You). It's true I need you</p><p><strong>SEGMENT8</strong><br>Just think about it. Spoken You know, Lord. We needed You to die on the cross for our sins. And til this day, we still need you to give us grace. To give us strength - we need you.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

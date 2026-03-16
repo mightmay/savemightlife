@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Setting Sun - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Setting Sun - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Setting Sun</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I've got a wound that doesn't heal, Burning out again, Burning out again</p><p><strong>SEGMENT2</strong><br>I've not sure which of me is real, And I'm alone again, Burning out again</p><p><strong>SEGMENT3</strong><br>My hope runs underneath it all, The day that I'll be home</p><p><strong>SEGMENT4</strong><br>It won't be long, I belong, Somewhere past the setting sun</p><p><strong>SEGMENT5</strong><br>Find me free, find me strong, Somewhere back where I belong</p><p><strong>SEGMENT6</strong><br>Something shared with me again, But I'm not buying it, I'm not buying it</p><p><strong>SEGMENT7</strong><br>My wound goes deeper than the skin, There's no hiding it, So I'm not trying it</p><p><strong>SEGMENT8</strong><br>My hope runs underneath it all, The day that I'll be home,</p><p><strong>SEGMENT9</strong><br>It won't be long, I belong, Somewhere past the setting sun, Find me free, find me strong, Somewhere back where I belong</p><p><strong>SEGMENT10</strong><br>Yeah, Yeah, (Somewhere past the setting sun!)</p><p><strong>SEGMENT11</strong><br>Yeah, Yeah, (Going back where we belong!)</p><p><strong>SEGMENT12</strong><br>Yeah, Yeah, (I'll find you). (The setting sun!)</p><p><strong>SEGMENT13</strong><br>Let the weak say I am strong, and it won't be long, Let the right say I was wrong, and it won't be long. Let us find where we belong, Beyond the setting sun, Beyond the setting sun</p><p><strong>SEGMENT14</strong><br>It won't be long, I belong, Somewhere past the setting sun, Find me free, find me strong, Somewhere back where I belong</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

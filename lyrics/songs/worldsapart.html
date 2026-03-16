@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Worlds Apart - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Worlds Apart - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Worlds Apart</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I am the only one to blame for this. Somehow it all adds up the same. Soaring on the wings of selfish pride. I flew too high and like Icarus I collide. With a world I try so hard to leave behind. To rid myself of all but love, To give and die</p><p><strong>SEGMENT2</strong><br>To turn away and not become. Another nail to pierce the skin of one who loves. More deeply than the oceans, More abundant than the tear. Of a world embracing every heartache</p><p><strong>SEGMENT3</strong><br>Can I be the one to sacrifice. Or grip the spear and watch the blood and water flow</p><p><strong>SEGMENT4</strong><br>To love you - take my world apart. To need you - I am on my knees. To love you - take my world apart. To need you - broken on my knees</p><p><strong>SEGMENT5</strong><br>All said and done I stand alone. Amongst remains of a life I should not own. It takes all I am to believe. In the mercy that covers me</p><p><strong>SEGMENT6</strong><br>Did you really have to die for me?. All I am for all you are. Because what I need and what I believe are worlds apart</p><p><strong>SEGMENT7</strong><br>And I pray, To love you - take my world apart. To need you - I am on my knees. To love you - take my world apart. To need you - broken on my knees</p><p><strong>SEGMENT8</strong><br>I look beyond the empty cross. Forgetting what my life has cost. And wipe away the crimson stains. And dull the nails that still remains. More and more I need you now, I owe you more each passing hour. The battle between grace and pride. I gave up not so long ago. So steal my heart and take the pain. And wash the feet and cleanse my pride. Take the selfish, take the weak, And all the things I cannot hide. Take the beauty, take my tears. The sin and soaked heart and make it yours. Take my world all apart. Take it now, take it now. And serve the ones that I despise. Speak the words I can't deny. Watch the world I used to love. Fall to dust and thrown away. I look beyond the empty cross. Forgetting what my life has cost. So wipe away the crimson stains. And dull the nails that still remain. So steal my heart and take the pain. Take the selfish, take the weak. And all the things I cannot hide. Take the beauty, take my tears. Take my world apart, take my world apart. I pray, I pray, I pray. Take my world apart</p><p><strong>SEGMENT9</strong><br>Worlds Apart.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Little Man - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Little Man - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Little Man</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Keep both my eyes transfixed on the prize. A high-rise to the blue skies my piece of the pie. There's a hole in my heart that I know how to fill. That's to light my cigarettes with a hundred dollar bill. It's all about cash flow the California Dream. To make the grade you gotta make the green. My friend I'm the champion I've no time for losers. Never ask for nothin 'cause beggars can't be choosers</p><p><strong>SEGMENT2</strong><br>Lookin' our for number ones's a full time occupation. I'll give to me myself and I my own salvation. Some people try to tell me God can save me from my sin. But God can take a number and I'll pencil him in. Busy oh so busy I got no time to search. My sunday's are all booked I've got no time for church. That's for those poor souls, dry as a stone. God bless this child 'cause this child's got his own.</p><p><strong>SEGMENT3</strong><br>Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man</p><p><strong>SEGMENT4</strong><br>He who gets the most toys and dies is the winner. I'm livin' the high life with lobster tail dinners. My lexus, my yacht, my gold chains and rings. These are a few of my favorite things. But most of all I keep my billfold the closest to my heart. House decorated with million dollar works of art. Roll with the bigwigs they think I'm the man. But then I stop and look and think about how big I really am</p><p><strong>SEGMENT5</strong><br>Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man</p><p><strong>SEGMENT6</strong><br>Mammon is an unforgiving god, I cast him away. I live my life to God, not to get paid. Money can't save your soul, don't think I can. I look to God and I feel like a little man.</p><p><strong>SEGMENT7</strong><br>Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man. Oh, let my pride fall down I'm a little man.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

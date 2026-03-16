@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for God Man - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>God Man - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>God Man</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. You say you would die for your block, and you would die for your dawgs. But would you get on the cross, and then die for us all. I can hear Him cryin' "Let this cup pass from Me". Yet some sin against Holy Ghost which is blasphemy. Now picture pain the worst on earth ever existed. Experienced the mischief, endureth the crucifixion. He died although 40 percent wouldn't believe. See He died although 10 percent wouldn't receive. See He died although 20 percent wouldn't understand. And only 30 percent reverenced Him as the Son of Man. Now knowin' this He still said "Nevertheless, not My will but let Yours be done". 33 years of pain, sufferin' and sorrow. Rejection, ridicule in a tomb that was borrowed. Foxes have holes, birds have nest. But even the Son of Man didn't have a place to rest</p><p><strong>SEGMENT2</strong><br>[Chorus]. They forget You're the Godman. Your Word says You were tempted on every hand. yet they promise up and down that you don't understand. Could it be an excuse to continue in sin. Could it be in their greed that they want more. As if dyin' on the cross wasn't enough for them. Let's pretend and defend like it's the last rhyme. This is what I would say to persuade minds. Listen</p><p><strong>SEGMENT3</strong><br>[Verse Two]. The first Adam straight died with his bride. And the second Adam straight died for His bride. And we have a high priest who can really sympathize. With our weaknesses and see the lies. And the disguise in us lived in Nazareth that's similar to our urban streets. Til He was 30 and rejected by His town peeps. Know what it's like to be shun, hung, spit upon. And still be the Son and one with the Father. Feel the agony of the main people hatin' on you. The ones that read about you and suppose to be waitin' on you. Know what it's like to be dogged out. But gotta fight cause you called out. Plus in the garden of Gethsemane. He made the choice to surrender to His enemies. Know what it's like to walk the earth and get no love. Treated so cold like hands and ice with no gloves</p><p><strong>SEGMENT4</strong><br>[Chorus]. They forget You're the Godman. Your Word says You were tempted on every hand. yet they promise up and down that you don't understand. Could it be an excuse to continue in sin. Could it be in their greed that they want more. As if dyin' on the cross wasn't enough for them. Let's pretend and defend like it's the last rhyme. This is what I would say to persuade minds. Listen</p><p><strong>SEGMENT5</strong><br>[Verse Three]. No tongue should ever speak He don't know strugglin'. Heartache, heart break and sufferin'. Spit on, whipped on, and thrown down. A prophet without honor in His hometown own town. We waitin' to see the spectacular and miraculous. He cracked the grave and resurrected the miraculous. Showed His love and died for us while we were yet sinners. You're either generation X or blessed winners. Took many lashes and then shed blood. Cried and sweat blood, God, now that's love that's love. What more can He do than He's already done. Than to love the world so much that He sent His only begotten son. What more can He do to say that He loves your life. Than to wrap in human flesh and become the Christ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

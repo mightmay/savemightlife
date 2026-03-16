@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for In A Market Dimly Lit - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>In A Market Dimly Lit - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>In A Market Dimly Lit</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>The bird that plucked the Olive Leaf. has been circling like a record never-ending in my mind. where the needle's worn the grooves too deep, and scratched the wax that's blistered from the heat besides. so from any movement in the room-. if my cat walked by the arm skipped!. but to my surprise, my interrupting cat improved. a sound already so severely compromised</p><p><strong>SEGMENT2</strong><br>the needle's worn the grooves too deep</p><p><strong>SEGMENT3</strong><br>I'm a donkey's jaw on a desert dune. beside the bush that Moses saw. that burned and yet was not consumed. she's the silver coin I lost, I'm the sheep who slipped away. we pray the fingers crossed. but you listen patiently anyway</p><p><strong>SEGMENT4</strong><br>I wrote a little song for you. with a melody I'd borrowed put to words that didn't rhyme. to repeat what you already knew. as the stones thrown at your window tapped a syncopated time. you kept a distance out of fear you'd break. but what good's a single windchime, hanging quiet all alone?. the music our collisions would make. is a sound that turns the road-that-leads-us-back-home. into Home.</p><p><strong>SEGMENT5</strong><br>the music our collisions make!</p><p><strong>SEGMENT6</strong><br>I had a rusty spade but I'm not the fighting sort. if I was Samson I'd have found that harlot's blade. and cut my own hair short!. then in a market dimly lit I come casually to pay. you see my coins are counterfeit. but accept them anyway</p><p><strong>SEGMENT7</strong><br>so spare me your goodbyes, your waving-handkerchief-good-byes. given my tendency to err so on the sentimental side. I'll spare you my goodbyes, the truth belongs to G-d, the mistakes were mine</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Momentum: Beatmart Remix - Todd Collins - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Momentum: Beatmart Remix - Todd Collins - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Momentum: Beatmart Remix - Todd Collins</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Somebody said you better let go. 'Cause they said so. But I could never let this thing go. Don't they even know what that means. They call me obscene. Say I wear my faith on my sleeve. But I ain't here to seek no glory. End of story, I know the judge and the jury. People always gotta ask who, what, when, and why. But never wanna step to the light</p><p><strong>SEGMENT2</strong><br>So I hear you say you wanna come and get some. Should I mention I got your attention. Know that I'm a man on a mission, my position is. Momentum</p><p><strong>SEGMENT3</strong><br>[CHORUS]. Been on a roll for two thousand years or so. We've got momentum baby</p><p><strong>SEGMENT4</strong><br>Livin' on the edge of obnoxious. They call me raucous. I'm a freak, I can't stop this. Ardently enthused about God. No hand-me-down nod. Your gonna get all I got. High-steppin' from the twenty on in. Knees to my chin. I'm rollin' deep in momentum. Burnin' with the hard core flame. No shame in this game. I'm followin' my heart not my brain</p><p><strong>SEGMENT5</strong><br>[CHORUS]</p><p><strong>SEGMENT6</strong><br>Been on a roll. Cause we got souls that won't die. And this party ain't over 'til we take flight. You've been told that we come bold on this side. You ain't never known the dilly 'til we testify. Cause have you ever heard of turnin' water into wine. And have you ever heard of givin' sight back to the blind. It's undeniable we're droppin' the Truth on this track. Cause once you start an avalanche there ain't no turnin' back</p><p><strong>SEGMENT7</strong><br>[CHORUS].</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

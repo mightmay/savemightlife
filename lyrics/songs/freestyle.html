@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Freestyle - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Freestyle - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Freestyle</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Kids coming up from the alleys not like the valleys. Southtown San Diego rats out here in Cali. So Cal with the crew to show 'em how. You like me now, with the sound straight underground. Putt'n it down, lift up this jewel that I have found. And pass it around, flowing against the crowd. Hip-hop hardknox rhym'n soon as the tune drops. Negative small talks, homie start kick'n rocks. And take it down the blocks where it belongs. A demo of songs but they wouldn't put me on. Thought I was gone, too late, but who's to say. My pockets are empty and I got dues to pay. To the tic toc you don't stop. To the tic toc you don't quit, hit it</p><p><strong>SEGMENT2</strong><br>Freestyle, freak with the flava it's the sure shot. Floss up the Ave when the spot gets hot. Still pay'n dues and knock'em out the box</p><p><strong>SEGMENT3</strong><br>That's how it is homie like it or not. It's bad enough late bills keep stacking up. No one ever told me that it would cost this much. So buckle up and come along for the ride. Catching the vibes and staying true to my tribe. I got mad love for the ones that still around. Knew you'd be down from the get-go here and now. You make me proud from the diapers to the grave. No masquerade, stayed the same like in the day. One day when we all gets saved. We're gonna change the world no matter what they say. And stay real playing what we feel. I'll keep praying for you while you shoot to thrill</p><p><strong>SEGMENT4</strong><br>To the tic toc you don't stop. To the tic toc you don't quit, hit it</p><p><strong>SEGMENT5</strong><br>Freestyle, freak with the flava it's the sure shot. Floss up the Ave when the spot gets hot. Still pay'n dues and knock'em out the box</p><p><strong>SEGMENT6</strong><br>It's been a long time. It's been a long time com'n. Hated by many and loved by less. Hold the thresh, resurrected here in the west. Clinch the fist, dismiss the stereotype myths. Loose lips sink ships, then plead the fifth. You hated this, no reason you hated this. If you only knew you'd be the first one to enlist. We come in love cause its just how we does. Fit the frame staying the same as it ever was</p><p><strong>SEGMENT7</strong><br>To the tic toc you don't stop. To the tic toc you don't quit, hit it</p><p><strong>SEGMENT8</strong><br>Freestyle, freak with the flava it's the sure shot. Floss up the Ave when the spot gets hot. Still pay'n dues and knock'em out the box</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

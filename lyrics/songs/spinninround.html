@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Spinnin' Round - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Spinnin' Round - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Spinnin' Round</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Round, round, you're spinnin' round. Your life goes round and round</p><p><strong>SEGMENT2</strong><br>I got a reason to rap cause my God is King. Just like a gospel singer's got a reason to sing. And like young David used to play his harp. Presenting praise and worship in the form of an art. I selected a direction, I'm going one way. I got a motive and a reason to say what I say. Telling you about a friend, you need to know Him. Christ the Messiah is the Savior of men. I presented my purpose, now present to me your's. To boast and to brag the most is no chore. I don't mean to sound negative, ain't puttin' ya down. But it appears kinda clear that you're just spinnin' around</p><p><strong>SEGMENT3</strong><br>(chorus). Round, round, a-ra-a round, round. You're spinnin' round. Round, round, a-ra-a round, round. On your way down. Round, round, a-ra-a round, round. You're spinnin' round. Round, round, a-ra-a round, round. Christ must be found</p><p><strong>SEGMENT4</strong><br>Spin, then do it again. But no real direction is where you've been. You're spinnin' like a top or a merry-go-round. Your life song is like my break sound. Your rap is ego-filled, the milk has been spilled. And for this piece of advice, you won't be billed. But take heed to this info, like it came from ya kin folk. Remem' it ain't a whim but you will hear it again. Yo, listen kinda a close, you might need a dose. Of Decent Christian rap with DC Talk as your host. I'm not on the mic to boast but I submit a toast. Praise the Lord y'all sings a heavenly host. You're spinnin'</p><p><strong>SEGMENT5</strong><br>(repeat chorus)</p><p><strong>SEGMENT6</strong><br>Stop grinnin' while you're spinnin' cause you're messin' up. You know I rap for the King who could be fillin' your cup. Enlightening lyrics can lengthen your life. Listen close, I don't boast, but illuminate Christ. Don't submit my name to fame, I don't claim to be down. Cause you'll see me going up when the trumpet sounds. Call it heavenbound while you're spinnin' round. I'm saved, hear me rave, I'll be wearing' a crown. Cause I'm in the Lord's army while satan's out to charm me. He won't harm me or disarm me, I know sin is gonna scar me. So I resist temptation, it comes in variation. Condemnation, devistation, you read in Revelation. God is love like a dove? His wrath will be keen!. What I mean is unseen, it won't be green. Crushin' satan, perpetratin' adversaries and foe. The Holy Word of God says they all gotta go. You're spinnin'</p><p><strong>SEGMENT7</strong><br>(repeat chorus)</p><p><strong>SEGMENT8</strong><br>What's up, this is dc Talk. This song goes out to all you people. That have no direction in life. You people that are spinnin' round. Well I got news, God has a plan for your life, He's just waitin' for you to ask Him for the map. So don't take it light</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for My One Thing - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>My One Thing - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>My One Thing</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Everybody I know says they need just one thing. And what they really mean is that they. need just one thing more. And everybody seems to think. They've got it coming. Well I know that I don't deserve You. Still I want to love and serve You. More and more. You're my one thing</p><p><strong>SEGMENT2</strong><br>Save me from those things. That might distract me. Please take them away and purify my heart. I don't want to lose the eternal for. The things that are passing. 'Cause what will I have when the world is gone. If it isn't for the love that goes on and on with</p><p><strong>SEGMENT3</strong><br>CHORUS: My one thing, You're my one thing. And the pure in heart shall see God. You're my one thing. You're my one thing. And the pure in heart shall see God</p><p><strong>SEGMENT4</strong><br>Who have I in Heaven but You Jesus. And what better could I hope. To find down here on earth. I could cross the most distant reaches. Of this world, but I'd just be wasting my time. 'Cause I'm certain already, I'm sure. I'd find You're</p><p><strong>SEGMENT5</strong><br>CHORUS</p><p><strong>SEGMENT6</strong><br>Every night and every day. You hold on tight. Or you drift away. And you're left to live. With the choices you make. Oh Lord please give me the strength. To watch and work and love and sing and pray</p><p><strong>SEGMENT7</strong><br>'Cause who have I in Heaven but You Jesus?. And what better could I hope. To find down here on earth?. Well I could cross the most distant reaches. Of this world, but I'd just be wasting my time. 'Cause I'm certain already I'm sure I'd find</p><p><strong>SEGMENT8</strong><br>You're my one thing (one thing). You're my one thing (one thing). And the pure in heart shall see God</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

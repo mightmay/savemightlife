@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for St. Nick's Groove - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>St. Nick's Groove - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>St. Nick's Groove</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You know, lots of people think that St. Nicholas is just another name for Santa Claus.. But Santa is also called Father Christmas, Kris Kringle, and some other names.. But behind all of these names is a boy who lived in what is now western Turkey about 1700 years ago.. His name was Nicholas.</p><p><strong>SEGMENT2</strong><br>Now when Nicholas was a little boy, a plague struck his home town and both his parents got sick and they died.. He went to live with his uncle who was a monk in a monastery, who taught him all about God and Jesus.. Now when Nicholas' parents died, they left him all of their money.. But monks are supposed to be poor, so Nicholas resolved to give it all away, especially to other children in trouble.. There's a wonderful story about three girls who cold not get married because they had no dowries.. Now in those days a girl had to have a big sum of money, or a dowry, if she was to marry.. If she didn't, she'd be sold as a slave.. Nicholas heard of this and he came up with a plan.. Late at night he tossed a stocking full of gold coins through the bedroom window of the oldest daughter.. Soon she married a good husband.. She said she had the dowry hidden away in her sock.. Nicholas again tossed a sock full of money through the window of the second daughter.. She, too, soon married.. But when Nicholas crept up to the house with the third sock full of money for the third daughter, he found all of the windows were shut.. So he did what boys sometimes do.. He climbed up on the roof and he dropped it down the chimney and it landed in the girl's shoes, which were beside the hearth.. When she, too, married claiming that her dowry was in her shoes, people were amazed, and they said to one another, "It's some kind of miracle.". St. Nicholas was an orphan boy who became a priest and then a bishop, who loved Jesus and God and gave away all of his wealth to the poor, and especially to children in trouble.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

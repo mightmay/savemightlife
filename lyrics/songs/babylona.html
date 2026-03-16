@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Babylona - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Babylona - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Babylona</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Ooh my little city was pretty tough. When it was the kingdom called Babylona. Ooh, I made a golden god and told the mob. Got to come and bow before my persona. Everybody dropped, givin' up. Such a pretty sight, they all were givin' up. All the town, 'cept three Israelites. Why, why, why, why, why?! Whoa!. Ba-ba-ba-babylona. Called the little jokers up -- said "Bring 'em up. Close enough to look in my fire's aroma!. Hebrew children, listen to me, you're dissin' me. Come and bow or simmer like Rice-a-rona!". "Never gonna drop," they said "We're not. "Such important guys, but God will get us out!". Told the guards, "Throw them in the fire!". Bye, bye, bye, bye, bye! Whoa!. Ba-ba-ba-babylona. Ba-ba-ba-babylona. Said to throw them into the rotisserie. Sizzlin' like a platter of fried bologna. Kids youre just a recipe, so rest in peace!. They didnt burst in flames and die. Why? Dont knowa. Never would have thought they'd live at all. Such a burnin' fire. I saw them with their God. Called them out. Now they're friends of mine. My, my, my, my, my! Whoa!. Ba-ba-ba-ba-ba-ba-ba-bye bye bye bye bye bye! Whoa!. Ba-ba-ba-babylona. Ba-ba-ba-babylona. Ba-ba-ba-babylona. Ba-ba-ba-babylona. Hot (hot), hot (hot), Ouch. Hot, (hot), hot (hot), Ouch. Hot. Too hot in the hot tub. Ow!. Oooo, (aaah). Babylona!. Oooo, (aaah). Babylona!. Oooo, aaah. Babylona!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

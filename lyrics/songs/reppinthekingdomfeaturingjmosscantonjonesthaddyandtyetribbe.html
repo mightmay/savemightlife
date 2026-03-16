@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Reppin' The Kingdom (featuring J Moss, Canton Jones, T Haddy and Tye Tribbe - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Reppin' The Kingdom (featuring J Moss, Canton Jones, T Haddy and Tye Tribbe - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Reppin' The Kingdom (featuring J Moss, Canton Jones, T Haddy and Tye Tribbe</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I'll go first, gimmie that mic. Gotta get this party started right. Everybody scream at the top of your lungs Holy Ghost gonna have me speakin in tounges. I'm a part of a dynasty, a family that's been set free. (like me)yes they call me d haddy, (yep) everywhere I go all eyes on me. cuz When I lead them to the cross, God our Father is the boss. Our job is to win the lost, name it so they name name it cost?. we goin goto the east coast to the west coast to find out who reppin the most. New generation takin our freedom , Reppin the Kingdom.  chorus (2x). (I'm) Reppin the Kingdom (4x). I'm in(2x) you can count me in, I'm reppin the Kingdom. i'm gone droppin #2 , second gone mean that I put it on point. I rep from the mid West cuz some of my hood rep good on the joint. get yo hands up. rep yo city. if you love Him go tell everybody you know. It's me from the D you goin see  D haddy  but enough about me. (rep God {for the lost}rep God{for the broken}rep God {you feel defeated}rep God{you haven't lost}rep God {so rep your place} rep God{stay in his face}. cuz there is (freedom) in the (Kingdom).   Chorus. The Kingdom is my business, so you can call me a business man. I follow the Scriptures, so you can call that my business plan. Do what He tell me to do. That is how my business is ran. Cajo be my business brand. See me in my business stands. Still busy after the Kingdom?. It don't mater what they ? then bring them. international or bilingual. we goin let he power sting 'em. drug dealers, pimps, thugs, kids, teens, and older. bow your head to Jehovah (okay) now you're a soldier.  Chorus. T haddy on the track, how long did we wait. when You say T, Haddy is my ?. We rep the family tree (yep). Covenant to the Father, so we rep fo sho (yep). And we gotta rep the Kingdom everywhere we go (say it cuz). ???????. Chorus. T.T. coming, I know I sound kinda hood. Might as well get used to it, accept it cuz I'm notin' here. (oh) we Reperesent the Kingdom of God. and I dont I dont fly with the mistakes in yall. We're talking Kingdom man. They say I'm kinda slow. You won't find us in sin. ?????? If you're reppin Christ let me see you hit the floor. Chorus.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

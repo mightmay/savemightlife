@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Brat Pack - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Brat Pack - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Brat Pack</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>For about four years Ive hated this town. Theres so much I just want to get out. Since graduation was long ago. Please somebody get me out of this hole. Cause I dont want to get stuck in here. When I am thirty-four just talking about high school years. No I dont want to be there an I feel so stuck right here. Back and forth side to side oh my dear. My foot to the floor I will drive to the place. Where I can kick it with friends through the night. A place well talk about now and the past what the future holds. Hanging out with not much to do. Just aimless with each other is what we do</p><p><strong>SEGMENT2</strong><br>Cause this aint where its at. My friends will second that. And I gotta admit sometimes its pretty sad. But its like were our own brat pack. Were always kickin back nobody can take that. That is that its like its all we have</p><p><strong>SEGMENT3</strong><br>Whooo whooo ya oh come on</p><p><strong>SEGMENT4</strong><br>Say oh oh get on the floor. Dance till you got no more. I know its there somewhere. Dont worry ill be there to rock the party all night. To rock into this night our fists in the air. Fightin a good fight. Cause we were singing along to Peter Gabriel sledge hammer song. You know its clear that tonight we belong in this place. So I stand back to reflect in this town I hate. At least just for a second I think I might stay</p><p><strong>SEGMENT5</strong><br>This aint where its at. My friends will second that. And I gotta admit sometimes its pretty sad. But its like were our own brat pack. Were always kickin back nobody can take that. And that is that</p><p><strong>SEGMENT6</strong><br>So ill run away to the hopes that I have. That still I fall asleep in the arms of my past. And when I wake so helpless and thinking of that just lay back down</p><p><strong>SEGMENT7</strong><br>Again</p><p><strong>SEGMENT8</strong><br>Everyday</p><p><strong>SEGMENT9</strong><br>So maybe later toady ill know. What I will do with my life as I know it. Maybe for now ill drive back to that place where I belong. And hope to god it hasnt changed</p><p><strong>SEGMENT10</strong><br>This aint where its at. My friends will second that. And I gotta admit sometimes its pretty sad. But its like were our own brat pack were always kickin back. Nobody can take that no no no</p><p><strong>SEGMENT11</strong><br>This aint where its at. My friends will second that. And I gotta admit sometimes its pretty sad. But its like were our own brat pack were always kickin back. Nobody can take that. That is that its like its all we have.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

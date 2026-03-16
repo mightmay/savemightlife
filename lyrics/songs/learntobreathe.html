@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Learn To Breathe - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Learn To Breathe - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Learn To Breathe</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Sometimes I just want to run away, From all the things you say to me, Feelings are ok to me..</p><p><strong>SEGMENT2</strong><br>And I just want to find a place, Where no one sleeps, we're all awake, And take the time to get away..</p><p><strong>SEGMENT3</strong><br>I don't want to play these games, Your strength has helped me make the change, Catch me if I fall from grace..</p><p><strong>SEGMENT4</strong><br>I don't want to play your games, 'Cause lonely was a safer place, Catch me if I fall from grace..</p><p><strong>SEGMENT5</strong><br>Take the time, to learn to breathe, 'Cause some day we're goin' under, When did we, all fall asleep?. Won't someone wake us?. Take the time, to learn to breathe, 'Cause some day we're goin' under, Help us see, what's underneath</p><p><strong>SEGMENT6</strong><br>I'm not here to place the blame, 'Cause although we're not, we're all the same, You lit a fire, when You called my name, uhh huh</p><p><strong>SEGMENT7</strong><br>I don't want to play your games, 'Cause lonely was a safer place, Catch me if I fall from grace, uhh huh</p><p><strong>SEGMENT8</strong><br>Take the time, to learn to breathe, 'Cause some day we're goin' under, When did we, all fall asleep?. Won't someone wake us?. Take the time, to learn to breathe, 'Cause some day we're goin' under, Help us see, what's underneath</p><p><strong>SEGMENT9</strong><br>I wanna take you, wanna shake you, Wanna make you feel like I do, I wanna take you, wanna break you, Wanna make you know what it's like</p><p><strong>SEGMENT10</strong><br>I wanna take you, wanna break you, Wanna make you, feel like I do, I wanna take you, wanna shake you, Wanna make you know what it's like</p><p><strong>SEGMENT11</strong><br>I won't fight you, I'm not like you, I wanna make you see what I see, I won't fight you, I'm not like you, I wanna make you feel like I do</p><p><strong>SEGMENT12</strong><br>I won't fight you, I'm not like you, I wanna make you see what I see, I won't fight you, I'm not like you, I wanna make you feel..like I feel</p><p><strong>SEGMENT13</strong><br>Take the time, to learn to breathe, 'Cause some day we're goin' under, When did we, all fall asleep?. Won't someone wake us?. Take the time, to learn to breathe, 'Cause some day we're goin' under, Help us see, what's underneath</p><p><strong>SEGMENT14</strong><br>You think you have it all figured out, You think you're onto something, I see you standing there, acting like you have. No idea what I'm talking about, You don't like the way I dress, You don't like the way I talk, That's fine, 'cause nobody asked you, And next time you want to point the finger. I suggest you look in the mirror,</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

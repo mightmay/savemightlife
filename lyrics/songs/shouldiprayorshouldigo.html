@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Should I Pray or Should I Go? - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Should I Pray or Should I Go? - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Should I Pray or Should I Go?</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Calling on God to let me know, should I pray or should I go?. If You say that You dont mind, Ill be here till You send a sign. So Your Gospel gets to grow in the neighborhood I know. If all of us leave to preach and teach. Youll have no one left on their knees. Id say its fine to just stay back. Though if You want me, I'll go pack. Well, come on, not Mexico  theres no Spanish words I know. Should I pray or should I go now?. Should I pray or should I go now?. If I go there will be trouble; the missionaries there may double. And it's crowded as we know. This Indian mission's buggin' me. (Greece, Indonesia, Malta, Malaysia). They say they want me desperately. (Mongolia, Philippines, Albania). Is that the food I'm s'posed to eat?. (India, Uzbekistan, Pakistan). Don't You need mission trips to Italy?. (Afghanistan, Kazakhstan). Don't want no vegetables. (Turkmenistan,Tajikistan). Shouldnt I go with the food I know. (Saudi Arabia, Bangladesh). (Guinea-Bissau, Benin, Gibraltar). (Cambodia, Vietnam, Somalia). (Ethiopia, Egypt, Sudan, Libya). (Tibet, Sri Lanka, Azerbijan). (Western Sahara, Macau, Lebanon). (Qatar, Nepal, East Timor, Burma). (UAE, Maldives, Gaza Strip). Should I pray or should I go now?. (Laos, Nigeria, Niger, Mali). Should I pray or should I go now?. (Israel, Syria, Thailand, Guinea). If I go rebuild their rubble. (Senegal, Portugal, Djibouti). Can't lift a spade or wield a shovel. (Bahrain, Algeria, China, Turkey). So You gotta let me know. (Iran, Oman, Yemen, Morocco). Should I mail in the check I wrote?. (Bhutan, Japan, Burkina Faso). Should I pray or should I go now?. (Cyprus, Brunei, both Koreas). If I go I'll break my bubble. (Mauritania, Iraq, Tunisia). And if I stay I will be cuddled. (Kyrgyzstan, Kuwait, Gambia). So tomorrow let me know. (Taiwan, Jordan, Eritrea). Should I pray or should I go?. (Chad)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Eye of the Storm - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Eye of the Storm - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Eye of the Storm</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I got the call at 2am, it awoke me from my sleep. I didnt recognize the voice, it was nervous and quite deep. He said that she was taken fast, she probably never knew. Maybe he was comforting me, or maybe it was true</p><p><strong>SEGMENT2</strong><br>The last time that I saw her she was walking out the door. I didnt think to hug her, it was just a trip to the store. Did I say I love you? Did she know it when she died?. When she had her last glance at me, did I look her in the eye?</p><p><strong>SEGMENT3</strong><br>Though I dont see, I still believe. Theres a purpose. Youre the eye of the storm. We fall asleep but we believe. You will wake us. And Your bride will come home</p><p><strong>SEGMENT4</strong><br>I took her to a restaurant, she spilled her drink on me. In anger I belittled her, I never said I was sorry. And now its those memories that haunt me in my sleep. How often we love someone, but were just to proud to speak</p><p><strong>SEGMENT5</strong><br>Though I dont see, I still believe. Theres a purpose. Youre the eye of the storm. We fall asleep but we believe. You will wake us. And Your bride will come home</p><p><strong>SEGMENT6</strong><br>When I was at the funeral. I tried hard not to cry. I didnt want to grieve like the world. As though the lost had died</p><p><strong>SEGMENT7</strong><br>Shes my sleeping beauty. For now shes resting in peace. But one day, Redeemer, Redeemer. Youll wake her from her sleep</p><p><strong>SEGMENT8</strong><br>I did alright till I went in her room. I buckled under the load. Tomorrow if the rain stops. well put a cross on the side of the road</p><p><strong>SEGMENT9</strong><br>God is good all the time. Even when little girls die</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

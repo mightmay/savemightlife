@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Wolf Am I! (And Shadow) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Wolf Am I! (And Shadow) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Wolf Am I! (And Shadow)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>It's the smell of hot summertime trash, it's the city noise of a busy street. it's a train derailed and two car head on freeway crash. each time we meet. "and if it comes as some sort of surprise," she said. "that I seem so composed, I've kept this moment closer to my eyes," she said, "than the glasses resting on the edge of my nose."</p><p><strong>SEGMENT2</strong><br>shadow am I!. a question of a person, no said reply. wolf am I!. and shadow cast on the sheep as I pass by. shadow am I, or like a. wearing-black-socks-and-white-woolen-locks. wolf am I, and shadow.</p><p><strong>SEGMENT3</strong><br>she was grace and green as a stem, but I walk heavy on delicate ground</p><p><strong>SEGMENT4</strong><br>(..as I go showing off again,self impressed by how well I can put myself down!!. and then go again, to the next further removed level. of that same exact feigned humility!!!)</p><p><strong>SEGMENT5</strong><br>[this for me goes on and on to the point of nausea]</p><p><strong>SEGMENT6</strong><br>shadow am I!. like suspicion that's never confirmed. but it's never denied. Wolf am I!</p><p><strong>SEGMENT7</strong><br>(no, "shadow" I think is better, as I'm not so much something as the absence of something)</p><p><strong>SEGMENT8</strong><br>So SHADOW AM I!. the material world seems to me like a newspaper headline-. it explicitly demands your attention. and it may even contain some truth. and what's really going on here?</p><p><strong>SEGMENT9</strong><br>one day the water's gonna wash it away. and on that day, nothing clever to say.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

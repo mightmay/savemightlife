@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I'm So Gone - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I'm So Gone - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I'm So Gone</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I'm so gone, I'm so out of here. This ain't my home, so I'm out of here. I'm so gone, gone, gone, gone, gone. I'm so gone, gone, gone, gone, gone. I'm so gone.</p><p><strong>SEGMENT2</strong><br>I wake up in the morning and I put it in on the news, the world going crazy, everybody so confused. But in the hood though, we got our own blues. Cuz somebody look just like me tryna knock me out my shoes. My, its so hard for us to fly, cuz everyday we walk outside and see somebody die. I'm sick of all this pain, I'm sick of all these wars. I'm looking for my home, it's somewhere behind the stars. Lord, I'm sick of all these lies. They try to feed it to me though like sweet potato pies. They put some sugar on it, its good to my eyes. But the truth is its poison, and its killin us inside. My, its time for me to go. I take a deep breathe, I exale and let it flow. Cuz' I am so convinced, that i do not belong. What type of world is this? This earth is not my home, I'm Gone.</p><p><strong>SEGMENT3</strong><br><<I'm so gone, I'm so out of here. This ain't my home, so i'm out of here. I'm so gone, gone, gone, gone, gone. I'm so gone, gone, gone, gone, gone. I'm so gone.>></p><p><strong>SEGMENT4</strong><br>Ask anybody we all want change, but everybody know we don't want the same thing. It's funny how we all being fed the same lies, but you don't see it though 'cause we ain't got the same eyes. Why, we all beggin for a sign.  But you can't see the truth and it is right before your eyes.  See one day you going to blink and we gonna be gone, and you'll be looking for us and we'll be gone home. See they can talk about cars, they can talk about money, they can talk about drugs, they can talk about women. Put women in bra's; but they try to turn me down when I talk about God. Lord, it's time for me to go. I got my bags packed and I'm headed for the door. See I am so convinced, that I do not belong. What type of world is this, this world is not my home, I'm Gone.</p><p><strong>SEGMENT5</strong><br>I'm so gone, I'm so out of here. (I'm out of here). This ain't my home, (this ain't my home) so i'm out of here. (I'm out of here). I'm so gone, gone, gone, gone, gone. I'm so gone, gone, gone, gone, gone. I'm so gone.</p><p><strong>SEGMENT6</strong><br>One day you're gonna make a run for me, and I'm gonna be gone; and I'm gonna be gone. One day you're gonna make a run  for me, and I'm gonna be gone; and I'm gonna be gone. One day you're gonna make a run  for me, and I'm gonna be gone; and I'm gonna be gone. One day you're gonna make a run  for me, and I'm gonna be gone; and I'm gonna be gone.</p><p><strong>SEGMENT7</strong><br>This is not my home, this is not my home. I'm gonna fly fly fly fly away. I'm gonna fly away. I'm gonna fly away. I'm gonna flyy awayy from here.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

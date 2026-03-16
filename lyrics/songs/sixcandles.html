@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Six Candles - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Six Candles - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Six Candles</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You're amazing but You're taking too much time. I've only got six candles left and I'm tryingto keep this off my mind. It's getting darker but it's the way they make me feel. They try to fill my head with questions 'cuz they all doubt You but I know that You are real</p><p><strong>SEGMENT2</strong><br>If it takes time then I'll be patient. Know that I will still believe. I'll take Your hand and hold it tightly. 'Cuz I know You'll carry me</p><p><strong>SEGMENT3</strong><br>Take me whole, take me in. Take these last six candles. And when I'm tired and warin' thin. Give me the strength to carry on. Here I am, see my hands. Take these last six candles. We're movin' on. We'll keep, keep movin' on</p><p><strong>SEGMENT4</strong><br>And I'm so thankful for every breath I take. There's not a moment that goes by. I waste wipin' tears out of my cryin' face</p><p><strong>SEGMENT5</strong><br>Don't look so sad, you've missed the point. I'm still so glad I knew you. Against the odds. I'll take my chances and burn this candle through you</p><p><strong>SEGMENT6</strong><br>If it takes time then I'll be patient. Know that I will still believe. I'll take Your hand and hold it tightly. 'Cuz I know You'll carry me</p><p><strong>SEGMENT7</strong><br>Take me whole, take me in. Take these last six candles. And when I'm tired and warin' thin. Give me the strength to carry on. Here I am, see my hands. Take these last six candles. We're movin' on. We'll keep, keep movin' on</p><p><strong>SEGMENT8</strong><br>If I could ever see the way You understand me. When no one else can see it I know You so own me. I'll be the one who listens only when You tell me. Not walking, but running, not talking ya-aa.</p><p><strong>SEGMENT9</strong><br>And they might not ever understand why I do what I do. But I can only speak my mind and what I feel is true. I'll take a vow to be the only one to stand if it takes. All that I am I will be standing</p><p><strong>SEGMENT10</strong><br>Take me whole, take me in. Take these last six candles. And when I'm tired and warin' thin. Give me the strength to carry on. Here I am, see my hands. Take these last six candles. We're movin' on. We'll keep, keep movin' on (x2).</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

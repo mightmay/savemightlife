@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Playing With Fire - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Playing With Fire - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Playing With Fire</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Pardon me for saying so. But you look more pitiful. Than I had ever imagined. Despite perfect fashion. And your photographs depict you so differently. I always thought you would be. Some sort of match for me</p><p><strong>SEGMENT2</strong><br>So let's decide who can survive. Jumping feet and racing beats. Of hearts that don't ever slow. Then I'll write letters on white paper. Expressing my deep disappointment</p><p><strong>SEGMENT3</strong><br>Dripping where I stand. From my watery hands. Hoping to get past the open bedroom door. Where her clothes on the floor. Remind me of our conversation. The feeling of slight hesitation. To turn out the light</p><p><strong>SEGMENT4</strong><br>Fourteen days now (I'm not). Since we started (I'm not hiding). To complicate the situation (From this situation). I'm not hiding (I'm not). I'm just buying some time (I'm not hiding). For us to find the back door (From this situation)</p><p><strong>SEGMENT5</strong><br>We will come out. When it's safe for us. When it's safe for us. When it's safe for us. Us. For us. All</p><p><strong>SEGMENT6</strong><br>There's nothing left to say (Don't believe me). To excuse the way that I behaved (When I say it's over). I still feel him. Gripping like a stain (By the time you're gone). To this fabric (It's almost over). Torn at every seam. Thrown away</p><p><strong>SEGMENT7</strong><br>I'm without regret. I will not forget. I'm without regret. I will not forget</p><p><strong>SEGMENT8</strong><br>Why should I take all the blame for all my mistakes? (I'm without regret). You were there with every promise made to break (I will not forget). When did you become the one without regret? (I'm without regret). Kill me, burn me down, I swear I won't forget (I will not forget). When did you become the one without regret (Kill me, kill me). Kill me, burn me down, I swear I won't forget (Kill me, kill me)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

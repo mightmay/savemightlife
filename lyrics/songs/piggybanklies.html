@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Piggy Bank Lies - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Piggy Bank Lies - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Piggy Bank Lies</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>All these answers. For the words that you omitted. You omit them still. Never thought I would find out. But we're here now. I'm aching for this, aching for it</p><p><strong>SEGMENT2</strong><br>You said you'd never been with anyone else. But you lied. As you tried to say somehow that I was the one to blame. Is this the way you've found for saving yourself. If lies were wealth, you'd need help. Counting riches from your mouth's piggy bank</p><p><strong>SEGMENT3</strong><br>I drove these streets to your front door. So could you please just help me out?. It's sad to say but there's always more. And you just stare like you can't hear a sound</p><p><strong>SEGMENT4</strong><br>Hide the suspects</p><p><strong>SEGMENT5</strong><br>This is where you say it's not what it looks like. He's got his hands wrapped around your waist. Well I want this, do you want it?. And I hate this, but you flaunt it. It sounds absurd so I waited for my own eyes. To put a face on the person that built these lies. Did you want this, cause I want it. Could have fooled me, cause I bought it</p><p><strong>SEGMENT6</strong><br>You have been found out</p><p><strong>SEGMENT7</strong><br>I told myself it was the jealousy that caught my distrust. But I'm such a good pretender. I surrendered my doubts. Of all the liars number one is where you made your debut. But I'll teach you the truth because I've figured you out</p><p><strong>SEGMENT8</strong><br>I drove these streets to your front door. So could you please just help me out. It's sad to say but there's always more. That brought you just stare like you can't hear a sound</p><p><strong>SEGMENT9</strong><br>Hide the suspects. I've finally figured you out. I've finally figured you out</p><p><strong>SEGMENT10</strong><br>This is where you say it's not what it looks like. He's got his hands wrapped around your waist. Well I want this, do you want it?. And I hate this, but you flaunt it. It sounds absurd so I waited for my own eyes. To put a face on the person that built these lies. Did you want this, cause I want it. Could have fooled me, cause I bought it</p><p><strong>SEGMENT11</strong><br>Trying to forget and wishing we never met. I should have been careful. I thought I was unbreakable. But sometimes you find out that you cannot control your heart. Or regain the person that you were from the start.</p><p><strong>SEGMENT12</strong><br>Hide the suspects</p><p><strong>SEGMENT13</strong><br>This is where you say it's not what it looks like. He's got his hands wrapped around your waist. Well I want this, do you want it?. And I hate this, but you flaunt it. It sounds absurd so I waited for my own eyes. To put a face on the person that built these lies. Did you want this, cause I want it. Could have fooled me, cause I bought it.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

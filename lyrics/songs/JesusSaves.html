@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jesus Saves - พระเยซูเป็นผู้ช่วย - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jesus Saves - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jesus Saves</h2>
+        <h3>พระเยซูเป็นผู้ช่วย</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE4</strong><br>จงป่าวร้องกึกก้องโลกา พระเยซูเป็นผู้ช่วยให้ประเทศทั้งหลายยินดี พระเยซูเป็นผู้ช่วยผู้ที่เชื่อรับความรอดได้ ผู้ประกาศสั่งสอนเรื่อยไปร้องเพลงนี้เพราะเรามีชัย พระเยซูเป็นผู้ช่วย.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>เราได้ยินเสียงอันสำราญ พระเยซูเป็นผู้ช่วยป่าวประกาศให้ทั่วทุกบ้าน พระเยซูเป็นผู้ช่วยรีบส่งข่าวไปทุกทวีป ขึ้นภูเขาและข้ามคลื่นด้วยไปประกาศตามพระบัญชา พระเยซูเป็นผู้ช่วยWe have heard the joyful sound: Jesus saves! Jesus saves!Spread the tidings all around: Jesus saves! Jesus saves!Bear the news to every land, Climb the mountains, cross the waves;Onward! ’tis our Lord’s command; Jesus saves! Jesus saves!</p><p><strong>VERSE2</strong><br>กระพือข่าวทั่วทุกประเทศ พระเยซูเป็นผู้ช่วยบอกคนบาปทั้งหลายให้รู้ พระเยซูเป็นผู้ช่วยจงบอกข่าวชาวเกาะทั้งหลาย จงบอกไปทุกถ้ำทุกห้วยจนชาวโลกเกิดความยินดี พระเยซูเป็นผู้ช่วยWaft it on the rolling tide: Jesus saves! Jesus saves!Tell to sinners far and wide: Jesus saves! Jesus saves!Sing, you islands of the sea; Echo back, you ocean caves;Earth shall keep her jubilee: Jesus saves! Jesus saves!</p><p><strong>VERSE3</strong><br>บอกชาวโลกซึ่งทุกข์วุ่นวาย พระเยซูเป็นผู้ช่วยพระเยซูชนะความตาย พระเยซูเป็นผู้ช่วยบอกให้ผู้ที่หมดความหวัง แล้วเล้าโลมผู้ซึ่งเหน็ดเหนื่อยเรามีชัยชนะความตาย พระเยซูเป็นผู้ช่วยSing above the battle strife: Jesus saves! Jesus saves!By His death and endless life Jesus saves! Jesus saves!Shout it brightly through the gloom, When the heart for mercy craves;Sing in triumph o’er the tomb: Jesus saves! Jesus saves!</p><p><strong>VERSE4</strong><br>Give the winds a mighty voice: Jesus saves! Jesus saves!Let the nations now rejoice: Jesus saves! Jesus saves!Shout salvation full and free; highest hills and deepest caves;This our song of victory: Jesus saves! Jesus saves!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

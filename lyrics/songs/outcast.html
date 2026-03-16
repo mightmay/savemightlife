@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Outcast - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Outcast - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Outcast</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Since I can remember. Guess I been a problem. Never had a filter. Never been the popular one. To sugar coat what I know is undeniable. I just can't hide it. I wear it like a letter</p><p><strong>SEGMENT2</strong><br>Everywhere I go. Everyone is talking. I can feel them staring. They hope I'm just pretending. And giving up my power. Caving into pressure. I'm not living for them. I live for something better</p><p><strong>SEGMENT3</strong><br>I'm not good enough. I'm not what they want. But let me tell you what. I know who I am. So just throw me out. For not fitting in. I will stand my ground. And be an outcast</p><p><strong>SEGMENT4</strong><br>So-o what if I'm an outcast. So-o what if I'm an outcast</p><p><strong>SEGMENT5</strong><br>So what if I don't look the. Part I'm supposed to play. What if I don't follow. All the rules they make. They think I should be perfect. They love it when I mess up. No grace in case I blow it. A good girl shouldn't need it</p><p><strong>SEGMENT6</strong><br>I'm not good enough. I'm not what they want. But let me tell you what. I know who I am. So just throw me out. For not fitting in. I will stand my ground. And be an outcast</p><p><strong>SEGMENT7</strong><br>So-o what if I'm an outcast. So-o what if I'm an outcast. So slow and everybody's so fast. So-o what if I'm an outcast</p><p><strong>SEGMENT8</strong><br>I try to play nice. I don't want to fight. But I won't be great. When it sounds like I'm right. Cause what I believe. Is what makes me strong. If I don't belong. I hold onto love</p><p><strong>SEGMENT9</strong><br>I try to play nice. I don't want to fight. But I won't be great. When it sounds like I'm right. Cause what I believe. Is what makes me strong. If I don't belong. I hold onto love</p><p><strong>SEGMENT10</strong><br>So-o what if I'm an outcast. So-o what if I'm an outcast. So slow and everybody's so fast. No matter what it costs. I'll be an outcast</p><p><strong>SEGMENT11</strong><br>I'm not good enough. I'm not what they want. But let me tell you what. I know who I am. So just throw me out. I'm not fitting in. I will stand my ground. And be an outcast</p><p><strong>SEGMENT12</strong><br>I'm not good enough. I'm not what they want. And let me tell you what. I know who I am. So just throw me out. I'm not fitting in. I will stand my ground. And be an outcast</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Story - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Story - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Story</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Hear me when I speak, And just listen and try not to be.. Some kind of self-righteous, high being, With the opposite mislead me, To better your mind unseen. This is a story of how we can't be!</p><p><strong>SEGMENT2</strong><br>Their building you up,  to tear you down. They won't admit it but it's true!. Your smiling advice to end with your frown. Cause they don't want what's best for you.</p><p><strong>SEGMENT3</strong><br>Its sad, I know, I know. But you know Im something else. And now's my time to just sit back. and tell that</p><p><strong>SEGMENT4</strong><br>You don't know just when to stop. Youre living life to be on top, So stop acting, be real, And just admit the way you feelin'. See we're all one big learning gang</p><p><strong>SEGMENT5</strong><br>And it's true that. We all want to be the baddest;. We all have a little baggage, Even though we hide it. And we always will deny it;. We are driving this float down Main, In this pride parade</p><p><strong>SEGMENT6</strong><br>And Im not saying that Im any better than you. Sometimes I have motives that are just so stupid. And I play the fool. But man you're telling me. The charade has got to end. So stop acting like you know everything. Because you're missing the point. You are supposed to be my friend. (oh!)</p><p><strong>SEGMENT7</strong><br>You don't know just when to stop. Youre living life to be on top, So stop acting, be real, And just admit the way you feelin'. See we're all one big learning gang</p><p><strong>SEGMENT8</strong><br>And it's true that. We all want to be the baddest;. We all have a little baggage, Even though we hide it. And we always will deny it;. We are driving this float down Main, In this pride parade</p><p><strong>SEGMENT9</strong><br>Just try, just try, drive me away. To take me to another place. well, I know, I know. Whats happening to my head. and to my dreams?. cuz I want I want, I need I need. Some peice of mind and clarity. So just take, take my hand and let's fray!</p><p><strong>SEGMENT10</strong><br>You don't know just when to stop. Youre living life to be on top, So stop acting, be real, And just admit the way you feelin'. See we're all one big learning gang</p><p><strong>SEGMENT11</strong><br>And it's true that. We all want to be the baddest;. We all have a little baggage, Even though we hide it. And we always will deny it;. We are driving this float down Main, In this pride parade</p><p><strong>SEGMENT12</strong><br>(oh, oh, oh oh oh!)</p><p><strong>SEGMENT13</strong><br>(oh oh oh oh!)</p><p><strong>SEGMENT14</strong><br>(oh, oh, oh oh oh oh!)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

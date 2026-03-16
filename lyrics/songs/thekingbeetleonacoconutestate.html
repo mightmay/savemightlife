@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The King Beetle on a Coconut Estate - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The King Beetle on a Coconut Estate - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The King Beetle on a Coconut Estate</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>the sun rose as the hour grew late. the day held by the ???. raked up the dry leaves that fell dead from the trees. which they burned in a pile by the lake</p><p><strong>SEGMENT2</strong><br>mmmm mmm mmm</p><p><strong>SEGMENT3</strong><br>the beetle king summoned his men. from the top of a ??? stone. "calling all volunteers. someone hurry back here. the great mystery ??? once again"</p><p><strong>SEGMENT4</strong><br>mmmm mmm mmm</p><p><strong>SEGMENT5</strong><br>a beetle emerged from the crowd. in a fashionable ??? shroud. said, "i'm a professor, you see, there's no mystery to me. i'll be back soon, successful and proud". when the beetle professor returned. he crawled on all six. his wings had been burned. he described to the finest detail what he learned. their was neither a light. nor a ???</p><p><strong>SEGMENT6</strong><br>mmmm mmm mmm</p><p><strong>SEGMENT7</strong><br>the deeply dissatisfied king. climbed the same stone to announce the same thing. and in his second appeal. saw to sweeten the deal. with a ???. a leiutenant stepped out from the line. as he lasso'd his thorax with twine. thought, "i'm stronger and braver, i'll earn the king's favor. one day, all the ??? will be mine". but for all the leiutenant's conceit. he too returned singed. and admitting defeat</p><p><strong>SEGMENT8</strong><br>i had no choice. please believe but retreat. it was bright as the sun. but with ten times the heat. and it cracked like the thunder. and bloodshot my eyes. though smothered with sticks. it advanced undeterred. and carelessly cast a black cloud to the sky. my lord, like a flock of dark vanishing birds</p><p><strong>SEGMENT9</strong><br>mmmm mmm mmm</p><p><strong>SEGMENT10</strong><br>and the beetle king slammed down his fist. your ??? description, no better than his. we sent for the great light. and you bring us this!. we didn't ask what it seems like, we asked what it is. his majesty's hour. at last had drawn nigh. the elegant queen took her leave from his side. without understanding. without asking why. she gathered their kids. to come say their goodbyes. their father explained "you've been somewhat deceived. you all called me your dad, but in truth that's not me. i had a go with your mom. and your form was conceived. but your Father's the Truth. within all that you see. and He fills up the ponds. as He empties the clouds. and He holds without hands. and He speaks without sound. provides us with the cow's waste and coconuts to eat. ??? one has salt taste. the other one sweet. he ???. like the eagle who hunts from above. ??? with goodness and love. He's dressed as a flower. and His fragrance ???. so much, each of you, and your father become. now distribute my scepter, my crown and my throne. the rest of our wealth to the poor and alone". and without hesitation. without looking back home. the king flew head on into the blazing unkown. as the ??? curled higher and higher. the troops flying loops round the telephone wire. they said, "our beloved's not dead. but his highness instead has been utterly changed into fire"</p><p><strong>SEGMENT11</strong><br>why not be utterly changed into fire?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

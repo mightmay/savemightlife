@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Give Us the Truth, Pt. 2 - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Give Us the Truth, Pt. 2 - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Give Us the Truth, Pt. 2</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>INTRO. Give us the truth...part 2 (part 2, part 2, part2). Give us the truth. For every email, for every phone call. For everybody that came up to me at a show, Here's part 2...listen yo</p><p><strong>SEGMENT2</strong><br>VERSE 1. After the platinum show the two I did with cross movement. I said my goodbyes 'cause I had to fly back to St. Louis. I left there to early for my first semester in school. I was exposed to so much truth that I had to choose. between what I had learned and what I was taught to do. at my church on my zone I was so confused. the first sunday morning back it was a culture shock. watching the sheppard and sheep explode like a soda pop. they're heads was shaking, they shaking over these chintzy sermons. people spitting and shouting but nobody's discerning. I left the building. my feeling were crushed I felt forsakin'. the one place I was supposed to come for restoration. . and worship of a Holy God and exalt Him in praises. spent the whole prayer time rubuking the satan. spent the whole sermon time just talking 'bout money. while I was dieing inside and spiritually hungry.</p><p><strong>SEGMENT3</strong><br>CHORUS. Give us the truth. That's what we need if we're gon' properly teach. If we gon' seek and we gon' properly reach.. Give us the truth . That's what we need if we gon' carry our cross. and if we gon' affectively disciple tha law.. Give us the truth . That's what we need if we gon' walk up in holiness and boldness and meek and lowliness.. Give us the truth. That's what we need in this race we running. proper lessons as we wait for his second coming (for real). Give us the truth</p><p><strong>SEGMENT4</strong><br>VERSE 2 . I left tha crib. moved into the dorms. so depressed that I ventured in porn (it was a crazy thing). I felt the disconnect from Jesus' arms. so I ceased to write these rhythms in palms to disobey the King. I told my teachers that I was living in sin. and my bible I'll never read it again and threw it in the closet. and anything that had to do with God. Marcus T. he was going the opposite into lifestyle. I called phanatic and turn to the cell. ad said for ministry I would go to jail 'cause I was in no position. to minister to anybody at all. cause I wasnt sure if I was a christian at that moment dog. I was skipping classes. hanging with the masses. and my days were black and grey like cigareete ashes. all I know is that I wanted to die. but suicide met me into God. then I felt Him shook me.</p><p><strong>SEGMENT5</strong><br>REPEAT CHORUS</p><p><strong>SEGMENT6</strong><br>VERSE 3. But it was obvious. God in his providence. put me with people to guide me and got me outta this. during the chapel service. a cat named Paul Wausher. preached the gospel and drove me up to the Lord's alter. and I confessed my sin. and he presed reset again. I started ova and felt like a solider for Jehovah. I called my old pastor and apologized for how I behaved. as of that day we agreed to go our seperate ways. . I met this girl named beth who told me about a church home. first I visit, became a member, and then it was on. then the pastor gave me a stack of books. now Im back with raps and hooks. took a summer and spent three hundred dollars on tapes and books and learned from these biblical scholars. now Im back and Im walking in light. living my life. Glorifying Jesus Christ</p><p><strong>SEGMENT7</strong><br>CHORUS.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

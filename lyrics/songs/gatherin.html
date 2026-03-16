@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Gather In - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Gather In - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Gather In</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I John Reuben on behalf of the forgotten, I stopped in. To keep it in your memory tightly locked in, remember me. 240 lb from back then, way back, why what who where when. Well, two decades in the makin, take it all in. From the kid of my life, I felt drawn in. Not many could see quite what I saw then. Young kid, free style, studyhall-in. Way before I hit the microphone brawlin. Way before I ever started yes yall in. I knew to get live, it was my callin. I had a fresh vibe on all fours crawlin</p><p><strong>SEGMENT2</strong><br>(add lib)Gather in and get down. (add lib)Gather in and get down. (add lib)Gather in and get down. (add lib)Gather in and get down</p><p><strong>SEGMENT3</strong><br>So much energy, so much force. Movin to the rhythm rockin till my voice gets sore. Bust now, where'd that come from yall, where's the shooa. Yall feelin me yet, bet, let's set the. course and get the blood circulatin. When the beat starts breakin, the people start shakin</p><p><strong>SEGMENT4</strong><br>And I start communicatin, are you feelin me yet. God given inspiration got me in imagination. And it's reeling me bet, bet, better than best. Fresher than fresh, man, from highth to depth, right to left. We keep your hands up in the air and say what. And keep em up and say what, say what</p><p><strong>SEGMENT5</strong><br>I, John Reuben, on behalf of the forgotten, I stopped in to build it. Give me a room full of hyperactive children. Forget the Ritalin, man I want em rowdy, come on and crowd me. When I choose to use my voice loudly. Shall we get down, immediately, how we get down, somality. Mos definitely fresh as can be the best in me. The pop a recipe for curin the g now what they see. We rockin steadily incredible melody</p><p><strong>SEGMENT6</strong><br>Motivated from the animated side tellin me, compellin me. Tellin me to rock, and yo the track is hot. And I am ready to get live even if you're not. Just pick out the spot and bring em all in. Party people get down while the turntables spin. After it's done, my man, we do it up again. Because I'm sure by then we'll have a second whim</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

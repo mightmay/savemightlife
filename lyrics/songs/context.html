@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Context - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Context - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Context</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Verse1: The first task of the interpreter is called exegesis/(extra Jesus)/ naw I said exegesis man/ its a Latin word dont be scared/ matter of fact I laughed when I first heard it too/ its spelled e-x-e-g-e-s-i-s/ guarantee you learn this process and youll be blessed/ exegesis is the careful systematic/ study of scripture for the Christian this should be a habit/ but to discover the original intended meaning/ of the author to his audience is exegeting/ but to do this man you need some tools/ so let me recommend a couple of things you should use/ aight cool/ first man you need this book/its called a commentary and it helps you to further look/ into some essential things you need to check/ in order for you to properly interpret the text</p><p><strong>SEGMENT2</strong><br>Hook: With this skill this should keep you from heresy/ and keep you from going through theological therapy/, the words of God will change your life/ if you Keep the text in its context/ with this skill/ this should keep you from heresy/ and keep you from going through theological therapy/ the words of God will change your life/ if you keep the text in its context</p><p><strong>SEGMENT3</strong><br>Verse 2: You need some more books I know its gettin scary/ but you need some definitions get a bible dictionary/to go without these tools you cant afford it/ thats why you need this book called a concordance/ and every time you start to think this is too much to do/ I recommend you reflect on 2 Timothy 2/and 15/and youll see what I mean/ simply because the serpent is lurking to glean/ those who dont read/ and those who dont study/ to keep a lock on this treasure/ from unlocking the pleasure/ cause Gods word is lovely/ thats why we hold it as precious as pearls/ to let our exegetical work reflect to the world/ in accuracy/ hoping that you happy to see/ the very words God breathe handle accurately/ yeah so many take text out of context/ and come up with mess and more nonsense</p><p><strong>SEGMENT4</strong><br>Hook</p><p><strong>SEGMENT5</strong><br>Verse 3: What you dont wanna do is called eisegesis/(I see Jesus)/ naw I said eisegesis man/ you a silly dude its Latin too/ and thats just the act of when your adding to/ or the process of reading ones own meaning/ into the text and thats just eisegeting/ dont fret I know these words are new/ and phrases to/ but its cool to go back to school/ its spell ei-se-gesis/ guarantee you learn this process and Godll be vexed/ a text can never mean what it never meant before/ to its original reader or author/ so if you run into a difficult passage and you know the Bible never contradicts itself/ then turn the pages to a parallel passage and just let the scriptures interpret itself</p><p><strong>SEGMENT6</strong><br>Hook.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

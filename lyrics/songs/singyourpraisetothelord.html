@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Sing Your Praise to the Lord - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Sing Your Praise to the Lord - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Sing Your Praise to the Lord</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Sing your praise to the Lord. Come on everybody. Stand up and sing one more hallelujah. Sing your praise to the Lord. I could never tell you just how much. Good that it's gonna do you. Just to sing</p><p><strong>SEGMENT2</strong><br>Anew. The song your heart learned to sing. When He first gave His life to you. Well life goes on and so must the song. You gotta sing again the song born in your soul when. You first gave your heart to Him. Sing His praises once more</p><p><strong>SEGMENT3</strong><br>Sing your praise to the Lord. Come on everybody. Stand up and sing one more hallelujah. Sing your praise to the Lord. I could never tell you just how much. Good that it's gonna do you. Just to sing</p><p><strong>SEGMENT4</strong><br>Aloud the song that someone is dying. To hear down in the madding crowd. That you once were before you heard the song. You gotta let them know the truth. Is a light to shine upon the way that maybe they could go. And sing His praises once more</p><p><strong>SEGMENT5</strong><br>Sing your praise to the Lord. Come on everybody. Stand up and sing one more hallelujah. Sing your praise to the Lord. I could never tell you just how much. Good that it's gonna do you</p><p><strong>SEGMENT6</strong><br>Just to sing. Your praises to the Lord. And everybody sing. Your praises to the Lord</p><p><strong>SEGMENT7</strong><br>From the rising of the sun. To the place where it sets. The name of the Lord is to be praised. The Lord is exalted over all the nations. His glory above the heavens. Who is like the Lord our God. The One who sits enthroned on high. He who stoops to look down upon. Down upon this earth and its sky</p><p><strong>SEGMENT8</strong><br>And that is why you gotta sing. Sing your praise to the Lord. Come on everybody. Stand up and sing one more hallelujah. Sing your praise to the Lord. I could never tell you just how much. Good that it's gonna do you</p><p><strong>SEGMENT9</strong><br>Just to let the name of the Lord. Be praised both for now and ever more. Praise him oh ye servants</p><p><strong>SEGMENT10</strong><br>Praise the name of the Lord. Come on everybody. Stand up and sing one more hallelujah. Sing your praise to the Lord. I could never tell you just how much. Good that it's gonna do you</p><p><strong>SEGMENT11</strong><br>Just to sing. Your praises of the Lord. And everybody sing. Your praises of the Lord</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

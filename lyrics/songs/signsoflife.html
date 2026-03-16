@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Signs Of Life - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Signs Of Life - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Signs Of Life</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Come in base, I've landed my ship on a planet here in space. This is the one they say is inhabited by the human race. And I'm going out to look around and see what's here. And I'll tell you what I find. Confirmation on the inhabitants, they're running everywhere. Their technology is beyond what I've seen anywhere. But I'm trying to communicate, but they don't hear me. Seems like for all I'm finding, I can't find the most important thing</p><p><strong>SEGMENT2</strong><br>Where are the signs, where are the signs of life. The love that proves there is a beating heart inside. Where are the signs, where are the signs of life. The compassion and concern, that make this world turn. Where are the signs of life</p><p><strong>SEGMENT3</strong><br>Now I've got crayons rolling around in the floorboard of my car. Bicycles all over my driveway, bats and balls all over my yard. And there's a plastic man from outer space sitting in my chair. The signs of life are everywhere. But I've got questions rolling around in the corners of my mind. And if it's true, I live in a world where hope has all but died. And if I really have a living love alive in me. How am I letting it be known, how am I letting it be seen?</p><p><strong>SEGMENT4</strong><br>These are the signs, these are the signs of life. The love that proves there is a living faith inside. These are the signs, these are the signs of life. The compassion and concern, that make this world turn. These are the signs of life. Signs of Life</p><p><strong>SEGMENT5</strong><br>These are the signs, these are the signs, these are the signs of life. The love that proves there is a living faith inside. These are the signs, these are the signs, these are the signs of life. The compassion and concern. Thats gonna make this world keep turning. These are the signs of life. A love thats flowing from the heart. Where the grace of God has left its mark. These are the signs of life. The reaching out of a servants hand. The giving that makes no demands</p><p><strong>SEGMENT6</strong><br>These are the signs. This is loving proof of the faith inside. These are the signs of life.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Something Bigger - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Something Bigger - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Something Bigger</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>My block in here!</p><p><strong>SEGMENT2</strong><br>[Chorus: 2x]. Gotta do it, gotta do it big. Big, ba-ba-bi-big. Gotta do it, gotta do it, gotta do it big. Big, ba-ba-bi-big</p><p><strong>SEGMENT3</strong><br>La, la, la, la, la, la, laaaaah, aaaah</p><p><strong>SEGMENT4</strong><br>[Verse 1:]. Everybody doin' that, can't do it again. Why you mad at me cause I wanna do it big. Don't think I'm unplugged and I'm disconnected. Cause I didn't do what ya'll expected. I ain't never thought small, cause my brain's colossal. When you gon' find out, you can do it if you want to. Pull up the New Test, click John 14. I can do great things cause of God in me. If God's in me, why I gotta think small. Now you know that don't make no sense at all. I'm in the image of the greatest, why I gotta defend. Why I wanna do it, wanna do it, wanna do it big</p><p><strong>SEGMENT5</strong><br>[Chorus]</p><p><strong>SEGMENT6</strong><br>[Verse 2:]. Can't keep it in a box cause it just don't fit. My God, he's bigger than just music. I can take it to the church where my people go. I can take it to the people that just don't know. I can take it to the people that feel real low. To the poor, to the rich, to the CEO. (Yeah) He knows who you are. Who you're not, what you got, when it's all gon' stop. (Yeah) He can make you larger. Change your life and take you farther. It ain't not limit cause this world is his. So you got to do it, got to do it, got to do it big</p><p><strong>SEGMENT7</strong><br>[Chorus]</p><p><strong>SEGMENT8</strong><br>[Bridge:]. Nobody plans to be a loser. Nobody tries for second place. Nothing's wrong with second place, but. Why stop at the ceiling when God showed me the sky. Why get on the airplane if I'm too scared to fly. Why am I goin' to the battle if I don't wanna fight. I'm goin' for the gold. Got to be incredible, oh oh</p><p><strong>SEGMENT9</strong><br>[Repeat 4x]. Got to do it, got to do it big, big. I got to, I got to, got to do it big</p><p><strong>SEGMENT10</strong><br>[Chorus]</p><p><strong>SEGMENT11</strong><br>Gotta do, gotta do, gotta do. Gotta do, gotta do. Gotta do it, gotta do it big. Big, ba-ba-bi-big-ba-big</p><p><strong>SEGMENT12</strong><br>I got to, I got to, got to do it big</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Myspace - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Myspace - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Myspace</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Young Chante Andrea Jones. Never met her father and momma's never home. Plus she's 15 and she lies about her age. She always on the phone or her myspace page. She likes to socialize cause it makes her feel loved. Mom doesn't have time for something simple as a hug. Drugs got her mom strung out. All on the streets. Suicide attempts as tears drip down her cheeks. This is deep. She's so young, with so much pain. There's so many things Chante wishes she could change. So what she does is spends hours of the day. Meeting new friends in her own little place. Yesterday she counted and had 300 friends. Most of them young, but yet some were older men. But it's okay, Chante says that it's safe. Her own little place to get away. Her myspace</p><p><strong>SEGMENT2</strong><br>Just wanna know that I am loved and that I am really beautiful. Everything around me tells me to be more than me. I just want to get away. Just wanna know that where I stand someone will accept me for who I am. Just understand maybe I can find a place. Where it's okay</p><p><strong>SEGMENT3</strong><br>Chante's profile is not marked private. Just by her pics you can see why the guys click. Yea, she's cute and she's not trying to hide it. It's best for me to not even try to describe it. Plus she's young, but you can't tell by how she's dressed. The messages she gets seems to express. Or at least suggest that he's interested in meeting. So she accepts, thinks he's cute, now she's cheesin'. Every click she mistakes it for love. Her daddy is gone plus she's too young for the clubs. Her about me section seems to suggest. Find More lyrics at www.sweetslyrics.com. That's she's sexual or open to sex. As time progress they make plans for a date. Chante lied to this guy 'bout her age. But it's okay. Chante says that it's safe. Her own little place to get away. Her myspace</p><p><strong>SEGMENT4</strong><br>Young Chante Andrea Jones. Never met her father and momma's always gone. Feeling all along invited him to her home. She's feeling it's wrong. But she figures her feelings wrong. All arrows point to the fact that it's love. Is what she thinks before she offers him a hug. A couple of chats man this cat's still a stranger. But young Chante can't foresee the danger. But she didn't know she was messing with an adult. She messaged a cat wanted for sexual assault. A sexual predator who preys on the young in age. Like Chante who was fearfully and wonderfully made. She ain't know Jesus Christ gives forgiveness and grace. Searching for love only ended up getting raped. Her life was shattered. If only she'd played it safe. And found love in His amazing grace. AHHH!</p><p><strong>SEGMENT5</strong><br>Just wanted you to know that I love you and that you're really beautiful. Everything around you doesn't change me my loves the key. I'll wipe your tears away. Just wanted you to know that where you stand you can accept me for who I am. Just understand know that I can be a place where. It's okay</p><p><strong>SEGMENT6</strong><br>He loves you, yes. He loves you, yes. Jesus He loves you. And it's okay</p><p><strong>SEGMENT7</strong><br>He loves you, yes. He loves you, yes. And it's okay. And it's okay.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

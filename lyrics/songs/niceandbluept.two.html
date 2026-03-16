@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Nice And Blue (Pt. Two) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Nice And Blue (Pt. Two) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Nice And Blue (Pt. Two)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You were a song I couldn't sing . caught like a bear by the bees with its hand in the hive . who complains of the pain of the sting . when I'm lucky I got out alive! . a life at best left half behind, . the taste of the honey still sweet on my tongue . and I'd run (Lord knows I've tried) . but there's no place on Earth I can hide . from the wrong I've done</p><p><strong>SEGMENT2</strong><br>then I saw a mountain and I saw a city . steadily sinking but suspiciously calm . it wasn't an end, it wasn't a beginning . but a ceaseless stumbling on . there, strapped like a watch on my wrist . that's finished with gold but can't tell the time . was all or what little pleasure exists . seductively sold and uselessly mine</p><p><strong>SEGMENT3</strong><br>our horse was fast and first from the gate . with the lead of a length at the sound of the gun . and the last of our cash laid down to fate (at 17 to 1) . but by the final stretch in the rear of the pack . that nag limping bad in the back . we reluctantly gave all the money we'd saved . 1/5 to the commonwealth and the rest ot the track . then I saw a forest grow in the city . and a driftwood wall of birdhouse gourds . and I'm still waiting to meet a girl like my Mom . who's closer to my age . the true light of my eyes is a Pearl . equally emptied to equally shine . and all or what little joy in the world . seemed suddenly simple and endlessly mine</p><p><strong>SEGMENT4</strong><br>I was once the wine and you were the wineglass, . I was once alive when you held me, . but G-d became the glass, . all things left are emptiness . but oh, you're just a little girl . if you look out and see a trace . of a dark red that was once my face . in the clarity of such grace, . you'll forget all about me.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

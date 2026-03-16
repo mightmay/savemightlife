@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Daddy's Girl - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Daddy's Girl - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Daddy's Girl</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You're so beautiful. You'll always be daddy's girl. You're so beautiful. You'll always be daddy's girl</p><p><strong>SEGMENT2</strong><br>Just an average girl they might've missed ya. You got a mom a step dad a little sister. I know his words they used to hit ya. You feel fat and ugly so your getting thinner. Sometimes you throw up or you skip dinner. Sometimes you hate the face you see in the mirror. You cry at night but nobody ever seems to hears ya. Nowhere to turn its getting no clearer. You got father in heaven though who wants to hold ya. Wrap ya in his arms lay ya head on his shoulder. Keep ya safe and warm when this world is getting colder. Tell you that you're beautiful over and over. He sees u struggling cause he's the one that knows ya. Sees the pain ya in plus he wants to show ya. How much you mean to him that's why I hope ya. Take the love he gives this is what he told ya saying..</p><p><strong>SEGMENT3</strong><br>Well do you hate what your looking at. Hate looking at this person that's looking back. Hate the way that they talk behind your back. So ashamed when ya walking to ya class. And every time now that you pass. They tease you any way they can it makes ya mad. You wanna run away from all the stress you have. Just want to fit in but it seems you never can. The other girls treat you like you're so strange. In your life it seems like things never gone change. You just feel like a no name. And all you wanna do is make it all go away. Skipping school sneaking out your coming home late. Far from cool so you coming up with no dates. How did your own face become what you so hate. When all along you couldn't hear what he was gone say it was.</p><p><strong>SEGMENT4</strong><br>Do you see how much you mean now to your Father. He don't make no junk but yet you feel you gotta. Chase so many things that this world wants to offer. You got so many needs he wants to fill yet you bother. To try to run after anything this world will give. But do you understand how beautiful you are to him. Cause then and only then that's when you truly live. That's when you comprehend who my Jesus is. Now to every single girl down to every kid. That struggles with your looks but now you always hid. How you felt deep inside but you always wish. To be somebody else well listen up to this. Don't believe the junk don't believe the lies. Cause your always beautiful now through his eyes. In your life you can find ya peace of mind. Cuz for you he died now here's the reason why.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

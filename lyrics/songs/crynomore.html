@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Cry No More - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Cry No More - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Cry No More</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>The boy stepped out his house on to the sidewalk. Looked down the street on his block and then he just stopped. And tied the shoes on his feet and then he just walked. It was the middle of the week outside was real hot. He told his dad where he would be now and what not. Said he would go down by trees near the bus stop. The clock read quarter to three and he just thought. I'll sneak around and play hide and seek in the back. Lot and on his way to the spot a man from upstairs. Told him to stop and come here and he just stared. At this little boy of seven years with brown hair. And as he came near the man whispered in his ear. What he said left him numb frozen with fear. He wanted to run but his feet wouldn't go anywhere. He wanted to scream but he couldn't he was glued there. He wanted to leave but he wouldn't he was too scared</p><p><strong>SEGMENT2</strong><br>Cry no more. You don't have to cry no more. Don't cry no more. You don't have to cry no more</p><p><strong>SEGMENT3</strong><br>What happened that day left him changed forever. A day he wisshed he could erase and never remember. He tried to block out the pain as he got older. But he was consumed with hate now for this neighbor. And everyday he was ashamed when he saw himself. So ashamed that he proclaimed that he would never tell. Blocked out the memory of the pain so he'd never feel. He'd pretend to be ok and hide in his shell. He'd try to put a smile on his face like all was well. But this child couldn't change what he really felt. He blamed God for the cards that he was dealt. His heart grew hard by the time he was twelve. Began to fall apart and his grades start to fail. Until the day he cried to God asking for His help. He wanted to find and start a new life for himself. He closed his eyes and into the arms of Christ he fell</p><p><strong>SEGMENT4</strong><br>Cry no more. You don't have to cry no more. Don't cry no more. You don't have to cry no more</p><p><strong>SEGMENT5</strong><br>Everything you heard the boy would never speak. He held it all inside until he turned fifteen. I know that might be hard for you to believe. But he couldn't talk about it until God set me free. See way back when he was seven years old. He was sexually abused but no one was ever told. With nowhere to turn and no place to go. See he thought he could get through and maintain control. But little did he know he couldn't make it on his own. But that was just the time when you came through to show. How much You loved himand You wanted him to know. That You would never leave and You would never go. And You taught him to forgive and gave peace to his soul. And now he trully lives cause You made him whole. From that day ever since he ain't never been alone. That's why he'd convinced he don't have to cry no more</p><p><strong>SEGMENT6</strong><br>Cry no more. You don't have to cry no more. Don't cry no more. You don't have to cry no more</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

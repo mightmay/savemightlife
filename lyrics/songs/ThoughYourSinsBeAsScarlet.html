@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Though Your Sins Be As Scarlet - แม้ว่าบาปของท่านแดงก่ำ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Though Your Sins Be As Scarlet - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Though Your Sins Be As Scarlet</h2>
+        <h3>แม้ว่าบาปของท่านแดงก่ำ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>แม้ว่าบาปของท่านแดงก่ำก็จะทำให้ขาวสะอาด แม้ว่าบาปนั้นจะแดงก่ำก็จะทำให้ขาวสะอาด แม้บาปนั้นแดงเหมือนสีที่แดงเข้ม ก็จะขาวสะอาด แม้ว่าบาปนั้นสีแดงก่ำ แม้ว่าบาปนั้นสีแดงก่ำ ก็จะทำให้ขาวสะอาด ขาวสะอาดเหมือนอย่างสำลี</p><p><strong>VERSE2</strong><br>จงฟังเสียงซึ่งอ้อนวอนท่าน จงกลับใจเชื่อในพระเจ้า จงฟังเสียงซึ่งอ้อนวอนท่าน จงกลับใจเชื่อในพระเจ้า เพราะว่าพระองค์ทรงรักท่านนักหนา ด้วยความรักประหลาด จงฟังเสียงซึ่งอ้อนวอนท่าน จงฟังเสียงซึ่งอ้อนวอนท่าน จงกลับใจเชื่อในพระเจ้า จงกลับใจเชื่อในพระเจ้า</p><p><strong>VERSE3</strong><br>ทรงยกโทษความบาปของท่าน ไม่ทรงจำบาปนั้นอีกเลย ทรงยกโทษความบาปของท่าน ไม่ทรงจำบาปนั้นอีกเลย “ให้ท่านทั้งหลายเสาะหามองดูเรา” นี่เป็นคำตรัสเชิญ ทรงยกโทษความบาปของท่าน ทรงยกโทษความบาปของท่าน ไม่ทรงจำบาปนั้นอีกเลย ไม่ทรงจำบาปนั้นอีกเลย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>“Though your sins be as scarlet, They shall be as white as snow; Though your sins be as scarlet, They shall be as white as snow; Though they be red like crimson,They shall be as wool!” “Though your sins be as scarlet, Though your sins be as scarlet, They shall be as white as snow, They shall be as white as snow.”</p><p><strong>VERSE2</strong><br>Hear the voice that entreats you, O return ye unto God! Hear the voice that entreats you, O return ye unto God! He is of great compassion, And of wondrous love; Hear the voice that entreats you, Hear the voice that entreats you, O return ye unto God! O return ye unto God!</p><p><strong>VERSE3</strong><br>He’ll forgive your transgressions, And remember them no more; He’ll forgive your transgressions, And remember them no more; “Look unto Me, ye people,”Saith the Lord your God! He’ll forgive your transgressions, He’ll forgive your transgressions, And remember them no more, And remember them no more.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

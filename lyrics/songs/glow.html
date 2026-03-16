@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Glow - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Glow - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Glow</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Illuminating lights under my skin. Radiation so intoxicating burning within. Feel the heat slowly rising. The beat thats hypnotizing. A wonder can you feel it</p><p><strong>SEGMENT2</strong><br>Fire thats so contagious. Its taking over me. And you cant stop it</p><p><strong>SEGMENT3</strong><br>Oh, oh. Turn the lights down so we can. Glow, glow. Watch us come alive. Were gonna. Show you something real. Like a city on a hill. Oh, oh. Were gonna glow</p><p><strong>SEGMENT4</strong><br>They see us coming from miles away. Theres no hiding, no denying, cause were not ashamed. With our hands up in the air. Boys and girls they start to stare. Its a wonder, can you feel it</p><p><strong>SEGMENT5</strong><br>We will not be silent. Wont hide it. The time is now. And you cant stop it</p><p><strong>SEGMENT6</strong><br>Oh, oh, here we go. Welcome to the show. Lights shining, so blinding. From our head to our toes. When this room blacks out. You know we will stand out. So come on, oh. Were gonna glow!</p><p><strong>SEGMENT7</strong><br>They see us coming from miles away. Theres no hiding, no denying, cause were not ashamed. With our hands up in the air. Boys and girls they start to stare. Its a wonder, can you feel it</p><p><strong>SEGMENT8</strong><br>Oh, oh here we go. Like a shooting star. Well l-l-l-light up your heart</p><p><strong>SEGMENT9</strong><br>They see us coming from miles away. Theres no hiding, no denying, cause were not ashamed. With our hands up in the air. Boys and girls they start to stare. Its a wonder, can you feel it</p><p><strong>SEGMENT10</strong><br>Copyright © Britt Nicole</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

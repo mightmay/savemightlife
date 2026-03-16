@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Sleigh Ride (Remix) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Sleigh Ride (Remix) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Sleigh Ride (Remix)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Just hear those sleigh bells jingling. Ring ting tingling too. Come on, it's lovely weather. For a sleigh ride together with you</p><p><strong>SEGMENT2</strong><br>Outside the snow is falling. And friends are calling "Yoo hoo". Come on, it's lovely weather. For a sleigh ride together with you</p><p><strong>SEGMENT3</strong><br>Giddy yap, giddy yap, giddy yap. Let's go, let's look at the show. We're riding in a wonderland of snow</p><p><strong>SEGMENT4</strong><br>Giddy yap, giddy yap, giddy yap, It's grand, just holding your hand. We're gliding along with a song of a wintry fairy land</p><p><strong>SEGMENT5</strong><br>Our cheeks are nice and rosy. and comfy cozy are we. We're snuggled up together. Like two birds of a feather would be. Let's take that road before us and sing a chorus or two. Come on, it's lovely weather. For a sleigh ride together with you. It's lovely weather for a sleigh ride together with you</p><p><strong>SEGMENT6</strong><br>There's a birthday party. At the home of Farmer Gray. It'll be the perfect ending of a perfect day. We'll be singing the songs. We love to sing without a single stop. At the fireplace while we watch the chestnuts pop. Pop! Pop! Pop!</p><p><strong>SEGMENT7</strong><br>There's a happy feeling. Nothing in the world can buy. When they pass around the chocolate and the pumpkin pie. It'll nearly be like a picture print. By Currier and Ives</p><p><strong>SEGMENT8</strong><br>These wonderful things are the things. We remember all through our lives</p><p><strong>SEGMENT9</strong><br>Just hear those sleigh bells jingling. Ring ting tingling too. Come on, it's lovely weather. For a sleigh ride together with you</p><p><strong>SEGMENT10</strong><br>Outside the snow is falling. And friends are calling "Yoo hoo". Come on, it's lovely weather. For a sleigh ride together with you</p><p><strong>SEGMENT11</strong><br>Giddy yap, giddy yap, giddy yap. Let's go, let's look at the show. We're riding in a wonderland of snow (A wonderland)</p><p><strong>SEGMENT12</strong><br>Giddy yap, giddy yap, giddy yap, It's grand, just holding your hand. We're gliding along with a song of a wintry fairy land</p><p><strong>SEGMENT13</strong><br>Our cheeks are nice and rosy. and comfy cozy are we. We're snuggled up together. Like two birds of a feather would be. Let's take that road before us and sing a chorus or two. Come on, it's lovely weather. For a sleigh ride together with you. It's lovely weather for a sleigh ride together with you. It's lovely weather for a sleigh ride together with you. It's lovely weather for a sleigh ride. Come on, it's lovely weather. For a sleigh ride together with you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Next Great Awakening - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Next Great Awakening - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Next Great Awakening</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I see you in the valley. Transferring death for life. I see an army coming. They all bear your light</p><p><strong>SEGMENT2</strong><br>I am not bound to reason. I live in violent love. This world can not define me. My hearts set above</p><p><strong>SEGMENT3</strong><br>For me to live it Christ. For me to die is gain. I am not shrinking back. I'll never be the same</p><p><strong>SEGMENT4</strong><br>Four walls can not contain me. I know I've been possessed. I know that God is love. And there's no failing love. So I am fearless</p><p><strong>SEGMENT5</strong><br>Come, love is overtaking me now.</p><p><strong>SEGMENT6</strong><br>Ch 1: This is the sound. of a revolution.</p><p><strong>SEGMENT7</strong><br>This is the sound. of a prophet's cry.</p><p><strong>SEGMENT8</strong><br>This is the sound. of a reformation.</p><p><strong>SEGMENT9</strong><br>This is the sound. of a warrior bride.</p><p><strong>SEGMENT10</strong><br>This is the sound. of a giants falling.</p><p><strong>SEGMENT11</strong><br>This is the sound. that you can't ignore.</p><p><strong>SEGMENT12</strong><br>This is the sound. of a rebel rising.</p><p><strong>SEGMENT13</strong><br>This is the sound. of an open door.</p><p><strong>SEGMENT14</strong><br>Ch2: God, release the sound. Release the movement. I'm laying down everything</p><p><strong>SEGMENT15</strong><br>God, you promised nations. I want the nations. I'm not gonna settle, now. I, I hear the cry. I hear the longing. This is the sound of freedom</p><p><strong>SEGMENT16</strong><br>I stand in the gap. I stand here praying. For the next. Great Awakening</p><p><strong>SEGMENT17</strong><br>(Ch 1)</p><p><strong>SEGMENT18</strong><br>Revival's not an epic or a mission</p><p><strong>SEGMENT19</strong><br>Revival's not program. or a play</p><p><strong>SEGMENT20</strong><br>Revival is not a slogan. Revival is a man. His name is Jesus</p><p><strong>SEGMENT21</strong><br>(Ch 2)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

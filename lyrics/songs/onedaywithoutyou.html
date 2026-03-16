@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for One Day Without You - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>One Day Without You - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>One Day Without You</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>There's nothing I can say that's changing your mind, It seems like everything has already been said and done, And I've been running up from behind since we begun, I'm going out of my way, out of my mind, I'm begging you stay, I know we'll find a love again, But you checked out on me so long ago, but all I know is..</p><p><strong>SEGMENT2</strong><br>I want you to stay and I've got to get to you somehow, If I have to, I'll scream it out loud, How much I need you, And I can't live one day without you, So why don't we turn this thing around?. We've got to turn this thing around, 'Cause I can't remember how to live one day without you.</p><p><strong>SEGMENT3</strong><br>Seems only yesterday that we were alright, But now I'm holding on with everything I have inside, But this could be the end of us tonight, if we don't fight, I'm going out of my way, out of my mind, How can I stay?. I cannot find you around, But you checked out on me so long ago, but all I know is..</p><p><strong>SEGMENT4</strong><br>I want you to stay and I've got to get to you somehow, If I have to, I'll scream it out loud, How much I need you, And I can't live one day without you, So why don't we turn this thing around?. We've got to turn this thing around, 'Cause I can't remember how to live one day without you.</p><p><strong>SEGMENT5</strong><br>You'll run, run away, You'll run away from me, You'll run, run away, You'll run away from me, You'll run, run away, You'll run away from me, You'll run, run away, You'll run away from me.</p><p><strong>SEGMENT6</strong><br>There's nothing I can say that's changing your mind, It seems like everything has already been said and done, And I been running up from behind since we begun, I'm going out of my way, out of my mind, I'm begging you stay, I know we'll find a love again, But you checked out on me so long ago, but all I know is..</p><p><strong>SEGMENT7</strong><br>I want you to stay and I've got to get to you somehow, If I have to, I'll scream it out loud, How much I need you, And I can't live one day without you, So why don't we turn this thing around?. We've got to turn this thing around, 'Cause I can't remember how to live one day without you.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Won't Ever Stop - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Won't Ever Stop - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Won't Ever Stop</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I heard em say me and K don't even speak no more. Then why you hear my voice coming out these speakers for. We gone keep on talking we gone keep on walking. Past these cats and this trash that they keep on squawking. Went our separate ways did our separate things. But real friendship is something you can't separate. I had to deal with pride I had to let it die. I thank God that we set our differences aside. It's S.O.I. there aint nothing you can do about it. Log onto chat rooms go ahead and tell your crew about it. Say what you say but me and K know the truth about it. God forgives and your lying we can do without it. So while you spread gossip we gone spread gospel. Speak that truth and keep it moving like some real apostles. Call us Paul and Silas man you can't divide us. Praise God cause the Spirit is the light that guides us</p><p><strong>SEGMENT2</strong><br>I will never stop. Will never quit. Will never drop till it's over with. I will never stop. Will never quit. Will never drop until he said it's finished</p><p><strong>SEGMENT3</strong><br>The first thing I heard I was wack and I was white. The second thing I heard I couldn't rap and couldn't write. This occurred and happened pretty much all my life. So by the 3rd time I just laughed at em and rocked the mic. It just happened to make me work harder and work better. My mailbox was filled up all the rejection letters. One day I'm a take em all out and put em together. Frame em stick them on my wall now so I'll remember. Where God brought me where God took me. Where God got me from where I just should be. You can't stop me from being what I just could be. So what you say and what you state aint never shook me. I aint no veteran but I sure aint no rookie. Anywhere that I've been is cause God took me. And I'm gonna go with him anyplace God put me. They couldn't comprehend they never understood me but.</p><p><strong>SEGMENT4</strong><br>I needed one shot I needed one break. Instead I got them telling me that I aint got what it takes. But listen and think about the next time you wanna hate. See God's got a way of using the least likely candidates. I seen the closest of my friends up and leave my life. The ones I would depend on didn't treat me right. I'm trying to hang on it lead to some sleepless nights. But I stood strong only cause of Jesus Christ. I been down and out I've been tossed away. I been lied about been booed off the stage. Now your finding out I wont ever change. I'm a keep grinding now you see I'm here to stay. I wont ever drop I wont walk away. I wont ever stop see I'm here to stay. To everybody that thought that I would fade away. Well here's a big fat God bless you have a nice day.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

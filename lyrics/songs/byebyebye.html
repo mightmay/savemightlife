@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bye Bye Bye - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bye Bye Bye - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bye Bye Bye</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Bye, Bye, Bye. Bye, Bye, Bye. Bye, Bye, Bye</p><p><strong>SEGMENT2</strong><br>I'm doin this tonight. You're probably gonna start a fight. I know this can't be right. Hey baby, come on. I loved you endlessly. When you weren't there for me. So now it's time to leave and make it alone. I know that I can't take no more. It ain't no lie. I wanna see you out that door. Baby, bye, bye, bye</p><p><strong>SEGMENT3</strong><br>Don't wanna be a fool for you. Just another player in your game for two. You may hate me but it ain't no lie. Baby, bye, bye, bye</p><p><strong>SEGMENT4</strong><br>Don't really wanna make it tough. I just wanna tell you that I had enough. It might sound crazy. But it ain't no lie. Baby, bye, bye, bye</p><p><strong>SEGMENT5</strong><br>Just hit me with the truth. Now girl you're more than welcome to. So give me one good reason. Baby come on. I live for you and me. And now I really come to see. That life would be much better once you're gone</p><p><strong>SEGMENT6</strong><br>I know that I can't take no more. It ain't no lie. I wanna see you out that door. Baby, bye, bye, bye</p><p><strong>SEGMENT7</strong><br>Don't wanna be a fool for you. Just another player in your game for two. You may hate me but it ain't no lie. Baby, bye, bye, bye</p><p><strong>SEGMENT8</strong><br>Don't really wanna make it tough, I just wanna tell you that I had enough. It might sound crazy. But it ain't no lie. Baby, bye, bye, bye</p><p><strong>SEGMENT9</strong><br>I'm giving up I know for sure. I don't wanna be the reason. For your love no more. Bye, Bye</p><p><strong>SEGMENT10</strong><br>I'm checkin out. I'm signin off. Don't wanna be the loser. And I've had enough</p><p><strong>SEGMENT11</strong><br>I don't wanna be your fool. In this game for two. So I'm leavin' you behind. Bye, bye, bye..</p><p><strong>SEGMENT12</strong><br>I don't wanna make it tough. Make it tough. But I had enough. And it ain't no lie. Bye, bye, baby. Bye, Bye. Don't wanna be a fool for you. Just another player in your game for two. I don't wanna be your fool. But it ain't no lie. Baby, bye, bye, bye..</p><p><strong>SEGMENT13</strong><br>Don't really wanna make it tough. I just wanna tell you that I had enough. Might sound crazy. But it ain't no lie</p><p><strong>SEGMENT14</strong><br>Bye, bye, bye.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

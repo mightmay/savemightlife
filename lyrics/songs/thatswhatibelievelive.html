@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for That's What I Believe [Live] - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>That's What I Believe [Live] - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>That's What I Believe [Live]</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Lord, You promised if I keep my mind on You, You'd keep me in perfect peace</p><p><strong>SEGMENT2</strong><br>Choir. (Yes you would, you'd keep me in perfect peace)</p><p><strong>SEGMENT3</strong><br>With a sincere heart if I called upon Your name. You'd never turn away from me</p><p><strong>SEGMENT4</strong><br>Choir. (No, no you'd never turn away from me)</p><p><strong>SEGMENT5</strong><br>Said you'd give me everything I need</p><p><strong>SEGMENT6</strong><br>Choir. (You'd give me everything i need)</p><p><strong>SEGMENT7</strong><br>I came for deliverance. Deliverance I'll receive. You said You'd deliver me. And that's what I believe</p><p><strong>SEGMENT8</strong><br>So now every promise is mine, Lord (It's mine). I claim it (Oh yes, I know It's mine). By faith I receive it it's mine (It's mine). Won't leave here like I came ; I'm never gonna be the same. I know (It's mine). By faith I believe I believe (Oh yes, I know It's mine). Reach out and receive now (It's mine). Won't leave here like I came; I'm never gonna be the same. You can be saved just say</p><p><strong>SEGMENT9</strong><br>I came for salvation, Lord. Salvation I'll receive. You said You would save me, Lord. And that's what I believe</p><p><strong>SEGMENT10</strong><br>I came just to hear Your word. Your word will I receive. You said You world send Your word. And that's what I believe</p><p><strong>SEGMENT11</strong><br>So down in my heart I know (It's mine). I do believe it ( Oh, yes. I know it's mine). I heard all your promises (it's mine). Won't leave here like I came; I'm never gonna be the same. I know, I know (It's mine)</p><p><strong>SEGMENT12</strong><br>Healing (Oh, yes. I know it's mine). The provision for me (It's mine). Won't leave here like I came; I'm never gonna be the same. Yes (It's mine). You need to know (Oh yes. I know It's mine). Believe all the promises (It's Mine). Won't leave here like I came; I'm never gonna be the same</p><p><strong>SEGMENT13</strong><br>Somebody help me say (It's mine). Come on and help me say (Oh yes. I know it's mine). Somebody help me say (It's mine)</p><p><strong>SEGMENT14</strong><br>I came for your healings Lord. Your healings I'll recieve. You said you would heal me Lord. And that's what I believe</p><p><strong>SEGMENT15</strong><br>I came for deliverance. Deliverance I'll recieve. You said you would deliver me. And that's what I believe. (I believe, I believe). And that's what I believe. (I believe, I recieve). And that's what I believe. (Lord I look down no doubt I no). And that's what I believe. (That's what I believe). And that's what I believe</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

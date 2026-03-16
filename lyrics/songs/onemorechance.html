@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for One More Chance - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>One More Chance - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>One More Chance</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Yeah, Oh, Yeah, Yeah, Yeah, Oh</p><p><strong>SEGMENT2</strong><br>Can you give me just one more chance?. Can you give me just one more chance?. All I'm asking for is one more chance.</p><p><strong>SEGMENT3</strong><br>I'm just a dead man walking. I got nothing to loose. Tomorrow is not promised. Might is well tell the truth. Truth is I always loved ya'. My pride got in the way. Gotta get this off my chest. I pray it's not too late.</p><p><strong>SEGMENT4</strong><br>You gave me everything. Everything I needed and more. I saw you reaching for me. That's when I slammed the door. But look at me now (Look at me now). I'm just a mess (I'm just a mess). And I must confess (And I must confess)</p><p><strong>SEGMENT5</strong><br>[Chorus:]. I cried all day (I cried). Prayed all night (I prayed). I'm willing to make all my wrongs right. One more chance. Can you give me just one more chance?. Can you give me just one more chance?. I refuse to go to my grave. Knowing that I treated you this way. One more chance. Can you give me just one more chance?. Can you give me just one more chance?</p><p><strong>SEGMENT6</strong><br>I'm just a dead man walking. Just hear me out. I'm asking for forgiveness. That I can't live without. Truth is I don't deserve it. I should be locked away. Throw away the key. Never see the light of day. Oh but they can't judge me. Cause I judge myself. And I surrender. I'm in need of help. I need you to save me. I have learned my lesson. Here it is Lord. This is my confession.</p><p><strong>SEGMENT7</strong><br>[Chorus]</p><p><strong>SEGMENT8</strong><br>[Bridge:]. I lied (I lied). I cheated (I cheated). When I should have fought for love. I retreated. Then I placed the blame on you. Walked away, said I was threw. Looking out for me. Without responsibility. You tried, and I knew it. All along I knew what I was doing. The life I thought I had I lost it. I'm cleaning out my closet. How could I be so. Mercy on my soul</p><p><strong>SEGMENT9</strong><br>One more chance. One more chance. Just one (Just one). Just one (Just one). Just one (Just one). Just one (Just one)</p><p><strong>SEGMENT10</strong><br>One more chance. One more chance. Just one (That's all I'm asking for). Just one (That's all I'm asking for). Just one (That's all I'm asking for). Just one</p><p><strong>SEGMENT11</strong><br>I cried all day. Prayed all night. I'm willing to make all my wrongs right I refuse to go to my grave. Knowing that I treated you this way</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

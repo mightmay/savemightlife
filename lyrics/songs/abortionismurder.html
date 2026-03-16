@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Abortion Is Murder - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Abortion Is Murder - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Abortion Is Murder</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Intro yeah, it's the P.O.D. right here. Coming straight from S.D. C - A. 619's in effect y'know what I'm sayin'. Givin' you that hardcore sound yeah. Comin' up from the ground boy. That's where it all started y'know what I'm sayin'. Yeah, this is hardcore, you know why it's so hardcore. 'Cuz it's bult on the rock - what rock you ask. The rock of Jesus Christ, yeah that's right. Givin' you the truth 'cuz the truth hurts y'kow. But that's how we layin' it down. We ain't got nothin' to hide. And we're breakin' it down like that y'know what I'm sayin'. Hardlove, hardcore one way yeah, check it ou. Abortion is murder. There's nothing you can say or do. To justify the fact. That there's a living breathing baby inside of you. That there's a living breathing baby inside of you. That there's a living breathing baby inside of you</p><p><strong>SEGMENT2</strong><br>Abortion is murder, abortion is murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder</p><p><strong>SEGMENT3</strong><br>There's nothing you can say or do. To justify the fact</p><p><strong>SEGMENT4</strong><br>That there's a living breathing baby inside of you. That there's a living breathing baby inside of you</p><p><strong>SEGMENT5</strong><br>Abortion is murder, abortion is murder. Abortion is murder, abortion is murde. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder</p><p><strong>SEGMENT6</strong><br>Murder, murder, murder, murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder. Abortion is murder, abortion is murder</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

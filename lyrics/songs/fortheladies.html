@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for For the Ladies - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>For the Ladies - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>For the Ladies</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>. This is for the ladies, all the ladies all around the world. This is for the ladies, this is dedicated now to every single girl. This is for the ladies</p><p><strong>SEGMENT2</strong><br>Alright, I don't care I wanna say this on the mic. Right now right here in the place it's ladies night. I know I might just sound crazy right. There's some things that's going down and its time to make it right. The world will tell you you gotta be a certain type, look a certain way, And just be a certain size. Do what they say and it'll just be "alright". Girl the only thing you gotta be doing is serving Christ. 6 years ago I was blessed with a wife. She was sweet and lovely and beautiful and nice. But the one thing that just made her my type. Was the fact that Christ was #1 up in her life. So take my advice. Forget them Hollywood stars, and them Hollywood hair. And them Hollywood cars. Next time you thinking that you ain't up to par. Remember God made you beautiful just the way you are</p><p><strong>SEGMENT3</strong><br>Sick of BET, sick of MTV, I'm sick of the sex that they always used to selling me. I'm sick of the messed up images they showing me. Im sick and tired of the messes that they say to me. That women are nothing more than sexual property. It's time we come back to treating women properly. So what I gotta say, I'll say it real loudly. We oughta be treating all women like royalty. Only God should be speaking what you gotta be. Only God can give you the love you gonna need. Ladies, if a guy won't treat you as you ought to be. Tell him goodbye, show him the door, and where to leave. Don't be afraid just to tell a guy to wait for me. Don't be ashamed just to live your life in purity. See what I say, I just say it now with certainty. That God has so much more if you'll wait and see</p><p><strong>SEGMENT4</strong><br>On a final note I wanna dedicate this song. To all the godly women that just keep on seeking God. Just keep on moving and continue standing strong. Keep doing what you doing girl you got it going on. And the single moms that's just barely holding on. And you're working two jobs trying to make it on your own. No one is home cause the kid's dad is gone. God promises to never ever leave you alone. The final thing that I'll say then I'm gone. To the female singers trying to get their pose on. Now I ain't trying to be a hata but wrong is just wrong. Now Britney and J-Lo, please put some clothes on!. Whether yall are red-headed or just a blonde. Make sure that the Son is the one you focus on. And with that said, I'm gonna say "so long". So get your hand up in the air, ladies, and sing along</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

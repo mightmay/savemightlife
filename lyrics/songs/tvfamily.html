@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for TV Family - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>TV Family - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>TV Family</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Just a calendar day (ba ba ba ba). its funny how things can stay the same. or drastically change. some things seem so close on some days but still so far away. dont know the right tings to do (ba ba ba ba). in fact i dont have a clue sometime i feel like a tool. and i want to be truthfully true to you. and do all the things that you do. but when i hate everything about the mean things that i say. it feels like i mess up so much and i can only say. "i hate everything about my ways". but you tell me im OK. and one day one day i know you'll say</p><p><strong>SEGMENT2</strong><br>"B im so glad you made it". "oh well Jesus thank you so much for saying that". because the truth you know is that i have just been hating so many things i do. but now i realize forever that you're my friend. no matter what you will never leave me to fend. i don't know much but i know we will be. as happy as a 195o's TV family. except times infinity</p><p><strong>SEGMENT3</strong><br>two calendar days (ba ba ba ba). and still my life is the same. and other people's have changed. i wonder what if im too late. all the time that i said i would wait?. and yeah does anyone care. about us here or anywhere?. well i just want to try adn dare. to be there, to care cus i know- i know thats rare. but when i hate everything about the mean things that i say. it feels like i mess up so much and i can only say. "i hate everything about my ways". but you tell me im OK. and one day one day i know you'll say</p><p><strong>SEGMENT4</strong><br>"B im so glad you made it". "oh well Jesus thank you so much for saying that". because the truth you know is that i have just been hating so many things i do. but now i realize forever that you're my friend. no matter what you will never leave me to fend. i don't know much but i know we will be. as happy as a 195o's TV family. except times infinity</p><p><strong>SEGMENT5</strong><br>a family that i will be in. a family- its jsut not pretend. a familt that i will be in, a family</p><p><strong>SEGMENT6</strong><br>i don't know much but i know we will be. happy as a 1950"s TV family.. except times infinity. just a calendar day.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

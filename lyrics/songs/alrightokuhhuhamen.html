@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Alrightokuhhuhamen - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Alrightokuhhuhamen - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Alrightokuhhuhamen</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Well the Lord said let there be and there was. On the earth below and in the sky above. Well then He knocked off work. 'Cause it was Friday night. Come Saturday morning. Everything was just alright. Sure enough</p><p><strong>SEGMENT2</strong><br>The Lord said let man choose and man did. There's been sorrow and trouble. In the world ever since. But there's hope for us still. In the Word God says. If we just be smart enough to just say yes. Smart enough to say yes to Him and say it</p><p><strong>SEGMENT3</strong><br>Alrightokuhhuhamen. Alrightokuhhuhamen. As it was in the beginning. It will be until the end. Alrightokuhhuhamen</p><p><strong>SEGMENT4</strong><br>Now the Lord said Church you better love. 'Cause it's a wounded world. That needs a healing touch. And He gave us a promise. And He gave us a job. He'll be with us but the work is up to us. It's up to us. And the Lord is sure speaking to you. So set aside your pride and your anger too. To say that time is short. Just means the time is now. Every tongue will confess. And every knee is going to bow. Every knee is gonna bow. Alrightokuhhuhamen, Alrightokuhhuhamen</p><p><strong>SEGMENT5</strong><br>You can argue with your Maker. But you know that you just can't win. Alrightokuhhuhamen, Alrightokuhhuhamen</p><p><strong>SEGMENT6</strong><br>Don't have to be no hunger. Don't have to be no war. Don't love this world any longer. Better learn how to say yes to the Lord. Alrightokuhhuhamen. Alrightokuhhuhamen</p><p><strong>SEGMENT7</strong><br>You can argue with your Maker. Or know the joy of saying yes to, to Him. Alrightokuhhuhamen. Alrightokuhhuhamen. You can argue with your Maker. (REPEAT)</p><p><strong>SEGMENT8</strong><br>As it was in the beginning. It will be until the end. Alrightokuhhuhamen</p><p><strong>SEGMENT9</strong><br>Alrightokuhhuhamen. As it was in the beginning</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Luv Is a Verb - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Luv Is a Verb - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Luv Is a Verb</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Luv is a Verb - dc talk</p><p><strong>SEGMENT2</strong><br>Down with the DC TALK. Down with the DC TALK. Are you down with the DC TALK. Down with the DC TALK</p><p><strong>SEGMENT3</strong><br>Pullin' out my big black book. 'Cause when I need a word defined that's where I look. So I move to the "L's" quick, fast, in a hurry. Threw on my specs', thought my vision was blurry. I looked again but to my dismay. It was black and white with no room for gray. Ya see a big "V" stood beyond my word. And yo that's when it hit me that luv is a verb</p><p><strong>SEGMENT4</strong><br>Words come easy but they don't mean much. When the words they're sayin' we can't put trust in. We're talkin' 'bout luv in a different light. And if we all learn to luv it would be just right</p><p><strong>SEGMENT5</strong><br>(Chorus). Hey, tell me haven't ya heard. Luv is a serious word. Hey, I think it's time ya learned. I don't care what ya say. I don't care what ya heard. The word luv. luv is a verb</p><p><strong>SEGMENT6</strong><br>Down with the DC TALK. Down with the DC TALK. Are you down with the DC TALK. Down with the DC TALK</p><p><strong>SEGMENT7</strong><br>Thinkin' of a way to explain-o. 'Cause ya knowin' that I'm flowin' like a bottle of Drain-o. Simple and plain L-O-V-E. Ain't all that junk that ya see on TV. Put soap's on a rope 'cause they ain't worth cope'n. With it's a myth that there ain't no hope and. Luv is enough if it's unconditionally. Given now ya livin' out the Great Commission</p><p><strong>SEGMENT8</strong><br>Words come easy but they don't mean much. When the words they're sayin' we can't put trust in. We're talkin' 'bout luv in a different light. And if we all learn to luv it would be just right</p><p><strong>SEGMENT9</strong><br>(Repeat Chorus)</p><p><strong>SEGMENT10</strong><br>Back in the day there was a man. Who stepped outta heaven and He walked the land. He delivered to the people an eternal choice. With a heart full of luv and the Truth in His voice. Gave up His life so that we may live. How much more luv could the Son of God give. Here is the example that we oughtta be matchin'. 'Cause luv is a word that requires some action</p><p><strong>SEGMENT11</strong><br>Words come easy but they don't mean much. When the words they're sayin' we can't put trust in. We're talkin' 'bout luv in a different light. And if we all learn to luv it would be just right</p><p><strong>SEGMENT12</strong><br>(Repeat Chorus)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

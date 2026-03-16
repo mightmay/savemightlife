@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Spinnin' Around - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Spinnin' Around - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Spinnin' Around</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>(You keep me spinnin' around!). ('Round round round round round round round)</p><p><strong>SEGMENT2</strong><br>I was thinkin' 'bout it yesterday. I was thinkin' 'bout tomorrow. In a dizzy kinda sorta way, like vertigo. I've been tryin' hard to figure out. But it's drivin' me crazy. Well you'd think I'd know by now. A is last, Z is first. Living life in reverse. 'Cause that's the way it works</p><p><strong>SEGMENT3</strong><br>Spinnin' around. I've got this funny feeling. Turnin' my whole world upside down. I'll keep my heart, my eyes on You. 'Cause you keep me spinnin' around. Spinnin' around</p><p><strong>SEGMENT4</strong><br>What we're doing doesn't have a sequel. Don't wanna lose your balance. Oh, you know you gotta keep your equilibrium. Goin' back to go forward. All these definite maybe's. It's like running around in circles. Make it last, take it slow. Just forget what you know. 'Cause that's the way it goes</p><p><strong>SEGMENT5</strong><br>Spinnin' around. I've got this funny feeling. Turnin' my whole world upside down. I'll keep my heart, my eyes on You. 'Cause you keep me spinnin' around. Spinnin' around</p><p><strong>SEGMENT6</strong><br>Every now and then I feel your peacefulness surround me. Then once again it all goes. Up and down and over under. 'Round and around. Go, Go, Go, Jump, Jump, Go, Go, Go J5. Spinnin' around, oh yeah, yea. Upside down, oh yeah yeah. J5 in the house, hey. Jump, jump, jump, jump, jump, jump. Turnin' turnin' upside down-down. 'Cause you're spinnin' spinnin' spinnin' me around-round. Go-jump-go-jump-go-jump-go-jump. Spinnin' around, that's the way it works. Take it slow and not so fast (fast). Z is first and A is last (last). Up and down, all around (hey, hey). Turnin' my whole world upside down. Oh yeah, It's not the take. it's the give. Yes that's the way, okay. The way it is</p><p><strong>SEGMENT7</strong><br>Spinnin' around. I've got this funny feeling. Turnin' my whole world upside down. I'll keep my heart, my eyes on You. 'Cause you keep me spinnin' around. Spinnin' around.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

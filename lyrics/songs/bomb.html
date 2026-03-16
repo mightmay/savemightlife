@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bomb - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bomb - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bomb</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Wait, wake up in the morning to the clear blue sky. Turn up the music when I hop in the ride. The windows down let the whole world see. Cant nobody rock it like the little old me</p><p><strong>SEGMENT2</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up</p><p><strong>SEGMENT3</strong><br>I got my chucks and my dickies and I put it on black. Banging Sinatra in the black cadillac. My old lady leaning out the whole window. Everybody lookin when we walk in slow</p><p><strong>SEGMENT4</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up</p><p><strong>SEGMENT5</strong><br>Wait, 1 for the money and a 2 for the show. but 3 to be a legend even if Im poor. I aint chasin nothin you gon have to catch me. and if you wanna taste you gon have to pay a fee</p><p><strong>SEGMENT6</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up</p><p><strong>SEGMENT7</strong><br>Call my mama, in-laws and my little scarecrows?. When they hear my record well they all hit the floor. Babies rock a pose cmon fill the front row. The homies in the back tip their hats real low</p><p><strong>SEGMENT8</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up</p><p><strong>SEGMENT9</strong><br>wowo wooo.. wowo wooo. (everybody singing now). wowo wooo.. wowo wooo. (everybody singing now). wowo wooo. (everybody singing now). wowo wooo. (everybody singing now). wowo wooo.. wowo wooo. (everybody singing now). wowo wooo.. wowo wooo. (alright now)</p><p><strong>SEGMENT10</strong><br>Ok, come on everybody wont you clap your hands. White folks do it on time if they can. Sounds good, now heres the plan. Lets all sing together like were in the same band</p><p><strong>SEGMENT11</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up. Im the bomb and Im bout to blow up. Im the bomb and Im . .</p><p><strong>SEGMENT12</strong><br>Now, were gonna reach another whole new level. Grabbin the light on the run from the devil (watch out). Been downtown for too long. I feel the sun risin all up in my bones</p><p><strong>SEGMENT13</strong><br>Im the bomb and Im bout to blow up. Im the bomb and Im bout to BLOW UP</p><p><strong>SEGMENT14</strong><br>wowo wooo.. wowo wooo. (everybody singing now). wowo wooo.. wowo wooo. (everybody singing now). wowo wooo. (everybody singing now). wowo wooo. (everybody singing now). wowo wooo.. wowo wooo. (everybody singing now). wowo wooo.. wowo wooo.. wowo wooo.. wowo wooo.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Stationary Stationery - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Stationary Stationery - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Stationary Stationery</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Do they not have pen or paper where you are?. 'Cause I haven't heard from you in ages. I relive each memory. From time to time. With notes exchanged. With all the scented pages. It's comin back. It's all comin back to me now</p><p><strong>SEGMENT2</strong><br>Tell me everything turned out alright. 'Cause I'm well and we said. That we'd meet tonight. Does he treat you like you want. Does he ask to take your hand. Does he believe in dreams we talked about. Though with no music we dance</p><p><strong>SEGMENT3</strong><br>I thought you said that you'd come find me. I thought you said you'd be home by now. I heard you say that you'd come back here. So I wrote to remind you somehow..</p><p><strong>SEGMENT4</strong><br>Dance by yourself and. Think of me when you do. I'm not sure you understand. What this means to me. What you do to me. I'm willing to prove. That you're the one. I regret to slip away. Now I know it was only you. That I've been searchin for. And missin all this time</p><p><strong>SEGMENT5</strong><br>I thought you said that you'd come find me. I thought you said you'd be home by now. I heard you say that you'd come back here. So I wrote to remind you somehow..</p><p><strong>SEGMENT6</strong><br>I thought you said that you'd come find me. I thought you said you'd be home by now. I heard you say that you'd come back here. So I wrote to remind you somehow..</p><p><strong>SEGMENT7</strong><br>Let the past be past. Let's start today. And let us both do. I need to see your face. Tell me where to be. I'll tell you why we shouldn't be. (I'll tell you why we shouldn't be)</p><p><strong>SEGMENT8</strong><br>I thought you said that you'd come find me. I thought you said you'd be home by now. I heard you say that you'd come back here. So I wrote to remind you somehow..</p><p><strong>SEGMENT9</strong><br>I thought you said that you'd come find me. I thought you said you'd be home by now. I heard you say that you'd come back here. So I wrote to remind you somehow..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

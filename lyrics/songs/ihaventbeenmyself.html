@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Haven't Been Myself - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Haven't Been Myself - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Haven't Been Myself</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Chorus. I'm not alright I haven't been myself lately. I'm not okay with the way I've let my thoughts overtake. take me away to a place I shouldn't have gone. I hope I'm not here for long. I'll see you when I'm better. I'll see you when I'm better</p><p><strong>SEGMENT2</strong><br>It's gotta get worse to get better. it went from no way never to okay whatever. slowly but surely and sure is, sure is blurry. the things that once were me are no longer. every so often God reminds me. but I'm always there in front to blind me. man, I value my pride more than peace of mind. my precious pride. there was a time when I had control. but I let it go. I watched the world pass in slow motion. my life's ahead of me. I can't catch up. stuck in a rut. I went to willingly. these thoughts are killing me. I wish I could control myself but I can't. or can I?  Man I'm gone. I hope I'm not here for long. it's just a visit. ashamed of who I've become. it's not really me, or is it?</p><p><strong>SEGMENT3</strong><br>Chorus</p><p><strong>SEGMENT4</strong><br>Thoughts led to emotion which led to action. I hate the fact that it happened. The Lord can forgive and forget. But I'm not able to do it. Maybe  there is where the problem lies. I'm unable to forgive myself. Plus I'm too proud to ask for help. Well I'm sorry for who I've become. I guess circumstances can leave you numb. Plus I refused accountability. It seemed like such small things you found in me. I called you secluded and alluded to the fact that your concerns were silly. Man don't overreact. Now lookin back in hindsight. I'm able to see that you were right. Is it too late for me?. I know it's not. It's just up to me to choose to stop</p><p><strong>SEGMENT5</strong><br>Chorus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

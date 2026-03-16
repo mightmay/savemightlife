@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rejoice the Lord Is King - เราจึงโห่ร้องถวายพรชัย - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rejoice the Lord Is King - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rejoice the Lord Is King</h2>
+        <h3>เราจึงโห่ร้องถวายพรชัย</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พวกเราสรรเสริญยินดี พระเจ้าทรงสร้างโลกา ทรงเป็นสันติราชา เรามอบทั้งใจกายา เราจึงโห่ร้อง ถวายพรชัย กราบไหว้พระองค์ด้วยความปรีดา</p><p><strong>VERSE2</strong><br>พระเยซูทรงปกครอง  ด้วยความรักและเมตตา เมื่อทรงล้างบาปเราแล้ว เสด็จกลับไปเมืองฟ้า เราจึงโห่ร้องถวายพรชัย กราบไหว้พระองค์ด้วยความปรีดา</p><p><strong>VERSE3</strong><br>อาณาจักรของพระเจ้า  ก็ตั้งอยู่ยั่งยืนนาน พระวิญญาณเสด็จมา โลมเล้าเฝ้าอภิบาล เราจึงโห่ร้อง ถวายพรชัย กราบไหว้พระองค์ด้วยความปรีดา</p><p><strong>VERSE4</strong><br>พระเยซูได้สัญญา ว่าจะเสด็จกลับมา เพื่อรับบรรดาสาวก  ให้ขึ้นไปถึงเมืองฟ้า เราจึงโห่ร้อง  ถวายพรชัย กราบไหว้พระองค์ด้วยความปรีดา.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Rejoice, the Lord is King: Your Lord and King adore! Rejoice, give thanks and sing, And triumph evermore. Lift up your heart, Lift up your voice! Rejoice, again I say, rejoice!</p><p><strong>VERSE2</strong><br>Jesus, the Savior, reigns, The God of truth and love; When He has purged our stains, He took his seat above; Lift up your heart,Lift up your voice! Rejoice, again I say, rejoice!</p><p><strong>VERSE3</strong><br>His kingdom cannot fail, He rules o'er earth and heav'n; The keys of death and hell Are to our Jesus giv'n: Lift up your heart,Lift up your voice! Rejoice, again I say, rejoice!</p><p><strong>VERSE4</strong><br>Rejoice in glorious hope! Our Lord and judge shall come And take His servants up To their eternal home: Lift up your heart,Lift up your voice! Rejoice, again I say, rejoice!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

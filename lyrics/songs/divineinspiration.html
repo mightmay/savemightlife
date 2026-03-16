@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Divine Inspiration - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Divine Inspiration - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Divine Inspiration</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Ladies and gentlemen, boys and girlies. From Upper-class America to minimum-wage employees. Wherever you are, wherever you're at. From Columbus Ohio to your point on the map. It's that kid John Reuben, mic checkin' one, two'n. MCs get the boot when they claim to be the shoe in. nothing new</p><p><strong>SEGMENT2</strong><br>Everybody wanna be a superstar MC. As for me, I find better things in which to place my energy. Diverse family, we up and at 'em full fashion. Been locked up in the lab mixin up this contraption. Smackin the mic with verbs and nouns of life. I utilize my time right to hold it down and keep it tight. And then decipher that I step through. Yeshua equals life so I don't separate the two. True peace 'n joy, more love to the connector. Illuminate your town as we hit your sector</p><p><strong>SEGMENT3</strong><br>Chorus: Everywhere we rock, everywhere we go. Every type of thought, every type of show. We got divine inspiration, we got divine inspiration</p><p><strong>SEGMENT4</strong><br>Well, let me come into the track, yes ya'll. Bring it on back, yes ya'll. One time for the mental piece release. Mos def John Reuben will decrease. Christ increased inspired lyrics hit your soul direct blow. How we communicate graf DJ and break. Take a minute, now listen and dissect the intuition. More than ear candy but yo, I dwell in submission. to Heavenly powers, hours on end I spend. Lookin for creative combinations to blend. Now that's a good combination, that's a good combination</p><p><strong>SEGMENT5</strong><br>Chorus</p><p><strong>SEGMENT6</strong><br>In the place to be bringin it out like.. Like dots, I connect my rhymes to the spot. Warp speed like I'm trekky, to bang heads of block. To rock, to petrify, combust with mad rush. More cool than that J to bring that cold crush. Transcend, runnin through this whole scheme. Seen with raps, stay fresh, more ultra to the V. I'm clutching microphones and roamin thru them zones. And melodies I release serk ambassadors and vocal tones. Shooting missiles from the lab, I contract, bust verbal raps. Ripping, torn thru, and spilling into laps, douse lyricals with divine divinity. To rise above the normal mediocre plain MC. Let me introduce cause I feel I'm rev'd and heated. In a state of mass destruct MCs like they never existed. Seein stars, like I'm spangle in your banner. Christian manner, b-boy for Christ, roaring like I'm Judah</p><p><strong>SEGMENT7</strong><br>Chorus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

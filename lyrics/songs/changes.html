@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Changes - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Changes - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Changes</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Chorus. Somethings changing my life in the night, I dont know what it is yall, Im believing its Christ he is the light. Who ever would a thought yall</p><p><strong>SEGMENT2</strong><br>Im not a dark child just a wild out abounds. Sabotaged God helped me out, beating down turned around. Deep down my soul, each round I go. No peace at home, falling domino. Rolled with the wind tossed in the sin. Coughing, heads moshing, thoughts banging. Hanging with my crew and, whos true man. Im choosing my future groupings Losing my sight looking for life. The fatherless type I might like to iiiii.. Suicides in my thoughts each step I walk. Swallow alcohol with pills to with drawl. It all changed in the night time, the right place. The right time encounters divine see the signs. Die or live hostage, destinies calling. I let this God in, and pose pone an early coffin</p><p><strong>SEGMENT3</strong><br>Chorus</p><p><strong>SEGMENT4</strong><br>Somethings changing Im aging maintain my saneness. I cant explain it, my lifes turning pages Yo SCRATCHES. Waking up freaking out, hearing sounds out my mouth. Its not freestyle vocal chords peaking out. Call the executionist bomb unit. I got new sense to influence, yo ye life lose it. News out my radar they say I got God. Escape the chaos masturbating I stopped jerking off. Halt hold pause falls, calls cuts and cussing. Juggling, knees buckling, pain suck it in. If Im a new man, the old is ruined. What Im do a do a do doing. Im different or Im just tripping. Limited living edition. Falling on my face, falling on my face. Its a life cycle dark to light like Michael. Down night all, or Christ read the bible. Enlightening my the thoughts minds on a higher force. Ive seen the light yall Ive seen it all.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

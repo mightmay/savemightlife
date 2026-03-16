@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Breathe on Me, Breath of God - เชิญพระวิญญาณลงมา - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Breathe on Me, Breath of God - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Breathe on Me, Breath of God</h2>
+        <h3>เชิญพระวิญญาณลงมา</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เชิญพระวิญญาณลงมา  ทรงเป็นลมปราณของข้าฯ ขอได้ประทานตามพระสัญญา เหมือนวันเพ็นเทคอศเต</p><p><strong>VERSE2</strong><br>เชิญพระวิญญาณลงมา    ประทับอยู่ใจตัวข้า ขอให้สนิทอยู่ทุกเวลา  เพื่อทนสู้มารบีฑา</p><p><strong>VERSE3</strong><br>พระองค์ทรงเป็นลมปราณ ให้ชีวิตใหม่แก่ข้าฯ โปรดลบล้างบาปผิดที่ผ่านมา  ให้บริสุทธิ์ยิ่งนา</p><p><strong>VERSE4</strong><br>ขอได้ทรงโปรดประทาน  ลมปราณจากเบื้องเมืองฟ้า ให้ลงมาสู่ดวงจิตของข้าฯ  ดำรงชีพกัลป์ปา.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Breathe on me, Breath of God, Fill me with life anew, That I may love what Thou dost love, And do what Thou wouldst do.</p><p><strong>VERSE2</strong><br>Breathe  on  me, Breath  of God, Until  my  heart  is  pure, Until with Thee I will one will, To do and to endure.</p><p><strong>VERSE3</strong><br>Breathe on me, Breath of God,  Blend all my soul with Thine, Until this earthly part of me,  Glows with Thy fire  divine.</p><p><strong>VERSE4</strong><br>Breathe  on  me, Breath  of God, So  shall  I  never  die, But live with Thee the perfect life  Of Thine  eternity.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

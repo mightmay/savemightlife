@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Hey Driftwood(Tides) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Hey Driftwood(Tides) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Hey Driftwood(Tides)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Every man accounted for, but lost in something tangibly unclear. I thought about the things we'd lost and won. Like a record store full of rhymes and candy when Sheena's ready for guns and rock n' roll. I confess I was falling asleep with a whirlwind at my door</p><p><strong>SEGMENT2</strong><br>Always to the east our eyes are looking at the dawn. Formally requesting, but the answers never come</p><p><strong>SEGMENT3</strong><br>Oh, a hundred years could pass. What is forever?. Living proof of boy and girl. We've got each other</p><p><strong>SEGMENT4</strong><br>I told' em all once and they said I was right. But you never get strong if you win it without a fight. Oh, spit it out on the ground, we'll reach the other side. Well, she packed up her life to head down to the city. When the ticket man asked she just smiled 'I ain't comin' back!'. Hey driftwood, will you lead me to the sea?</p><p><strong>SEGMENT5</strong><br>Always to the east our eyes are looking at the dawn. Formally requesting but the answers never come</p><p><strong>SEGMENT6</strong><br>Oh, a hundred years could pass. What is forever?. Time is non-existent for today as long as we're together. Oh, and every moment comes just a little faster. Living proof of boy and girl. We've got each other</p><p><strong>SEGMENT7</strong><br>In a moment here we all may die. Know one now is quite aware just why. Summer nights that we vowed to remember turned to nightmare. Father Time has not appointed us for ever. Listen to summer nights that we vowed to remember turn to nightmare. Father Time has not appointed us forever</p><p><strong>SEGMENT8</strong><br>One last time and then I cannot defy you. Onward, can we find our way back home?. It's time and still I cannot defy you. Onward, can we find our way back home?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

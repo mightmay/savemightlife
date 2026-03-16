@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for O Perfect Love - ความรักประเสริฐของพระเยซู - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>O Perfect Love - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>O Perfect Love</h2>
+        <h3>ความรักประเสริฐของพระเยซู</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เราไม่เข้าใจความรักของพระเยซูเจ้า ถ่อมใจกราบทูลขอให้ประทานแก่เรา ให้ความรักนี้มีอยู่ในเราไม่ศูนย์หาย ผูกมัดเราไว้เป็นอันเดียวไม่เสื่อมคลาย</p><p><strong>VERSE2</strong><br>ความรักประเสริฐของพระเยซูผู้บันดาล ความกลัวความเจ็บความตายก็อันตรธาน ให้ข้าฯกล้าหาญอ่อนโยนสงบและเมตตา ข้าฯไว้ใจพระคริสต์ผู้ยอมไถ่ตัวข้าฯ</p><p><strong>VERSE3</strong><br>ขอให้ข้ามีชัยความทุกข์ของโลกนี้ได้ โศกกลายเป็นยินดีมีสุขทั้งใจกาย ข้าฯไม่รู้ว่าพรุ่งนี้จะมีเหตุการณ์ใด แต่ข้าฯรู้ว่าชีวิตภายหน้าไม่ตาย</p><p><strong>VERSE4</strong><br>ขอพระบิดาโปรดเมตตายกโทษแก่ข้าฯ   อาศัยอำนาจพระเยซูตามสัญญา   ทั้งมีพระวิญญาณคุ้มครองพิทักษ์รักษา   ให้รอดปลอดภัยอยู่ได้ตลอดเวลา</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>O perfect Love, all human thought transcending,    Lowly we kneel in prayer before Thy throne,     That theirs may be the love which knows no ending,    Whom Thou forevermore dost join in one.</p><p><strong>VERSE2</strong><br>O perfect Life, be Thou their full assurance, Of tender charity and steadfast faith, Of patient hope and quiet, brave endurance  With childlike trust that fears nor pain nor death.</p><p><strong>VERSE3</strong><br>Grant them the joy which brightens earthly sorrow;    Grant them the peace which calms all earthly strife,    And to lifes day the glorious unknown morrow     That dawns upon eternal love and life.</p><p><strong>VERSE4</strong><br>Hear us, O Father, gracious and forgiving, Through Jesus Christ, Thy coeternal Word, Who, with the Holy Ghost, by all things living Now and to endless ages art adored.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

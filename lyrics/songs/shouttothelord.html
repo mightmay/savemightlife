@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Shout To The Lord - พระเยซู พระผู้ช่วย - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Shout To The Lord - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Shout To The Lord</h2>
+        <h3>พระเยซู พระผู้ช่วย</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเยซู พระผู้ช่วย ไม่มีผู้ใดเปรียบพระองค์ ในทุกๆ วัน ฉันอยากสรรเสริญ ความรักยิ่งใหญ่ของพระองค์เจ้า</p><p><strong>VERSE2</strong><br>พระทรงเป็น ที่กำบัง ป้อมปราการและกำลังใจ เชิญทุกชีวิตและทุกๆสิ่ง พากันสรรเสริญพระเจ้า</p><p><strong>CHORUS1</strong><br>สรรเสริญพระเจ้า ทั่วโลกา ร่วมร้องเพลง พลังและฤทธิ์เดช สรรเสริญกษัตรา ภูเขากราบลง และทะเลคึกคะนอง ส่งเสียงร้อง สรรเสริญ</p><p><strong>CHORUS2</strong><br>ฉันร้องชื่นชม ยินดีในฝีพระหัตถ์ และฉันจะรัก พระองค์ตลอดชีพวางวาย ไม่มีสิ่งใดจะเปรียบปาน สัญญากับพระองค์</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>My jesus, my savior, Lord, there is none like you. All of my days, I want to praise, The wonders of your mighty love.</p><p><strong>VERSE2</strong><br>My comfort, my shelter, Tower of refuge and strength. Let every breath, all that I am, Never cease to worship you.</p><p><strong>CHORUS1</strong><br>Shout to the lord, all the earth let us sing. Power and majesty, praise to the king. Mountains bow down, and the seas will roar, At the sound of your name.</p><p><strong>CHORUS2</strong><br>I sing for joy at the work of your hands, Forever I'll love you, Forever I'll stand. Nothing compares to the promise I have In you.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p><strong>VERSE1</strong><br>A E F#m E D C#m D A F#m G Bm E</p><p><strong>VERSE2</strong><br>A E F#m E D C#m D A F#m G Bm E</p><p><strong>CHORUS1</strong><br>A F#m D Esus E F#m D E F#m E E7</p><p><strong>CHORUS2</strong><br>A F#m D Esus E A F#m D Esus E F#m D E A</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Make Way - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Make Way - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Make Way</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Let me tell you how it's goin' down. Let me introduce the new show in town. Playin' no games, no messin' round. Taking no prisoners, how's that sound. Three young ladies, comin' out for you. Yo, it's been too long since you heard the truth. So this is the real no substitute. We've come to lay it down, get it crunk for you. You tired of hearing songs about things they've got. When you are dead broke and ain't got alot. Got questions and answers they have not. That's why we came here, to blow up the spot. You're ready for something new. Something more than my new car or my brand new shoes. My Burberry this or my 22's. Well, listen close as we break it down for you</p><p><strong>SEGMENT2</strong><br>[chorus 2x]. Make way for the crew, shout it. We comin' through, shout it. You know how we do, shout it. We're makin' moves, shout it. I know you feel this beat. So bump it in the clubs. And bang it in your Jeeps. Cause you just can't get enough</p><p><strong>SEGMENT3</strong><br>We represent for G-O-D. Full of life, bringing positivity. Livin' right cause that's the way. Fully clothed and that's okay. Trying to give a new point of view. Cause you to think. The message that your life can be new. That's what we bring. You're wasting years and air you breath. No clue about your destiny. Great is what you're meant to be. Here's the light for you to see. Cause we're walking different. We smoke the competition. We dope, we're on a mission. No joke, this thing is real</p><p><strong>SEGMENT4</strong><br>[chorus 2x]. Make way for the crew, shout it. We comin' through, shout it. You know how we do, shout it. We're makin' moves, shout it. I know you feel this beat. So bump it in the clubs. And bang it in your Jeeps. Cause you just can't get enough</p><p><strong>SEGMENT5</strong><br>Listen close to what we say. What we say, what we say. We ain't coming just to play. We've come to save the day. [2x]</p><p><strong>SEGMENT6</strong><br>Yo, we from the south, shout it. Gonna make you bounce, shout it. It's mister deal and now it's even what you think whatay. My jiggle, my Burberry frick it don't matter. When it come to the home beat pitcher, holla back. If you really wanna get down whatcha like. Can i get a witness, in the bars it's pitching</p><p><strong>SEGMENT7</strong><br>Shout it, we gonna represent. Shout it, cause we heaven sent</p><p><strong>SEGMENT8</strong><br>[chorus 4x]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

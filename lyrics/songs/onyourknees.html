@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for On Your Knees - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>On Your Knees - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>On Your Knees</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Lately, she's been thinking what her daddy said. How when you're winning, you got more friends. But are they your friends if you fall they're gone?. Something about those kind of people seems wrong</p><p><strong>SEGMENT2</strong><br>Who's gonna be there when the phone call knocks her down?. All of the steeples but she can't hear a bell sound. Jumps on a bus to head downtown and picks up a paper. That's been blowing around, it says</p><p><strong>SEGMENT3</strong><br>When your heart breaks, He'll hurt for you. Dreams are out of reach, He'll pull you through. When you lose hope all you gotta do is. Get on your knees again</p><p><strong>SEGMENT4</strong><br>Not long now and you're gonna see. No mountain's too high for you or for me. Or fall too far if you can believe. And get on your knees, on your knees again</p><p><strong>SEGMENT5</strong><br>She pulls up her paper and puts it in her bag. Knows she really needs a savior like that. Walking past her church just up the street. Says, "Maybe it's time to get on my knees"</p><p><strong>SEGMENT6</strong><br>'Cause He was there when no one was around. All of the people but no one made a sound. Thinks of her brother who's been feeling down. Pulls out the paper and reads it aloud</p><p><strong>SEGMENT7</strong><br>When your heart breaks, He'll hurt for you. Dreams are out of reach, He'll pull you through. When you lose hope all you gotta do is. Get on your knees again</p><p><strong>SEGMENT8</strong><br>Not long now and you're gonna see. No mountain's too high for you or for me. Or fall too far if you can believe. And get on your knees, on your knees again</p><p><strong>SEGMENT9</strong><br>Giving everything you've got. Still it's hard to believe. Love comes from the inside out. If you wanna be free</p><p><strong>SEGMENT10</strong><br>Gotta give your life and never stop. When you're thinking about giving up. Get on your knees</p><p><strong>SEGMENT11</strong><br>When your heart breaks, He'll hurt for you. Dreams are out of reach, He'll pull you through. When you lose hope all you gotta do is. Get on your knees again</p><p><strong>SEGMENT12</strong><br>Not long now and you're gonna see. No mountain's too high for you or for me. Or fall too far if you can believe. And get on your knees, on your knees again. On your knees again, on your knees again</p><p><strong>SEGMENT13</strong><br>When you've giving everything you've got. Gotta give your life and never stop. If you wanna be free, on your knees again.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

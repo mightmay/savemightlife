@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Golden  Harps  are  Sounding - เสียงพิณทองคำบรรเลง - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Golden  Harps  are  Sounding - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Golden  Harps  are  Sounding</h2>
+        <h3>เสียงพิณทองคำบรรเลง</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ได้เสด็จมาช่วยเรา โดยยอมตายไถ่โทษ เดี๋ยวนี้กำลังคอยอยู่ เคียงข้างพระบิดา ไม่ต้องทนทุกข์ลำบาก ไม่ตายจากอีกเลย รับพระเกียรติอันยิ่งใหญ่ สูงยิ่งกว่าผู้ใด</p><p><strong>CHORUS</strong><br>งานพระองค์สำเร็จแล้ว จึงเสด็จไปคอย  อยู่ในเมืองสวรรค์งาม  จงสรรเสริญพระนาม</p><p><strong>VERSE2</strong><br>เวลานี้พระเยซู เตรียมที่ไว้คอยท่า   ทูลขอพระบิดาเจ้า พร้อมจะต้อนรับเรา สาวกของพระเยซู ผู้สัตย์ซื่อได้พร และพระองค์ทรงเป็นอยู่ คอยรักษาอุ้มชู</p><p><strong>CHORUS</strong><br>งานพระองค์สำเร็จแล้ว จึงเสด็จไปคอย  อยู่ในเมืองสวรรค์งาม  จงสรรเสริญพระนาม</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>He Who came to save us, He Who bled and died, Now is crowned with glory at His Father's side. From the grave arisen, nevermore to die; Jesus, King of glory, is gone up on high.</p><p><strong>CHORUS</strong><br>All His suffering ended,  Joyfully we sing,  Jesus hath ascended   Glory to our King.</p><p><strong>VERSE2</strong><br>Pleading for His children in that blessed place, Calling them to glory, sending them His grace; His bright home preparing, faithful ones, for you; Jesus ever liveth, ever loveth, too.</p><p><strong>CHORUS</strong><br>All His suffering ended,  Joyfully we sing,  Jesus hath ascended   Glory to our King.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

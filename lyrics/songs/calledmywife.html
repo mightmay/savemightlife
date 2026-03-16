@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Called My Wife - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Called My Wife - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Called My Wife</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Called my wife Eve, the serpent he jumped in. Jumped in cause he was never good for nothing. Nothing cept his lies and his empty boasts. Closed our foolish eyes and he ended our hopes. All life long Ill remember the day. When Eden was around now its taken away. Eve says just to deal with it I feel morose. When it costs the life of a sheep or goat. Calm down this aint recess. I wanna tell you the rest. And if I give you a test. Sons, you two both better do your best. Sacrifice something that matters. Like Abel did with his sheep. Cause youre my reason to breathe. Dont want my sons ending up like me. Cmon my sons listen up I plead. Cain, dont let it go to waste. I love you, dont just vegetate. Hates keeping you down. Abel, yeah, youre going great. I love you, but I hesitate. Cains sneaking around. When I found out we need covered. I covered up with some leaves. I made a one-piece for Eve. Over the shoulders down to the knees. Didnt get any closer to making both of us wise. It left me empty inside. From then on Ive got something to hide. From then on Ive got something to hide. Cain, dont let this grow to rage. I love you, whyd you make that face. Snakes seeking you out. Abel, yeah, I know your faith. I love you, but you aint that safe. Cains creeping me out. Called my wife Ive been searchin since sunset. Something must be wrong have you seen our sons yet. Not yet but I spy someone gettin close. Closer, yes, its Cain at the end of the road. Oh, my son, whats that thing on your face. And Abels not around whered you take him today. He was in the field with you I fear you know. You look kind of like youve just seen a ghost. My son, son, what have you just done. Son, son, tell me what have you just done. Son, my son, Cain, I dont wanna guess. Cain you better go away. I love you but I hate that snake. Cant keep him around. Abel, what a total waste. Id love to go and take your place. Laid deep in the ground. Done, done, on to the next son. Done, Im done, now Im warning you Seth</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

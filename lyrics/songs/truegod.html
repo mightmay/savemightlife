@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for True God - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>True God - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>True God</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. I found something to be true when I. Made up my mind, to do what I had to do for God. Most of my, peeps started acting shice. When I mention the Christ, and when I mention even changing my life. I come around they like gone dawg. Check out my new song and they all like gone dawg. I look em' straight in the eyes and say your wrong dawg. So I let it be known if that's what you want then I'm gone dawg. I'll pray for ya, but that's exactly what I expect from that. Disrespect and neglect is what reflects from that. See these cats didn't know God. He helped me to leave what's weak so they can see, and that's fa sho bru. Come on bru, I met the one who never change. Forever remain, always remaining the same. So I take the pain that's gone make a mayne. And I stay in the thang, as I praise his name</p><p><strong>SEGMENT2</strong><br>[Chorus]. Its true God, none other faithful like you, Hallelujah. Can't do me the way you do, knew it was true God. None other faithful like you hallelujah. It's true God, hallelujah. It's true God, true God</p><p><strong>SEGMENT3</strong><br>[Verse Two]. Thug cats you can just leave your piece behind. Cuz on this side it ain't nothing but peace of mind. Why bust like blaw, when you can be with us and get a rush like wow. I think you better rush and get touched right now. Cuz you ain't got to fuss you just hush right now. Until you learn enough to get rough like us. And tough like us. And learn enough word where you can right bust like us. Said He would never leave never forsake. My only guarantee that was never fake. In fa sho in the faith, and now I trust and I wait. And take his word, to be my guideline so I can face this world. I must brag and boast taste and see that He's good fa sho. Grace and peace in the hood fa sho. So why fight with time, when you can be ignited and get right with God. And tight with God</p><p><strong>SEGMENT4</strong><br>[Chorus]</p><p><strong>SEGMENT5</strong><br>[Verse Three]. I exalt your name above all of the earth. You're so majestic blessed with personal worth. That comes from You, when I'm hurt I run to You. My refuge is in You, cause I'm a fool for You. You kept me in the time of the storm. kept me when I wept as if I slept in Your arms. So now Lord I wanna be close and intimate commune with You. Perfectly in tune with You, like no otha. We can be closer than spiritual brothers. Closer than marriage, closer than lovers. No one can touch us, as I bow down. Take off my boots on holy grounds. finna clown now, feelin' a praise down inside. Cause it's personal. Givin' us back everything that Adam's sin stole. Thinkin' of that just bless my soul. I let patience work its perfect work. My medication is to see a nation delivered from hurt. And that's for real peeps</p><p><strong>SEGMENT6</strong><br>[Chorus].</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

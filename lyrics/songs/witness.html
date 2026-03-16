@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Witness - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Witness - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Witness</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Can I get a witness?. ah-. yeah, yeah, yeah, yeah, yeah. Can you get with this?. ah-. yeah, yeah, yeah, yeah, yeah</p><p><strong>SEGMENT2</strong><br>Yeah(5x)</p><p><strong>SEGMENT3</strong><br>Lookin' for some ladies and some young men. To run the race and endure to the very end. No turning back, no quitting if you're gonna win. Your mark, get set, running like a champion</p><p><strong>SEGMENT4</strong><br>Have you heard the story about Joshua?. He was young, strong, and courageous. Not by power nor was it by might my friend. "But by my Spirit," that's what the Lord says</p><p><strong>SEGMENT5</strong><br>CHORUS: Witness? ah-. Yeah, yeah, yeah, yeah, yeah. Can I GET A WITNESS, ah. Yeah,yeah, yeah, yeah, yeah. (repeat)</p><p><strong>SEGMENT6</strong><br>I believe God is calling you my friend. To shake your world upside-down and back again. Might be a hundred you might just be a little kid. But you can slay giants just the way that David did</p><p><strong>SEGMENT7</strong><br>I remember times when it was difficult. And I prayed that God would send a miracle. I don't know how but right up to the very end. He made a way outta' "no-way" and show 'nuff delivered</p><p><strong>SEGMENT8</strong><br>Chorus</p><p><strong>SEGMENT9</strong><br>Sling shot in my back pocket track. Bumpin with a rocket. Battle rocks by my side. Ready for appocolypse. Even these inventions unseen but heard. Not by power or might but by my spirit says the Word</p><p><strong>SEGMENT10</strong><br>And who can be against us if you for us(nobody). And who can shut us down if you with us(nobody). And who can stop a thing that you started(nobody). If you with us, put 'em up and be a witness</p><p><strong>SEGMENT11</strong><br>Chorus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

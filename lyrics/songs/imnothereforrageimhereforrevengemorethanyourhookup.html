@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I'm Not Here For Rage I'm Here For Revenge (More Than Your Hook Up) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I'm Not Here For Rage I'm Here For Revenge (More Than Your Hook Up) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I'm Not Here For Rage I'm Here For Revenge (More Than Your Hook Up)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Your self destruction has become mine. Your reflection contains nothing but vacant eyes. Those vacant eyes tell the stories, tell the stories. You forsake all loyalties for lies</p><p><strong>SEGMENT2</strong><br>Youre too late to decide. This cant go right. Cause I got this tonight, I got this tonight</p><p><strong>SEGMENT3</strong><br>I wondered how hurt youd be (the words weve become). After you read this (were they yours or mine). Did it even speed your heart beat (is that what you thought). Or make you nervous? (thought that you would find). I need to say this (what you waited for). the best parts were hush, hush (tonight). The best parts were pure luck (tonight). But I swore that this time. I was more than your hook up</p><p><strong>SEGMENT4</strong><br>Those vacant eyes looking back. To see your words under my skin. And I am more than a moment. But I had to give in. A person gets just one chance. To say what they really mean. You said yours, Ill say mine. Its all wasted, so fake it, at 19</p><p><strong>SEGMENT5</strong><br>The best years have passed you by. The best years have already passed. You forsake all loyalties for lies. You forsake all loyalties for lies</p><p><strong>SEGMENT6</strong><br>Your penny thoughts of leaving (I can still hear the sound). Together from this town (we can work this out). Convinced the boy inside me (with the last of my strength). To let his guard down (I said everything). You played me so well (enjoy your time left). I didnt notice when the floor fell (without the blame). From underneath my feet. I thought we were floating</p><p><strong>SEGMENT7</strong><br>Those vacant eyes looking back. To see your words under my skin. And I am more than a moment. But I had to give in. A person gets just one chance. To say what they really mean. You said yours, Ill say mine. Its all wasted, so fake it, at 19</p><p><strong>SEGMENT8</strong><br>The best years have passed you by. The best years have already passed you by</p><p><strong>SEGMENT9</strong><br>Is this the world passing by?. Or is it turning, turning?. This is the first time that I have ever looked inside myself. It was the first time that I ever looked inside myself. Now the world beneath my feet is turning, turning. Oh, this silly world keeps turning, turning away. All this time the world I knew was turning, turning. All this time that I loved you. You were turning, turning away</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

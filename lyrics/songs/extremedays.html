@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Extreme Days - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Extreme Days - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Extreme Days</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We're livin' in extreme days</p><p><strong>SEGMENT2</strong><br>Comin' at ya like a whirlwind. A hundred miles an hour's where we'll begin. I spy the eye of apprehension. Show me risk and you'll get my attention</p><p><strong>SEGMENT3</strong><br>Come on, can ya take it. Bang to the bip I make ya wanna flip. Take my trip and you can bust your lip</p><p><strong>SEGMENT4</strong><br>I never fear cause I live fearless. Don't even think for a second you can get with this</p><p><strong>SEGMENT5</strong><br>Come on, I never fake it, come on. These are extreme, extreme days. We're livin' in extreme days. These are extreme, extreme days. We're livin' in extreme days</p><p><strong>SEGMENT6</strong><br>I'm a freak from the burbs of the chocolate city. Luther Jackson was my middle. Pine Ridge my elementary. School of hip hop 1979. And Sugar Hill had the skills that taught me to rhyme</p><p><strong>SEGMENT7</strong><br>Got hip to Kiss and I tripped on Zeppelin. So Mr. Therapist, Why did I go this direction?. God had a plan to end all my schemes. I had a dream He said to be..extreme</p><p><strong>SEGMENT8</strong><br>CHORUS</p><p><strong>SEGMENT9</strong><br>Just the other day I saw a kid. Who flipped his hat to the back and he called it a lid. You know what else he did?. He stacked books from the floor to ceiling. Said somethin' bout trying to get to heaven. And he was only eleven. So he climbed to the top with outstretched arms. And he screamed at the top of his lungs</p><p><strong>SEGMENT10</strong><br>Move out my way. Give up the mic. X to me is extremely Christ. Livin up in me. Like it or not. Put an X on my chest. Cause X marks the spot</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

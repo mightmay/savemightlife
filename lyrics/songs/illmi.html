@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Ill-M-I - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Ill-M-I - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Ill-M-I</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Ill-M-I, Ill-M-I, Ill-M-I, Ill-M-I and you. Illuminati comin' thru. Ill-M-I, Ill-M-I, Ill-M-I, Ill-M-I and you. Illuminati comin' thru</p><p><strong>SEGMENT2</strong><br>Flow like the Cassius, swing like the Clay. One day, Ima make the whole world pay. With k.o.'s and okay we bash clots-n-dot-dash. You got that right, Ima rock the Morse code tonight. Transmit 'n throwin' fits 'n paparazzi like zits. Get flipped out and squeezed fresh like juicy sun kissed. And if I miss with my missles youre still gonna sizzle. Cause I frizzle fry radiation style worldwide</p><p><strong>SEGMENT3</strong><br>You got your pipeline clogged man get that puppy routed. You got the style down and since you don't know about it. Who's the loser (I am) because we come in numb love. And choicer and did I mention looser (no you didn't). Then I do sir, producer, hit me with the juice. Much obliged got the head of a moose. So mount me on the wall of your livin' room. Sure to bring the boom. Speakin' like a zoom deep into your tomb</p><p><strong>SEGMENT4</strong><br>And if you feel the vibe glide true it's on you. And if you need to drive right through it's on you. And if your screamin' "moi non plus" it's like. What you tryin' to do when you can't fade the true one</p><p><strong>SEGMENT5</strong><br>Eruption type volcanics I got the vocal spurtmatic. Suction cup hands upside the slammin' daily planet. I do windows (on school days) spill Jim Jones (type kool-aid). All these primrose (style bouquets) I clip those (for doomsday). Got succulent flavor, the uprisen Savior. Manifestin' thru these mics, blastin' out your graveyard. Savor every bite that TOBYMAC gave ya. Turn and tell your neighbor this ball-o-dirt is goin' into labor.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

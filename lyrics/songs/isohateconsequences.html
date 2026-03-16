@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I So Hate Consequences - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I So Hate Consequences - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I So Hate Consequences</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>And I'm good, good, good to go. I got to get away. Get away from all of my mistakes</p><p><strong>SEGMENT2</strong><br>So here I sit looking at the traffic lights. The red extinguishes the hope that the green ignites. I want to run away I want to ditch my life. Cause all of my mistakes keep me awake at night</p><p><strong>SEGMENT3</strong><br>And after all of my alibis desert me. I just want to get by. I don't want nothing to hurt me. I had no idea where my head was at. But if my heart says I'm sorry can we leave it at that. Because I just want for all of this to end</p><p><strong>SEGMENT4</strong><br>And I so hate consequences. And running from you is what my best defense is. Consequences. Oh God, don't make me face up to this. And I so hate consequences. And running from you is what my best defense is. Cause I know that I let you down. And I don't want to deal with that</p><p><strong>SEGMENT5</strong><br>It just now hit me this is more than just a set back. And when you spelled it out, well, I guess I didn't get that. And every trace of momentum is gone. And this isn't turning out the way I want</p><p><strong>SEGMENT6</strong><br>And after all of my alibis desert me. I just want to get by. I don't want nothing to hurt me. I had no idea where my head was at. But if my heart says I'm sorry can we leave it at that. Because I just want for all of this to end</p><p><strong>SEGMENT7</strong><br>And I spent all last night. Tearing down. Every stoplight. And stop sign in this town. Now I think there might. Be no way to stop me now. I'll get away despite. The fact I'm so weighed down</p><p><strong>SEGMENT8</strong><br>All of my escapes have been exhausted. I thought I had a way but then I lost it. And my resistance was once much stronger. And I know I can't go on like this much longer</p><p><strong>SEGMENT9</strong><br>When I got tired of running from you. I stopped right there to catch my breath. There your words they caught my ears. You said, I miss you son. Come home. And my sins, they watched me leave. And in my heart I so believed. The love you felt for me was mine. The love I'd wished for all this time. And when the doors were closed. I heard no I told so's. I said the words I knew you knew. Oh God, Oh God I needed you. God all this time I needed you, I needed you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

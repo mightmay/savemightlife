@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Never Knew - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Never Knew - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Never Knew</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I just ran into a few someones today. Someones that I never really knew. And I used to think how I had them all so figured out</p><p><strong>SEGMENT2</strong><br>But no, none of it's true cuz I never knew you. and now the truth of it is, is I wanna be like you. So hello, good friend, I wanna be next to you. For my head for my heart for its true</p><p><strong>SEGMENT3</strong><br>So I'm burning the thoughts of the things that I once said. Because you tore down the walls that the world that has put inside my head. And I just get of sick of things that we think, we think we know</p><p><strong>SEGMENT4</strong><br>And no, none of it's true cuz I never knew you. and now the truth of it is, is I wanna be like you. So hello, good friend, I wanna be next to you. For my head for my heart for its true</p><p><strong>SEGMENT5</strong><br>So take me and save me and change me and then make me. And embrace me and then brave my heart for you. No, No, cuz I can't go on without you. And it's time for something never knowing, oh</p><p><strong>SEGMENT6</strong><br>And no, none of it's true cuz I never knew you. and now the truth of it is, is I wanna be like you. So hello, good friend, I wanna be next to you. For my head for my heart for its true</p><p><strong>SEGMENT7</strong><br>And as they as strolled along. My heart broke out in song. From all the things and the thoughts and assumptions that I had wrong. See now I'll be on my way to make this claim. I'll make it famous in everyway. I'll make it stay when I will save it..</p><p><strong>SEGMENT8</strong><br>No, none of it's true cuz I never knew you. and now the truth of it is, is I wanna be like you. So hello, good friend, I wanna be next to you. For my head for my heart for its true [x3].</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

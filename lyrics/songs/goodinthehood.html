@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Good in the Hood - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Good in the Hood - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Good in the Hood</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>-I got something good inside of me. -Good in the hood. -It's good in the hood. -Good in the hood. -I got something good inside of me. -Everybody ain't. -Sticking up cars going to bars getting drunk to fight everybody just talking junk. -Everybody ain't. -Walking around with baggy jeans being mean. -And the lips purple 'cause we smoking trees. -Everybody ain't. -Trynna be tough and violent. -Matter of fact I know some cats from the hood play the violin. -Everybody downtown. -Down frown 'cause you around. -Just because you wear a suit don't mean we think u a clown. -Some of us are. -Going to bed about eleven got to get up real early be at work quater to seven. -Some of us are. -Going to school not skipping class. -Didn't make the dean's list but we still goin' to pass. -Some of us are. -Taking good care of all our kids. -Makin' sure they got clothes and something in the fridge. -Some of us are. -Happy with life we down with Christ. -Got a good head on our shoulders and we feel alright. -Good in the hood. -It's good in the hood. -Good in the hood. -I got something good inside of me. -Good in the hood. -It's good in the hood. -Good in the hood. -I got something good inside of me. -Everybody ain't. -Walking around carrying guns thinking it's fun. -Got two and three girls carrying sons. -Everybody ain't. -Wearing all black and selling dope and crack. -To teens and fiends whose clothes don't match. -Everybody ain't. -Cussin' out babies because they driving you crazy. -Just maybe they miss their daddy who left them the day before. -Everybody ain't. -Sleeping around with everybody in town. -And when you hit the college ground it's going down. -Some of us are. -Working in barbershops and salons. -Making money, paying bills and child support every month. -Some of us are. -Really good people just had a crazy life. -And now in jail for life with long nights. -Some of us are. -Going to church faithfully. -Got to get it right with God before we finally leave. -Some of us are. -Trynna do better we trynna get it together. -And when it's all said and done we tyrnna go to heaven. -Good in the hood. -It's good in the hood. -Good in the hood. -I got something good inside of me (repeat chorus)</p><p><strong>SEGMENT2</strong><br>Copyright © Tye Tribbett</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

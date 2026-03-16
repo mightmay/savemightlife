@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for While You Were Sleeping - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>While You Were Sleeping - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>While You Were Sleeping</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Oh little town of Bethlehem. Looks like another silent night. Above your deep and dreamless sleep. A giant star lights up the sky. And while you're lying in the dark. There shines an everlasting light. For the King has left His throne. And is sleeping in a manger tonight, tonight</p><p><strong>SEGMENT2</strong><br>Oh Bethlehem, what you have missed while you were sleeping. For God became a man. And stepped into your world today. Oh Bethlehem, you will go down in history. As a city with no room for its King. While you were sleeping. While you were sleeping</p><p><strong>SEGMENT3</strong><br>Oh little town of Jerusalem. Looks like another silent night. The Father gave His only Son. The Way, the Truth, the Life had come. But there was no room for Him in the world He came to save</p><p><strong>SEGMENT4</strong><br>Jerusalem, what you have missed while you were sleeping. The Savior of the world is dying on your cross today. Jerusalem, you will go down in history. As a city with no room for its King. While you were sleeping. While you were sleeping</p><p><strong>SEGMENT5</strong><br>United States of America. Looks like another silent night. As we're sung to sleep by philosophies. That save the trees and kill the children. And while we're lying in the dark. There's a shout heard 'cross the eastern sky. For the Bridegroom has returned. And has carried His bride away in the night, in the night</p><p><strong>SEGMENT6</strong><br>America, what will we miss while we are sleeping. Will Jesus come again. And leave us slumbering where we lay. America, will we go down in history. As a nation with no room for its King. Will we be sleeping. Will we be sleeping</p><p><strong>SEGMENT7</strong><br>United States of America. Looks like another silent night</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

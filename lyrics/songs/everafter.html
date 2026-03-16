@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Ever After - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Ever After - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Ever After</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I hate to be the one to break the news. To let you down. But I can't lie to you. There's things about the world I wish weren't true. I guess by now, you must have had a clue. It seems you're growing up fast. I tried my best to push back</p><p><strong>SEGMENT2</strong><br>Would you believe me if I told you..</p><p><strong>SEGMENT3</strong><br>There's no such thing as Peter Pan?. No such place as Never Never Land?. I wish we all could have those tiny magic wings. But we live in a world with wars. It's not like it was before. We won't find our happy ever after here. There's no such thing</p><p><strong>SEGMENT4</strong><br>I've dreaded this talk for so long. I knew someday, you'd wonder what went wrong. We get to be the story of it all. For the Glory of it all. And so we move along. This is not where it ends. It's just where it begins</p><p><strong>SEGMENT5</strong><br>Would you believe me if I told you..</p><p><strong>SEGMENT6</strong><br>There's no such thing as Peter Pan?. No such place as Never Never Land?. I wish we all could have those tiny magic wings. But we live in a world with wars. It's not like it was before. We won't find our happy ever after here. There's no such thing</p><p><strong>SEGMENT7</strong><br>It's not where we belong. And if it's feeling wrong. Oh you must stay strong. 'Cause it was here. That I first saw your face. Every night I pray. That you'd believe the same</p><p><strong>SEGMENT8</strong><br>There's no such thing as Peter Pan?. No such place as Never Never Land?. I wish we all could have those tiny magic wings. But we live in a world with wars. It's not like it was before. We won't find our happy ever after here. There's no such thing</p><p><strong>SEGMENT9</strong><br>There's no such thing</p><p><strong>SEGMENT10</strong><br>I hate to be the one to break the news. To let you down. But I can't lie to you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

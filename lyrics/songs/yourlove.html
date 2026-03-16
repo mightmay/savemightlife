@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Your Love - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Your Love - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Your Love</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I felt it first when I was younger. A strange connection to the light. I tried to satisfy the hunger. I never got it right. I never got it right</p><p><strong>SEGMENT2</strong><br>So I climbed a mountain and l built an altar. Looked out as far as I could see. And everyday Im getting older. Im running outta dreams. Im running outta dreams</p><p><strong>SEGMENT3</strong><br>But Your love. Your love. The only the thing that matters is Your love. Your love is all I have to give. Your love is enough to light up the darkness. Its Your love. Your love. all I ever needed is Your love</p><p><strong>SEGMENT4</strong><br>You know the effort I have given. And you know exactly what it cost. And though my innocence was taken. Not everything is lost. Not everything is lost nooooo</p><p><strong>SEGMENT5</strong><br>But Your love. Your love. The only the thing that matters is Your love. Your love is all I have to give. Your love is enough to light up the darkness. Its Your love. Your love. all I ever needed is Your love</p><p><strong>SEGMENT6</strong><br>Youre the hope in the morning. Youre the light when the night is falling. Youre the song when my heart is singing. its Your love. Youre the eyes to the blind man. Youre the feet to the lame man walking. Youre the sound of the people singing. Its Your love</p><p><strong>SEGMENT7</strong><br>But Your love. Your love. The only the thing that matters is Your love. Your love is all I have to give. Your love is enough to light up the darkness. Its Your love. Your love. all I ever needed is Your love</p><p><strong>SEGMENT8</strong><br>But Your love. (Your love is all that I needed). The only the thing that matters is Your love. Your love is all I have to give. Your love is enough to light up the darkness. (Your love is all that I needed). Its Your love. Your love. Its all I ever needed</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

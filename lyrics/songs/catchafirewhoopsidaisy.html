@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Catchafire (Whoopsi-Daisy) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Catchafire (Whoopsi-Daisy) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Catchafire (Whoopsi-Daisy)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Slackin off like a bum, Im feelin ho hum. Im feelin luke warm like the water in my tub. Started out and we was hot, looked up and now were not. We had that fire like we was boilin in a pot</p><p><strong>SEGMENT2</strong><br>Whoopsi-daisy, whoopsi-daisy, whoopsi-daisy. Come, we gonna catch that</p><p><strong>SEGMENT3</strong><br>Fire, Im feenin for a flicker. Then well fan the flame up into something bigger. Started out and we was hot, looked up and now were not. We gonna catch a fire, catch a fire for God</p><p><strong>SEGMENT4</strong><br>Whoopsi-daisy, whoopsi-daisy, whoopsi-daisy. Come, we gonna catch that. Whoopsi-daisy, call me crazy, whoopsi-daisy. Come, we gonna catch that</p><p><strong>SEGMENT5</strong><br>Fire, takin it from warm to hot. Fire, gotta give it all we got. Fire, whoopsi-daisy, call me crazy, whoopsi-daisy. Come, we gonna catch that</p><p><strong>SEGMENT6</strong><br>Spark to a flame, Im flippin up my game. I caught the fire and Ill never be the same. So unexplainable I cant contain it, son. And my retaining it would only be a shame. So let me hear you say</p><p><strong>SEGMENT7</strong><br>Heat, like the Kingston concrete. There aint no stoppin the fire. Were straight breakin ground. There aint no cooling this thing down. We burnin up and keepn it krunk as we know how. Hear me now people</p><p><strong>SEGMENT8</strong><br>Catch a fire let it burn within. Catch a fire let it burn for him</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

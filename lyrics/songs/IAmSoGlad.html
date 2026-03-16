@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Am So Glad - โอข้ายินดีพระเยซูปรานี - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Am So Glad - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Am So Glad</h2>
+        <h3>โอข้ายินดีพระเยซูปรานี</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ข้าฯยินดีเพราะพระบิดาในสวรรค์  ตรัสในคัมภีร์ให้รู้ความรักนิรันดร์ คิดพิศวงในคัมภีร์นั้นหนักหนา มีคำสอนว่าพระเยซูทรงเมตตา  โอข้าฯยินดี พระเยซูปรานี ได้ทรงปรานี ได้ทรงปรานี  โอข้าฯยินดี พระเยซูปรานี  พระเยซูทรงปรานี</p><p><strong>VERSE2</strong><br>ถึงแม้ว่าข้าฯได้ละลืมพระองค์ไป ทำบาปนานแต่พระองค์ยังทรงอภัย ดลใจข้าฯให้คิดสำนึกรู้สึกแน่ ว่าพระเยซูทรงเอ็นดูรักมากแท้</p><p><strong>VERSE3</strong><br>จึงพร้อมหน้ากันสรรเสริญพระบารมี ตรงพักตร์พระองค์บรรเลงเพลงสดุดี เทิดพระเกียรติแด่พระคริสต์ผู้ทรงยอดพลี เพื่อเป็นค่าไถ่คนชั่วเช่นตัวข้าฯนี้</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>I am so glad that our Father in heaven  Tells of His love in the book He has given: Wonderful things in the Bible I see; This is the dearest, that Jesus loves me. I am so glad that Jesus loves me,  Jesus loves me, Jesus loves me, I am so glad that Jesus loves me,   Jesus loves even me</p><p><strong>VERSE2</strong><br>Though I forget Him, and wander away,  Still He doth love me wherever I stray; Back to His dear loving arms I do flee, When I remember that Jesus loves me.</p><p><strong>VERSE3</strong><br>O if there's only one song I can sing, When in His beauty I see the great King, This shall my song in eternity be, "O what a wonder that Jesus loves me."</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

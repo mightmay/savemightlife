@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Baby, You're A Star - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Baby, You're A Star - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Baby, You're A Star</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[intro]. Somebody's out there listening right now. So please turn up your radio. Yeah.</p><p><strong>SEGMENT2</strong><br>[Verse 1]. She planned to finish school and get a degree. Start a business and make her own money. But somehow her dreams didn't work out that way, Yeah. She fell in love at the age of 16. Had two babies and she couldn't believe. That the boy she loved is now gone away</p><p><strong>SEGMENT3</strong><br>But because you've had some setbacks in your life. It doesn't mean that you should let just let your dreams die</p><p><strong>SEGMENT4</strong><br>[Chorus]. Baby you're a star, don't you know who you are. Don't you let nobody tell you nothing different. Than what you know that's in your heart. 'Cause baby you a star, don't you know who you are. If you could only see what I see, but first you must believe. Oh, you're a star</p><p><strong>SEGMENT5</strong><br>[Verse 2]. He graduated at the top of the class. Had everything he needed and more. And like an eagle, he was made to soar. But at the wrong place, at the wrong time. Introduced to a drug and messed up his mind. Lost so many years, now he's making up for lost time</p><p><strong>SEGMENT6</strong><br>And you may have fallen on your journey, my friend. But let me encourage to get back up and try again</p><p><strong>SEGMENT7</strong><br>[Chorus]. Baby your a star, don't you know who you are. Don't let nobody tell you nothing different. Than what you know that's in your heart. Baby your a star, that's who you are. If you could only see what I see, you first must believe. Baby, you're a star</p><p><strong>SEGMENT8</strong><br>[Verse 3]. Oh, you are only human. You're gonna make mistakes along the way, yeah. And God has blessed you with something so pure. You just need some motivation and need a little push. To get up off the floor and walk through the door</p><p><strong>SEGMENT9</strong><br>Baby, you're a star, ooh. Don't let 'em tell you nothing different. Than what you know that's in your heart. Baby, baby, baby, baby, you're a star. You still can reach your goal, you gotta take control</p><p><strong>SEGMENT10</strong><br>Baby, you're a star, woo. Hey, hey, I know, I know. Baby, you're a star, that's who you are. Just make up in your mind. 'Cause you were made to shine</p><p><strong>SEGMENT11</strong><br>Baby, you're a star.  That's who you are, yeah</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

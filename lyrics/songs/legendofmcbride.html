@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Legend Of McBride - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Legend Of McBride - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Legend Of McBride</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Long ago on the Texas Plains. Was a little town. That never changed. Until a man rode into town, A Ranger known for miles around</p><p><strong>SEGMENT2</strong><br>Well, he could keep the peace. Without a gun. From Abilene down to Galveston</p><p><strong>SEGMENT3</strong><br>When he rode by the general store. People crowded through the door. To see the legend and the man called McBride,</p><p><strong>SEGMENT4</strong><br>And oh, woh, woh, And oh, woh, woh, And oh, woh, woh. In Iverson</p><p><strong>SEGMENT5</strong><br>Through the doors of the old hotel. A burnin' fire began to build. People screamin' for their lives, And the first one there was john McBride.</p><p><strong>SEGMENT6</strong><br>And just as soon. As he stepped in. People saw the roof cave in, And everybody knew. That he would not survive</p><p><strong>SEGMENT7</strong><br>And oh, woh, woh, And oh, woh, woh, And oh, woh, woh. In Iverson</p><p><strong>SEGMENT8</strong><br>Than a lady right outside, Said her baby boy was trapped inside. But not a man would fight the flames, And she knew. That it would be too late</p><p><strong>SEGMENT9</strong><br>But through the smoke. And burnin flames. She heard her baby. Call her name. The boy appeared. But no one knew. Who saved his life.</p><p><strong>SEGMENT10</strong><br>And when the boy grew old and gray. He spoke about that fateful day, And the man that saved his life, Texas Ranger, john McBride</p><p><strong>SEGMENT11</strong><br>And oh, woh, woh, And oh, woh, woh, And oh, woh, woh. In Iverson</p><p><strong>SEGMENT12</strong><br>And oh, woh, woh, And oh, woh, woh, And oh, woh woh</p><p><strong>SEGMENT13</strong><br>Still I travel far and wide, Yeah. To hear the legend of McBride. YEAH</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

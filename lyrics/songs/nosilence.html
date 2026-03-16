@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for No Silence - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>No Silence - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>No Silence</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Lecrae]. My brothers over seas gettin' teased for pronouncin' their faith. Gettin' duct taped and chased catching spit in the face. We runnin' the same race at a similar pace. Screamin' "Jesus is Lord", every time we step in the place. They holla naw in the dirty south, naw in the Midwest. They don't want the truth, they don't dig that. So we shakin' all the dust off our shoes. If they don't receive the gospel and they treat us like some fools. What it do, keep on pressin' even if they don't receive. That we was unbelievin' heathens, til we met the word of Jesus. Now we preachin', catchin' beatings, that ain't keepin' us from speakin'. And no matter how they treat us, we repeat the need to seek Him. They won't beat us into shuttin' up, naw we won't button up. Flame give it to ya hot Crae I'm a cut it up. Chop it chop it up and screw it we gone do it all in Christ name. Beat us into silence, naw dawg ain't gone happen mayne</p><p><strong>SEGMENT2</strong><br>[Chorus]. They won't beat us (naw) into silence (never). They won't beat us (naw) into silence (never). They won't beat us (naw) into silence (never). we got truth mayne</p><p><strong>SEGMENT3</strong><br>[Flame]. We will continue to preach, on the blocks in the hoods. The great gospel of peace, we wouldn't stop if we could. Cause the apostles believed, to the point of they death. So we gone follow they lead, and we gone walk in they steps. Just like the Savior explained, that we should shake off the dust. From our feet if they don't wanna receive us. It's all part of the plan, when persecution shows up. But we are ordered to stand, and be just like a soldier. So the spirit of fear it gets thrown in the trash. The Holy Spirit is here and gives us power for the task. So we gone spread the news both the good and the bad. All at the same time just like Newsflash (newsflash homie). Don't feel lonely cause your family in Christ. Is standing as an example amp and we're ready to fight. For the truth and it's cool if we usin' the mic. But we gone rep Him til the death with our lips and our life. So let's go</p><p><strong>SEGMENT4</strong><br>[Chorus]</p><p><strong>SEGMENT5</strong><br>[Lecrae]. Hard pressed in a mess still stressed tryin' to live it. And we sinnin', if we livin' to escape all of the afflictions. Of sharin' Christ with the world, of sharin' life with the world. The light of Christ is blazin' sheddin' light on the world</p><p><strong>SEGMENT6</strong><br>[Flame]. We haven't suffered to the point of sheddin' blood like our Savior. So we shouldn't be unfaithful like Gomer was to Hosea. Yeah we don't lose heart its not an option. We just continue to put in them the truth of His doctrines</p><p><strong>SEGMENT7</strong><br>[Lecrae]. Watchin' Him Christ He's the perfecter of faith. So we turn and embrace any persecution that we may face</p><p><strong>SEGMENT8</strong><br>[Flame]. Yeah proclaim boldly, while at the same time remain holy. Teaching them to observe everything that Jesus told me</p><p><strong>SEGMENT9</strong><br>[Lecrae]. Homie we solely concerned with the mission of Christ. Unable to quiet us we gone be spittin' for Christ</p><p><strong>SEGMENT10</strong><br>[Flame]. The price that was paid, the nights in the grave. And the resurrection is our reflection to not be afraid. So lets go</p><p><strong>SEGMENT11</strong><br>[Chorus]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

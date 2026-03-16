@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Come unto Me, Ye Weary - ผู้ลำบากเหน็ดเหนื่อย - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Come unto Me, Ye Weary - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Come unto Me, Ye Weary</h2>
+        <h3>ผู้ลำบากเหน็ดเหนื่อย</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ผู้ลำบากเหน็ดเหนื่อยมาเถิด เราช่วยหายเหนื่อยเดี๋ยวนี้” นี่คือดำรัสพระเยซู ตรัสแก่ผู้ถูกกดขี่ บอกเรื่องยินดีน่าชื่นใจ ทรงยกบาปให้อภัย ความสุขเช่นนี้ไม่เสื่อมคลาย ทรงรักท่านจนสุดปลาย  2 “ผู้ที่หลงจงมาหาเรา ท่านจะรับความสว่าง” พระสุรเสียงแห่งความรัก จักบอกให้ท่านรู้ทาง ดวงใจซึ่งเต็มด้วยความโศก วิญญาณหลงโลกต้องตาย บัดนี้ได้รับความชื่นใจ เพราะจิตสว่างสบาย  3. ผู้อ่อนเปลี้ยเพลียใจเชิญมา เราให้ชีวาเป็นอยู่” พระสุรเสียงพระเยซู หนุนใจให้ท่านต่อสู้ ศัตรูเข้มแข็งและร้ายกาจ เด็ดขาดต่อสู้อยู่นาน แต่องค์พระคริสต์ทรงฤทธิ์เดช ไม่มีผู้ใดต้านทาน    4. “ผู้ใดที่เข้ามาหาเรา จะไม่ทอดทิ้งเขาเลย” เสียงเชิญของพระเยซูเจ้า เรียกท่านอย่าได้ทำเฉย พระเยซูทรงร้องเชิญให้บรรดาคนบาปกลับใจ พระองค์ประทานชีวิตใหม่ โดยไม่คิดค่าใดๆ</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>"Come unto Me, ye weary, And I will give you rest." O blessed voice of Jesus, Which comes to hearts oppressed! It tells of benediction, Of pardon, grace, and peace, Of joy that hath no ending, Of love that cannot cease.  "Come unto Me, ye wand'rers, And I will give you light." 0 loving voice of Jesus, Which comes to cheer the night! Our hearts were filled with sadness, And we had lost our way; But Thou hast brought us gladness And songs at break of day. "Come unto Me, ye fainting, And I will give you life." 0 cheering voice of Jesus, Which comes to aid our strife! The foe is stern and eager, The fight is fierce and long; But Thou hast made us mighty And stronger than the strong.  "And whosoever cometh, I will not cast him out." O patient love of Jesus, Which drives away our doubt, Which, though we be unworthy Of love so great and free, Invites us very sinners To come, dear Lord, to Thee!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

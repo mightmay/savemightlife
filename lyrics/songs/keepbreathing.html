@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Keep Breathing - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Keep Breathing - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Keep Breathing</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You wait in darkness. For answers that you can't see. You know what you deserve. And your wondering why your life is. Not what you thought it should be. When the knife breaks. Your heart still aches. How can you face the day. You just</p><p><strong>SEGMENT2</strong><br>Keep breathing. you'll make it. Don't give in. You're not done yet. Sometimes all that you can do is. Keep breathing and believing. Don't let go. Just hand on tighter. A little longer. When you feel like your dying. Keep breathing</p><p><strong>SEGMENT3</strong><br>Don't give up. Don't give in. No you're not done. Don't give up. Don't give in. Don't let go</p><p><strong>SEGMENT4</strong><br>When every moment. Is almost more than you can take. You've got to know some. Tomorrow will bring you a breakthrough. Is the reason why. You got to get through the today. When the knife's gone. You will be strong</p><p><strong>SEGMENT5</strong><br>Keep breathing. you'll make it. Don't give in. You're not done yet. Sometimes all that you can do is. Keep breathing and believing. Don't let go. Just hand on tighter. A little longer</p><p><strong>SEGMENT6</strong><br>With every breath. You're bringing hope. You're letting go of all your doubts. When nothing is easy. You got to keep going. Even when you don't know how. You don't have to know how, no</p><p><strong>SEGMENT7</strong><br>Keep breathing. you'll make it. Don't give in. You're not done yet. Sometimes all that you can do is. Keep breathing and believing. Don't let go. Just hand on tighter. A little longer</p><p><strong>SEGMENT8</strong><br>Keep breathing. you'll make it. Don't give in. You're not done yet. Sometimes all that you can do is. Keep breathing and believing. Don't let go. Just hand on tighter. A little longer</p><p><strong>SEGMENT9</strong><br>Keep breathing. Don't give up. No you're not done yet. Don't give up. Don't give in. Don't let go. No you're not done yet</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

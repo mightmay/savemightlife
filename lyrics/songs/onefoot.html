@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for One Foot - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>One Foot - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>One Foot</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This is the path less taken. This is the life less lived. This is where You have placed me. And You want all I have to give</p><p><strong>SEGMENT2</strong><br>There were times when I was lonely. There were times when I was scared. There were moments when I stopped chasing. And I was frozen in my fear</p><p><strong>SEGMENT3</strong><br>But I won't be the man. Who watched the world passed him by</p><p><strong>SEGMENT4</strong><br>I don't really know where this road is going. I don't really know why this door is open. Put one foot in front of the other. That's how I'm going to discover. Who you really are when the world is ending. How you raise the dead to new beginnings. One foot in front of the other. That's how I'm going to discover. One foot, one foot at a time. One foot, one foot at a time</p><p><strong>SEGMENT5</strong><br>There are those who stood against me. They said I'd never measure up. All the voices are fading. Cuz I care more about Your love. But this is not about them. It isn't even about me. Because my worth is found inside Your eyes. So I will rise and sing</p><p><strong>SEGMENT6</strong><br>I won't be the man. Who watched the world passed him by</p><p><strong>SEGMENT7</strong><br>I don't really know where this road is going. I don't really know why this door is open. Put one foot in front of the other. That's how I'm going to discover. Who you really are when the world is ending. How you raise the dead to new beginnings. One foot in front of the other. That's how I'm going to discover. One foot, one foot at a time. One foot, one foot at a time</p><p><strong>SEGMENT8</strong><br>Give me open hands. And strength to stand. Grace to fall. Cuz all I want is You in this life. Give me open eyes. And strength to walk. Whether I may rise or fall. Cuz all I want is You. All I want is You</p><p><strong>SEGMENT9</strong><br>I don't really know where this road is going. I don't really know why this door is open. Put one foot in front of the other. That's how I'm going to discover. Who you really are when the world is ending. How you raise the dead to new beginnings. One foot in front of the other. That's how I'm going to discover. One foot, one foot at a time. One foot, one foot at a time</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Beautiful Letdown - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Beautiful Letdown - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Beautiful Letdown</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>It was a beautiful letdown. When I crashed and burned. When I found myself alone, unknown and hurt. It was a beautiful letdown. The day I knew, That all the riches this world had to offer me will never do.</p><p><strong>SEGMENT2</strong><br>In a world full of bitter pain, and bitter doubts, I was trying so hard to fit in, Fit in, until I found out</p><p><strong>SEGMENT3</strong><br>I don't belong here (I don't belong). I don't belong here (I don't belong). I will carry a cross and a song. Where I don't belong. I don't belong</p><p><strong>SEGMENT4</strong><br>It was a beautiful letdown. When you found me here. Yeah, for once in a rare blue moon. I see everything clear. I'll be a beautiful letdown. That's what I'll forever be. And though it may cost my soul. I'll sing for free</p><p><strong>SEGMENT5</strong><br>We're still chasing our tails. In the rising sun. In our dark water planet still spinning. In a direction no one wins. No one's won.</p><p><strong>SEGMENT6</strong><br>See, I don't belong here (I don't belong). Well, I don't belong here, I don't belong. I will carry a cross. With a song where I don't belong. I don't belong. I don't belong here (I don't belong). No, I don't belong here, I don't belong. I'm gonna set side. And set sail. For the kingdom come, kingdom come. Your kingdom come. Won't you let me down, yeah. Let my foolish pride forever let me down</p><p><strong>SEGMENT7</strong><br>Ah, Easy living, you're not much like the name. Easy dying, you look just about the same. Would you please take me off your list. Easy living please c'mon and let me down</p><p><strong>SEGMENT8</strong><br>We are a beautiful letdown. Painfully uncool. The church of the dropouts. The losers, the sinners, the failures, and the fools. What a beautiful letdown. Are we salt in the wound. Hey, let us sing one true tune</p><p><strong>SEGMENT9</strong><br>I don't belong here (I don't belong). It feels like I don't belong here, yeah. It goes like I don't belong here. I don't belong (I don't belong). Won't you let me down (I don't belong). C'mon and let me down (I don't belong). You always let me down (I don't belong). So glad that I'm let down (I don't belong). C'mon and let me down (I don't belong). Cuz I don't belong here. Won't you let me down!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Fox Hills Mallmacks - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Fox Hills Mallmacks - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Fox Hills Mallmacks</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[PJ:] Sup girl?. [PJ:] What's your name?. [Girl:] Hi, my name is Harmony. [PJ:] True. [Girl:] I'm from Venice, California. [PJ:] I like that. [Girl:] And I'm representing Fairfax High School. [PJ:] What?. [Girl:] Melrose</p><p><strong>SEGMENT2</strong><br>It's like, uh, what's up girl?. I'm ? baby, it's a whole different world. Like, sssssssss..uh. You've never seen. Dirty clothes but the caddy real clean like. Mmmmmmm..some dishes. I'm so hungry, you look delicious. Rocked in your Chucks and your Big E Levis. Label says big size. I like your little turtle-neck too (True). TJ-Max right? Hmm, do what you do. You lookin' like you seen money before. And your used to these dudes openin' the door (True). Hmm, yep that's what I thought. You the Red Ridin' Hood and you wanna get caught. Speak, or forever hold your peace. Alone, I'm PJ, put your digits in the phone</p><p><strong>SEGMENT3</strong><br>[Chorus: x3]. (c'mon) Just want it. (c'mon) Just do it. (c'mon) Just believe me and then prove it</p><p><strong>SEGMENT4</strong><br>(c'mon!)</p><p><strong>SEGMENT5</strong><br>What's up girl?. You drinkin' too much. You better ?. What you lookin' at?. Forget them dudes. They buffed up cause they do not got attitude. Like me, I'm too O.G. Raised up in the streets to redefine free. Hey, them other dudes is weird. You can see they insecure from way over here. Fresh out of Foot Locker. Lookin' like some athletes. They the real geeks, believe it!. Been off the Varsity team, yo fo' real. Still dressin' like they on a football field. Yes yes y'all, okay back to you. About to get some coffee, should I make it two?. Girl you better say yes. Especially if you wanna roll Rock Seven instead of Guess. Like it's '88, I just got a deal. I'm about to flip the whole dang plate (for real). Plus you look like Gidget. The only thing missin' is your digit</p><p><strong>SEGMENT6</strong><br>[Chorus: x3]. (c'mon) Just want it. (c'mon) Just do it. (c'mon) Just believe me and then prove it</p><p><strong>SEGMENT7</strong><br>You drinkin' too much. You better ?.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

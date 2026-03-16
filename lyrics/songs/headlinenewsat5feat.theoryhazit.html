@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Headline News At 5 (Feat. Theory Hazit) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Headline News At 5 (Feat. Theory Hazit) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Headline News At 5 (Feat. Theory Hazit)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>reporting live from the projects where Jesus walks. here we have little kids that were deceived and taught. to live barbaric and cherish images that are false. in the ghetto some settle some carry the cross. one of out two families here suffer a loss. the home of dead beat dads where the mothers distraught. where the drug dealers rise and the soldiers fall. red yellow black and white Jesus covers us all. in spite of street wars and a twisted system abide in him. ride with him recognize the sin yo we wont forget ya. the little ones wont see the bigger picture. until we get a clear vision of his mission using wisdom. I look around and see now known as former victims. converted into Christians halo glistening. millions of brothers and sisters hauled to prison when. J. Christ paid the price and cost of living like that</p><p><strong>SEGMENT2</strong><br>check the headlines heres the headlines. Jesus is alive thats the headlines. so read the headline youll see the headline. they went and beat till he died then he redlined</p><p><strong>SEGMENT3</strong><br>. until you know the deal Im a keep rocking till. I reflect the light like the forehead of Dr. Phil. in Christ my healer paid the doctors bill. and made the sin disappear like David Copperfield. stop and chill park it while I spark it. watch it go down like ya town with the housing market. the fields is white so Im down to harvest. so check me out like shopping lines that be down at target. I dont write like Im trying just to sound the hardest. I just try to shine the light right where its now the darkest. Christ paid my debt now and thats a promise. so keep the stimulus check I aint counting on it. and when I got to comment on the pain he felt. it leaves my brain swimming like the head of Michael Phelps. Jesus came to help with the shame weve dealt. cause broad be the path on the way to hell</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

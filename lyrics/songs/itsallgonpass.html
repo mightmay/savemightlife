@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for It's All Gon' Pass - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>It's All Gon' Pass - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>It's All Gon' Pass</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[VERSE]. Everyday, at the end of my block. See big whips pulling out the rim shop. Black on black Giovanni's they blowing they money that's how they spend guac. Not tripping off where they gone end up. They aint listening, chilling, ignoring His calling. Learned it on REDEEMED, but you really should've learn it on OUR WORLD FALLEN. But you're living for the moment. God's gifts you don't want it. When Christ comes back He's going to hit harder than Katrina hit New Orleans. You're gonna lose all you have. One day it's all gon pass. You'll meet the Rock of Ages bigger than the rock that made Titanic crash. Puffing blunts in the Jag. That's how you stuck with your cash. Like Lil Wayne You gone all day with your money tucked in a duffle bag. Sell a couple of bags you on the block grinding. Chasing American dreams so you can keep shinin'. But your time is winding up. You ain't never gonna have enough. Even money got more faith than you cause every dollar says in God we trust. It's the lust of the flesh. Your turn just could be next. You never know when it's over time, but are you prepared to play sudden death</p><p><strong>SEGMENT2</strong><br>[HOOK]. You can have it all take the cars and the cash. It ain't gon' mean nothing when the Lord comes back. It's all go pass - I said it's all gon' pass. Oh Lord</p><p><strong>SEGMENT3</strong><br>[VERSE]. Reporting live from the booth. Good Morning America. Still here to inform you're Godless in your character. Like your pop you're a natural born replica. No better I was chief of the heathens far from a amateur. Anxious to make a statement. Park I'm going to keep it basic. I know you're on your weight lift. Laced in designer bracelets. God is just and patient. Reveals this Truth so gracious. The chosen one like Matrix. Endured the brutal facelift. Chosen to choose man I was birth for this. Called out to give the lost direction like turn you missed. No pride of life I gotta shy God loves brokenness. Had to fly above the norm too much turbulence. Ain't pushing keys. Crushing trees or popping E. Minus Christ no matter how your placed your sideways daddy like PS3. I know the fox is mean. You whip a Lamborghini. Steady on the rise, but you gon' burn scrap like gasoline. Ya dig</p><p><strong>SEGMENT4</strong><br>[HOOK]. You can have it all take the cars and the cash. It ain't gon' mean nothing when the Lord comes back. It's all go pass - I said it's all gon' pass. Oh Lord</p><p><strong>SEGMENT5</strong><br>[VERSE]. Listen, cats is hungry for that money so hungry it's like a pot of greens. Cause once you taste it you change faces like Halloween. I see you movements you keep it smoother than Frank Lucas. You're flirting with flames, but ain't came through St Louis. You want that pot of gold, that's Harry Potter though. I mean fantasy man answer me what about your soul. See Christianity's basically like a movie trailer. Showing you clips that Heaven's better. Yet you'd rather settle. For the bootleg with low class quality. What are yellow diamonds and the earthly monopoly I mean a. Dozens of cars and a dozen of houses and a couple awards. And a couple of islands plus a couple of girls. You know that be wildin' but. Compared to Heaven that's a couple of thousand bucks. See life is like a vapor. I know you like the paper. But paper's passing away you should take to Christ the Savior</p><p><strong>SEGMENT6</strong><br>[HOOK]. You can have it all take the cars and the cash. It ain't gon' mean nothing when the Lord comes back. It's all go pass. I said it's all gon' pass</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

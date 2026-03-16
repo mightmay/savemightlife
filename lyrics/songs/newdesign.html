@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for New Design - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>New Design - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>New Design</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Wait, I might hesitate. Am I a minute too late?. Please Lord, I need to know. This pressure's got me lettin' go. If I'm wrong, will I still carry on. And end up where I belong?</p><p><strong>SEGMENT2</strong><br>BRIDGE. I've never felt this way before. I've never come so close. I've never worn so thin. I'm stepping out. Instead of closing in. Left myself behind. When I made up my mind. No turnin' back this time. This is my new design</p><p><strong>SEGMENT3</strong><br>CHORUS. Sometimes I feel so alone. It feels like I'm standing out here on my own. I've never felt so far from home. It's comin' on, it hits me. When I step outside my zone. Cause sometimes, I feel so alone. It feels like I'm standing out here on my own. I've never felt so far from home. It's comin' on, it hits me. When I step outside my zone</p><p><strong>SEGMENT4</strong><br>I see what you're doin' to me. Could have been you so easily. You look the other way. Even though we were close the other day. And I'm still tryin' to get up this hill. I need you just like a pill</p><p><strong>SEGMENT5</strong><br>BRIDGE</p><p><strong>SEGMENT6</strong><br>CHORUS</p><p><strong>SEGMENT7</strong><br>Do you get the feelin'. Everything will be alright?. I'm movin'. So pleased to meet you. But I am movin' on. Tried to pass it to another. But it's comin' on. I can't wait to find out. Break me, can't seem to climb out. Of this hole, I'm stuck again. If I'm not out in a minute I'm jumpin' in. Let's start again. I'm sick of this. Let's just get it out. Are ya feelin' it?. Move back. Ya wanna feel how real it is. Let's just get it out. Are ya feelin' it?. Move back. Ya wanna feel how real it is</p><p><strong>SEGMENT8</strong><br>CHORUS</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Fully Surrenddered - ข้าขอมอบดวงใจ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Fully Surrenddered - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Fully Surrenddered</h2>
+        <h3>ข้าขอมอบดวงใจ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ข้าฯขอมอบดวงใจให้แด่พระองค์ เต็มจิตเต็มใจปลง มอบถวายให้ วางไว้บนแท่นบูชา ข้าฯยอมสละทุกสิ่ง พระองค์ทรงตายไถ่ข้าฯ ขอถวายตัว</p><p><strong>VERSE2</strong><br>ข้าฯขอมอบถวาย ชีวาเวลา  สารพัดทุกสิ่ง พร้อมยอมยกให้ โปรดตรัสสั่งแต่คำเดียว ยินดีตามพระองค์ไป บัดนี้และสืบๆไป ข้าฯขอฟังคำ</p><p><strong>VERSE3</strong><br>ข้าฯขอมอบถวาย เงินทอง ของใช้ พระองค์ทรงให้ข้าฯ เหลือล้นมากมาย เป็นของพระองค์ทั้งสิ้น พระองค์ชำระค่าไถ่ เป็นของพระองค์สืบไป พระเจ้าของข้าฯ</p><p><strong>VERSE4</strong><br>ข้าฯขอมอบถวาย กาย ใจ วาจา  ยินดีตามพระองค์ พระมหาไถ่ อัญเชิญประทับภายใน เต็มใจอาศัยพระองค์ พระคริสต์สถิตในข้าฯทุกวันเวลา.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Fully Surrendered, Lord, I would be, Fully surrendered, dear Lord to thee, All on the altar laid, surrendered fully made, Thou hast my ransom paid, I yield to Thee.</p><p><strong>VERSE2</strong><br>Fully Surrendered, life, time, and all, All Thou hast giv'n me held at thy call. Speak but the word to me, Gladly I'll follow thee, Now and eternally Obey my lord.</p><p><strong>VERSE3</strong><br>Fully Surrendered, silver and gold, His, Who hath giv'n me riches untold all. All belong to thee, For Thou didst purchase me, Thine evermore to be, Jesus my lord.</p><p><strong>VERSE4</strong><br>Fully Surrendered, Lord, I am Thine, Fully Surrendered, Saviour divine, Live Thou Thy life in me,  All fellnesses wells in thee, Not I, But Christ in me, Christ all in all.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

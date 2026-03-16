@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Addicted To Bad Decisions - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Addicted To Bad Decisions - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Addicted To Bad Decisions</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I'm addicted to bad decisions. I just can't ever help myself. (but this is different). It sounds so convincing.. She's good for you. So good for us as well. You'll be the taste lingering on my lips. It'll be my hands clinging to your hips.</p><p><strong>SEGMENT2</strong><br>I got get get get it out, gotta get me out. Find the flaw, find the switch, just get me down.</p><p><strong>SEGMENT3</strong><br>Wouldn't matter if you couldn't go back. But you never even thought to ask. So I think if you would, then I think that you should.</p><p><strong>SEGMENT4</strong><br>Remember, remember, remember. (I blame this on a honest year). We've done this all together. (If you take this (?) she won't know). Remember the imposters and pretenders. (You blame this on a modest year). Together have done this to get her. So go get her.</p><p><strong>SEGMENT5</strong><br>Is it possible to forget your name?. The identity running through your veins?. Was it worth these ends to play this part?. I never thought it could get this far. Vanity only brings in the new. But the sinking ship drowns every person here, including you.</p><p><strong>SEGMENT6</strong><br>And tell yourself you were wrong when it hurts. But the unoriginal you would have never worked. Oh, you're the lucky one.</p><p><strong>SEGMENT7</strong><br>It's hard to show when the stains bleed through, she's gotta know this was never you. Gotta get get get it out, gotta get me out, just can't seem to shut shut shut it down. Although the stains stay same, they just reappear. But I can keep this all up for you, dear. Gotta get get get me out, gotta get it out. Find the flaw, find the switch, just shut it down.</p><p><strong>SEGMENT8</strong><br>Remember, remember, remember. (I blame this on an honest year). We've done this all to get her. So go get her.</p><p><strong>SEGMENT9</strong><br>Is it possible to forget your name?. The identity running through your veins?. Was it worth the ends to play this part?. I never thought it could get this far. Vanity only brings in the new. But the sinking ship drowns every person here, including you.</p><p><strong>SEGMENT10</strong><br>Tell yourself it was wrong when it hurts. But the unoriginal you would have never worked.</p><p><strong>SEGMENT11</strong><br>Oh, you're the lucky. You're the lucky one. Someone would love you so much they would come undone. On, you're the lucky one.</p><p><strong>SEGMENT12</strong><br>I'm addicted to bad decisions, I just can't ever help myself. Always thought I could fix the edges. But I'm torn and there's nothing left. I just can't stand the thought of you this way. So I said the things that I thought would make you stay.</p><p><strong>SEGMENT13</strong><br>But I was wrong. I was wrong. I was wrong.</p><p><strong>SEGMENT14</strong><br>Is it possible to forget your name?. The identity running through your veins?. Was it worth the ends to play this part?. I never thought it could get this far. Vanity only bring in the new. But the sinking ship drowns every person here, including you.</p><p><strong>SEGMENT15</strong><br>Tell yourself you were wrong when it hurts. But the unoriginal you would have never worked. You're so unoriginal, it would have never worked.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

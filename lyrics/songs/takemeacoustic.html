@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Take Me (Acoustic) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Take Me (Acoustic) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Take Me (Acoustic)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Can you hear me? Does anyone around me. Feel the way that I feel now?. 'Cause from the window where I sometimes cry. I just want to see Your face tonight. And I'm willing to lose everything I am</p><p><strong>SEGMENT2</strong><br>Cause I need you more than ever. I need Your help to find where I've been going wrong so far</p><p><strong>SEGMENT3</strong><br>Take me under Your wing tonight. Make me so perfect in your eyes. Hold on cause it will be alright. You're not alone. When You're near me, I feel like I just found me. In the traces of the boy from yesterday. But in a world that is so black and white. I will take the steps to change my life. And I won't be coming back to here again</p><p><strong>SEGMENT4</strong><br>I need your loving hand to guide me. Through the maze of all the things inside me. Then I'll know that I'm alright</p><p><strong>SEGMENT5</strong><br>Cause I need You more than ever. I need Your help to find where I'll be going wrong so far</p><p><strong>SEGMENT6</strong><br>Take me under Your wing tonight. Make me so perfect in Your eyes. Hold on cause it'll be alright. You're not alone. Please help me get from worse to better. Before these tears soak through this lonely sweater. And let me know that I'm alright. I still have one strike of this match left. And I'm holding on to my last breath. And its getting a little dark around to see here</p><p><strong>SEGMENT7</strong><br>Take me under Your wing tonight. Make me so perfect in your eyes. Hold on 'cause it'll be alright. You're not alone</p><p><strong>SEGMENT8</strong><br>Take me under your wing tonight. Make me so perfect in your eyes. Hold on it'll be allright. You're not alone</p><p><strong>SEGMENT9</strong><br>And You'll be here forever, forever You'll stay. And You promised to love me, You'll love me always. You'll love me for always, You'll love me for always. Always</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

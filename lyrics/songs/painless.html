@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Painless - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Painless - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Painless</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>The sun was barely coming up, my heart was all but slowing down. but I could barely make out the sound. It was my personal symphony.</p><p><strong>SEGMENT2</strong><br>Striking the chords for only me. There was a coursing all through my veins. Another chance to get away, oh.</p><p><strong>SEGMENT3</strong><br>Until this empty place is filled, I'll keep pretending.</p><p><strong>SEGMENT4</strong><br>Hey! Wait! Knock me down and I'll get up again. Oh! Pain! A remedy that can erase your sting. I'll keep holding, and I'll keep trying. I feel this fight, it is slowly dying now but I feel painless..</p><p><strong>SEGMENT5</strong><br>These days and night blend into one, but one more night is all I need. Another chord from the symphony. To float above the world for now, to lose control is bliss somehow. And wring the color from the grey, another chance to get away, oh.</p><p><strong>SEGMENT6</strong><br>Until this empty place is filled, I'll keep pretending.</p><p><strong>SEGMENT7</strong><br>Hey! Wait! Knock me down and I'll get up again. Oh! Pain! A remedy that can erase your sting. I'll keep holding, and I'll keep trying. I feel this fight, it is slowly dying now but I feel painless..</p><p><strong>SEGMENT8</strong><br>All these reckless nights, have left me spinning out of control. Is there not a cure for sorrow?. All these faded lights, have made me search for something more. Will there be a new, tomorrow.</p><p><strong>SEGMENT9</strong><br>Until this empty place is filled, I'll keep pretending.</p><p><strong>SEGMENT10</strong><br>Hey! Wait! Knock me down and I'll get up again. Oh! Pain! A remedy that can erase your sting. I'll keep holding, and I'll keep trying tonight.</p><p><strong>SEGMENT11</strong><br>Hey! Wait! Knock me down and I'll get up again. Oh! Pain! A remedy that can erase your sting. I'll keep holding, and I'll keep trying. I feel this fight, it is slowly dying now but I feel painless..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

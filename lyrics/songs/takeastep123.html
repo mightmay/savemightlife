@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Take A Step (1, 2, 3) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Take A Step (1, 2, 3) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Take A Step (1, 2, 3)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>It was on a Tuesday night. When I saw you passin' by. When you came my way in your eyes. I could see the pain inside. Then you looked at me and tried to smile. I asked what's wrong?. You said my life</p><p><strong>SEGMENT2</strong><br>So I asked can we talk about.. Every little thing that's on your mind. Every little thing that makes you cry. Let me tell you all about.. Every little thing that's on my heart. God's given me a brand new start. It's as easy as..</p><p><strong>SEGMENT3</strong><br>1, 2, 3, take a step toward me. I can see you're hurting. You could be so free. In a flash you could start all over. Let me know if you wanna go there. We're just hanging out. We can talk about it</p><p><strong>SEGMENT4</strong><br>You said that's cool, but not for you. And you walked away. I tried my best, I gave my all. What else could I say?. As you crossed the street. By chance you meet an angel in disguise. Supernatural meeting of modern times</p><p><strong>SEGMENT5</strong><br>She knew. Every little thing that just occured. Every little way you've been disturbed. Every little thing that has been wrong. Faith in God has kept her strong. Just take a step</p><p><strong>SEGMENT6</strong><br>1, 2, 3, take a step toward me. I can see you're hurting. You could be so free. In a flash it could all be over. Let me know if you wanna go there. We're just hanging out. We can talk about it. 1, 2, 3, take a step with me. I can see you're hurting. He can set you free. In a flash you could start all over. Let me know if you wanna go there. We're just hanging out. We can talk about it</p><p><strong>SEGMENT7</strong><br>You know what you gotta do. Don't wanna confuse, but you gotta choose. You know you got nothing to lose. Don't refuse, don't refuse, yeah. You know what you gotta do. Life's already got you singing the blues. You know you've got nothing to lose. Don't refuse, take a step. It's so simple, so what you waitin' on?</p><p><strong>SEGMENT8</strong><br>1, 2, 3, take a step toward me. I can see you're hurting. You could be so free. In a flash it could all be over. Let me know if you wanna go there. We're just hanging out. We can talk about it. 1, 2, 3, take a step with me. I can see you're hurting. He can set you free. In a flash you could start all over. Let me know if you wanna go there. We're just hanging out</p><p><strong>SEGMENT9</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

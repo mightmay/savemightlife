@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for So Cold I Could See My Breath - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>So Cold I Could See My Breath - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>So Cold I Could See My Breath</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Let's start with just the basics then. I'm sure that we can fake it when. It's time to say how much it meant. And we walk out so innocent</p><p><strong>SEGMENT2</strong><br>You can be so persuasive. When you say it's. More than a day trip. And convince me. I'm condescending. When I ask, Will this be ending?. How quickly lust can pretend it's love</p><p><strong>SEGMENT3</strong><br>(Chorus:). We're just the boys and girls that think they always know (we are the boys and the girls). With answers for the world. The ambiguity shows. We're just the boys and girls that dance with all their clothes (we are the boys and the girls). Hiding under the sheets. Believing nobody knows</p><p><strong>SEGMENT4</strong><br>All the suspense. That we've created. Now it's wasted. And we can't change it. The beginning to the ending. I find myself remembering</p><p><strong>SEGMENT5</strong><br>How quickly lust can pretend it's love. Designing words to help us believe. It's so much more than just tonight. So we have got to get this right. How quickly words can become our hands. Resigning everything we believe. You wanted, you wanted. More</p><p><strong>SEGMENT6</strong><br>(Chorus:). We're just the boys and girls that think they always know (we are the boys and the girls). With answers for the world. The ambiguity shows. We're just the boys and girls that dance with all their clothes (we are the boys and the girls). Hiding under the sheets. Believing nobody knows</p><p><strong>SEGMENT7</strong><br>You could be the one to stay. Made from birth for just this day. But something tells me it's not right. If we could lose it all tonight. I'm no better on my own. Leave the message on your phone. Always trying what I can to be a child and not a man</p><p><strong>SEGMENT8</strong><br>(Chorus:). We're just the boys and girls that think they always know (we are the boys and the girls). With answers for the world. The ambiguity shows. We're just the boys and girls that dance with all their clothes (we are the boys and the girls). Hiding under the sheets. Believing nobody knows</p><p><strong>SEGMENT9</strong><br>My hands across your clothes (my hands across your clothes). And me without a plan. (Something I'll miss). To keep us boys and girls (to keep us boys and girls). Another woman and man?. (Something I will always miss)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

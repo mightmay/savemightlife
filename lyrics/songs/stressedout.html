@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Stressed Out - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Stressed Out - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Stressed Out</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Intro: The pressures of life got me thinking again. What ticked you off today, your boss, girlfriend, that same idiot at school?</p><p><strong>SEGMENT2</strong><br>This world makes me upset like a bomb threat, my palms sweat I wanna get off it locked down Like an alcoholic cant give it up, Take what you get in life sip lick it up. Cause yo Ive gone crazy dear God can you save me I need a solution Im hallucinating lately. Something gone wrong in my brain chasm assault. And battering embarrassing this world I aint cherishing. You shot the heroin I lacked the parenting, Inherit the kingdom like the sin syndrome. Vision blurry focus in on your brokenness loneliness stuck up in societys hopelessness</p><p><strong>SEGMENT3</strong><br>Take me home God, I wanna quit my job, I hide in camouflage let loose in dialogue, If its working out I wish youd hear me now if so Ill trust in you without a doubt.</p><p><strong>SEGMENT4</strong><br>Chorus. Cause every time cause every time I get Stressed Out!!!. Cause every time cause every time I get Stressed Out!!!</p><p><strong>SEGMENT5</strong><br>I wonder what would happen if I really spoke mind to every individual critical situation with you. You thought I was a quiet person, now its not for certain smiling in your face really cursing. If it wasnt for Christ I might of react detached make you see black send you into relapse, I relax And check my posture pray to my God father, got a lot of stress try to find a place to rest. I never let the chemicals wrestle with my blood vessels, push ethical take care of your medical its Evident the pressures of life have got me thinking again I sin frequent again, I isnt drinking it in. I separate hate give my heart an x-ray, check the next day before it escalates, severance pay was Not an option kick me out cause my droors are dropping. Got this talent locking, and Im stress talking.</p><p><strong>SEGMENT6</strong><br>I cant take it I got to get out. The stress is to hot, Im a jet out. I cant take it yall I got to get out. The stress is too hot, Im a jet out</p><p><strong>SEGMENT7</strong><br>Im not lost Ive just got some issues, Im not artificial cause Im just being real with you. Its just one of those days you dont say, tick me off start a fire like foreplay. Ill visuals my lifes circumstance trapped like circus ants nervous and Im. Stressed check my third eye serve the most high. So why you caught up blame how youre brought up. What you done with your life show your product. I remain speechless not the same fetus reborn with an attitude receive how I speak this. Why you need a joint or else you sleepless stress it plus you un-rested. Quest for life in Christ I dont regret it, Its Babylon, stress guns and nylons, They dead two buildings I pray for Gods children.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

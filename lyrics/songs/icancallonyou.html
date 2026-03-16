@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Can Call on You - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Can Call on You - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Can Call on You</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Our Father who art in heaven. Hallowed be thy name. Thy kingdom come. Thy will be done. On earth as it is in heaven</p><p><strong>SEGMENT2</strong><br>I can, i can call on you. I know that you'll hear me. I can , i can call on you. I know that youll answer</p><p><strong>SEGMENT3</strong><br>You didnt know what to do. Came home from after school. Mom and dad said they were through. Now pretty soon was gonna have ta move. Shut the door went inside his room. Layed on the floor and he cried to you. Said jesus please help me through. Right now i just feel so confused. Dont know what im suposed to do. But i need to be close to you. Help me with what im goin through. Cuz i know that your here when im callin you. Everythings just fallin through. But aint nuttin too hard for you. So plesae come when i call to you. Cuz all that i have is all in you. And thats why</p><p><strong>SEGMENT4</strong><br>I can, i can call on you. I know that youll hear me. I can, i can call on you. I know that youll answer. I can, i can call on you. I know that youll hear me. I can, i can call on you (i can call on you). I know that youll answer</p><p><strong>SEGMENT5</strong><br>She didnt knwo what to say. She got the phone call and it was late. It was a hit and run jus on the free way. And her son got hurt and was in bad shape. Tears ran down her face. As her mind began to race. Didnt knwo what to do what move to make. So she called up to you and began to pray. Jesus she began to say i need you in a major way. My son might die today im so confused please provide a way. Please now just give me strength. Please just help me face everything thats about to come my way. In you i trust and put my faith thats why (thats why)</p><p><strong>SEGMENT6</strong><br>I can, i can call on you. I knwo that you hear me. I can, i can call on you. I know that you answer (i know that youll answer). I can i can call on you (i can call on you). I know that you hear me. I can i can call on you. I know that you answer (i know that you answer)</p><p><strong>SEGMENT7</strong><br>So whati wanna say tonight. N e thing you face in life. When yoru mind is filled with strife. You can always find strength in christ. Even times when the money is tight. Even times when nothin is right. Dont worry bout nothin in life call him and thats my advice. And thats why thats why thats why (thats why)</p><p><strong>SEGMENT8</strong><br>[praying]</p><p><strong>SEGMENT9</strong><br>(i need you)</p><p><strong>SEGMENT10</strong><br>(i can call on you). I can i can call on you. I knwo that you hear me. I can i can call on you i know that you answer i know that you answer. I can i can call on you i can call on you. I know that you answer</p><p><strong>SEGMENT11</strong><br>[kids praying].</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

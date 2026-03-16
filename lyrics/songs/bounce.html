@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bounce - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bounce - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bounce</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We come rushing through your stereo system. Into your ear canal like the alignments of the solar system. Have you forgotten about the days when we just wanted to. rock 'cause we like it that way?</p><p><strong>SEGMENT2</strong><br>And, no more hate, no more lies, no more politics, Seen the fakes who cry over copied riffs. This is the day that we rise and we conquer it. Raise your mics to the sky like apocalypse</p><p><strong>SEGMENT3</strong><br>Everyone, Bounce! show me what it's all about. Don't stand up, Bounce! cause we're takin' over now. It's TFK, we rock the party. We keep the party jumpin' in an old school way</p><p><strong>SEGMENT4</strong><br>Situation restless, like someone tryin' to sneak up on the guest list. Play for a team called "not to mess with". And check out the scenario, let the sound you hear. control your stereo</p><p><strong>SEGMENT5</strong><br>Turn it up and let the people know. I'm never lettin' go, I'm never lettin' go. This is the day that we rise and we conquer it. Raise our mics to the sky like apocolypse</p><p><strong>SEGMENT6</strong><br>Everyone, Bounce! show me what it's all about. Don't stand up, Bounce! 'cause we're takin' over now. It's TFK, we rock the par-tay. We keep the party jumpin' in an old school way. Bounce! show me what it's all about. Don't touch us, Bounce! Get up and let it all hang out. If you find it hard to breath ya better just leave. We 'bout to make it hotter than the third degree</p><p><strong>SEGMENT7</strong><br>Let's break this mold in, can't let this hold us. Let's be soldiers, go back and let God control us. Boys and girls together we'll shake the world. If you're with me then put it to the sky with me</p><p><strong>SEGMENT8</strong><br>If you agree there's more to this than what we see. And what we know then bounce 'till you lose control. And grab a partner, we about to make this hotter. Turn up the heat when we get this started</p><p><strong>SEGMENT9</strong><br>Time has come, now shake up the dust 'till it settles in the sun. Bounce! Get up! Bounce! Push up! Bounce! Switch up!. Let your spirit flow</p><p><strong>SEGMENT10</strong><br>Bounce! show me what it's all about. Don't stand up, Bounce! Cause we're takin' over now. It's TFK, we rock the par-tay. We keep the party jumpin' in an old school way. Bounce! show me what it's all about. Don't touch us, Bounce! get up and let it all hang out. If you find it hard to breathe ya better just leave. We 'bout to make it hotter than the third degree</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

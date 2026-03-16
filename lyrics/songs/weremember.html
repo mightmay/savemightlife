@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for We Remember - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>We Remember - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>We Remember</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>How could we forget, When you touched the earth on that starry night. Angels sang glory to god on high. We remember</p><p><strong>SEGMENT2</strong><br>How could we forget, The moment the water became wine. Stories of men leaving all behind. We remember</p><p><strong>SEGMENT3</strong><br>The story burns upon our hearts. A beautiful and binding scar. Forever we will, forever we will think of you</p><p><strong>SEGMENT4</strong><br>We remember. We remember you O Lord. We remember. We remember you O Lord</p><p><strong>SEGMENT5</strong><br>How could we forget, There in the garden you cried for it. The city that cursed you and turned you in. We remember</p><p><strong>SEGMENT6</strong><br>How could we forget, Death has no power and we are free. The good thought of us there on calvary. We remember</p><p><strong>SEGMENT7</strong><br>The story burns upon our hearts. A beautiful and binding scar. Forever we will, forever we will think of you. Oh think of you</p><p><strong>SEGMENT8</strong><br>We remember. We remember you O Lord. We remember. We remember you O Lord</p><p><strong>SEGMENT9</strong><br>O the the things that you have done. And great things you've yet to do. O Jesus we remember you</p><p><strong>SEGMENT10</strong><br>How could we forget the moment your love rolled the stone away. Our hearts were opened our lives were changed. we remember</p><p><strong>SEGMENT11</strong><br>How we could forget the promise of hope and that trumpet sound. We'll see your glory roll back the clouds. We remember</p><p><strong>SEGMENT12</strong><br>Instrumental</p><p><strong>SEGMENT13</strong><br>We remember you o Lord. We remember you our King. We remember you the Son of God who came to set us free.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

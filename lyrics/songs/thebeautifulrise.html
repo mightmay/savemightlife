@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Beautiful Rise - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Beautiful Rise - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Beautiful Rise</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Lights low, dark as the night, so covered in blood, the darkness ignites, the fires of evil, to burn on the One, who dies for the people, who turned on the Son, through that final breath, earth shook, boulders split, hurt and mourned, cursed and scorned, finished but not over with. Beautiful life, beautiful end. It\'s a beautiful rise back up again. Yeuh, yeuh, yeuh, yeuh, it\'s goin\' down; we gettin\' up. They throw us down; we gettin\' up. The Son\'s power, that\'s what strengthens us. In that final hour, we gettin\' up. Uh, everybody that lives this life, is gon\' go through circumstances, that make you wanna look to the sky, and ask God for some answers, like \"Why is there so much pain God? Why is there so much torment? It\'s hard to keep on my brain God, the things that You say is important. Why was I made to live in a world full o\' atheism, that hates the Christians, and You? New Age religion can\'t stand You. Am I losin\'?\" Hurt, feeling like the underdog. Dirt, what they put us under dog, gettin\' up through grace, not under law, uh, at the trumpet call. It\'s goin\' down; we gettin\' up. They throw us down; we gettin\' up. The Son\'s power, that\'s what strengthens us. In that final hour, we gettin\' up. Beautiful life, beautiful end. It\'s a beautiful rise back up again. I, wanna be fashioned after heaven, my body\'s decayin\', why? Because o\' Adam in Eden with Satan. Ahh, I\'m dyin\' slowly in this body here, yeah, my body groans to a zombie there. Raised from the dead, imperfection though attacked and damaged, through resurrection gets power from the Son like Captain Planet. Before you came to the earth as an atom, you was dead in the hearse through Adam 1. [With new certain madam?], (uh) we gettin\' made alive through Adam 2. Consider that the pain of the present don\'t compare to what we gain in His presence. Jesus died, Jesus rose, we gon\' die but believers know. It\'s goin\' down; we gettin\' up. They throw us down; we gettin\' up. The Son\'s power, that\'s what strengthens us. In that final hour, we gettin\' up. Lights low, dark as the night, so covered in blood, the darkness ignites, the fires of evil, to burn on the One, who dies for the people, that turned on the Son, through that final breath, earth shook, boulders split, hurt and mourned, cursed and scorned, finished but not over with. Beautiful life, beautiful end. Yeuh it\'s goin\' down; we gettin\' up. They throw us down; we gettin\' up. The Son\'s power, that\'s what strengthens us. In that final hour, we gettin\' up</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

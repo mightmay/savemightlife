@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Daddy's Little Peach - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Daddy's Little Peach - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Daddy's Little Peach</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You got me falling in love with whats next. The personalities a casualty but I'm impressed. with the way you control the words. I'm moving in and out of words. So slow down. We don't have to rush. How profound is the secret perception to the touch. Is it just me or does this routine ever get inside your head?. And tell you all the little things you wish had been said?. That you wish had been said?</p><p><strong>SEGMENT2</strong><br>When, When will I be old enough to do as I please?. These late nights are getting old. There are better ways to your knees. He reminded me to always button up. We were daddy's little peach. When will I be old enough?. When will I be old enough, to do as I please?</p><p><strong>SEGMENT3</strong><br>You got me here. But you got me wrong. (Got me wrong). I'm not a cannibal but I cannot say I wont eat one of my own. but with words slurred, I confess: This smile isn't based on. your subtle wit but the cut of your dress. That makes that ugly morning seem so far away. And if it ever comes at all, I'll know just what to say.</p><p><strong>SEGMENT4</strong><br>When, When will I be old enough to do as I please?. These late nights are getting old. There are better ways to your knees. He reminded me to always button up. We were daddy's little peach. When will I be old enough?. When will I be old enough, to do as I please?. To do as I please?. To do as I please?</p><p><strong>SEGMENT5</strong><br>So wake up. Wake up its the morning. Another A, I was seven days left to wanting reprieve. Or at least religion. But just relax, 'cause everyone's sinning. Last night. The drinks. The words. The kiss. The car. The apartment. The ??? fake digits. Your hand. Your make up. Your high heels, impeccable. And all of it just to sit. with some bottle thieves and counterfeits. How respectable. How respectable.</p><p><strong>SEGMENT6</strong><br>Let's turn the lights on. Let's turn the lights on. Let's turn the lights on. Let's turn the lights on, now.</p><p><strong>SEGMENT7</strong><br>When will I be old enough to do as I please?. When will I be old enough to do as I please? (Daddy's little peach). When will I be old enough? (When will I be). When will I be?. When will I be?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

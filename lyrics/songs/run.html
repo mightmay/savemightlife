@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Run - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Run - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Run</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Living on the streets of nowhere. Nobody understands and nobody cares. Nobody Listens, so who can I tell my life is just a living hell. I'm going back and forth no one to turn to. Slowly losing my mind so what am I doin'. If you could only see the pain and hurt in my soul. But you don't understand me so how could you know. Sometimes it gets so bad I think I'm losing it. Can't get a hand out of life so I'm losing my grip. And when you lose your grip, then you begin to slip. Death is just waiting one to trip. Heading down the path to nowhere. No one can hear me, 'cause nobody's there. Life gets darker and there's no light at all. When the ways of this world just prepare me for the fall. What can I do, what can I say. I don't know love, only hate. What would you do if you were mep. I guess you'll never know. How would it feel to walk in my shoes. A victim of this world only used and abused. Trapped in a box with the walls coming down on me. Suffocated by my sin, it keeps drowning me. They say they know how I feel. Let's end it all, right now, that's how I feel. Don't have a care in the world, life means nothing. Don't look back, don't look back, just keep running. Run - Keep running. Run - Keep running</p><p><strong>SEGMENT2</strong><br>How long, o Lord?. Will you forget me forever?. How long will you hide your face from me?. How long must I wrestle with my thoughts. And everyday have sorrow in my heart. How long will my enemy triumph over me?. Look on me and answer, o Lord my God. Give light to my eyes or I will sleep in death. My enemy, will say "I have overcome him". And my foes rejoice when I fall. But I still believe in you Lord. And I know that you're real, you're so real Lord. Come and take me away from this place Lord. Everyday I will follow and seek your face Lord. But I trust in your unfailing love. My heart rejoices in your salvation. I will sing to you my Lord. For he has been, for he has been. Good to me. You're the one who rescued me. And you're the one who set me free. I kept on running, but there's nowhere to hide. You took me in with your arms open wide. You loved me first when no one else would. You died for me so I give my life to you. False hopes and lies. But you're the one who's next time I run. I'm running straight to you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

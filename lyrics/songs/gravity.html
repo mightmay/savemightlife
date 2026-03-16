@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Gravity - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Gravity - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Gravity</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Tryna' make it to heaven, stuck on the moon. How beautiful earth is from this point of view. So much evil back on the ground. Gravity keeps on bringing me down (down down down)</p><p><strong>SEGMENT2</strong><br>Yeah.. Whoohhh ahhhh (Bringing me down). Yeah.. ahhh .. Yeah</p><p><strong>SEGMENT3</strong><br>[Verse 1:]. [?] just have to let my light shine. Like the sun that aluminates the sky so bright. Like the stars that chase away the dawn this night. Church by it would be whoah like the moon that flow, let's go. Lord, I want to be where you are. But in my flesh Lord, I can only go so far. It's like a test, every time I try to raise the bar. I want to worship, really, but it's too much gravity</p><p><strong>SEGMENT4</strong><br>[Chorus: ]. Tryna' make it to heaven, stuck on the moon. How beautiful earth is from this point of view. So much evil back on the ground. Gravity keeps on bringing me down. So much hatred, famine and wars. I don't want to go back anymore. Wanna share with the world the peace that I found. But gravity keeps on bring me down. Gravity.. Keeps bringing me down. Gravity.. Keeps bringing me down. Gravity.. Keeps bringing me down. Gravity.. Keeps bringing me down</p><p><strong>SEGMENT5</strong><br>[Verse 2: ]. If I can just fly away. From the negative energy that's strongest my faith. Get on a space ship, take a trip thru space. Go with me sight seeing thru the milky way. How did you make Pluto, Jupiter and Mars. Only you can make Venus, Neptune and Stars. And [?] makes me feel like I can just surf in gravity. Brings me way back down to Earth</p><p><strong>SEGMENT6</strong><br>[Chorus]</p><p><strong>SEGMENT7</strong><br>Yeah oh yeah oh yeah oh yeah ehhh</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

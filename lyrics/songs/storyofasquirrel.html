@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Story of a Squirrel - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Story of a Squirrel - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Story of a Squirrel</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This is the story of a squirrel. Whom God preserved when He drowned the whole world. And while things looked so dark and Noah's ark was absolutely flooded. Yet she's fine. How many days were they there?. Afloat in the boat it was over one year. And how come the world didn't prepare?. Meteorologists said it would clear. How could they stand that raining?. Where was the hope in the souls of the crew?. Life on the waves is severe when it's Gilligan's Island combined with a zoo. But Noah was aware the world would get sprayed. And the rain would never fall in quite the same way. But two of every creature would come out of things O.K. This is the story of a squirrel. Whom God preserved when He drowned the whole world. And while things looked so bad and Noah's raft was absolutely flooded. Yet she's fine. Have they discovered the place. Where the boat came to rest when the rain was all drained?. Why don't we climb up its face?. Walk up the mountain from Genesis 8?. It's probably still there waiting there in the snow in the cold altitude. How do we get there today when you walk into Turkey and hiking's refused?. They've closed up the Ararat Mountains these days. There's terrorists there besides -- it ain't safe. And they're 17,000 feet high -- I think we'll wait. This is the story of a squirrel. Whom God preserved when He drowned the whole world. And while she took no bath and those giraffes were absolutely stubborn. Yet she's fine. Well, you're told to prepare as well and get saved. And the end of the world it might be on the way. But you'd never think you'd run out of time today. This is the story of a squirrel. Whom God preserved when He drowned the whole world. And when we look close at Jehovah's wrath I absolutely shudder. This is the story of a squirrel -- I tried to sing it about the old girl. But all this went so fast -- I've noticed that I accidentally snubbed her. Yet she's fine -- Yes, she's fine</p><p><strong>SEGMENT2</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

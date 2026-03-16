@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Go There With You - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Go There With You - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Go There With You</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I know you've heard me say these words before. But every time I say I love you the words mean something more. I spoke them as a promise right from the start. I said death would be the only thing that could tear us apart. So now that you are standing on the edge of the unknown. I love you means I'll be with you wherever you must go</p><p><strong>SEGMENT2</strong><br>I will take a heart whose nature is to beat for me alone. And fill it up with you make all your joy and pain my own. No matter how deep a valley you go through. I will go there with you. I will give myself to love the way Love gave itself for me. And climb with you to mountaintops or swim a raging sea. To the place where one heart is made from two. I will go there with you</p><p><strong>SEGMENT3</strong><br>I see it in your tears you wonder where you are. The wind is growing colder and the sky is growing dark. Though it's something neither of us understands. We can walk through this together if we hold each other's hand. I said for better or for worse I'd be with you. So no matter where you're going I will go there too</p><p><strong>SEGMENT4</strong><br>I will take a heart whose nature is to beat for me alone. And fill it up with you make all your joy and pain my own. No matter how deep a valley you go through. I will go there with you. I will give myself to love the way Love gave itself for me. And climb with you to mountaintops or swim a raging sea. To the place where one heart is made from two. I will go there with you</p><p><strong>SEGMENT5</strong><br>I know sometimes I let you down. But I won't let you go we'll always be together. I will take a heart whose nature is to beat for me alone. And fill it up with you make all your joy and pain my own. No matter how deep a valley you go through. I will go there with you. I will give myself to love the way Love gave itself for me. And climb with you to mountaintops or swim a raging sea. To the place where one heart is made from two. I will go there with you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

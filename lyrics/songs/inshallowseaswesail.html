@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for In Shallow Seas We Sail - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>In Shallow Seas We Sail - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>In Shallow Seas We Sail</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I got eyes in the back of my head and I see where you're going with this. I'm not surprised. You take me for a fool. Maybe you're right. If I was wiser I would not have let myself come here tonight.</p><p><strong>SEGMENT2</strong><br>You sold your soul, You never learn. Here I am watching the summer fading. (The summer we shared fades away with the winter). Your hands were warm on my face. Now their crashing away. (Your hands were cold now..). Slowly pushing me away. Pushing me away. (Slower than icy veins (?) pushing me away)</p><p><strong>SEGMENT3</strong><br>I knew it (I knew it) right from the start. I got this big, big hole in my heart. I wanted (I wanted) to put you in. But for some reason you just wouldn't fit. You just wouldn't fit.</p><p><strong>SEGMENT4</strong><br>You sold your soul, You never learn. Here I am watching the summer fading. (The summer we shared fades away with the winter). Your hands were warm on my face. Now their crashing away. (Your hands were cold now..). Slowly pushing me away. Pushing me away. (Slower than icy veins (?) pushing me away). Pushing me away.</p><p><strong>SEGMENT5</strong><br>Lust kept giving men so many regrets. Just this once is what we tell ourselves.</p><p><strong>SEGMENT6</strong><br>Oh, oh, oh, oh, oh. Oh, oh, oh, oh, oh.</p><p><strong>SEGMENT7</strong><br>Ships don't sink if they have wind in their sails. But if the wind fails, is there hope for me? (I guess your love..). I thought your love was safe. The promise you made..(wasn't so safe, the promise you made..)</p><p><strong>SEGMENT8</strong><br>Now I am drowning in your shallow sea; I swim. (you are the storm, the wind and the waves. you break me in two and toss me away)</p><p><strong>SEGMENT9</strong><br>You are the waves that toss me in. (I fell apart when I fell for you)</p><p><strong>SEGMENT10</strong><br>How can I float above the water that fills my lungs?. (you are the water filing my lungs, killing me softly without a word)</p><p><strong>SEGMENT11</strong><br>Killing me softly without a word. (Without a word..)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

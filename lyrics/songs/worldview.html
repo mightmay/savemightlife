@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for World View - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>World View - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>World View</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Yea, its a lot of suffering going on in this world. A lot more than what we see in America. I think its just healthy to be aware. So I want to take you with me. As we travel the globe. And see the problems and see the pain. And see our only hope. Is through Jesus Christ. To redeem our world, lets go</p><p><strong>SEGMENT2</strong><br>See its more suffering in the world. Than we see on the streets. Open your eyes step away from MTV. See into CNN and see in the Middle East. Places like Iraq, Iran, the UAE. See the murder. The rape. Religions. The pain. The terror. The poverty diseases in the veins. See our desperate need for change as we travel the globe. And see our only hope is Jesus grabbing a soul. Look at Africa actually one of the places. Where 24 million people living with AIDS is. Where rape is half of the women experience violence. Orphans guerilla warfare break the silence. Vulnerable African children go hungry. While we in the states we waste money. 12 years olds traded for sex. We need Jesus what type of suffering is next. Even Europe has problems. Think a place like Greece. Where they smuggle Cannabis and heroin from the Middle East. The assaults the car theft and drug offenses. Illicit drugs and rape exist. Though they can never rate with the USA. We number 1 on the list for most criminal cases. Though we living in the free land and free to vote. But yet we still slaves to sin?. Welcome to I-N-D-I-A. Where 63 out of a thousand children die before the age of 5. 5.1 million people with AIDS alive. Mad pollution in the Asian sky. Millions of children live and they work and on the streets. One of the poorest countries that this world will ever see. And 10 million babies died from abortions in two decades. Thats more of a reason for you to get saved. Look at China and see the way they treat the females. They drown them and poison them. I give you the details. It overwhelms me the magnitude of they sinning. When over 60 million babies never grow to be women. Violent crimes on the rise prostitution is rising. Drug addition plus they persecuting they Christians. The most populated country with 3 billion people. Needs to look up so they can see the point like a steeple. In Israel. Terrorism is real. Cant imagine the amounts of blood that gets spilled. Many people displaced from the bombs dropping. Judaism Christianity Islams doctrine. Civil war taking place in the Holy land. While peoples homes getting crushed like a soda can. As the children sit and watch the crossfire. Other countries plead for peace to cease fire. Jamaica Wah Gwan. I guess I get to tell. 15 percent of the people have sickle cell. In this third world where gang violence is. Its prevalent, its evident all the Godlessness. The drug traffic ganja and cocaine. With so much cocaine you can skid on a slope main. But when Jesus Christ died recognize that hope came. So fight the sex trade and racism for sho main. See in Cuba people submerged in repression in fear. From 48 years Fiedel Castro is their Prime Minister Counsel of ministers. Also referred to as Premier. Prostitution is high and the crime is too. Cant express your ideas like you and I can do. In America democracy is what were use to. But Im just trying to remind you thats it. See its more suffering in the world than we see on the streets. Open your eyes step away from MTV. Sin to sin in the sea in the Middle East. Places like Iraq, Iran, the UAE. See the murder. The rape. Religions. The pain. The terror. The poverty diseases in the veins. See our desperate need for change as we travel the globe. And see our only hope is Jesus grabbing a soul</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

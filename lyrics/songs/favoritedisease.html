@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Favorite Disease - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Favorite Disease - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Favorite Disease</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Wanting, watching, debating, on which way to run to, Haunted, voices, craving, someone to run to</p><p><strong>SEGMENT2</strong><br>I haven't lost myself in a long time, I never tried to care when I wanted to, I just want to be part of something, I just want to be real like you</p><p><strong>SEGMENT3</strong><br>Sometimes, I feel like a monster, And times, I feel like a saint, I'm on my knees, you're my favorite disease,</p><p><strong>SEGMENT4</strong><br>Silent, warnings, tell me, that I've let things come undone, Show me, teach me, the way to heaven, 'cause no other way can</p><p><strong>SEGMENT5</strong><br>Pre Ch. I haven't lost myself in a long time, I never tried to care when I wanted to, I just wanted to be part of something, I just wanted be real like you</p><p><strong>SEGMENT6</strong><br>Sometimes, I feel like a monster, And times, I feel like a saint, I'm on my knees, you're my favorite disease,</p><p><strong>SEGMENT7</strong><br>Closer, closer, closer to You, I need to be closer, have closure, and get closer to You, Every step I take...</p><p><strong>SEGMENT8</strong><br>Sometimes, I feel like a monster, At times, I feel like a saint, I'm on my knees, you're my favorite disease, And I love the way you kill me, Love the way you heal me</p><p><strong>SEGMENT9</strong><br>Sometimes, I feel like a monster, At times, I feel like a saint, I'm on my knees, you're my favorite disease, I Love the way you kill me, Love the way you heal me. I love the way you kill me, Love the way you heal me. I love the way you kill me, Love the way you heal me. I love the way you kill me, Love the way you heal me. I love the way you kill me, Love the way you heal me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

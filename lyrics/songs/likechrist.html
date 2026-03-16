@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Like Christ - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Like Christ - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Like Christ</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. She's always dancin' like every little chance she gets. And little man can't wait to get his hands on the whip. They don't understand life nor the issue of sin. But they know the article and the issue that 50 was in. You should hear them spit little man is always tryin' to battle rap. I'm like follow me to the scriptures see where the battle's at. But you can't you're watching College Hill. I guess you drop your cup and let the knowledge spill. I'm lookin' for the convicted to see who's new on the team. And tired of doing what they do on the screen. In other words, tryin' to see the ones that Jesus drafted. No matter what round pick you were still engrafted. You ain't gotta walk miles for cheesecake to be down with the squad. Faith through grace will get you signed with God. So let Him hear you say "I wanna be like Christ". He'll change the person's life, after hearin' the sinner pray</p><p><strong>SEGMENT2</strong><br>[Verse Two]. Look at baby girl is cute as a baby doll. It's hard to reach her cause she's tuned into cable now. She's watchin' videos starin' at all of the boys. She's a sinner she doesn't know about Jesus' joy. Yet she knows about the clothes and the latest fashion. She should be on MTV news with the latest action. About what's goin' on lately in the industry. But she's clueless about Jesus' ministry. She doesn't know her and God are still enemies. Separated by nature now there's enmity. She's so silly you should see her dance. Only thing that I'm prayin' is that she sees her chance. To meet the One with the world in His hands. Personally as her Savior and start takin' a stand. Begin to advance and stop chasin' a man. I wanna be like Christ. Is what the Father is waitin' to hear the young lady sayin'</p><p><strong>SEGMENT3</strong><br>[Verse Three]. You can't claim to be a Laker rockin' white and red. See those are Rockets we headed with the righteous dead. That's a category mistake like a solo group. You can't take to the grave those Manolo boots. Advice to you look to His life and the blood that He shed. The sin price cost Him more than an arm and a leg. And we ain't preachin' wrap it up. You wouldn't have to deliver if you put the package up. Get it? Everybody is lookin' for somethin' to be like. But other somethings are nothing unless it be Christ. The Bible instructs us we sinners and can't see light. Our direction is left and sinners can't see right. I can't wait til we finish and get to see Christ. Mike is retired seek the Messiah I wanna be like Christ. That's the only person God wants us to be like</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

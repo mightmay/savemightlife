@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Tuesday's Child - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Tuesday's Child - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Tuesday's Child</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Just when I though I was strong. Another weak day comes along. And all my righteousness goes wrong. But I was doing so well. My dreams to be a Godly man. Seem out of reach of my own hand. But where I fall short His grace still stands. If I have faith like a child</p><p><strong>SEGMENT2</strong><br>And if Mondays child is fair of face. And Tuesdays child is full of grace. Then you can call me a Tuesdays child. Like Wednesdays child, Im full of woe. And Thursdays child Ive got far to go. But you can call me a Tuesdays child</p><p><strong>SEGMENT3</strong><br>Sounds too easy some might say. Theres a bigger price to pay. But when Jesus gave His life away. It was once and for all. So with more of His grace filling me. I more than ever want to be. Growing up in purity. With the faith of a child</p><p><strong>SEGMENT4</strong><br>And if Mondays child is fair of face. And Tuesdays child is full of grace. Then you can call me a Tuesdays child. Like Wednesdays child, Im full of woe. And Thursdays child Ive got far to go. But you can call me a Tuesdays child</p><p><strong>SEGMENT5</strong><br>Thats what I want to be. Full of His grace for me. Knowing hes all I need</p><p><strong>SEGMENT6</strong><br>And if Mondays child is fair of face. And Tuesdays child is full of grace. Then you can call me a Tuesdays child. Like Wednesdays child, Im full of woe. And Thursdays child Ive got far to go. But you can call me a Tuesdays child</p><p><strong>SEGMENT7</strong><br>Thats what I want to be. Full of His grace for me. Knowing hes all I need. And if Mondays child is fair of face</p><p><strong>SEGMENT8</strong><br>Sharing the grace he gives. Thats how I want to live. Free in His promises. I wan to be a Tuesdays child</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

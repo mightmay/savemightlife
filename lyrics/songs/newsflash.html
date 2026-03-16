@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for News Flash - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>News Flash - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>News Flash</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. This is a pop pill culture we willin' to try it. Anything from implantin' plastic to the Atkin's diet. We gone flap 'til we die like a fish from water. She's lost in her sin that's why you missin' your daughter. This ain't VH1 but here's a fabulous life. With them spikes in the whip picture them stabbin' the Christ. In a very vivid way I can imagine, the night. That's why I'm sparkin' the flames in the dark to flashin' the light. I must admit there are some ones that wanna be changed. But they're the ones callin' MTV so they can be made. But we're the ones callin' Jesus so they can be saved. Saved from what? Sins penalty, the wrath and the grave. We're so afraid to rep Christ we're so embarrassed. Jesus is God and He took many lashes. With a legion of angels could have beat the masses. So the least I can do is speak the truth in these glasses</p><p><strong>SEGMENT2</strong><br>[Chorus- X2]. News flash homie dawg I'm droppin' the dime. News flash homie I'm speakin' Jesus' mind. News flash homie I must mention the crime. I bring the bad news and the good news all at the same time</p><p><strong>SEGMENT3</strong><br>[Verse Two]. You can tell the size of a ship by the waves it leaves. Now who's name has been made into a figure of speech. Now who's death started over the beginning of time. A.C. actually in the beginning was God. And when it's all said and died in the ending is God. Since we sinners we need repentance we're defensive to God. Listen here's a sample but I'm not just blaze. We just blaze for Christ not just on stage. Walk with us Jesus but not Kanye's. The One that laid in the grave and raised in three days. Listen the term Christian dawg you might not like. But it's the definition that's in it and it is Christ like. So there it is we'd rather hear the cherubim's wings flap. Then some of these raps being rapped. Just like your rims still spin even after your car stops. Then where will you spend eternity after your heart stops</p><p><strong>SEGMENT4</strong><br>[Chorus- X2]. News flash homie dawg I'm droppin' the dime. News flash homie I'm speakin' Jesus' mind. News flash homie I must mention the crime. I bring the bad news and the good news all at the same time</p><p><strong>SEGMENT5</strong><br>[Verse Three]. These are God's words consider me doin' the ad libs. Tryin' to get behind your stomach just to see where your abs is. In other words tryin' to see who your dad is. It's the inner darkness in your heart like Knight like Gladys. Are you posted on them blocks like them St. Louis cabs is. Are you starin' at them rappers and you wishin' you had his. Cribs, and money and women and fashion. Did you see that Source cover and read it with sadness. Those same rappers that were drawn like magnets. To chasin' that stuff the same color as grass is. Might have to make that jailhouse they casket. And some will get out and continue to live backwards. But you want it cause it's so attractive. And ignore the One keepin' tabs on your track list. Dust to dust and ashes to ashes. I would ask for grace from Jesus' passion</p><p><strong>SEGMENT6</strong><br>[Chorus- X2]. News flash homie dawg I'm droppin' the dime. News flash homie I'm speakin' Jesus' mind. News flash homie I must mention the crime. I bring the bad news and the good news all at the same time.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

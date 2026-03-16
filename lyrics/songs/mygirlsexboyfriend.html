@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for My Girl's Ex-Boyfriend - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>My Girl's Ex-Boyfriend - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>My Girl's Ex-Boyfriend</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>When he was seeing her. He could see he had his doubts. And now he's missing her. Because you know shes missing out. And now its haunting him. Her memory's like a ghost. And he's so terrified. Cause no one else even comes close</p><p><strong>SEGMENT2</strong><br>He's the guy that you should feel sorry for. He had the world but he thought that he wanted more. I owe it all to the mistake he made back then. I owe it all to my girl's ex-boyfriend</p><p><strong>SEGMENT3</strong><br>So then along comes me. This undeserving mess (undeserving mess). Who would believe my life. Would be so blessed (life would be so blessed). Two years ago. When he left all that to debris (left all that to debris). Who would've known. He would leave everything I need</p><p><strong>SEGMENT4</strong><br>He's the guy that you should feel sorry for. He had the world but he thought that he wanted more. I owe it all to the mistake he made back then. I owe it all to my girl's ex-boyfriend</p><p><strong>SEGMENT5</strong><br>If it wasn't for him. I would still be searching. If it wasn't for him. I wouldn't know my best friend. If it wasn't for him. He would be able to see that. If it wasn't for him. He'd be as happy as me</p><p><strong>SEGMENT6</strong><br>When she and I settle down you can bet. That he is going to have to settle for less. He's someone I would hate to be. I got the girl and he's left with just the memory.</p><p><strong>SEGMENT7</strong><br>He's the guy that you should feel sorry for. He had the world but he thought that he wanted more. I owe it all to the mistake he made back then. I owe it all to my girl's ex-boyfriend</p><p><strong>SEGMENT8</strong><br>If it wasn't for him. I would still be searching. If it wasn't for him. I wouldn't know my best friend. If it wasn't for him. He would be able to see. If it wasn't for him. He'd be as happy as me</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

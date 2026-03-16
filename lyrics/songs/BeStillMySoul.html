@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Be Still, My Soul - นิ่งเถิดดวงใจ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Be Still, My Soul - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Be Still, My Soul</h2>
+        <h3>นิ่งเถิดดวงใจ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>นิ่งเถิดดวงใจ พระเจ้าอยู่ใกล้เคียงข้าง ต้องทรมานทนทุกข์อยู่นานเพียงไร  ไว้ใจพระเจ้าจัดเตรียมให้เราทุกอย่าง สิ่งใดเปลี่ยนแปลง อย่าได้ระแวงสงสัย  นิ่งเถิดดวงใจ ทรงเป็นสหายของเรา  แม้ทางเสี้ยนหนาม ยินดีเดินตามพระเจ้า</p><p><strong>VERSE2</strong><br>นิ่งเถิดดวงใจ พระเจ้าเป็นใหญ่คุ้มครอง ทรงนำภายหน้า เหมือนนำเวลาแต่ก่อน อย่าให้สิ่งใดทำให้ศรัทธาสั่นคลอน มืดมัวเดี๋ยวนี้ต้องมีสว่างภายหน้า  นิ่งเถิดดวงใจ คลื่นลมยังฟังบัญชา เหตุนี้ควรเราเชื่อฟังพระเจ้าดีกว่า</p><p><strong>VERSE3</strong><br>นิ่งเถิดดวงใจ เวลาล่วงไปไม่นาน เราไปอยู่ด้วยพระเยซูตลอดกาล หมดทุกข์เสียใจ ไม่ร้องไห้ แต่ชื่นบาน ลืมความเศร้าโศกลืมความวิโยคนานา  นิ่งเถิดดวงใจ น้ำตาไหลก็แห้งหาย ทุกคนรอดตาย พากันชื่นชมยินดี...</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Be still, my soul: the Lord is on thy side;  Bear patiently the cross of grief or pain;  Leave to thy God to order and provide;  In ev'ry change He faithful will remain.  Be still, my soul: thy best, thy heav'nly Friend  Thro' thorny ways leads to a joyful end.</p><p><strong>VERSE2</strong><br>Be still, my soul: thy God doth undertake  To guide the future as He has the past.  Thy hope, thy confidence let nothing shake;  All now mysterious shall be bright at last.  Be still, my soul: the waves and winds still know  His voice who ruled them while He dwelt below.</p><p><strong>VERSE3</strong><br>Be still, my soul: the hour is hastening on When we shall be forever with the Lord, When disappointment, grief, and fear are gone, Sorrow forgot, love's purest joys restored.  Be still, my soul: when change and tears are past  All safe and blessed we shall meet at last.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Drop of Lucifer - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Drop of Lucifer - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Drop of Lucifer</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Now that he's back in the atmosphere the drop of Lucifer is severe. He acts like somehow his worldwide reign. Reminds him of his diamond days. Till the return of the Way and the Truth. He's livin' like a king and he talks like it too. Tell me, are you sad you crossed the Son. Did you fake it so the millions may believe. Your light's not faded and that Heaven is overrated. Tell me, did you fall like a shooting star. One day you'll be burning in fire. I'm glad you missed me while you were booking your hotel down there. Now Christ came back with our soul salvation. Saving the day to your consternation. I checked out Romans, found He loves my soul. Reminds me that He's assumed control. Now that He's back and the coast is clear. I'm afraid that we might think of you as. A plain old angel you're scarier than that. Though I'm not afraid to die still the devil's pretty bad. But tell me, did your sin sweep you off your seat?. Did you make it through the gilded page to see your final fate in. Chapter 20 in Revelation. Tell me, did Jesus blow your mind?. Did you ever think He wanted to die?. I read your history while I was lookin' at 14:12 in Isaiah. I do imagine you love tryin' to deep fry Christians. You get them always slippin' up for you. Even when they know you're wrong. But you're no match for that verse 10:8,9 Romans. Find out from Revelation. You'll get yours later but you're never havin' me. But tell me, did your sin sweep you off your seat?. Did you finally get the chance to glance at all the Bible says?. Will happen to you anyway. Tell me, are you sad you crossed the Son. Did you finally face the fact you'll stand alone in latter days. Get paid back for your filthy ways. Tell me, did you fall like a shooting star. One day now the serpent gets squashed. In Romans 16 verse 20 lookee for yourself. And did you finally get the chance to check Ezekiel 28. And did you fall like a shooting star, fall like a shooting star. And now you're only booking your hotel down there</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

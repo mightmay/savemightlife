@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Whoop Whoop - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Whoop Whoop - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Whoop Whoop</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Chorus. Here we go like (whoop whoop). Break it down like (whoop whoop). Now everybody like (whoop whoop). Come on y'all like (whoop whoop). Here we go like (whoop whoop). Break it down like (whoop whoop). Now everybody like (whoop whoop). Come on y'all like (whoop whoop)</p><p><strong>SEGMENT2</strong><br>Oh no he's back again. doncha know here I go and I'm rappin in. in the studio in the lab again. the one mic one flow one pad and pen. fo' one mo'  just stack em in. one show let's roll let's pack em in. yeah y'all know when we comin in. we blow every mind when we telling it. and we chose every rhyme that we send in this. so folks recognize that we born again. and realize he died so you can live again. it'll crack the skies and then come again. alright lets ride start bouncin in. we can go all night it don't have to end. now it ain't tired we just started man. so get up high holler back if ya hear me yeah come on</p><p><strong>SEGMENT3</strong><br>Chorus</p><p><strong>SEGMENT4</strong><br>Now everybody from front to back. if ya just can't get enough of that. and ya feel the bump and your lovin that. to get em up turn it up and just bump the track cause. that's the way that we runnin that. and all day every day we gotta come with that. all truth no lies it's none of that. Just for you every time just turn and ask. so understand that's why when we bust the track. every time any line any kind of rap. from a kind of guy to a type of cat. you gonna find every rhyme on compact. that is just Christ nothing less than that. and just every time I be runnin that. so that's why I'm always bumpin that. so get a fist real high and start pumpin that come on</p><p><strong>SEGMENT5</strong><br>Chorus</p><p><strong>SEGMENT6</strong><br>Come on now everybody</p><p><strong>SEGMENT7</strong><br>Chorus x2</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

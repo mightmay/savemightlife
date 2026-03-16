@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Crown Him with Many Crowns - .ขอจงถวายมงกุฏแด่พระคริสต์ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Crown Him with Many Crowns - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Crown Him with Many Crowns</h2>
+        <h3>.ขอจงถวายมงกุฏแด่พระคริสต์</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ขอจงถวายมงกุฎ แด่พระคริสต์บนบัลลังก์ ฟังเสียงดนตรีแห่งเมืองสวรรค์ บรรเลงไพเราะเสียงดัง จิตเอ๋ยจงตื่นขึ้นเถิด สรรเสริญพระองค์ยิ่งใหญ่ สรรเสริญพระผู้ประเสริฐล้ำเลิศ ตลอดกาลนานสืบไป</p><p><strong>VERSE2</strong><br>สรรเสริญพระผู้ทรงรัก จงดูพระหัตถ์สีข้าง รอยแผลเช่นนี้ชาวฟ้ารู้จัก จึงร้องสรรเสริญไม่ว่าง เหล่าทูตสวรรค์เบื้องบน ยกย่องสรรเสริญพระเจ้า เมื่อเห็นความรักทนทุกข์เหลือล้น เห็นอัศจรรย์เหลือเล่า</p><p><strong>VERSE3</strong><br>พระองค์ยิ่งใหญ่สูงสุด อำนาจฤทธิ์เดชอนันต์ พระเจ้าประทานพระวิญญาณมา แต่เบื้องบนฟ้าสวรรค์ พระคริสต์ทรงไถ่มนุษย์ ชาวชนสรรเสริญทั่วกัน จงกราบนอบน้อมพระเจ้าเบื้องฟ้า ตลอดเป็นนิจนิรันดร์ อาเมน.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Crown Him with many crowns,  The Lamb upon His throne. Hark! How the heav'nly anthem drowns  All music but its own  Awake, my soul, and sing  Of Him who died for thee, And hail Him as thy matchless King  Through all eternity</p><p><strong>VERSE2</strong><br>Crown Him the Lord of love, behold His hands and side, Those wounds, yet visible above, in beauty glorified. No angel in the sky can fully bear that sight, But downward bends his burning eye at mysteries so bright.</p><p><strong>VERSE3</strong><br>Crown Him the Lord of Heaven, enthroned in worlds above, Crown Him the King to Whom is giv'n  The wondrous name of love. Crown Him with many crowns,  As thrones before Him fall. Crown Him, ye kings, with many crowns  For He is King of all.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

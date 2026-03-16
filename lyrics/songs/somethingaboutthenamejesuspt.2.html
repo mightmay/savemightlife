@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Something About The Name Jesus Pt. 2 - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Something About The Name Jesus Pt. 2 - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Something About The Name Jesus Pt. 2</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[chorus:] Its something about the name Jesus . Something about the name Jesus . Something about the name jesus. . It is the sweetest name I know . Oh how I love the name Jesus, Oh how I love the name Jesus . It is the sweetest name I know.</p><p><strong>SEGMENT2</strong><br>Some people say I'm crazy but,(God ew ooh) I can't explain the power that I feel when I call your name ( when I call your name) said it's just like fire shut-up in my bones. The holy ghost is moving (yes it is) and just won't leave me alone. There's something yeah yeah yeah</p><p><strong>SEGMENT3</strong><br>[chorus ]</p><p><strong>SEGMENT4</strong><br>Said it's sweeter than honey(locked in) from the honeycomb. (I feel em) I can fell the holy ghost moving and it won't leave won't leave me alone (no, no, no, no, no, nooo) at the name of Jesus (ooohhh) every knee has got to bow (got to bow) so you don't have to wait till the fire comes you can call on him shout praise him do it right now.</p><p><strong>SEGMENT5</strong><br>. [chorus:] Something about the name Jesus, something about the name Jesus. It is the sweetest name I know Oh how I love the name Jesus , Oh how I love the name Jesus. It is the sweetest name I know, I know, I know, I knoooowwwwww</p><p><strong>SEGMENT6</strong><br>[repeat chorus ]</p><p><strong>SEGMENT7</strong><br>It is the sweetest name I knooooowwwwwww . [repeat 5 times ]</p><p><strong>SEGMENT8</strong><br>[Break it up ]</p><p><strong>SEGMENT9</strong><br>Oh I love the name Jesus (Jesus) . oh (oh) . oh (oh) . Jesus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

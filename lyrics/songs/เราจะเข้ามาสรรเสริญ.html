@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I will enter His gates - เราจะเข้ามาสรรเสริญ - เยีย อ๋อย เปียะ เฒี้ยว เญย เปย๊า. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I will enter His gates - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I will enter His gates</h2>
+        <h3>เราจะเข้ามาสรรเสริญ</h3>
+        <h3>เยีย อ๋อย เปียะ เฒี้ยว เญย เปย๊า</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p><strong>VERSE1</strong><br>เยีย อ๋อย เปียะ เฒี้ยว เญย เปย๊า, เหว่ย อ๋อย ป๋าว  ฑูง เธง เหฌียว เฒี้ยว เยีย เปียะ ต้าย หล่ง เฮญี้ยว เธง เฒี้ยว ทิน-ฮู่ง.</p><p><strong>VERSE2</strong><br>เยีย อ๋อย ก๊อง น้าย นอม ฮนอย เซ เฒี้ยว เหธย ต้าย เหว่ย ปุน บัว. เยีย เก้ง อะเฮน้ย เหว่ย เฒี้ยว ปุน บัว  เฌียน-โย่ว.</p><p><strong>CHORUS</strong><br>*เฒี้ยว ปุน เยีย เฌียน-โย่ว. เฒี้ยว ปุน เม่ย  เฌียน-โย่ว. ล่ม ฑ่อย อะเฮน้ย เซ เหว่ย ม่าย เฒียน เฌียน-โย่ว.   (ป๋าว อี หฑุ่น)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เราจะเข้ามาสรรเสริญ ด้วยใจโมทนาพระคุณ เราจะเข้ามาด้วยการร้องเพลง</p><p><strong>VERSE2</strong><br>เราจะร้องวันนี้เป็นวัน ที่พระเจ้าทรงสร้าง ให้เราเปรมปรีดิ์และยินดีในพระองค์</p><p><strong>CHORUS</strong><br>จงชื่นชมยินดี จงชื่นชมยินดี ให้เราเปรมปรีดิ์ และยินดีในพระองค์</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>I will enter His gates. With thanksgiving in my heart. I will enter His courts with praise.</p><p><strong>VERSE2</strong><br>I will say this is the day, that the Lord has made. I will rejoice for He has made me glad.</p><p><strong>CHORUS</strong><br>He has made me glad, He has made me glad. I will rejoice for He has made me glad.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p><strong>VERSE1</strong><br>D G D G A A7</p><p><strong>VERSE2</strong><br>D G D Bm G Em A D</p><p><strong>CHORUS</strong><br>G D G Em A7 D</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

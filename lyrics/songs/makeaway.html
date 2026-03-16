@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Make a Way - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Make a Way - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Make a Way</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>She was only 17. Wild at heart and following her dreams. Believing she was pretty. Got a ticket to the city. Where she'd find her place on the cover of a magazine</p><p><strong>SEGMENT2</strong><br>It was only a chat room, but it would lead the way. To the door of a man where she'd throw it all away. He said they'd take it slow. But little did she know. She'd be all used up by the end of the day</p><p><strong>SEGMENT3</strong><br>But she was strong. And she would survive. Ambition would be her drive. And she said..</p><p><strong>SEGMENT4</strong><br>I'll make a way. I'll do whatever it takes. Even though it won't be easy. I have a plan and though I may not understand. Someday, I'll make a way</p><p><strong>SEGMENT5</strong><br>Where did she go wrong, how did she get here?. Livin' hard and looking older than her years. Miss Little Big Town. Trying to hold a job down. Doing what she could to choke her fears</p><p><strong>SEGMENT6</strong><br>But she was strong. And she would survive. A spark of hope had kept her dream alive. And she cried..</p><p><strong>SEGMENT7</strong><br>I'll make a way. I'll do whatever it takes. Even though it won't be easy. I have a plan and though I may not understand. Someday, I'll make a way. Someday, I'll make a way</p><p><strong>SEGMENT8</strong><br>Walking down the road. In the city where she'd come with so much hope. Her vision had long died. Along with all her pride. And she found herself at the end of her rope</p><p><strong>SEGMENT9</strong><br>But she heard angels through the door. Of a church she'd passed a million times before. There was a song of heaven ringing. And soon she found herself believing. That out there maybe there was something more</p><p><strong>SEGMENT10</strong><br>So she bowed her head to pray. And said, Jesus, please make a way</p><p><strong>SEGMENT11</strong><br>And she heard Him say..</p><p><strong>SEGMENT12</strong><br>I'll make a way. I'll do whatever it takes. Even though it won't be easy. I have a plan and though you may not understand. Today, I'll make a way</p><p><strong>SEGMENT13</strong><br>Hallelujah, hallelujah. Hallelujah. Today He'll make a way</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jefferson Aero Plane - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jefferson Aero Plane - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jefferson Aero Plane</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>if it hurts, kiss it better. you wear skirts, i write nice letters. never said nothing with flowers. though we always talked for hours. and it seems to get much colder. when you cry on your own shoulder. and we know the show. must go on. guess i know. i guess i'll throw on</p><p><strong>SEGMENT2</strong><br>some jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows. jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows</p><p><strong>SEGMENT3</strong><br>cause when it's colder. i feel much better. when i cry on my own shoulder. i'll just throw on a sweater and go</p><p><strong>SEGMENT4</strong><br>and i'll go to undergo a change of heart, a change of clothes. and when i'm home, i think i'll go eat cereal and stare out the window</p><p><strong>SEGMENT5</strong><br>i'll make the calls. you cover your ears. niagra falls. still flows on new year's. i will save. your plunging neck-line. kiss your face. you try to deck mine. if i behave it's going to cost him. stop the rave in downtown boston. and we know the show. must go on. guess i know. i guess i'll throw on</p><p><strong>SEGMENT6</strong><br>some jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows. jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows</p><p><strong>SEGMENT7</strong><br>cause when it's colder. i feel much better. when i cry on my own shoulder. i'll just throw on a sweater and go</p><p><strong>SEGMENT8</strong><br>and i'll go to undergo a surgery to purge me of this lonely mood. and my ego, the status quo, provides me with a decent attitude. and i'll go to undergo a change of heart, a change of clothes. and when i'm home, i'll think i'll go eat cereal and stare out the window</p><p><strong>SEGMENT9</strong><br>cause you confused me more than anyone. an adjustment has begun. to let me feel the desperate need to leave what we undid undone. and maybe you could sympathize. with the bags under my eyes. and we'll see the signs are saying that we have used up all our (tries). try to be a better person. to be a better friend. to be a better son</p><p><strong>SEGMENT10</strong><br>he tries to be a better someone. that understands the difference. and that he can't show all the people all the things that really mean as much as he could (feel). feels like i don't remember. ever being this tired (before). before now my eyes were closed to all of the beauty in this world</p><p><strong>SEGMENT11</strong><br>jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows. jefferson airplane. i'm trapped and i am enclosed. but i won't complain. i'll open all the windows</p><p><strong>SEGMENT12</strong><br>cause when it's colder. i feel much better. when i cry on my own shoulder. i'll just throw on a sweater and go</p><p><strong>SEGMENT13</strong><br>and i'll go to undergo a surgery to purge me of this lonely mood. and my ego, the status quo, provides me with a decent attitude. and i'll go to undergo a change of heart, a change of clothes. and i'll go, oh yes, i'll go and hope the new me shows so everybody knows. that i've found myself able to fly away without magic feathers or jefferson aero planes. i've got with me all that i need</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

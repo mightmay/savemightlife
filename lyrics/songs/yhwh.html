@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Yhwh - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Yhwh - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Yhwh</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>One man, with the sheep he was found. I said, one man, saw a bush on the mount. He said, "How come it's not burnt to the ground?. "Guess I need to see what's happening!". One man in a place long ago. I said, one man, who for short we'll call, "Mo". He went up there, and the Lord he did find. And he learned God's name for all time. He spelled His name with just YHWH. He spelled His name with just YHWH. They have Exodus 3 -- if you plan to read more. You can learn all about the Lord. He spelled His name with just YHWH. He spelled His name with just YHWH. Can you guess what it means. Just "I am that I am". He's the Lord God of Abraham. Some men spell it L-O-R-D. I said, some men use a J and a V. I said, hey man, ain't no big deal to me. But you've got to know just one thing: No man should take God's name in vain. Cause He commands us to honor His name. He's our Father, Lord and YHWH. All those names work well when you pray. He spelled His name with just YHWH. He spelled His name with just YHWH. They have Exodus 3 -- if you plan to read more. You can learn all about the Lord. He spelled His name with just YHWH. He spelled His name with just YHWH. Can you guess what it means. Just "I am that I am". He's the Lord God of Abraham. Back then, with the ancient Hebrews. They did not have a, e, i, os or u's. And so Moses had no vowels he could buy. Wheel of Fortune shows were so dry. That's why sometimes there when you read. You'll find capitalized letters L-O-R-D. There's a place there for the YHWH. You can just pronounce it Yahweh. He spelled His name with just YHWH. He spelled His name with just YHWH. They have Exodus 3 -- if you plan to read more. You can learn all about the Lord. He spelled His name with just YHWH. YHWH -- the Tetragrammaton  YHWH. Yahweh, Yahweh  it's a name of renown. Yahweh, Yahweh  its a most awesome sound. YHWH  the highest one is  YHWH. No man, no man, should take Gods name in vain. Cause He commands us to honor His name. YHWH  so just go to Him</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

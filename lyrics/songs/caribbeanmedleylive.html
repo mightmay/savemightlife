@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Caribbean Medley [Live] - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Caribbean Medley [Live] - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Caribbean Medley [Live]</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Well we gon' sing us some Jamaican songs. But if we sing them, You've got to get out of those seats. And dance like you're really from Jamaica. Or your parents are from Jamaica. Parent's parents are from Jamaica. But I want you to be true to who you are</p><p><strong>SEGMENT2</strong><br>Chorus: I've got my mind made up. And I won't turn back. Because I want to see my Jesus someday. I've got my mind made up. And I won't turn back. Because I want to see my Jesus someday. (Repeat 2x)</p><p><strong>SEGMENT3</strong><br>They say this goodbye world. I stay no longer with you. Goodbye pleasures of sin. I stay no longer with you. I've made up my mind to go that way the rest of my life. I've made up my mind to go that way the rest of my life. (repeat 2x)</p><p><strong>SEGMENT4</strong><br>They say born born born again. Thank God I'm born again. Everybody say born born born again. Thank God i'm born again. Try it again say born born born again. Thank God i'm born again. Let me hear you say it now. Born born born again. Thank God i'm born again</p><p><strong>SEGMENT5</strong><br>They used to say. Born of the water spirit and the Lord. Thank God I'm born again. Just say it now. Born of the water spirit and the Lord. Thank God I'm born again. Sat it again say it. Born of the water spirit and the Lord. Thank God I'm born again. Yes I am yes I am. Born of the water spirit and the Lord. Thank God I'm born again</p><p><strong>SEGMENT6</strong><br>(Chorus)</p><p><strong>SEGMENT7</strong><br>They say I am under the rock. The rock is higher than I. Jahova hide me I am under the rock. Go tell my enemies. I am under the rock. Jahova hide me I am under the rock</p><p><strong>SEGMENT8</strong><br>Say Jesus name's so sweet. Emanuel name's so sweet. Say now Jesus name's so sweet. Emanuel name's so sweet. Jesus name's so sweet. Emanuel name's so sweet. Jesus name's so sweet. Emanuel name's so sweet</p><p><strong>SEGMENT9</strong><br>Every rock me rock upon Jesus. Jesus name's so sweet. Say every rock me rock upon Jesus. Jesus name's so sweet. Every rock me rock upon Jesus. Jesus name's so sweet</p><p><strong>SEGMENT10</strong><br>(Chorus)</p><p><strong>SEGMENT11</strong><br>We say it like this we say. Oh I want to see him, look upon his face. There to sing forever, of his saving grace. On those streets of glory, let me lift my voice. All my cares have past, home at last, ever to rejoyce. (repeat2x)</p><p><strong>SEGMENT12</strong><br>(Repeat Chorus 2x)</p><p><strong>SEGMENT13</strong><br>Fire fire fire fire fall on me. Fire fire fire fire fall on me. Just like on the day of Penticus the fire fall on me. On the day od Penticus the fire fall on me. (repeat until fade).</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

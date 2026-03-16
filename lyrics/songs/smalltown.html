@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Small Town - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Small Town - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Small Town</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I heard a place not too far from here, is handing out answers about why we are here. and it's a small town, in a small world, and the congregation's small too, but somehow I think they're telling the truth;. and in the same small town there is a girl, she's a good looker but she's mad at the world, and she's wonderin' about tomorrow and why she's here, and she's sick and tired of using her sleeve to wipe her tears,</p><p><strong>SEGMENT2</strong><br>And you can tell by the look that's in her eyes that she's not well, she wishes someone would close their eyes, and picture this for just a moment to themselves;</p><p><strong>SEGMENT3</strong><br>At least that's what they say, at least that's what they, that's what they say, that's what they say, at least that's what they say;</p><p><strong>SEGMENT4</strong><br>She sits alone, she's a re-run queen, the sun shines through her window enough to make out her figurine;. Her neighbours look at her strange, 'cause she's lived there her whole life, and they still don't know her name;. She likes to keep to herself, 'cause she can't find nobody else;</p><p><strong>SEGMENT5</strong><br>Yeah, yeah, What they say, what they say, what they say, what they say, and I don't care, what they say, what they say, what they say, what they say, and I don't care;</p><p><strong>SEGMENT6</strong><br>She wanders through the town, to find this place she's heard about, thinking maybe they can figure out what's wrong, they greet her with a smile, say they've been waiting for quite some while, just to let her know she's worth more than she's ever dreamed of, And her heart opens wide, and for the first time in her life, she feels the touch of JESUS deep inside, she wonders what went wrong, in a town where nothing's going on, and thinks of all the others that she knows;. And she said, and she said, and she said, and she said...</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

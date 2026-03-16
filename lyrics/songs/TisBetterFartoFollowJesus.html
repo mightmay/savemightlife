@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for ‘Tis Better Far to Follow Jesus - ข้าฯขอติดตามพระเยซูดีกว่า - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>‘Tis Better Far to Follow Jesus - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>‘Tis Better Far to Follow Jesus</h2>
+        <h3>ข้าฯขอติดตามพระเยซูดีกว่า</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ข้าฯขอติดตามพระเยซูดีกว่า  ไม่ว่านำทางไหนข้าฯจะตาม  โลกนี้มีความสุขซึ่งอาจสูญได้  แต่ข้าฯกระหายสิ่งซึ่งไม่ตาย  พระเจ้าสร้างเราเพื่อเกียรติพระองค์เอง  และทรงยินดีไม่มีเสื่อมคลาย  ติดตามพระเยซูชื่นชูดวงใจ  เพราะว่าทรงทำให้ข้าอิ่มใจ</p><p><strong>VERSE2</strong><br>มาตรแม้นขวากหนามมีอยู่ในทางเดิน  หรือต้องเผชิญทุกข์โศกมืดมัว  ข้าฯไม่กลัวเพราะพระองค์อยู่เคียงข้าง   นำไปถึงปลายทางโดยปลอดภัย  ทรงทนอับอายขายหน้าเพื่อตัวข้าฯ   ยอมพลีโลหิตไถ่ข้าฯจนตาย  ชื่นใจเพราะว่าข้าฯได้ร่วมลำบาก   เหนื่อยยากเพียงไรพระองค์อยู่ใกล้</p><p><strong>VERSE3</strong><br>ข้าฯตามพระเยซูด้วยความเต็มใจ ทุกข์ร้อนเพียงไหนข้าฯก็ไม่กลัว มืดมัวปวดร้าวดวงใจก็ยอมทน เพราะว่าเหล่าทูตสวรรค์ปลอบโยน แม้ว่าจะขมจะขื่นข้าฯกลืนได้ เพราะว่าภายหลังกลายเป็นชมชื่น จะทนความทุกข์ความเจ็บแม้ความตาย ไม่ช้าข้าฯไปสวรรค์สบาย...</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>'Tis better far to follow Jesus  No matter where His hand may lead;  Than with the world's vain fleeting pleasures Our souls’ immortal longings feed; For He has made us for His glory  And His are joys that never die;  'Tis sweeter far to follow Jesus,  For He alone can satisfy.</p><p><strong>VERSE2</strong><br>What matter if  the way be thorny,  Or if dark waves of sorrow roll? Beside me walks my loving Saviour And I shall safely reach the goal; For me He bore the thorns and scoffing, It was for me He bled and died;  'Tis sweet that I may share His sorrow And walk forever at His side.</p><p><strong>VERSE3</strong><br>What matter if I stand at Calvery And lay my life down for the lost?  'Twas only what He did before me, I’ll follow Him at any cost;  Then from the pain,and shame and dying, In glorious power I’ll rise again To share the glory of His kingdom And evermore with Jesus reign</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

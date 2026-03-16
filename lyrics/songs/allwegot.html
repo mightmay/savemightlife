@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for All We Got - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>All We Got - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>All We Got</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>CHORUS: [x2]. All We Got Is A Rock An' A Roll. The Only Way That I Know How To Get Home. All We Need Is Four Wheels An' A Road. Now Turn It Up Slow Till Your Speakers Explode</p><p><strong>SEGMENT2</strong><br>And Blow A Hole In The Wall. Are You Ready To Ball?. Are Really Ready To Rock Or Ready To Fall?. This Is A Call Going Out From The Ends Of The Earth. From New Zealand To Manila From New York To Perth. This Is The Sound Of The Underground Out Of The Dark. The Sound Of A Redeemed Soul Who's Spilling His Heart. Spilling It Through Rhythm And Rhyme. Every Time I Flip An Inspired Rhyme Without Even Trying. I'm Prophesying, Speaking The Truth. To Every Man Woman And Child Geriatric And Youth. And When I Step In The Booth Best Prepare For The Wolf. Because I'll Huff And I'll Puff And I'll Blow Off The Roof. And I Don't Know What You Know What Ya Heard Of My Flow. Still The Realest Thing Running The Realest Thing That I Know. Still Trotting The Globe The Road Leading To Home. The Road Leading To Freedom When My Soul Will Be Home</p><p><strong>SEGMENT3</strong><br>CHORUS [x2]</p><p><strong>SEGMENT4</strong><br>Boom Like A Boom Box Banging Down The Block. Like Old School Hip Hop Getting Sampled An' Chopped. And As They Pop And They Lock. To The Boom And The Bap. The Music's So Soothing. It's Moving From The Front To The Back Of The Room. Singing Out Of Tune It Doesn't Matter. Just Bring Your Friends To The Dance Floor. Man It's Mind Over Matter. No Matter If You Can Dance. Or Just Clap Ya Hands. This Is The Chance Ma Man Why Don't You Pull Up Your Pants An'. This Is The Moment Of Truth The Moment Of Proof. The Moment You Own It Before Your Moment Goes Poof. Before The Dreams Are Gone And You Back All Alone. In Your Bedroom On Your Bed Singing Into A Comb</p><p><strong>SEGMENT5</strong><br>CHORUS [x2]</p><p><strong>SEGMENT6</strong><br>BRIDGE: [x2]. This Ain't What You Know, Same Flow No. You Never Know What's Coming Next No No. You Think You've Heard Of It But No You Haven't Though. Turn It Up Slow Til Your Ears Explode</p><p><strong>SEGMENT7</strong><br>CHORUS [x3]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

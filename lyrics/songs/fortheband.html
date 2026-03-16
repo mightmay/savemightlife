@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for For The Band - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>For The Band - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>For The Band</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Now for the question. That just won't go away. "So what are we. Gonna do today?". 'Cause it seems like. For the last four years. We've had far much. Less of a say. I know I always come out. Like a pessimist. But there is always something else. That's leading up to this. Chris used to come. To all the local shows. Back when the days were simpler. Do you remember?</p><p><strong>SEGMENT2</strong><br>[Chorus]. Those days are gone but Chris is not. And now he's got pink hair. And in fact along with that. He's developed a severe disliking for. For the band, for the band, for the band, for the band. And I don't like, how it seems like, Anything and everything is always. For the band</p><p><strong>SEGMENT3</strong><br>So don't think I'm going to. Sit and complain. When there's so many. Good things left to say. But watch closely. As I refrain. From forgetting who I am along the way</p><p><strong>SEGMENT4</strong><br>[Chorus]. Those days are gone but Chris is not. And now he's got pink hair. And in fact along with that. He's developed a severe disliking for. For the band, for the band, for the band, for the band. And I don't like, how it seems like, Anything and everything is always. For the band</p><p><strong>SEGMENT5</strong><br>She sat me down and said to me. I think you've misplaced your identity. 'Cause what you do isn't all of who. You really are</p><p><strong>SEGMENT6</strong><br>'Cause everyday is just the same to me. We're playing sloppily. And singing out of key. 'Cause everyday is just the same to me. We're playing sloppily. We're singing out of key</p><p><strong>SEGMENT7</strong><br>[Chorus]. Those days are gone but Chris is not. And now he's got pink hair. And in fact along with that. He's developed a severe disliking for. For the band, for the band, for the band, for the band. And I don't like, how it seems like, Anything and everything is always. For the band.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

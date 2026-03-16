@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for My Home, Sweet Home - บ้านงดงาม - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>My Home, Sweet Home - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>My Home, Sweet Home</h2>
+        <h3>บ้านงดงาม</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>วันหนึ่งพระเยซูตรัสแก่ข้าฯ “เราได้จัดเตรียมที่อยู่คอยท่า และในไม่ช้านานจะรับท่านกลับบ้าน บ้านงดงามนั้นอยู่เมืองสวรรค์”  ร้องรับ บ้านงดงามในสวรรค์ เป็นบ้านนิรันดร ที่นั่นข้าเห็นเป็นเมืองสุกใสงามตา คือบ้านของข้าฯ</p><p><strong>VERSE2</strong><br>จะพบบรรดาสหายของข้าฯ ผู้ที่ไปก่อนคอยอยู่ล่วงหน้า เราต่างคนกราบลงตรงเบื้องพระบาทา ในบ้านงดงามงดงามนักหนา</p><p><strong>VERSE3</strong><br>ชีวิตโลกนี้ช่างสั้นเหลือเกิน ความสุขโลกนี้มีแต่เพลิดเพลิน สุขใดไม่เกินเท่าสุขกับพระเยซู ในบ้านงดงามงดงามน่าอยู่</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Walking along life’s road one day,I heard a voice so sweetly say,“A place up in heav’n I am building thee,A beautiful, beautiful home.” Home, sweet home, home, sweet homeWhere I’ll never roam!I see the light of that city so bright–My home, sweet home.</p><p><strong>VERSE2</strong><br>Loved ones upon that shore I’ll meet,Casting their crowns at Jesus’ feet;I’ll worship and praise Him for evermoreIn my beautiful, beautiful home.</p><p><strong>VERSE3</strong><br>Life's day is short, we soon shall goTo be with Him who loved me so;I see in the distance that shining shore,My beautiful, beautiful home.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

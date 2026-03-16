@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Church On The Moon - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Church On The Moon - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Church On The Moon</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Today is a celebration. When we live to see the church reach new heights. We dedicate this new territory. To God, we have, lift off</p><p><strong>SEGMENT2</strong><br>There's no gravity between you and me. Let's go to a place where there's no time or space. And the Holy Spirit has got me so high. Ooh, this must be what Heaven is like</p><p><strong>SEGMENT3</strong><br>This earthly atmosphere can't contain me. You might as well lift your praise and go with me. The only way to explain this to you. I'm havin' church on the moon</p><p><strong>SEGMENT4</strong><br>Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon</p><p><strong>SEGMENT5</strong><br>We all can say we lived to see God do the impossible. The church is officially on the moon</p><p><strong>SEGMENT6</strong><br>Yeah, I'm out of this world, moving in the speed of light. New territories surrounded by His glory. Uplifting me to a place I've never been before. Got me flyin' higher than a eagle that ever soars</p><p><strong>SEGMENT7</strong><br>This earthly atmosphere won't restrain me. You might as well lift your praise and go with me. Only way I can explain it to you. I'm havin' church on the moon</p><p><strong>SEGMENT8</strong><br>Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon</p><p><strong>SEGMENT9</strong><br>Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon</p><p><strong>SEGMENT10</strong><br>From way up here, my problems look so small. And I'm not worried, no, God ain't gonna let me fall. I got a flag in my hand, I'ma set it down right here. And the world will know me and you at church on the moon, yeah</p><p><strong>SEGMENT11</strong><br>We're havin' church, we havin' church on the moon. We're havin' church, we havin' church on the moon. We're havin' church, we havin' church on the moon. We're havin' church, we havin' church on the moon</p><p><strong>SEGMENT12</strong><br>Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon</p><p><strong>SEGMENT13</strong><br>Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon. Church on the moon,Church on the moon</p><p><strong>SEGMENT14</strong><br>We're now all witnesses to the power of God. We are astounded of this phenomenon. They said that we couldn't do it. But our praise has taken us somewhere we've never been before</p><p><strong>SEGMENT15</strong><br>We're havin' church, we're havin' church on the moon. We're havin' church, we're havin' church on the moon. We're havin' church, we're havin' church on the moon. We're havin' church, we're havin' church on the moon.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

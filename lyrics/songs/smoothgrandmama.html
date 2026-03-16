@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Smooth Grandmama - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Smooth Grandmama - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Smooth Grandmama</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>As he came up to the window, heard the sound of Barry Manilow. He came into her apartment, smelled the Ben Gay and the chocolate. She was sitting at the table, he could see she had a Bible. So she ran into the bedroom, got her teeth down and her perfume. Granny, are you okay, you okay, you okay, Granny? (4X). Granny's not an old maid, she's a zealot with a bold faith. She's a kind-hearted widow and she bought you a Nintendo last week. You came into her apartment, left the mudstains on the carpet. And then she ran into the bedroom, she was knelt down, it was for you. Granny likes to crochet, and croquet, and quote Dear Abby. Granny causes road rage in slow lanes, she's no Andretti. Granny's got the whole day to go pray for all her family. You've been hit by, you've been struck by, a smooth grandmama. So she came into the hallway, it was Sunday, had a snack made. Then the book of Revelation was the topic of conversation. Granny says, "you know, babe, the Lord says in verse 3:20. He's standing at the doorway, so don't waste a moment, honey. And you gotta go pray or else, babe, He won't gain entry". Then you told her "okay, I want saved, I'll go pray, Granny". Granny told you, "okay, first you tell Him that you're sorry. Believe He died for your sins, though. And accept Him and repento. Whammy!". He came into your heart then. You were prostrate on the carpet. Then she ran you to the next room. You were sat down, there was more food. Granny karaokes to old tapes of Sandi Patty. You've been hit by, you've been struck by, a smooth grandmama. Granny had a roast made and potatoes that were homemade. And she buys Poppin' Fresh Dough. So she baked you some crescent rolls, man, eat!. You came into her apartment, and the blessings only started. And then your Granny took and fed you. You were stuffed now; it was her food. Granny brought you cold grapes and poached eggs and bowls of candy. Granny brought you milkshakes and fruitcake, keep Rolaids handy. Granny's artichokes make your throat gag so don't take any. And before you go, babe, you must take a roast beef sandwich</p><p><strong>SEGMENT2</strong><br>.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

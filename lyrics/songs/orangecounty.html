@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Orange County - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Orange County - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Orange County</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Chorus: I think that i'm falling slowly and i don't wanna get up. I kinda like it down here all I can do is look up. When noone's looking i can do exactly what I want. I'm going to Orange County I'm going to Orange County</p><p><strong>SEGMENT2</strong><br>Heh it's kinda risky. When me and friends start drinking whiskey. Now we spinning and grinning and feeling frisky. Throwing bottles out the window like a frisbee. Outside yelling at the stars tipsy. Trying to find God screaming where is he?. Friends grabbing on my sleeves trying to save me. Covering my mouth and thought that He gave me. And now we sipping the room taking shots like medicine. Calming the storms up in the head again. Way ahead of excedrine slipping feeling words. Spill out the mouth until we freaking hit the bed again. And I used to to youth group that what I thinking. In the corner with my head down sobbing the truth. I got my n***s in the kitchen drinking around the stove. Laughing loud and hugging and the 'bout to explode</p><p><strong>SEGMENT3</strong><br>Chorus</p><p><strong>SEGMENT4</strong><br>That's when i stand crooked start cussing at my friends. Swinging my fist take another shot of Hen. Everything seems right everything seems frantic. Everything gleams slow motion like trantic. Take another sip piss on the carpet. All I hear is fuzz all i feel is buzz. All I need is Love all i need is hope. Hanging on the walls and i'm trying not to float. Trying not to choke up swallowing my throw up. Watching CKY with my homeys tore up. Get a call from my girl and i'm trying to explain. That my love in the end only succumes to pain. Then I hang up in mid thought and i feel caught. In the middle of a hurricane spinning in a loft. Then i start pop locking blowing out my snot. In the bathroom crying and can't stop lying</p><p><strong>SEGMENT5</strong><br>Chorus</p><p><strong>SEGMENT6</strong><br>Oh God why does it have to be this way. Never again I promise never this much make it stop ok. Make it stop Dude please I'll do whatever you say. But let me finish off my Alize</p><p><strong>SEGMENT7</strong><br>Chrous</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

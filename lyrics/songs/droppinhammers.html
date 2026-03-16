@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Droppin' Hammers - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Droppin' Hammers - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Droppin' Hammers</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I got one chick, no kids no drama. I soak in, music sing soap operas. I got four wheels one board globe trotter. I got money got God I still got problems. It dont matter though Im zoned in my own flow. So when I get told off my emotions hold. I dont punch a whole through the bathroom door. I count to four 1,2,3,4!!!. Cause If I dont calm down, stress is gonna compound. Cops are gonna come down, cuff me up g style. Buck wild like hulk Ill turn green, Pray for me "AH" theres animal inside of me. I drop a rhyme, hard flip hit a grind. Turn 360 degrees adrenalin ride. Let these hammers fall flat, conscience intact. Cause all around the world we gonna feel the impact</p><p><strong>SEGMENT2</strong><br>New York dropping hammers like what. California dropping hammers like what. Manafest Dropping hammers on anybody crazy enough to get down. America dropping hammers like what. Worldwide dropping hammers like what. Manafest Dropping hammers on anybody crazy enough to get down</p><p><strong>SEGMENT3</strong><br>I cant tell you that Ive never been ticked off. Picked on, spit upon felt ripped off. Ive had my mom rip me a new one. For a quick tongue, run, kid, run, run, run. Sun dont shine in my life all the time. Some fly, some die, some survive the ride. Christ got my back when I fall face flat. When the fault line cracks I bounce right back. I used to freak out scream loud I need help. Beat down the ground till my fists were ow. Now I got bolder got wisdom got style. I used to miss out now Im Mr. Wow. Blow to your radio Blow to your video. Dropping these hammers like what. I said Blow to your radio to Blow to your Video. Dropping these hammers right now on your stereo</p><p><strong>SEGMENT4</strong><br>We dropping hammers, like it dont matter. Setting the standard. We dropping hammers, like it dont matter. Raising the banner</p><p><strong>SEGMENT5</strong><br>Ye cant pigeon hole me, hommie, Sorry cant do what you told me, Im only. Doing what I feel, whats right? Whats wrong?. When Im dropping it hard somewhere I belong, I hear God. Talking to me, while Im falling asleep, I got cuts in my knees. After hitting the streets trying to figure out the following. Why me, why not, Thank God, this is life drop it like its.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Jezebel - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Jezebel - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Jezebel</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>First glimpse, instant attraction. She acted as if my interest was a common reaction. Took satisfaction in knowin she was beautiful. She twisted up the blessing and she used it as a tool. Of manipulation, yet I was blinder at aim. She was very athletic, but yet excelled at the mind game. Lame excuse, but it's the truth, come on, I mean. I was young and naive and would've believed anything. When it came to sweetheart, she had me wrapped. Around her little finger and my mind was tapped. But none the less, I'm the fault obviously. I was confused and chose stupidity over patiently waiting. I mean how could I not see that tryin to. fill a God-sized void with her. Would only leave me empty, but I did it. And like a stupid human I fell. By the way, what's her name. I think they call her Jezebel</p><p><strong>SEGMENT2</strong><br>Jezebel, who? Jezebel, man, who is she, what is she?. Man, it's hard to tell. Jezebel, who? Jezebel, come on, what is she about?</p><p><strong>SEGMENT3</strong><br>Second glimpse, still attracted, but I'm not quite sure. Been playin games with Jezebel, but now I question what for. Before, it was a motivation, now, it's not clear. Now I'm askin myself, Reuben, who's the one at fault here. See, I'm the fool so why do I remain. In a relationship with all to loose, yet nothing to gain. Except headache, heartache, and an occasional where you been. Pssssssst, Jezebel, where'd you hear that (from a friend). Frontin Godliness, I say hey miss, you're posin. You love material things, but you're favorite's sheepskin clothin. So then what can I say, her charm fades by the day. And I'm askin the Good Lord, whatever twisted me to stay. Straight for a moment, now it's time to let go. Though my willpower's weak, man, there's one thing that I know. That greater is he that's in me than he who's in this world. and it wasn't the he in me that hooked it up with this girl</p><p><strong>SEGMENT4</strong><br>Life must go on, the dawn of a new day was risin. I opened up my eyes and then I started realizin. That my vision was blurred so there will be no third glimpse. After two and a half, I think I came to my sense. So with this, I think it's time that we parted. And dismiss somethin we should never started. So miss, I guess I'll say farewell. One last time for the books, her name was what?</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

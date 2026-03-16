@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Socially Acceptable - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Socially Acceptable - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Socially Acceptable</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[its okay, its all right]</p><p><strong>SEGMENT2</strong><br>Its okay, its alright. Yeah, here we go. Dct is in the house boy. Its okay, its alright</p><p><strong>SEGMENT3</strong><br>Whatcha thinking, doing the things you do. Whose opinion are ya listening to?. Justifying, you turn it all to gray. Synchronizing to societys ways</p><p><strong>SEGMENT4</strong><br>Society has gotten to be all outta whack. And dont bother with excuses whether white or. black. To blame it on a color wont get a result. Because history reveals to me how ethics were. lost. In reality our decency has taken a plunge. "in God we trust" is an american pun. Funny how it happened so suddenly. Hey yo fellas, kick the melody..</p><p><strong>SEGMENT5</strong><br>(chorus). Socially acceptable, its okay, its all right. Socially acceptable, its okay, in whose sight. Socially acceptable</p><p><strong>SEGMENT6</strong><br>Times are changing, with morals in decay. Human rights have made the wrongs okay. Somethings missing, and if youre asking me. I think that something is the g-o-d</p><p><strong>SEGMENT7</strong><br>To label wrong or right by the peoples sight. Is like going to a loser to ask advice. And by basing your plans. On another mans way of living life. Is creating a brand of ethics. Sure to be missing the punch. No count morals that are out to lunch. Theyre sliding away cause everything is okay. It was taboo back then but today ya say, "what the hey"</p><p><strong>SEGMENT8</strong><br>(repeat chorus)</p><p><strong>SEGMENT9</strong><br>Yeah, yeah, yeah. Here we go, here we go. A come on, a come on. Here we go, here we go. A come on, a come on. Here we go, here we go. A come on, a come on. Here we go, here we go. A come on, a come on</p><p><strong>SEGMENT10</strong><br>Everybodys doin it. Whos doin it. Everybodys doin it. Yo, whos doin it. Everybodys doin it. Whos doin it. Everybodys doin it. Yo, yo, yo, whos doin it. Ohhhh, alright. Ohhhh, come on</p><p><strong>SEGMENT11</strong><br>(bridge). We gotta back to the principles found in the. word. A little g-o-d could be societys cure. From the state that were in cause again were. slipping. So pray for america cause time is ticking</p><p><strong>SEGMENT12</strong><br>(repeat chorus 2x)</p><p><strong>SEGMENT13</strong><br>Socially respectable. Socially acceptable. Socially respectable</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

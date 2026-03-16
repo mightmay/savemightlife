@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Homemade - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Homemade - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Homemade</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Riding the city bus. On the way to school. Me and my two sisters. And all the ridicule. The older girls on the back of the bus. Would laugh and call us names. They'd talk about our hair, our clothes. And call us homemade</p><p><strong>SEGMENT2</strong><br>See the not-so-good old days could make you. Weak or make you brave</p><p><strong>SEGMENT3</strong><br>[Chorus]. And I've never been. The most beautiful. No, I ain't never been. The most popular. But it's amazing what. Love can do. It's amazing what. A little love can do</p><p><strong>SEGMENT4</strong><br>Every thought and action. Is like a boomerang. What goes around will come back, baby. So careful what you say. And the little ugly ducklings. Are swans that got away. 'Cause Cinderella stories, They still happen every day</p><p><strong>SEGMENT5</strong><br>Well, the not-so-good old days could make you. Weak or make you brave</p><p><strong>SEGMENT6</strong><br>[Repeat Chorus]</p><p><strong>SEGMENT7</strong><br>See I bumped into a stanger. Just the other day. She said, "Can you spare a dollar, sista?. My man, he ain't got paid.". And so I gave her what I had. Then I recognized her face. She was the leader of the girls who used to. Call us homemade</p><p><strong>SEGMENT8</strong><br>Back when the not-so-good old days could make you. Weak or make you brave. And then I told her. .</p><p><strong>SEGMENT9</strong><br>See I have never been (never been). The most beautiful. And don't really care that I ain't never been (never been). The most popular. 'Cause it's amazing what. Love will do. Now hang on, it's amazing what. Homemade love, what homemade love will do</p><p><strong>SEGMENT10</strong><br>Yeah. . Mama said, "This is what homemade love would do". .</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

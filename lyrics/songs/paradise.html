@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Paradise - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Paradise - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Paradise</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I tuned in to the tv once again today. Watch the news to educate my mind. The destruction and the chaos that confronted me. It's our world caught in it's own demise. (As I sat there I began to cry). The situation worsens every day that goes by. (And I thought how can this be, Lord why). So heavy on me all those that are hurting inside</p><p><strong>SEGMENT2</strong><br>If I had a dollar for every heart that's broken. For every word of love unspoken. For every childhood dream that's never realize. If I had a penny for all the wrong we're doing. And all the ways we could be moving on. Maybe I could buy you paradise. Just to see some hope in your eyes</p><p><strong>SEGMENT3</strong><br>Sometimes life it seems a bit too much for me. More things we must survive on top of all that we had before. Broken hearts, broken homes, kids abused left alone. So many in the streets, homeless with no food to eat. (I know God hears us crying out). Run to Him for all the answers, don't turn away. (If we look to Him there is no doubt). He'll give us all the help we need, he knows the way, still if I</p><p><strong>SEGMENT4</strong><br>If I had a dollar for every heart that's broken. For every word of love unspoken. For every childhood dream that's never realize. If I had a penny for all the wrong we're doing. And all the ways we could be moving on. Maybe I could buy you paradise. Just to see some hope in your eyes</p><p><strong>SEGMENT5</strong><br>There are so many troubles, God knows what we need to do. He has us in His hands, knows what we are going through. Silver and gold have I none, what I have I give to you. His word says we can make it and I know His word is true. Here's to the hurting souls and for all the broken hearts. All those who've been abused, who's life has been torn apart. I don't have all the answers, what I have I gladly give. It's in him there is life, if in him we live and if I</p><p><strong>SEGMENT6</strong><br>If I had a dollar for every heart that's broken. For every word of love unspoken. For every childhood dream that's never realize. If I had a penny for all the wrong we're doing. And all the ways we could be moving on. Maybe I could buy you paradise. Just to see some hope in your eyes</p><p><strong>SEGMENT7</strong><br>If I had a dollar for every heart that's broken. For every word of love unspoken. For every childhood dream that's never realize. If I had a penny for all the wrong we're doing. And all the ways we could be moving on. Maybe I could buy you paradise. Just to see some hope in your eyes.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

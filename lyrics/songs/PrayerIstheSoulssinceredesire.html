@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Prayer Is the Soul’s sincere desire - ดวงจิตต้องการคำอธิษฐาน - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Prayer Is the Soul’s sincere desire - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Prayer Is the Soul’s sincere desire</h2>
+        <h3>ดวงจิตต้องการคำอธิษฐาน</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>ดวงจิตต้องการคำอธิษฐาน ออกเสียงหรือนึกในใจ เป็นเหมือนไฟคุกรุ่นอยู่ภายใน ซึ่งสั่นสะท้านดวงใจ</p><p><strong>VERSE2</strong><br>การอธิษฐานช่วยเปลื้องโศกเศร้า บางครั้งต้องน้ำตาไหล บางครั้งทุกข์หนักไม่อาจพึ่งใคร พระเจ้าสถิตอยู่ใกล้</p><p><strong>VERSE3</strong><br>เมื่อคนผิดบาปได้อธิษฐาน รับสารภาพผิดบาป เหล่าทูตสวรรค์พากันยินดี เพราะมีคนบาปกลับใจ</p><p><strong>VERSE4</strong><br>เราอธิษฐานพระเจ้าได้ง่าย เด็กเล็กหนุ่มสาวคนแก่ บิดามารดาก็ทูลขอได้ พระเจ้าทรงฟังเป็นแน่</p><p><strong>VERSE5</strong><br>การอธิษฐานเหมือนการหายใจ ต้องปฏิบัติทุกวัน เวลาจวนตายใช้เป็นสัญญา เพื่อเดินผ่านเข้าสวรรค์...</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Prayer is the soul’s sincere desire, Unuttered or expressed; The motion of a hidden fire, That trembles in the breast.</p><p><strong>VERSE2</strong><br>Prayer is the burden of a sigh, The falling of a tear The upward glancing of an eye, When none but God is near.</p><p><strong>VERSE3</strong><br>Prayer is the contrite sinner’s voice, Returning from his ways, While angels in their songs rejoice And cry, “Behold, he prays!”</p><p><strong>VERSE4</strong><br>The saints in prayer appear as one, In word, in deed, and mind, While with the Father and the Son, Sweet fellowship they find.</p><p><strong>VERSE5</strong><br>Prayer is the Christian’s vital breath, The Christian’s native air, His watchword at the gates of death; He enters Heav’n with prayer.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

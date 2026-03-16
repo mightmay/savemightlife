@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Mood Rings - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Mood Rings - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Mood Rings</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>we all know the girls that i am talking about. well they are time bombs and they are ticking. and the only question's when they'll blow up. and they'll blow up; we know that without a doubt. cause they're those girls, yeah you know those girls that let their emotions get the best of them</p><p><strong>SEGMENT2</strong><br>and i've contrived some sort of a plan to help my fellow man. let's get emotional girls to all wear mood rings. so we'll be tipped off to when they're ticked off. cause we'll know just what they're thinking. cause what they're thinking..</p><p><strong>SEGMENT3</strong><br>she's so pretty but she but doesn't always act that way. her mood's out swinging on the swing set almost every day. she said to me that she's so happy it's depressing. and all i said was "someone get that girl a mood ring"</p><p><strong>SEGMENT4</strong><br>if it's drama you want then look no further. they're like the real world meets boy meets world meets days of our lives. and it just kills me how they get away with murder. they'll anger you then bat their eyes; those pretty eyes that watch you sympathize</p><p><strong>SEGMENT5</strong><br>and i've contrived some sort of a plan to help my fellow man. let's get emotional girls to all wear mood rings. so we'll be tipped off to when they're ticked off. cause we'll know just what they're thinking. cause what they're thinking..</p><p><strong>SEGMENT6</strong><br>she's so pretty but she but doesn't always act that way. her mood's out swinging on the swing set almost every day. she said to me that she's so stressed out that it's soothing. and all i said was "someone get that girl a mood ring"</p><p><strong>SEGMENT7</strong><br>cause when it's black (it) means watch your back because you're probably. the last person in the world right now she wants to see. and when it's blue it means that you should call her up immediately. and ask her out because she'll most likely agree. and when it's green it simply means that she is really stressed. and when it's clear it means she's completely emotionless (and that's all right i must confess)</p><p><strong>SEGMENT8</strong><br>we all know the girls that i am talking about. she liked you wednesday but now it's friday and she has to wash her hair. and it just figures that we'll never figure them out. first she's jekyll and then she's hyde..at least she makes a lovely pair</p><p><strong>SEGMENT9</strong><br>mood ring oh mood ring. oh tell me will you bring. the key to unlock this mystery. of girls and their emotions. play it back in slow motion. so i may understand the complex infrastructure known as the female mind</p><p><strong>SEGMENT10</strong><br>[speaking:]. heh..that's terrible</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

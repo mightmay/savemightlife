@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Word 2 the Father - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Word 2 the Father - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Word 2 the Father</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Word 2 the Father, Word 2 the Father. Word 2 the Father, Word 2 the Father. We're here to say Word 2 the Father up in heaven. A shout out loud from me, Mike, and Kevin. Some may wonder what we're talkin' about. When Word is heard. It's like a church that shouts "Amen!". It breaks down to approval. Those in the pews may find it unusual. We're here to get them to loosen their collars. And use this to say Word 2 the Father</p><p><strong>SEGMENT2</strong><br>(chorus). Word, say Word 2 the Father. Above any other, say Word to the Father. Pump, pump, pump, pump it up!. Word, say Word 2 the Father. Above any other, say Word to the Father. Pump, pump, pump, pump it up!</p><p><strong>SEGMENT3</strong><br>Once again we're here to drop some science. Standin' up tall in the land of giants. Steadily keepin' our message intact. And the truth is, it's a matter of fact. That this goes out to the One we look to. Hopin' that the message in our jam would hook you. Up in a hurry so that you could be locked in. This is a bond that you oughtta take stock in</p><p><strong>SEGMENT4</strong><br>This is a shout out to heaven from Toby, Mike and Kevin. Straight up propers to the Papa. And can't nobody stop us. Cause we'll do this, like Brutus. We told you we ain't new to this. So jump on it like a hornet. And we got no other word than..</p><p><strong>SEGMENT5</strong><br>(chorus)</p><p><strong>SEGMENT6</strong><br>When dc Talks, He Works like this. I Luv Rap Music--Can I Get a Witness?. He's doin Nu Thangs so the Children Can Live. Without the Things of This World that only He can give. We need to Talk it Out, stop Spinnin' Around. Without the Things of This World that only He can give. We need to Talk it Out, stop Spinnin' Around. So let's Take It To the Lord if we're Heavenbound. Ya see Time is tickin' away so we gotta come harder. We're tearin' down Walls with a Word 2 the Father</p><p><strong>SEGMENT7</strong><br>God is always workin', workin', hallelujah. God is always workin', workin', hallelujah</p><p><strong>SEGMENT8</strong><br>Word, say Word 2 the Father. Above any other, say Word to the Father (4x)</p><p><strong>SEGMENT9</strong><br>Word 2 the Father, Word 2 the Father up above. Word 2 the Father, Word 2 the Father up above</p><p><strong>SEGMENT10</strong><br>I give my life to you. In everything I do. These words I sing to you. This love I know will never end</p><p><strong>SEGMENT11</strong><br>[It's a trip. It's got a funky beat. And I can bug out to it]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

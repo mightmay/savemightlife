@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Stand - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Stand - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Stand</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse]. What do you do. when you've done all you can. And it seems like it's never enough?. And what do you say. when your friends turn away, you're all alone?. Tell me, what do you give. When you've given your all, and seems like. you can't make it through?</p><p><strong>SEGMENT2</strong><br>Stand and be sure. Be not entangled in that bondage again. You just stand, and be sure. God has a purpose. Yes, God has a plan.</p><p><strong>SEGMENT3</strong><br>Tell me what do you do. when you've done all you can. And it seems like you can't make it through. Child you just stand. You just stand. Stand. Don't you give up. Through the storm , through the rain. Through the hurt , through the pain</p><p><strong>SEGMENT4</strong><br>[Chorus]. Well, you just stand. When there's nothing left to do. You just stand. Watch the Lord see you through. Yes, after you've done all you can. You just stand</p><p><strong>SEGMENT5</strong><br>Don't you bow, don't bend. Don't give up, don't give in. Hold on, just be strong. God will step in and it won't be long. VERSE. Tell me, how do you handle the guilt of your past?. Tell me, how do you deal with the shame?. And how can you smile. when your heart is broken. and filled with pain?. Tell me what do you give. when you've given your all. Seems like you can't make it through?</p><p><strong>SEGMENT6</strong><br>After you've done all you can. After you've gone through the hurt. After you've gone through the pain. After you've gone through the storm. After you've gone through the rain. Prayed and cried,you've prayed and cried. Prayed and cried, prayed and cried. After you've done all you can, you just stand.</p><p><strong>SEGMENT7</strong><br>Child you just stand, when there's nothing left to do. You just stand. Watch the Lord see you through. Yes, after you've done all you can. You just stand.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

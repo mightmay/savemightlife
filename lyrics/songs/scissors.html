@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Scissors - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Scissors - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Scissors</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>In your brilliance, you became the only voice you trust</p><p><strong>SEGMENT2</strong><br>If it's true then I'm dead, right where I stand. Was the plan always this vicious. You thought that your faith would carry you home. But it left me there in the waiting room alone. As I planned what to say, to the ones I'd be leaving. All praise and honor seem so far away. I never saw this coming you can lose what you found. And here comes the breakdown</p><p><strong>SEGMENT3</strong><br>Careful, careful watch your mouth. You're talking like your such the innocent (accidents, accidents are we all?). These words will be the death of you. This I swear this I know. The blame will find your hands. The blame has found these hands</p><p><strong>SEGMENT4</strong><br>It's hard to live this, to know if I mean it. To let you know you have me, that I never can forget it. And these last words I say here. Are the last words that I will share (last words that I will share). So God I'm asking you do you even care</p><p><strong>SEGMENT5</strong><br>My hands are shaking and they won't stop, as the world becomes a hospital room. I am not the one to ever disappear, but it's over now (over now). Say it for the last time, one last time. I want to let go of this world for you</p><p><strong>SEGMENT6</strong><br>Careful, careful watch your mouth. You're talking like your such the innocent (accidents, accidents are we all?). These words will be the death of you. This I swear this I know. The blame will find your hands. The blame has found these hands</p><p><strong>SEGMENT7</strong><br>Hands held toward the sky. In the cool air of October. The whispers were always there. But they never caught up to your words. So will December find me all alone</p><p><strong>SEGMENT8</strong><br>The wishful face of the believer. Hope, but there is doubt that bleeds through. Still, I am arrested by your presence. Nothing will compare to you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

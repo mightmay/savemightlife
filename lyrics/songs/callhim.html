@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Call Him - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Call Him - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Call Him</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Yea this your boy Flame. Im going to do something a little bit different for yall</p><p><strong>SEGMENT2</strong><br>Call Him (talk to Him man). Call Him (talk to Him man). Come out the box a lil bit. I want you to know that you can talk to him man. Call Him (talk to Him man). Call Him (talk to Him man). O. Call Him. I know its hard to let go. Swimming in sin. All you know is the death stroke. The broad road make you run out of petro. Reject the Holy Ghost and youre becoming a vessel. Of dishonor. Rejecting His honor. Lost in your sin. Cant find you like Osama. Yes Imma address this issue. I must kick truth like Im doing you Jujitsu. If you were Christ when Judas kissed you ditched you. Snitch to Jewish officials. To the point where it whipped and ripped through. Your tissue. Just to crucifix you. Would those be the ones you give ya unconditional love. though they spit on you. Lied, but you provide for them to get on through. Cause Christ died to rise for something He aint do</p><p><strong>SEGMENT3</strong><br>Chorus. Call Him. Though this world is fallen He can hear you calling. Call Him. Though this world is fallen He can hear you c-c-calling. Call Him. Though this world is fallen He can hear you calling. Call Him. (You aint gotta die in ya sin). Call Him. (You can know God. Come alive again!)</p><p><strong>SEGMENT4</strong><br>Lets take a look at the fall man. The one who came down and put His foot on the raw land. Gotta question do you know who you are man?. Or do you assume that you can do what the Lord can?. I know its hard fam trying to live life. Looking to the left and nobody is living right. Looking to the right everybody is living wrong. Like we living in a movie and doing it to a song. Are your influences throwing you in a zone?. Influence you to wrong and doing what youre most prone. You know Christ. He left His Heavenly home. Not just that He left His Heavenly throne. Just to bring Ebony home. Or whatever your name is. He definitely claims His. Plus exchanges filth and anguish. Guilt and pain and makes us stainless</p><p><strong>SEGMENT5</strong><br>Chorus</p><p><strong>SEGMENT6</strong><br>Yea we born in this world in the curse creation Its fallen. Thats how we refer to creation.. its fallen. Man is the reason for crime. The reason for lies. The reason for dying. Its wrapped all in it. Yea it fell and it mean that we fall in it. And everything you see on the TV it aint authentic. Im trying to spit truth. Trying to cut the lights on. And pull you out the storm of life like the cyclone. See life aint all about fun. I love the night life with all of my duns. But now in my life like the honor Gods son. Shine like a bright light until Christ come. Used to think about fortune and fame. I blinked and day dreamed of me in a Range. But He rearrange my definition of what life is. While I called on Christ and His likeness</p><p><strong>SEGMENT7</strong><br>Chorus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Gotta Notice - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Gotta Notice - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Gotta Notice</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>We've got truth that you've gotta notice. To split seas like God and Moses. Best believe He's watchin' motives. Examine yourself then hand Him yourself. He speaks life so I can breathe now. Without Christ would have got the beat down. Was blind but I can see now. If you can too then you can move</p><p><strong>SEGMENT2</strong><br>First of all let me time myself. To put me on a strict schedule and to remind myself. Before I go to long without denying myself. Cause everyday I should be dying and crucifying myself. Yes homie and you should too. Be inclusive to the newness that He's brewing in you. And them communicable attributes that He's doing them through. Cause if you guilty of the crime He's going to be suin' you too. Ok that's why we gotta watch our motives. Cause when God's speaking gotta watch them shoulders. Cause we love to shrug them like we don't care. But if you blind you can look but can't see no where. So don't gamble with your soul like a casinos here. Just slow down and watch ya actions. Pick them again then lift Him up again and He'll draw all men from your actions</p><p><strong>SEGMENT3</strong><br>See I can only watch T.V. to a certain extent. Until I feel an urgent need to repent. Cause even the commercial now are all converted and perverted with sin. And you might slip if you ain't conversing with Him. Find More lyrics at www.sweetslyrics.com. Cause when I saw myself. Dawg I wanted to saw myself. Immediately it grieved me and wanted to insult myself. Whatever made me think to exalt myself. Now He's gleaning and cleaning me and now I'm salt myself. So what we living all reckless for. Ever seen a Buick with a Lexus door. That kind of whip will perplex a boy. That's how it is when you don't consider what the text is for. I ask the Lord to correct a boy. And constantly making my calling and election sure. Until we die we should rep the Lord. For the same reason Paul got arrested for you</p><p><strong>SEGMENT4</strong><br>You can still work out your faith with fear and tremblin'. In fitted hats sincere in Timberlands. If you examining and ain't sittin' there panicing. Like a mannequin knowing you in need of an ambulance. It's alright man to move and rock. As long as you in love with God when the music stop. I'm trying to see if we got some soldiers. In the building repin' God Jehovah. Or YHWH if it's better translated. I bet you'll pass if you let a man grade. What's that fam the test of life. The test of righteousness in spite of the risk but if. God be judge. How would He see the grudge. Would He see you or see His Son. Ask yourself before Jesus comes. Back like the slacks with pleats in the front</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

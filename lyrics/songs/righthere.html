@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Right Here - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Right Here - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Right Here</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Every time I see you I can see right through you. Knowing I could never change your mind. I look into your eyes for the last time. I have realized for the first time</p><p><strong>SEGMENT2</strong><br>While everyone is around I'll take a moment. To let you know that I am down</p><p><strong>SEGMENT3</strong><br>Have all my questions been ignored?. This time I'm walking out the door</p><p><strong>SEGMENT4</strong><br>I don't know if I'll ever know why. Or hear the sound when angel's cry. What you said to me late last night. I'll remember for the rest of my life. Every night when I close my eyes. I see the ways that you've touched my life. And I want you to know that I'll. Always be right here</p><p><strong>SEGMENT5</strong><br>Time stands still, so do I, leave me here. But for now I will go and I won't say nothing. Every time I hear that sound it reminds me that. You're always hanging around</p><p><strong>SEGMENT6</strong><br>Have all my questions been ignored?. This time I'm walking out the door</p><p><strong>SEGMENT7</strong><br>I don't know if I'll ever know why. Or hear the sound when angel's cry. What you said to me late last night. I'll remember for the rest of my life. Every night when I close my eyes. I see the ways that you've touched my life. And I want you to know that I'll. Always be right here</p><p><strong>SEGMENT8</strong><br>These are the days these are the moments that pass us by. We ask the questions but we never really find out why</p><p><strong>SEGMENT9</strong><br>Pull my card right from the bottom. Reminds me of the things we've forgotten. That road trip we look back in autumn. The time we left and went back and got em</p><p><strong>SEGMENT10</strong><br>These are the days these are the moments that pass us by</p><p><strong>SEGMENT11</strong><br>I don't know if I'll ever know why. Or hear the sound when angel's cry. What you said to me late last night. I'll remember for the rest of my life. Every night when I close my eyes. I see the ways that you've touched my life. And I want you to know that I'll. Always be right here</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

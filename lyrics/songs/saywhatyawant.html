@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Say What Ya Want - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Say What Ya Want - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Say What Ya Want</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>First off tell me what's your name dude who are you. Man I'm you I'm KJ Five Number 2 man. How can that be man you aint me man. I'm 52 what are you KJ Five Three man?. Nah see I'm the rapper that yo u used to be. Before you sold out and started rapping so pathetically. I came from the past to battle me?. That's right because you forget what means to be an emcee. Oh I get it cause I'm popular now. And I got a dove award I forgot the underground. You think I forgot how to throw it down. And I can't hold my own that's what your saying to me now?. Yeah that's right and what I'm saying is. You're a biter you write your songs for youth group kids. Dear slim a gimmick everybody's knowing this. Oh you think so we can find out about this</p><p><strong>SEGMENT2</strong><br>You can say what you want yep. But I really don't care I really don't care</p><p><strong>SEGMENT3</strong><br>First of all fools like you get devoured. You aint wack you like wack to the 7th power. I'm a go ahead and expose all ya gimmicks. And leave ya blown out like a tire with a hole in it. You don't' get it battling me that's risky. Your last CD was wack but it made a nice Frisbee. You can't be expect now not to get exposed. When your style's such a copy I could pick it up at Kinkos. How you gonna run up in the place. When your eyebrows look like they exploded off your face. Knowing your rock the pair of same socks for 3 days. Dude is so white he probably bleeds mayonnaise. I'm sorry don't get all mad. Cause your teeth look like you just brush em with a brillo pad. Don't be sad that's not what I mean. I mean it smells like an animal went and died between ya teeth but.</p><p><strong>SEGMENT4</strong><br>I'm all up in your atmosphere. and I'm blowing out your mind like sticking dynamite in your ear. Yeah don't even try to step. When the rhymes are so tight you could use them for spandex. you should know when to quit. cause I aint feeling you like I chopped off my fingertips. see I aint even bluffing. I could take you without saying ... how you gonna get all up on it. When your forehead so big I could write my next song on it. I didn't mean it dog gone it. I meant the junk is so big I could pull out a paintbrush and draw on it. Don't be looking at me strange. When your hair is so greasy I think it needs an oil change. Fo sheezy I'm the real 52. Welcome to the city of wackness population only you</p><p><strong>SEGMENT5</strong><br>You gonna have to shut your mouth. So you can finally see what the kj is all about. Yeah no doubt I'll be the first to admit it. That since I started now a days I rap a lot different. But c'mon man you got to be kidding. I cant stay the exact same way now be realistic. Music evolves that's being artistic. There's just one thing that stays consistent. Its just Jesus first in every single lyric. Hopefully that's apparent I care less if ya feel it. Label what I do as nothing more than gimmicks. In fact label me a sell out in fact I agree with it. Sold out to Christ sold out my life. Plus I sold out the show I did last night. And if I sold out to doing God's plan. And that makes me a sell out that's what I am then</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

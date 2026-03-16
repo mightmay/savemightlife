@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Faust, Midas, And Myself - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Faust, Midas, And Myself - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Faust, Midas, And Myself</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This one's about a dream. I had last night. How an old man tracked me home. And stepped inside. Put his foot inside the door. And gave a crooked smile. Something in his eyes. Something in his laugh. Something in his voice. That made my skin crawl off</p><p><strong>SEGMENT2</strong><br>Said I've seen you here before. I know your name. How you could have your pick. Of pretty things. You could have it all. Everything at once. Everything you've seen. Everything you'll need. Everything you've ever had in fantasies</p><p><strong>SEGMENT3</strong><br>You have one life. You have one life</p><p><strong>SEGMENT4</strong><br>One life left to lead. You have one life. You have one life</p><p><strong>SEGMENT5</strong><br>One life left to lead</p><p><strong>SEGMENT6</strong><br>I woke up from my dream. As a golden man. The Girl I've never seen. With Golden skin. I jump up to my feet. She asked me what was wrong. I began to scream. I don't think this is me. Is this just a dream?. Or really happening, happening</p><p><strong>SEGMENT7</strong><br>You have one life. You have one life. One life left to lead</p><p><strong>SEGMENT8</strong><br>You have one life. You have one life. One life left to lead</p><p><strong>SEGMENT9</strong><br>What direction. What direction. I'm spinning up. I'm spinning up. This is my personal disaffection</p><p><strong>SEGMENT10</strong><br>What direction. What Direction. What Direction now</p><p><strong>SEGMENT11</strong><br>I looked outside the glass. At golden shores. Golden ships and masts. With golden cords. As my reflection passed. I hated what I saw. The Golden eyes were dead. A thought passed through my head. A heart that is made of gold can't really beat at all</p><p><strong>SEGMENT12</strong><br>I wanted to wake up again. I wanted to wake up again. Without a touch of gold. Without a touch of gold</p><p><strong>SEGMENT13</strong><br>What direction. What direction. What direction. What direction. Life begins at the intersection. What direction. What direction. What direction. What direction</p><p><strong>SEGMENT14</strong><br>I woke up as before. But the gold was gone. My wife was at the door. With a night robe on. My heart beat once or twice. And life flooded my veins. Everything had changed. My lungs had found their voice. And what was once routine. Was now the perfect joy</p><p><strong>SEGMENT15</strong><br>You have one life. You have one life. One life left to lead</p><p><strong>SEGMENT16</strong><br>You have one life. You have one life. One life left to lead</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

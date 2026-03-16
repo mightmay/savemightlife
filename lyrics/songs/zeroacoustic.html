@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Zero (Acoustic) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Zero (Acoustic) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Zero (Acoustic)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Your Life dreams are shattered, Now you're gone away. We've cried here for hours, And the hours turn to days. We know you regret this, Leaving us here, With portraits and memories. That we've held so dear.</p><p><strong>SEGMENT2</strong><br>When I hear your name, it's not the same. No matter what they say, I'm not okay. And we started at zero, and went different ways. Now we're all out here wasting away.</p><p><strong>SEGMENT3</strong><br>And if we started at zero, then how did things change?. It seems like just yesterday we were the same.</p><p><strong>SEGMENT4</strong><br>It's been three months since he left us. So far nothing's been the same. And my question without answer is: Am I the one to blame?</p><p><strong>SEGMENT5</strong><br>He was such a good description of a favored future man. He spoke well of other people, and they said the same for him.</p><p><strong>SEGMENT6</strong><br>When I hear your name, it's not the same. No matter what they say, I'm not okay. And we started at zero, and went different ways. Now we're all out here wasting away. And if we started at zero, then how did things change?. It seems like just yesterday we were the same, we were the same. They say they're sorry, well what are they sorry for?. How can they possible know what I'm going through?</p><p><strong>SEGMENT7</strong><br>I feel like no one's ever had to deal with the pain that I'm dealing with right now.</p><p><strong>SEGMENT8</strong><br>[spoken:]. Does anyone have answers?. Just Six months ago everything was fine. or so it seemed. What turn of event caused him to go downhill?. His parents are devastated. His girlfriend's depressed. What was he thinking!?</p><p><strong>SEGMENT9</strong><br>And we started at zero. And went different ways. Now we're all out here wasting away. Wasting away. Wasting away</p><p><strong>SEGMENT10</strong><br>And we started at zero. And went different ways. Now we're all out here wasting away. And if we started at zero. Then how did things change?. It seems like just yesterday we were the same. We were the same. We were the same</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

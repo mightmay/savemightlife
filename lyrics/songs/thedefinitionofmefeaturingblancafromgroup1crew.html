@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for The Definition Of Me (featuring Blanca from Group 1 Crew) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>The Definition Of Me (featuring Blanca from Group 1 Crew) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>The Definition Of Me (featuring Blanca from Group 1 Crew)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Everybody's got an opinion. Of what they want me to be. Everybody's got a condition. That I may never meet</p><p><strong>SEGMENT2</strong><br>So tired of looking in the mirror. It always says the same thing. I want to be about something different. Something more than the mirror can see</p><p><strong>SEGMENT3</strong><br>Like joy, peace. Alive in me. When it comes to my identity</p><p><strong>SEGMENT4</strong><br>I want the love. I want the light. I want the beauty. On the inside. I want the one that you can't see. To be the definition of me. More than the face. More than the girl. More than the voice. More than the world. I want the truth that I believe. To be the definition of me</p><p><strong>SEGMENT5</strong><br>Pretty is cool for a minute. But it always fades away. Trends are hot for a second. They'll be gone the very next day</p><p><strong>SEGMENT6</strong><br>So before you get lost in the moment. Lets get one thing clear. Only love will last forever. That's the reason that we're here</p><p><strong>SEGMENT7</strong><br>It's up to you cause everybody's looking. Who do you want them to see?</p><p><strong>SEGMENT8</strong><br>Chorus</p><p><strong>SEGMENT9</strong><br>They say Im cute with the boots. And the trendy attire. You kinda reminiscent of a younger Mariah. But do they see beyond what I got, what I rock. Theyd be shocked if they knew it was my soul that was hot. Hot boys dont affect my own self respect (no!). And neither do the magazines and vanity tests. Yo Disa make a list. Whos fly and whats next. Start it off with love, joy, peace, and end it with blessed. Muah!</p><p><strong>SEGMENT10</strong><br>Chorus</p><p><strong>SEGMENT11</strong><br>. (Featuring Blanca from Group 1 Crew) / (1 Peter 3:3-4, Philippians 3:7-11)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for L.A.D.I.E.S. - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>L.A.D.I.E.S. - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>L.A.D.I.E.S.</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>[Verse One]. Back then if I was a Jew the life that I led would not be common. I would be in prayer shawls anticipatin' His comin'. Between 1 and 30 A.D. I'd be under the Romans. Thankin' Yaweh that I'm not a slave, Gentile, or woman. Now don't get it twisted a woman had to be honored. If you came from out of her womb you had to obey your momma. For the fact that she was a woman wasn't the problem. It's because she was forbidden to publicly read the Talmud. Plus only allowed to be either in the balcony-. Or on the floor divided to avoid problems. And forbade to pray out loud, when it came to religious life. For women it was grey outside, till Christ came in the picture. switched up some customs. Now these same women are providin' Jesus with substance. Leavin' Jewish men grieved, they ain't agree. Cause out of these women's means they ministered to their needs</p><p><strong>SEGMENT2</strong><br>[Verse Two]. Look at Jesus maneuva in spite of the culture. Taken ladies and shapin' em makin' em soldiers. Peep this type of behavior was taboo. Jesus seen with Joanna (Luke 8:13) would make Him a bad Jew. But Jesus called some of the grimiest women. Like prostitutes even some of the slimiest women. In hot pursuit, women are weak is not the truth. And just to prove this point ladies I got the proof. Wouldn't be a Timothy without Timothy's moms. Eunice speakin' to Tim in them spiritual psalms. The way women were treated then these are similar times. But yet the men of God recognize ya strength. Who were the first witnesses of the empty tomb. Who birth Jesus being a virgin Holy Spirit consumed. Who stood for God way back in them Exodus times. And wouldn't even let em kill they son (Exodus 1:16)</p><p><strong>SEGMENT3</strong><br>[Chorus]. Jesus did walk with women in a special way. This was odd for men in the first century. Look at God callin' women to the ministry. Jesus did walk with the ladies</p><p><strong>SEGMENT4</strong><br>[Verse Three]</p><p><strong>SEGMENT5</strong><br>Da TRUTH: Just think about this. You're real fit in Abercrombie and Fitch. And when you in the mall you thinkin' about how to catch fish. Imagine you in Von Dutch on a date. No lust in the place, dude got a crush cause how you hustle your faith. You ain't tryin' be tuck at the waist. Cause you spend more time in the presence of God than adjustin' your face. Listen let me cut to chase. And encourage the beauty of holiness you should just want to be chased</p><p><strong>SEGMENT6</strong><br>Flame: Ladies we know it's real and it gets hard sometimes. Especially with the pressure of being flawless now. You can't do enough crunches to be the perfect woman. God ain't lookin' for perfect size but a worshippin' woman. Ok you gain weight maybe had an abortion. Made a mistake had a divorce and. It still ain't over Jesus forgives this is the gospel. so don't let that stuff stop you</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

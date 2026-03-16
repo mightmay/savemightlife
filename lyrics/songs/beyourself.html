@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Be Yourself - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Be Yourself - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Be Yourself</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Be yourself man. Be your own girl. What you want huh??. Why you concerned Want to be a super star. Like you got hot. It dont rain. Just rock. Why not lets talk. Of the days growing up things got tuff. Grade 9 is so rough want to be so loved. By the popular kids. When ya walk in the place they all trip. Chicks want to be kissed. In your dreams that are wet. When reality hits. Gravity kicks. Ya phone calls seemed to be missed. Its apparent that you starring and comparing your self. You need stop caring, forget everyone else</p><p><strong>SEGMENT2</strong><br>Chorus. To be a child forever. Innocent surrendered. Figured out who I want to be. Ill just be myself yo!!!</p><p><strong>SEGMENT3</strong><br>Sitting by the phone again. Wishing it will ring. Watching friends on TV its a trend. Never go out, and no where to go. Lonely in ya home chilling with the 5 year olds. Lonely all alone chilling with your mom at home. I know it aint perfect you. You wanna learn about the bees and the birds in the trees. And your urge to succeed its dream that you have. And all that you got. Come as you are let no one else stop it</p><p><strong>SEGMENT4</strong><br>Bridge. I hate when I look around. All I see is a generation dying for love I want peace. Its the game you play. You never win. Its just not you. Who you gonna be</p><p><strong>SEGMENT5</strong><br>I dont want to be me, I want to be him, be in. Be new school set the latest trends. Fashion expos up to your nose in clothes, With the models live your life pro like ye maestro. You dont want the pressure dog. Im telling you, so you better not. Live your life for it, its not better off. Why have strangers depict how you dress. How you feel, its a mess, be real you want respect.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

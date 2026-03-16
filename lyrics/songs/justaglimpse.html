@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Just a Glimpse - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Just a Glimpse - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Just a Glimpse</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I don't have to fully know. Just how far Your love can go. To sing of Your love for me</p><p><strong>SEGMENT2</strong><br>I don't have to comprehend. How Your mercy never ends. To sing of Your mercy</p><p><strong>SEGMENT3</strong><br>And all I need is. All I really need is</p><p><strong>SEGMENT4</strong><br>Just a glimpse of You. And I'm in awe. Just a glimpse of You. My God. Just a glimpse of You. And all I can do is worship. (All I can do is worship You Lord Yea)</p><p><strong>SEGMENT5</strong><br>And I don't have to clearly see. How amazing grace can be. To sing of Your grace for me</p><p><strong>SEGMENT6</strong><br>And I don't have to fully grasp. The measure of Your holiness. To sing holy holy</p><p><strong>SEGMENT7</strong><br>And all I need is. All I really need is</p><p><strong>SEGMENT8</strong><br>Just a glimpse of You. And I'm in awe. Just a glimpse of You. My God. Just a glimpse of You. And all I can do is worship</p><p><strong>SEGMENT9</strong><br>I worship You. I worship You. I worship You</p><p><strong>SEGMENT10</strong><br>Just a glimpse of You. And I stand in awe. Just a glimpse of You. You take my breathe away. My God. Just a glimpse of You. And all I can do is worship</p><p><strong>SEGMENT11</strong><br>Just a glimpse of You (just a glimpse of You and Im in awe). And I'm in awe. Just a glimpse of You (a glimpse ofshow me Your glory). My God. Just a glimpse of You. And all I can do is worship</p><p><strong>SEGMENT12</strong><br>Just a glimpse of You. And I'm in awe. Just a glimpse of You (oh God I stand in wonder). My God (and amazement of You). Just a glimpse of You. And all I can do is worship</p><p><strong>SEGMENT13</strong><br>All go ahead and worship him tonight. We worship You (I worship You). We lift up our voices in praise. And thanksgiving Lord (I worship You). We worship You. I worship You</p><p><strong>SEGMENT14</strong><br>We worship You Lord. In spirit and truth. We worship You. We stand in child like amazement. Oh with our eyes wide open. We worship You. With our hands stretched wide. We worship You. With our hearts wide open Lord. We worship You</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

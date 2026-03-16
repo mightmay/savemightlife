@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rochester - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rochester - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rochester</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>i was born in rochester to a book making man. had a fake cigar shop with the games on in the back. see them coming and going letting it ride on thorough breads. the police chief and tom hall wondering what was the spread</p><p><strong>SEGMENT2</strong><br>i carried rich mans bags through brier trying to chase down a little white ball. learned that any soft place wasn't good for me at all. daddy'd come home fired up looking for some sort of release. he'd beat the hell of timmy and timmy'd beat the hell out of me</p><p><strong>SEGMENT3</strong><br>i would hop the fence out to those government fields. run till there was nothing left to feel. lying there watching just disappear. knowing one day i'm gonna fly on out of here</p><p><strong>SEGMENT4</strong><br>the same police chief came knocking my first freshman day. put my daddy in handcuffs and his picture on the front page. took everyone of his suits and all my dignity. i'd walk the halls of irodiquie looking for any punk to set me free</p><p><strong>SEGMENT5</strong><br>i would hop the fence out to those government fields. run till there was nothing left to feel. lying there watching just disappear. knowing one day i'm gonna fly on out of here</p><p><strong>SEGMENT6</strong><br>got that call to vietnam just like everyone else i knew. so scared of the hand grenades through them farther then any other troop. came home like an iron fist and timmy tried to take my keys. ripped open his from pocket that was the last time he touched me</p><p><strong>SEGMENT7</strong><br>moved to an island out west and up to Breckenridge. met a mermaid on a glass boat and she promised me some kids. bought a house in oregon where you could touch both of the walls. had a son named benjamin and i was so scared of it all</p><p><strong>SEGMENT8</strong><br>well benjamin walked in the front room where i was cutting up my hash. looked into his deep blue eyes wondering why i'd been so mad. flushed a quarter pound down the drain praying for the mercy to confess. trying to rip the boy from Rochester right out of my chest</p><p><strong>SEGMENT9</strong><br>were gonna walk right out into those heavenly fields. run like there was no more time to steal. my three boys and the grace of god revealed. knowing one day you're gonna take me out of here. knowing one day you're gonna take me out of here</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

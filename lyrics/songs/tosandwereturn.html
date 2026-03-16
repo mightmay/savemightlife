@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for To Sand We Return - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>To Sand We Return - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>To Sand We Return</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Cowering man, a legion of no-ones call, bet it all</p><p><strong>SEGMENT2</strong><br>Covenant kill, he points to the heavens, bare. with blank stares</p><p><strong>SEGMENT3</strong><br>Beckoning search in self for his answer. Reckoning, purge, the great fall, the cancer. Settlement comes in wages now he is</p><p><strong>SEGMENT4</strong><br>shattered, broke, and all alone</p><p><strong>SEGMENT5</strong><br>Weve lost all our control. Our faces fall to the ground. Were powerless to your voice. Surrender to the sound.</p><p><strong>SEGMENT6</strong><br>Whatll it take to prove our decisions wrong. will we fall?</p><p><strong>SEGMENT7</strong><br>Alone in ourselves there nothing but chaos, fear. end it here</p><p><strong>SEGMENT8</strong><br>til we concede to drink from the endless. The desert we find ourselves in is hopeless. til we submit and let go the contol</p><p><strong>SEGMENT9</strong><br>we will always be alone..</p><p><strong>SEGMENT10</strong><br>Weve lost all our control. Our faces fall to the ground. Were powerless to your voice. And No longer seeming so, shattered, broke and all alone</p><p><strong>SEGMENT11</strong><br>Who do I belong To?. Not Earth. Not world. Not Evil. Not mortals. Not wretches. Not horrors</p><p><strong>SEGMENT12</strong><br>Who do I belong to?. Unchanging. Unbreaking. Unfailing. Creator. Immortal. Eternal</p><p><strong>SEGMENT13</strong><br>Surrender to the sound.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

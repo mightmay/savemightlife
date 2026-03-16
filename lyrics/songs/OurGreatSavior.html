@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Our Great Savior - เพื่อนคนบาปคือองค์พระเยซู - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Our Great Savior - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Our Great Savior</h2>
+        <h3>เพื่อนคนบาปคือองค์พระเยซู</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เพื่อนคนบาปคือองค์พระเยซู  ผู้คุ้มครองและทรงรักษา แม้เพื่อนบ้านเบื่อหน่ายศัตรูชัง   แต่พระองค์ทรงรักข้าฯ  ร้องรับ  อาเลลูยา ผู้ช่วยยิ่งใหญ่            พระเยซูผู้เป็นสหาย            ทรงคุ้มครองพ้นอันตราย            ทรงอยู่ด้วยจนวันสุดท้าย</p><p><strong>VERSE2</strong><br>ทรงช่วยชูกำลังคนอ่อนแอ  ข้าฯขออยู่ในอ้อมพระทรวง ทรงเป็นห่วงเมื่อมารมาล่อลวง  ทรงยึดหน่วงจนข้าฯมีชัย</p><p><strong>VERSE3</strong><br>ทรงปลอบโยนเมื่อเราโศกเศร้าใจ เมื่อมีทุกข์น้ำตาหลั่งไหล ใจของเราแทบแยกสลายไป  แต่พระเยซูทรงอยู่ใกล้</p><p><strong>VERSE4</strong><br>ทรงพิทักษ์รักษาและนำข้าฯ เมื่อต่อสู้ช่วยให้ใจกล้า คราวเกิดทุกข์ไร้สุขใจมืดมัว ข้าฯรู้แน่พระเจ้าอยู่ด้วย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Jesus! What a Friend for sinners! Jesus! Lover of my soul; Friends may fail me, foes as sail me, He, my Savior, makes me whole.               Hallelujah! What a Savior!            Hallelujah! What a Friend!            Saving, helping, keeping, loving,            He is with me to the end.</p><p><strong>VERSE2</strong><br>Jesus! What a Strength in weakness! Let me hid myself in Him; Tempted, tried, and sometimes failing, He, my Strength, my victory wins.</p><p><strong>VERSE3</strong><br>Jesus! What a Help in sorrow! While the billows o'er me roll; Even when my heart is breaking, He, my Comfort, helps my soul.</p><p><strong>VERSE4</strong><br>Jesus! What a Guide and Keeper! While the tempest still is high; Storms about me, night o'er takes me, He, my Pilot, hears my cry.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

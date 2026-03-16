@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I Smile - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I Smile - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I Smile</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I dedicate this song to recession, depression and unemployment. This song's for you.</p><p><strong>SEGMENT2</strong><br>Today's a new day, and there is no sunshine. Nothing but clouds, and it's dark in my heart. and it feels like a cold night. Today's a new day, where are my blue skies, where is the love and the joy that you promised me. you tell me it's alright.</p><p><strong>SEGMENT3</strong><br>(I'll be honest with you). I almost gave up, but a power that I can't explain, fell from heaven like a shower.</p><p><strong>SEGMENT4</strong><br>(When I think how much better I'm gonna be when this is over). I smile, even though I'm hurt see I smile, I know God is working so I smile, Even though I've been here for a while. I smile, smile.. it's so hard to look up when you look down. Sure would hate to see it when you give up now. You look so much better when you smile, so smile.</p><p><strong>SEGMENT5</strong><br>Today's a new day, but there is no sunshine. Nothing but clouds, and it's dark in my heart, and it feels like a cold night. Today's a new day, tell me where are my blue skies, where is the love and the joy that you promised me. you tell me it's alright.</p><p><strong>SEGMENT6</strong><br>(the truth is). I almost gave up, but a power that I can't explain. fell from heaven like a shower.</p><p><strong>SEGMENT7</strong><br>I smile, even though I'm hurt see I smile, I know God is working so I smile, Even though I've been here for a while. I smile, smile.. it's so hard to look up when you look down. Sure would hate to see it when you give up now. You look so much better when you smile.</p><p><strong>SEGMENT8</strong><br>Smile. for me. Can you just smile.. for me. Smile. for me. Can you just smile.. for me.</p><p><strong>SEGMENT9</strong><br>ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. (and while your waiting). ohohoh you look so much better when you. (and while your praying). ohohoh you look so much better when you. (look in the mirror). ohohoh you look so much better when you. (always remember). You look so much better when you smile</p><p><strong>SEGMENT10</strong><br>I almost gave up, but a power that I can't explain. fell from heaven like a shower.</p><p><strong>SEGMENT11</strong><br>I smile, even though I'm hurt see I smile, I know God is working so I smile, Even though I've been here for a while. I smile, smile.. it's so hard to look up when you look down. Sure would hate to see it when you give up now. You look so much better when you smile. so smile.</p><p><strong>SEGMENT12</strong><br>ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. ohohoh you look so much better when you. smile..</p><p><strong>SEGMENT13</strong><br>I just want you to be happy.. I want you to have joy 'cause can't nobody. take that away from you. I see you. SMILE!!</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

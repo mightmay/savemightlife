@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for You Keep Givin' Me - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>You Keep Givin' Me - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>You Keep Givin' Me</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>So many reasons to be thankful. So many blessings that I can't repay. And I never would've made it here without You. Sending angels to guide me on my way</p><p><strong>SEGMENT2</strong><br>You keep givin' me joy. You keep givin' me happiness. You keep givin' me hope. You keep givin' me everything I wish. You keep givin' holding me. When I'm about to fall. And if even all of that was not enough. You keep givin' me love. (You're givin', You're givin' me love)</p><p><strong>SEGMENT3</strong><br>I know that I'm not always easy. And I know I put You through some trying days. But in spite of all the worries that I gave You. No, You never let my Angels get away</p><p><strong>SEGMENT4</strong><br>You keep givin' me joy. You keep givin' me happiness. You keep givin' me hope. You keep givin' me everything I wish. You keep givin' holding me. When I'm about to fall. And if even all of that was not enough. You keep givin' me love</p><p><strong>SEGMENT5</strong><br>Have I told You lately (have I told ya). How Your love has saved me. It takes me to place I've only dreamed. I'm so thankful, Lord, for sending me angels</p><p><strong>SEGMENT6</strong><br>You keep givin' me joy. You keep givin' me happiness. You keep givin' me hope. You keep givin' me everything I wish. You keep givin' holding me. When I'm about to fall. And if even all of that was not enough. [X2]</p><p><strong>SEGMENT7</strong><br>You send angels to guide me from up above. You just keep gvin' me. You just keep givin' me love</p><p><strong>SEGMENT8</strong><br>You're givin' me, givin' me, givin' me.. How can I thank you?. How can I thank you, Lord?. You're the. One who's blessed me with everything. You keep givin' love.. You keep givin' me.. givin' me love. You! You! You! Givin' me, givin' me. You're givin' me, givin' me, givini' me.. My everything. You keep givin' me love.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

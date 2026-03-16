@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Manger - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Manger - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Manger</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Girl, use my manger for your darling angel. Cozier than my sheep you ought to be, Mary. Showed you my stable -- for my farming animals. Girl, you must spend the night with these, maybe. Life is one big party when there's children. But whose gonna have a bed for your small son?. It's all good that you're little one's near but. Can't find a room -- crud! Water broke and now what?. You can rush out to the place I mentioned. Spend the night save the money for the rent and. Keep him there through your entire vacation. You won't need reservations -- my barn's pretty vacant. Girl, use my manger for your darling baby. Over where Bo Peep would want to be, Mary. Sure, use my stable -- it's a charming place and. Girl you'll make friends with cows and sheep, maybe. Sure it's clean and that's how you should be treated. Though you'd better get another one in Egypt. Ruler of Bethlehem is conceited. Take it from me kid: if he comes, beat it!. But he's not gonna come tonight; there's no problem. Not till talkin' to some wise men; Herod's so dumb. But the free room that I have for you is ho hum. He could search for so long and still never see your son. Girl, use my manger for your darling baby. Clothe Him with white sheets or else he'll freeze, Mary. Showed you my stable -- what are all these angels?. Girl, I might end up on my knees, maybe. Girl, there's probably gonna be a crowd. So let me see your child -- He must be sent from up above. And He appears to be so tender and so nice and friendly. I think He's givin' me a hug. Girl, there's probably gonna be a crowd. So let me see your child -- He must be sent from up above. And He appears to be so tender and so like the shepherds. I'm thankin' Heaven He has come. Tonight it's one big party 'cause it's God's son. But you'd better watch your back when it's all done. It's all good that your little one's here but. Can't be a fool, hon -- what about the law, mon?. You can call on divine intervention. But shiny light gives you very much attention. It could lead to my incarceration. I wanna tell the nations, but I think Ill wait some. REPEAT SECOND CHORUS, THIRD CHORUS</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

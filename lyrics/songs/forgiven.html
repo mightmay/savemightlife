@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Forgiven - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Forgiven - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Forgiven</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Can you hear me. Yeap. Come on friends Can you lift your hands. Forgiven [4x] Oh [repeat 3x]</p><p><strong>SEGMENT2</strong><br>[Verse 1:]. Can I have a moment of your time. I'm going to come from my heart. I know what I'm about to tell you. Is going to hit you where you are. See I was raised in the church but I. Found a way to do my dirt. See I was a preacher's son and you won't believe the things. I've done but I said to myself you got to do better. You Can't keep living this way you got to get it together. When I humble myself and pray I knew God would listen. Today I can hear him say my son you are</p><p><strong>SEGMENT3</strong><br>[Chorus:]. Forgiven [4x] Oh [repeat 2x]. My past is behind me. I'm moving ahead. God has forgiven me. That old man is dead. Forgiven [4x] Oh [repeat 2x]. That was yesterday. This is today. I don't care what people have to say</p><p><strong>SEGMENT4</strong><br>[Verse 2:]. People always judging everybody else situation. But when the tables are turned suddenly they get the revelation. Nobody has the power to put you in a heaven or hell. I don't regret the things I've done. Cause now I got a story to tell. And there ain't no testimony. If you don't go through the test. And you ain't got no message. If you don't go through the mess. Just humble yourself and pray. And give God confessions. And you will hear him say my child you are</p><p><strong>SEGMENT5</strong><br>[Chorus:]. Forgiven [4x] Oh [repeat 2x]. My past is behind me. I'm moving ahead. God has forgiven me. That old man is dead. Forgiven [4x] Oh [repeat 2x] (Forgiven for the sins you committed? and even though you did it). That was yesterday. This is today. I don't care what people have to say</p><p><strong>SEGMENT6</strong><br>[Bridge:]. No I'm not innocent no. God know I've did some things yea. Somebody need to understand. That you can put your sins in the master hands. Now bow your head and repeat after me right now. Say father forgive me. I'm a sinner I need you. Come in to my heart and change my world around. Forgive me Oh Lord. Forgive me right now. I can't go another day. Living my life this way. You died for me. You rose and I confess you are Lord</p><p><strong>SEGMENT7</strong><br>[Chorus:]. Forgiven [4x] Oh [repeat 2x]. My past is behind me. I'm moving ahead. God has forgiven me. That old man is dead. Forgiven [4x] Oh [repeat 2x]. That was yesterday. This is today. I don't care what people have to say. Forgiven [4x] Oh [repeat 2x]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

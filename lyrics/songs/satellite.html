@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Satellite - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Satellite - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Satellite</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Satellite. Satellite</p><p><strong>SEGMENT2</strong><br>Verse 1:</p><p><strong>SEGMENT3</strong><br>I wonder how clear it must look from there to here. No obstruction, this selfish corruption. All in this atmosphere. No fear, less tears, only time to catch my breath. I fail to inhale. Your love constricts my chest. Confusion blinded me, mental and physically. And it's because of you that now I can see. So now I can run. I follow the Son and ride on to Zion. And dance this last song of freedom. But only time will tell, if it's truly for real. Can't change your mind, all I know this is what I feel. Whether I'm wrong or right, please keep my life in sight. And never take your eyes off me</p><p><strong>SEGMENT4</strong><br>Bridge:</p><p><strong>SEGMENT5</strong><br>As I look up to the sky today. Well I can see you looking down on me. It brings a smile to my face again. S-S-S-Satellite</p><p><strong>SEGMENT6</strong><br>Chorus:</p><p><strong>SEGMENT7</strong><br>Satellite. Satellite</p><p><strong>SEGMENT8</strong><br>Verse 2:</p><p><strong>SEGMENT9</strong><br>It's truly one of a kind, like star shine, beyond night time, are you there. My eyes stare to find, just what's behind this blind notion of mine, is it. genuine. Cause sometimes, it plays tricks with my mind, some call it asinine. But it's like love or hate, now is that real or fake?. Cause it's a real thin line, but that's your choice to make. The question at hand, help me understand, is this your plan?. I think I can, can I think, then I think I can. Because I won't break (nah), and I won't shake (nah). With lifted hands to this Man (Jah), I'll stand in faith. I'll make it through, my trust in you. Close my eyes, make a wish, kiss the sky. Hey thereI see you</p><p><strong>SEGMENT10</strong><br>Shining Light. Shining Light. Blinding Light. Blinding Light. Shining Light. Shining Light. Blinding Light. S-S-S-Satellite</p><p><strong>SEGMENT11</strong><br>Chorus:</p><p><strong>SEGMENT12</strong><br>Satellite. Satellite. Satellite (When I look up to the sky today, I can feel you looking down on me). Satellite (It brings a smile to my face again, satellite)</p><p><strong>SEGMENT13</strong><br>Satellite. Satellite. Guiding Light. Guiding Light. Shining Bright. Shining Bright. Guiding Light. Guiding Light. Satellite (As I look up to the sky today). Satellite. Blinding Light (satellite). Blinding Light. Shining Light (It brings a smile to my face again). Shining Light. Guiding Light. Guiding Light</p><p><strong>SEGMENT14</strong><br>It's truly one of a kind, like star shine, beyond night time</p><p><strong>SEGMENT15</strong><br>Are you there? - (echo/repeat X 9)</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

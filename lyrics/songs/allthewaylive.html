@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for All The Way Live - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>All The Way Live - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>All The Way Live</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Let's funk it up!. Relate, vacate, what's today's rate?, In this day 'n' age ain't nobody safe, get'cha got'cha yo, who shot'cha?. I must warn ya, it's that way in California, no one's givin', everyone's takin', who set's off the moves, you're makin'?. huh, we're bringin' it, got you singin' it, hold on tight, cuz' this might sting a bit,</p><p><strong>SEGMENT2</strong><br>now, bring it back</p><p><strong>SEGMENT3</strong><br>Yo, I gotta let my peeps know, success ain't rated by how much dough you hold, ha, huh, huh, and it don't make sense, to live your whole life for the dollars 'n' cents, this greed is killin' us by the hundreds, ya sittin' on a million but ya still won' derin', I guess happiness is a fish you can't catch 'n'. fool ya lookin' in the wrong direction, it don't matter whether ya rich or not, if ya gone, ya gone, ain't nothin' ya got, it matters most in this circle of life, if ya find your reason for being here, if ya don't know, listen here, it's outlined in the book of life, you want things to make sense?, take a U-turn, make it right, for the two-triple zero, we come hummin', my hand grippin' the mic tight, that's how I'm comin',</p><p><strong>SEGMENT4</strong><br>All-the-way-live (x4). uh, feel the funk, make it rough,</p><p><strong>SEGMENT5</strong><br>It's just something that happens, we try hard to deny, you'll find out when it happens, it's in the air tonight, here it comes now, fast like a gun now, on the run now?. turn to NUMBER ONE now, ya feet slowing, you're crazy, and tired, come-back,</p><p><strong>SEGMENT6</strong><br>Hit me, sometimes, life is tricky, the stickman comes along, to stick me, flick me, he cannot get with me, got saved 'n' got the victory,</p><p><strong>SEGMENT7</strong><br>Well who planned this?, the Krutch don't miss, with that funked out twist to get'cha on the canvas, we be that ill-type, but only when we grip mics,'n' T.F.K. be the squad that'll burn out the lights, like that, gettin' upon the drum track, crack back ya speaker stack to to be exact, HE'S comin' keep ya eyes on the clock, we rip mics of all types when we rock, . on and on and on, 'n' they'll be no frontin', 'cuz this is how I'm comin'</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

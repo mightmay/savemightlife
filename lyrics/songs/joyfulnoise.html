@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Joyful Noise - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Joyful Noise - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Joyful Noise</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>You know what it is. I love it. Yeah. Let's talk about it</p><p><strong>SEGMENT2</strong><br>Your boy's been a Christian, quite a few years. Victory and faith, but I failed in my fears. I heard a lot of words that have tickled many ears. That's why I praise God for the Word that we adhere. The Word became flesh, lived for thirty years. Died at 33, but after days reappeared. Jesus Christ anointed one ascended in the air. Or you can say the air where the Father made Him heir. Of all things the throne know it's more than a chair. But after our redemption yes He did take a chair. Greater than the angels name superior to theirs. This is Hebrews Chapter 1 if you cared. I'm leaning to the right. The light is where I'm running. I thought I wanted life, drunk, sexed out and blunted. But all I really wanted was the One who really won it. Fought death, beat it gave His life to the public. I love it!</p><p><strong>SEGMENT3</strong><br>Angels surrounding His throne and. Worthy is the Lamb who was slain. The whole earth is full of His glory. All nations bow to His name. His majesty fills the Heavens. Our hearts give thunderous praise. Declare the Lord is forever. Make a joyful noise in this place</p><p><strong>SEGMENT4</strong><br>Man I'm trying to lift Him high. Higher than the stars. I am not of this world like I'm from the planet mars. I love to preach Jesus you can read it in my bars. I'm pretty straight forward when I'm speaking bout my Lord. He paid the sin price being beat by Roman guards. But when He resurrected gave us life free of charge. Now me and my boys need to be in the phych ward. Cause we went crazy for God our lives was scarred. Now in the Book of Life, our names have been written down. Find More lyrics at www.sweetslyrics.com. We're casting our crowns before His feet on the ground. It's such a holy melody and a heavenly sound. Hearing holy holy holy coming out of the mouth. Of the four living creatures by His throne all around. Can you picture the scene this this is how it's going down. You just need a little faith and a new set of eyes and a telescopic lens to look in and see God. I love it!</p><p><strong>SEGMENT5</strong><br>Angels surrounding His throne and. Worthy is the Lamb who was slain. The whole earth is full of His glory. All nations bow to His name. His majesty fills the Heavens. Our hearts give thunderous praise. Declare the Lord is forever. Make a joyful noise in this place</p><p><strong>SEGMENT6</strong><br>One day we gon' be out man, like three strikes. And home son like a homerun CHRIST. IS  KING  LION  LAMB  GOD  MAN  SIN CONQUEROR  GRAVE CONQUEROR  SATAN CONQUERED. Can take a sinner, atheist sinner to God conscience. Can take nothing. Make creation and lives honor. The same God that came through a fetus as Jesus. Limited to breathing. Got believers singing</p><p><strong>SEGMENT7</strong><br>Angels surrounding His throne and. Worthy is the Lamb who was slain. The whole earth is full of His glory. All nations bow to His name. His majesty fills the Heavens. Our hearts give thunderous praise. Declare the Lord is forever. Make a joyful noise in this place.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

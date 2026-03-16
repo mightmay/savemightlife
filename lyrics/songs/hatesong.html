@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Hate Song - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Hate Song - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Hate Song</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This is a song about stuff that I hate. Momma always said that hate was a strong, strong word. Poppa always said that words of hate should never be heard. But I'm getting older and I just cannot lie. There are things I hate, no matter how hard I try. I hate traffic, I hate dirt in my eyes. I hate spiders, and I hate girlfriends that lie. I hate cancer, I hate cauliflower pie. But most of all, I hate my ex-girlfriend's new guy, I hate that guy. The good book says that we should love everyone. And I'm doing my best, but it's easier said than done. This new guy was a good friend of mine before. Caught him with my girl in his mustang ford. I hate taxes, I hate stink bugs and flies. I hate rug burns, and I hate poke dot ties. I hate Mike Tyson, 'cause bite your ear then bust you in the eye. But most of all, I hate my ex-girlfriend's new guy, I hate that guy. I was sittin' down by myself, I was having a coke. I heard someone laughing real loud at a real dumb joke. I recognized the voice so I turned around. It was my ex-girlfriend's new guy, can't stand that clown. He walked up to me with a really sorry look on his face. And he said, man I done you wrong but now she's gone and I've been replaced. I know I don't deserve to have you as a friend because I played the fool. But I'm really hurtin' man, can I just pull up a stool. So he started crying and saying how he loved that girl. She got with a new guy and it rocked his world. He asked me how I dealt with it when she dumped me. And I said, I just talked about stuff I hate man, it's like therapy. And he said, really, I said yeah, yeah, give it a shot go ahead. I hate pimples, I hate hemorrhoids and hives. I hate funerals, I hate unsalted fries. I hate Brittney spears because she never returns any of the letters that I Write. But most of all, I hate my ex-girlfriend's new guy. Wouldn't mind if someone huge fell on his head and he died. Like a bus, or a truck, or a meteorite. A hippopotamus, a rhinoceros or even a pig if it was falling from a great height. I hate that guy</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

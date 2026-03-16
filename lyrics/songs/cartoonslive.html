@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Cartoons [Live] - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Cartoons [Live] - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Cartoons [Live]</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I was thinkin' the other day. "What if cartoons got saved?. They'd start singing praise. In a whole new way"</p><p><strong>SEGMENT2</strong><br>Yeah, I was thinkin' the other day. "What if cartoons got saved?. They'd start singing praise. In a whole new way", Yeah yeah</p><p><strong>SEGMENT3</strong><br>Fred and Wilma Flintstone. Sing, "Yabba dabba do yah". Scooby Doo and Shaggy. "Scooby dooby doo yah". And the Jetsons' dog named Astro. "Rough rough roo yah"</p><p><strong>SEGMENT4</strong><br>'Cause, I was thinkin' the other day. "What if cartoons got saved?. They'd start singing praise. In a whole new way", Yeah yeah yeah</p><p><strong>SEGMENT5</strong><br>Teenage Mutant Ninja Turtles. "Cowabunga loo yah, dude". Then there's, Kermit the Frog here, singing. "High ho le loo yah". And that little bald guy, Elmer Fudd. "How ay woo yah"</p><p><strong>SEGMENT6</strong><br>'Cause, I was thinkin' the other day. "What if cartoons got saved?. They'd start singing praise. In a whole new way"</p><p><strong>SEGMENT7</strong><br>Oh, that big old moose and his friend Rocky. "Bullwinkle loo yah". And our favourite bear named Yogi. "Hey, boo boo boo loo ya". Then there's all those little blue guys. And they'd sing, "Hah la la la la la la la la lay loo yah". How about Beavis and that other guy?. "Nah"</p><p><strong>SEGMENT8</strong><br>Now, there's a point to this looney tune. I'm not an Anamaniac. But there's a lot of praisin' to do. And cartoons were made for that. It's our God, yeah yeah yeah. So, let's sing Hallelujah</p><p><strong>SEGMENT9</strong><br>Hallelujah. Hallelujah. Hallelujah. Hallelujah</p><p><strong>SEGMENT10</strong><br>Yabba dabba do yah. Scooby dooby doo yah. Rough rough roo yah.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

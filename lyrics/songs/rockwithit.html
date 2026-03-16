@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rock With It - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rock With It - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rock With It</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Are y'all ready for this (Rock on). Pump ya fist to this (Rock on). Never mess with this (Rock on). So come and get with this (Rock on)</p><p><strong>SEGMENT2</strong><br>[Repeat Chorus]</p><p><strong>SEGMENT3</strong><br>It goes 1 2 3 and to the 4. Well, this is what happens when hip-hop meets the hardcore. From the stands all the way to the dance floor. Get ya hands up pump it till ya arm sore. Ya better understand now who we rock for. The Son of Man just nothing else nothing more. So make your plans any time that we on tour. It's guaranteed we can and will give ya what ya came for. What's the deal what in the world ya standing there for. C'mon for real I came in here to declare war. I ain't ashamed of the name of who I stand for. Jesus reigns supreme I'll say it till my tongue sore</p><p><strong>SEGMENT4</strong><br>Party people you want to get down. Are ya ready to rock and get down. Show me what ya got then get down. So everybody in the spot get down now</p><p><strong>SEGMENT5</strong><br>[Chorus]</p><p><strong>SEGMENT6</strong><br>It goes 1 2 3 and to the 4. We ain't down get ready cuz there's plenty more. Ya better come get this life that we living for. So my man gives these people what they waiting for. Rock, rock, ready to roll. It's also no celebrating out of control. C'mon party people and hit the dance floor. Keep the party rocking till your ears get sore. It sounds too much to ignore. So throw your hands up yo give me some more. We're party on poor let the crowd roar. Cuz me and Bob are here to settle the score. C'mon</p><p><strong>SEGMENT7</strong><br>Party people you want to get down. Are ya ready to rock and get down. Show me what ya got then get down. So everybody in the spot get down now. [Chorus x3]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

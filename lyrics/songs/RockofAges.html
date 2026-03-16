@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Rock of Ages - พระเยซูเปรียบดังศิลา - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Rock of Ages - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Rock of Ages</h2>
+        <h3>พระเยซูเปรียบดังศิลา</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>พระเยซูเปรียบดังศิลา  ซึ่งกำบังข้าฯให้พ้นภัย พระโลหิตและน้ำไหล  ออกมาจากสีข้างพระกาย เป็นฤทธิ์เดชชำระบาปข้าฯ ให้หลุดโทษพ้นบาปนานา</p><p><strong>VERSE2</strong><br>อันคุณงามความดีของข้าฯ ความร้อนรนหรือความอดทน หรือน้ำตาที่ไหลพรั่งพรู ไม่ทำให้บัญญัติสมบูรณ์  มีแต่พระเยซูองค์เดียว  ยกบาปโทษให้หมดมลทิน</p><p><strong>VERSE3</strong><br>ข้าฯไม่มีอะไรติดมา  รู้สึกอายเมื่อพึ่งกางเขน ขอพระคุณช่วยข้าฯพ้นอาย  ทรงโปรดเมตตาปรานี ข้าฯเร่งไปยังน้ำพุไหล  โปรดล้างข้าฯหาไม่คงตาย</p><p><strong>VERSE4</strong><br>เมื่อกำลังอำลาโลกหล้า  เมื่อวิญญาณออกจากกายา แล้วขึ้นไปยังโลกภายหน้า  ที่บัลลังก์ตัดสินประชา พระเยซูเปรียบดังศิลา  ทรงบังข้าฯพ้นภัยนานา.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>Rock of Ages, cleft for me,  Let me hide myself in Thee; Let the water and the blood,  From Thy wounded side which flowed Be of sin the double cure;  Save from wrath and make me pure.</p><p><strong>VERSE2</strong><br>Not the labor of my hands Can fulfill Thy law's demands; Could my zeal no respite know, Could my tears forever flow, All for sin could not atone; Thou must save, and Thou alone.</p><p><strong>VERSE3</strong><br>Nothing in my hand I bring, Simply to the cross I cling; Naked, come to Thee for dress; Helpless look to Thee for grace; Foul, I to the fountain fly; Wash me, Savior, or I die.</p><p><strong>VERSE4</strong><br>While I draw this fleeting breath, When mine eyes shall close in death, When I soar to worlds unknown, See Thee on Thy judgment throne, Rock of Ages, cleft for me, Let me hide myself in Thee.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

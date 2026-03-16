@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Be Still And Breathe - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Be Still And Breathe - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Be Still And Breathe</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Everything they said about you. Everything they've known was wrong.</p><p><strong>SEGMENT2</strong><br>Did you hear me call your name?. Did you hear me call. or were your thoughts just too loud, or were your thoughts just loud enough. for you to miss it?. I thought you'd be listening. a little more intently. for me. But I'll be here when you're ready. Until then, just be still and breathe. Just be still and breathe.</p><p><strong>SEGMENT3</strong><br>But I was screaming. I was screaming.</p><p><strong>SEGMENT4</strong><br>Everything they said about you. Everything they've known was wrong. The outside doesn't feel. what the inside knows is real.</p><p><strong>SEGMENT5</strong><br>Did you see me walking back. through the same door that I left?. The same door that I left. Why didn't you stop me if you could, stop me?. There was something that I missed. Probably cause I didn't want to find it. I didn't want to find it. Then came the arguments, now there is silence. Just be still and breathe. Just be still and breathe.</p><p><strong>SEGMENT6</strong><br>And we're both breathing. We're both breathing.</p><p><strong>SEGMENT7</strong><br>Everything they said about you. Everything they've known was wrong. The outside doesn't feel, what the inside knows is real. Everything they said about you. Everything they've known was wrong. The outside doesn't feel, what the inside knows is real.</p><p><strong>SEGMENT8</strong><br>Just walk away and save everything you can, and save everything you can. Just walk away and save anything you can, anything.</p><p><strong>SEGMENT9</strong><br>Everything they said about you. Everything they've know was wrong. The outside doesn't feel, what the inside knows is real. Everything they said about you. Everything they've know was wrong. There's a place that they don't know. and that's where I call my home. Where I call my home.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

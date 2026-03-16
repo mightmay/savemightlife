@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Meditate - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Meditate - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Meditate</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Just Sit back and meditate. I just wanna think about it, just think about it. Just sit back and think how great. the love you give, oh. Just sit back and meditate. I just wanna think about it, just think about it. There is no way, no one compares to you. No way, no one compares to you.</p><p><strong>SEGMENT2</strong><br>It's raining, I don't really have no place to go, hear a voice of quiet in my soul. saying I should go on just stay home. Saying I should talk to you. Tell you everything that's on my mind. Tell you what's goin' on inside;. I don't even know when's the last time that I. made time to talk to you. I've been so busy runnin' bout', always trying to kick it, go hang out, but there's, there's no one else but you. Oh it's you I truly want to see, cause of all the love you give to me and I</p><p><strong>SEGMENT3</strong><br>Chorus: Just sit back and meditate. On your goodness, your mercy, your grace. Right now I want to just sit back and think how great. your love that will never change. I think I'm gonna just sit back and meditate. You have given me all that I need. And there is no way, no one compares to you. No way, no one compares to you to me.</p><p><strong>SEGMENT4</strong><br>My tower in times of refuge, my source of life and peace. Your love, it falls like raindrops, and never seems to cease. You're the God of all creation, you're the lover of my soul. Given me the air that I breathe, no way I could ever let you go, so I. So I give thanks to you. More than just for everything you've done, but for how you've shown me you're the one that I. can put my trust into. So no matter who it is that calls, I'm not leavin' til your spirit falls on me.</p><p><strong>SEGMENT5</strong><br>(Repeat Chorus)</p><p><strong>SEGMENT6</strong><br>Who could I have in heaven, Lord, but you?. There's no one, there's no one. Tell me, who could be who you are and do what you do?. Your beauty Lord, I long to see, see. In your prescence I find joy and peace,</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

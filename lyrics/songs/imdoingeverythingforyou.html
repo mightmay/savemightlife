@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for I'm Doing Everything (For You) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>I'm Doing Everything (For You) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>I'm Doing Everything (For You)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Do you ever do a thing or two just to wait. When you don't have a thing to say. I'll try to take this love but I don't know. Cause I don't wanna wait I'm tired of. looking for the folks who try to say. that we don't know until were old cause. that's how it goes but what do i know, oh. And please pick me I'm a terrible mess. You know I just can't help it and I just gotta confess. You do what you do when I care a little less</p><p><strong>SEGMENT2</strong><br>[Bridge:]. So stay I'm gonna do everything I'm gonna make it right. I'm gonna make it good I'm gonna do it alright. I'm gonna write it down I'm gonna make a sound</p><p><strong>SEGMENT3</strong><br>[Chorus:]. Cause I'm doing everything for you. Cause I love to be near to you. Something just takes me away to a place where I'm happy. Cause I'm doing everything for you. Yeah you know that I adore you. and I just can't take it anymore</p><p><strong>SEGMENT4</strong><br>Oh! Oh! you know I gotta know, yeah, oh no</p><p><strong>SEGMENT5</strong><br>So I'll be making up things for you to see. Like romantic lights surrounding Italy. Cause you deserve the very best, and I'll never rest. So I'll be sure to pass that test. And I just smile and say whoa cause you just gotta know. That every time we stay you never lose your way. It reaches to the stars shines up the clouds and lights up this whole world. Bless your heart you've made me happy again. It's been so long and I'm sick of pretending. You've enlighted the pain in my heart</p><p><strong>SEGMENT6</strong><br>[Bridge Repeat]</p><p><strong>SEGMENT7</strong><br>[Chorus Repeat]</p><p><strong>SEGMENT8</strong><br>Cause I do wanna wait for another day cause I can feel this is right. I do wanna make this go on for too much longer. Cause you've got a ringless finger and I could go buy a ring right now. Well.. Actually I don't have money but that's ok. Cause I can figure it out</p><p><strong>SEGMENT9</strong><br>[Chorus Repeat]</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Running Just To Catch Myself - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Running Just To Catch Myself - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Running Just To Catch Myself</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I am driving. I am late for work. Spilling coffee down my whitest shirt. While I'm flossing and I'm changing lanes. Oh Yeah</p><p><strong>SEGMENT2</strong><br>Now I'm driving. Through the parking lot. Doing eighty, hey what the heck why not. Watch it lady, Cuz you're in my spot. Once again, It's early to work. And here's a surprise, I got a. McMuffin for just 99 cents today. I think they ran a special</p><p><strong>SEGMENT3</strong><br>Chorus: I can't stand still Can I get a witness. Can you hear me Anybody, Anybody. I think I am running just to catch myself</p><p><strong>SEGMENT4</strong><br>Maybe someday I could fly away. Go to Key Largo or Montego Bay. Sport my Speedo, maybe grab a tan. DREAM VACATION, WILD ELATION. Now I'm running. Straight into my boss. And he's angry, Oh and he calls me Ross. Which is funny, cause that ain't my name. And that's lame. I'm still running. Running very late, For a meeting. Wait, that was yesterday. Guess I'm early for the one next week, Oh how sweet. I get on the ladder, I corporately climb. I wave at my life as it passes me by everyday. My name's not Ross!</p><p><strong>SEGMENT5</strong><br>(Chorus)</p><p><strong>SEGMENT6</strong><br>Life in my cubicle is discreet, Life in my cubicle is neat. I've got some pictures of my friends. Some sharpened pencils where's my pen. Ten O'clock I'm in a meeting. Paper cut I think I'm bleeding. Check my hair it's still receding, Hey what a life. Break for lunch, there's nothing better. Run outside and don my sweater. Like Fred Rogers let's be neighbors. I've lost my mind. I'm over worked, and underpaid, and non appreciated. It's just a perk of being of being middle class and educated. One.. spinning circles in my chair. Two..win a game of solitaire. Three.. And I ponder where my stapler's gone 'till. Four O'clock and I stare at the door, And I stare at my watch, Then I stare at the door. I stand by my desk like I'm going to war. There's just one thing I'll be needing. Grab my paycheck as I'm leaving. Oh oh oh oh oh oh ohhhhhhh. Five O'clock it's time to go. There's crowds to fight and horns to blow. It's talking fast on my cell phone. Hey, watch out that's reckless driving!. Five O'clock. It's time to hit the couch and watch TV. Set the clock and go to sleep. It's 8 a.m. on Monday morning. Again and again and again and again and again. Driving around, no where to go. And so I hang with my lady, Oh, and chill with my bros. It's okay, in my Cabriolet</p><p><strong>SEGMENT7</strong><br>(Chorus)</p><p><strong>SEGMENT8</strong><br>When I meet God, I will have a question. I just forgot the question. I think I am running just to catch myself. Oh oh oh. Oh oh oh</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

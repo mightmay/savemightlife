@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Those Nights - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Those Nights - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Those Nights</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I remember when we used to laugh about nothing at all. It was better than going mad. From trying to solve all the problems we're going through. Forget 'em all. Cause on those nights we would stand and never fall. Together we faced it all. Remember when we'd</p><p><strong>SEGMENT2</strong><br>Stay up late and we'd talk all night. In the dark room lit by the TV light. Through all the hard times in my life. Those nights kept me alive. We'd listen to the radio play all night. Didn't want to go home to another fight. Through all the hard times in my life. Those nights kept me alive</p><p><strong>SEGMENT3</strong><br>I remember when we used to drive anywhere but here. As long as we'd forget our lives. We were so young and confused. That we didn't know to laugh or cry. Those nights were ours. They will live and never die. Together we'd stand forever. Remember when we'd</p><p><strong>SEGMENT4</strong><br>Stay up late and we'd talk all night. In the dark room lit by the TV light. Through all the hard times in my life. Those nights kept me alive. We'd listen to the radio play all night. Didn't want to go home to another fight. Through all the hard times in my life. Those night kept me alive</p><p><strong>SEGMENT5</strong><br>Those nights belong to us. There's nothing wrong with us. Those nights belong to us</p><p><strong>SEGMENT6</strong><br>I remember when we used to laugh. And now i wish those nights would last</p><p><strong>SEGMENT7</strong><br>Stay up late and we'd talk all night. In the dark room lit by the TV light. Through all the hard times in my life. Those nights kept me alive. We'd listen to the radio play all night. Didn't want to go home to another fight. Through all the hard times in my life. Those night kept me alive</p><p><strong>SEGMENT8</strong><br>Stay up late and we'd talk all night. In the dark room lit by the TV light. Through all the hard times in my life. Those nights kept me alive. We'd listen to the radio play all night. Didn't want to go home to another fight. Through all the hard times in my life. Those night kept me alive. Those nights belong to us. There's nothing wrong</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Omega - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Omega - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Omega</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>The amazing grace, Of the master ? Jesus Christ. The extravagant love of God, The intimate friendship of the Holy Spirit, Be, with you.</p><p><strong>SEGMENT2</strong><br>May the grace of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT3</strong><br>May the love of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT4</strong><br>May our Lord, Jesus Christ Himself. Encourage and strengthen you, In every good thing you do and say. God loved us, And through His grace, He gave a shining hope, And His encouragement continues forever!</p><p><strong>SEGMENT5</strong><br>May the grace of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT6</strong><br>May the love of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT7</strong><br>Love mixed with faith be yours. From God the Father. And from the Master. Jesus Christ. And now unto Him. Who is able to you from falling. And present you faultless before. The presence of His glory. With exceeding joy. To the only wise God, Our Saviour. Be glory and majesty. Dominion and power. Both now and forever.. Amen.</p><p><strong>SEGMENT8</strong><br>May the grace of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT9</strong><br>May the love of our Lord be with you, Now and always may you stay, Blameless till he comes.</p><p><strong>SEGMENT10</strong><br>Repeat x 5</p><p><strong>SEGMENT11</strong><br>Introduction</p><p><strong>SEGMENT12</strong><br>Verse 1</p><p><strong>SEGMENT13</strong><br>Be Thou my vision, oh Lord of my heart, Nought be all else to me, save that Thy art. Thou my best thought in the day and the night, Waking or sleeping, Thou presence my light.</p><p><strong>SEGMENT14</strong><br>Verse 2</p><p><strong>SEGMENT15</strong><br>Be Thou my wisdom, be Thou my true word, I ever with Thee and Thou with me Lord. Be Thou my breastplate, my sword for the fight, Be Thou my armour and be Thou my might.</p><p><strong>SEGMENT16</strong><br>Instrumental</p><p><strong>SEGMENT17</strong><br>Verse 3</p><p><strong>SEGMENT18</strong><br>Riches I need not, nor man's empty praise, Thou mine inheritance now and always. Thou and Thou only Thou first in my heart, High King of heaven my treasure Thou art.</p><p><strong>SEGMENT19</strong><br>My treasure you are</p><p><strong>SEGMENT20</strong><br>Verse 4</p><p><strong>SEGMENT21</strong><br>Oh high king of heaven, when battle is done, Grant heaven's joy to me, bright heaven?s sun. Christ of my own heart, whatever befalls, Still be my vision, My ruler of all.</p><p><strong>SEGMENT22</strong><br>My ruler of all.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

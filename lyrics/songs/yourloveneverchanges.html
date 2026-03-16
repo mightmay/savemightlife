@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Your Love Never Changes - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Your Love Never Changes - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Your Love Never Changes</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I'm tired of falling on my face lord. get up tell myself (oh oh oh oh). I'm tired of singing the same songs. na na na na (ha! oh oh oh oh). I'm so high I'm so low. I'm so hot I'm so cold. I'm so young but I'm feeling so old. I'm at peace I'm at war. I want less I want more. I want it all but i don't know what it's for. and all that i am is all that you see. when nobody is looking at me. I fall to my knees you're calling my name. And you love me just the same - whoa!. Because your love never changes - no. Yea you love me just the same - whoa!. Cuz your love never changes - no. I'm back on the right track again (ya know I'm back). I'm back hanging with the right friends (ya know I'm back). I'm back on my feet again. kicking back (kick it) ha' just laughing. I'm so high I'm so low. I'm so hot I'm so cold. I'm so young but I'm feeling so old. I'm at peace I'm at war. I want less I want more. I want it all but i don't know what it's for. and you love me just the same. your love it never changes whoa!. (uh 1-2 1-2 1-2) your love never changes. because your love never changes. your love it never changes no!. (1-2 we rock on, we rock on kid) your love never changes. yea you love me just the same. your love it never changes whoa!. your love never changes. cuz your love never changes your love never changes. no your love never never. yea you love me just the same (come let's kick it kick it want to live it live it). yesterday today tomorrow everyday (love's the ticket so ya gotta give it give it). yea you love me just the same (come let's kick it kick it want to live it live it). yesterday today tomorrow everyday (love's the ticket so ya gotta give it give it). and you love me just the same (love me just the same) whoa! your love never changes. because your love never changes (because your love never changes) no! your love never changes. yea you love me just the same(love me just the same) whoa! your love never changes. because your love never changes (because your love never changes) no!. yea you love me just the same (come let's kick it kick it want to live it live it). yesterday today tomorrow everyday (love's the ticket so ya gotta give it give it). yea you love me just the same (come let's kick it kick it want to live it live it). yesterday today tomorrow everyday.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Back Down - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Back Down - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Back Down</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Back down, don't you back down baby tonight. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight</p><p><strong>SEGMENT2</strong><br>. Starting out I felt like. I had time. To properly prepare. for this climb. Now I've just left, I'm out of breath. And falling far behind. Too tired to run, but running out of time</p><p><strong>SEGMENT3</strong><br>. Don't look down now. Don't look down</p><p><strong>SEGMENT4</strong><br>. I'm growing tired. of climbing higher. Your love is all I have. to keep me strong. As I'm ascending, I feel you with me. You wait with. outstretched arms. In case I fall back down</p><p><strong>SEGMENT5</strong><br>. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight</p><p><strong>SEGMENT6</strong><br>. Every time I take. your hand. It seems things just. go as planned. Sometimes I feel with. two free hands. I may accomplish more. But that's just one. more hand to. Break my fall when. I fall short</p><p><strong>SEGMENT7</strong><br>. Don't look down now. Don't look down</p><p><strong>SEGMENT8</strong><br>. I'm growing tired. of climbing higher. Your love is all I have. to keep me strong. As I'm ascending, I feel you with me. You wait with. outstretched arms. In case I fall back down</p><p><strong>SEGMENT9</strong><br>. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight</p><p><strong>SEGMENT10</strong><br>. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight. Back down, don't you back down baby tonight</p><p><strong>SEGMENT11</strong><br>. I'm growing tired. of climbing higher. Your love is all I have. to keep me strong. As I'm ascending, I feel you with me. You wait with. outstretched arms. In case I fall</p><p><strong>SEGMENT12</strong><br>. I'm growing tired. of climbing higher. Your love is all I have. to keep me strong. So keep me strong</p><p><strong>SEGMENT13</strong><br>. Back Down, don't you baby tonight</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

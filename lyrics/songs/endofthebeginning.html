@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for End Of The Beginning - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>End Of The Beginning - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>End Of The Beginning</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I was taking a trip on a plane the other day, just wishin that I could get out. When the man next to me saw the book in my hand and asked me what it was about. So I settled back in my seat. "A best-seller," I said, "a histry and a mystry in one.". Then I opened up the book and began to read from Matthew, Mark, Luke and John..</p><p><strong>SEGMENT2</strong><br>He was born of a virgin one holy night in the little town of Bethlehem. Angels gathered round Him underneath the star singing praises to the great I AM.</p><p><strong>SEGMENT3</strong><br>He walked on the water, healed The lame, and made the blind to see again. And for the first time here on earth we learned that God could be a friend. And though He never, ever did a single thing wrong, the angry crowd chose Him. And then He walked down the road and died on the cross and. that was the end..of the beginning."</p><p><strong>SEGMENT4</strong><br>"Thats not a new book, thats a Bible," he said, "And Ive heard it all before. Ive tried religion, its shame and guilt, and I dont need it anymore. Its superstation, made-up tales, just to help the weak to survive.". "Let me read it again," I said, "But listen closely. This is gonna change your life."</p><p><strong>SEGMENT5</strong><br>"He was born of a virgin one holy night in the little town of Bethlehem. Angels gathered round Him underneath the star singing praises to the great I AM.</p><p><strong>SEGMENT6</strong><br>He walked on the water, healed the lame, and made the blind to see again. And for the first time here on earth we learned that God could be a friend. And though He never, ever did a single thing wrong, the angry crowd chose Him. And then He walked down the road and died on the cross and that was the end..of the beginning."</p><p><strong>SEGMENT7</strong><br>"The end of the beginning?" he said with a smile. "What more. could there be? Hes dead. You said they hung Him, put nails in. His hands and a crown of thorns on His head." I said, "Ill read it. again, but this time theres more.</p><p><strong>SEGMENT8</strong><br>And I believe that this is true: His death wasnt the end but the beginning of life thats completed in you. Dont you see, He did all this for you.."</p><p><strong>SEGMENT9</strong><br>"He was born of a virgin one holy night in the little town of. Bethlehem. All the angels singing praises to the great I AM. He walked on the water, healed the lame, and made the blind to see. And for the first time here on earth, did you know that God could be a friend?. And though He never, ever did a single thing wrong, He was the one the crowd chose. And then He walked and He died, but three days later, three days later, three days later.. He rose! Three days later He rose!</p><p><strong>SEGMENT10</strong><br>You see, He came, He lived, and He died, but that was the end of the beginning.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

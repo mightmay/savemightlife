@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Sacred Night (Away in a Manger) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Sacred Night (Away in a Manger) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Sacred Night (Away in a Manger)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Away in a manger, no crib for a bed. The little Lord Jesus lay down His sweet head. The stars in the sky look down where He lay. But little Lord Jesus asleep on the hay</p><p><strong>SEGMENT2</strong><br>Oh, what a sacred night, the stars were shinin' bright. The angels sing it loudly, the Savior has arrived. Their music filled the skies, oh, what a lullaby. To announce the new born baby to people far and nigh</p><p><strong>SEGMENT3</strong><br>And they cried glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high. All the angels sang glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high</p><p><strong>SEGMENT4</strong><br>The cattle are lowing, the baby awakes. But little Lord Jesus, no crying He makes. I love Thee Lord Jesus, look down from the sky. And stay by my cradle till morning is nigh</p><p><strong>SEGMENT5</strong><br>Oh, what a sacred night, the stars are shinin' bright. Angels sing it loudly, the Savior has arrived. Their music fill the skies, oh, what a lullaby. To announce the new born baby to people far and nigh</p><p><strong>SEGMENT6</strong><br>And they sing glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high. All the angels sing glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high</p><p><strong>SEGMENT7</strong><br>Be near me, Lord Jesus, I ask You to stay. Close by me forever and love me, I pray. Bless all the dear children in Thy tender care. And fill us for Heaven to live with You there</p><p><strong>SEGMENT8</strong><br>And we will cry holy, holy, holy, holy, holy, holy. Holy, holy, holy is the Lord God on high. Children, help me sing, holy, holy, holy, holy, holy, holy. Holy, holy, holy is the Lord God on high</p><p><strong>SEGMENT9</strong><br>Everybody sing glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high. Glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high</p><p><strong>SEGMENT10</strong><br>Glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high. Glory, glory, glory, glory, glory, glory. Glory, glory, glory to the Lord God on high</p><p><strong>SEGMENT11</strong><br>Glory, glory, glory, glory, glory, glory. Glory, glory, glory</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

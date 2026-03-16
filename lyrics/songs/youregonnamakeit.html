@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for You're Gonna Make It - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>You're Gonna Make It - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>You're Gonna Make It</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Your gonna make it. Yes your gonna make it. Don't you worry about a thing that's happened in your life. Your gonna make it. Yes your gonna make it. Don't you worry about a thing it's gonna be alright</p><p><strong>SEGMENT2</strong><br>You may feel like your just starting over. Mistakes from your past that just want to hold ya. Down to the ground its all on your shoulder. You'll never make it now that's what they told ya. You start to figure out who really cares for ya. When no ones around no one is there for ya. When I was down and out and life was getting colder. See I found that's when God showed up. Your trying to make it right they make it hard for ya. But God will take a life even if it's broke up. Give you strength to fight whatever's coming toward ya. And don't forget that I'm always praying for ya</p><p><strong>SEGMENT3</strong><br>It's not fair all the things that just had to happen. Some days you wake up and feel like you've been abandoned. Life didn't shape up in the way that you planned it. The life you live is not the one that you imagined. I know they laugh and pick on you. I know you've had a lot of junk that you gone through. But I know who would never ever wrong you. Never quit on you and help you get on thru. When you fell he was the one who caught you. With every single tear man see he saw you. He was right there every time he called you. And I'll be praying for you gonna get on through</p><p><strong>SEGMENT4</strong><br>You try to pray but feel too ashamed too. Cuz those around you they just wanna blame you. But don't listen now just to what they say dude. God loves you he never hates you. You can count on the fact that hes faithful. Always exactly on time always came thru. When your blind you feel you lost your way too. He'll guide you and help you to find your way through. He knows you he's the one that made you. In anything you go thru now he can save you. And help you and plus give you strength too. You're gonna make it man you're gonna be ok dude.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

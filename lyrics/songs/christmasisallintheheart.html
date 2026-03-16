@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Christmas Is All In The Heart - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Christmas Is All In The Heart - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Christmas Is All In The Heart</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Track Number:  02.</p><p><strong>SEGMENT2</strong><br>In a one bedroom apartment on the humble side of town. There stands a little Christmas tree, looks a lot like Charlie Brown's. And underneath there's one little gift for him, and one little gift for her</p><p><strong>SEGMENT3</strong><br>After six months on the new job, they're still barely getting by. So in the way of decorations, there's nothing there to catch your eye. But both of them would be the first to say. We're together, and we're gonna have the merriest Christmas anyway</p><p><strong>SEGMENT4</strong><br>'Cause Christmas is all in the heart, that's where the feeling starts. And like a fire inside, it touches every part. 'Cause Christmas is all in the heart. And even if no white snow falls, that's all right because. The joy can still be found, wherever you are. 'Cause Christmas is all in the heart</p><p><strong>SEGMENT5</strong><br>Two little blonde haired boys with big dreams, tried to sleep but sleep wouldn't come. We'd be tearing into presents, long before the break of dawn. With Mom and Dad and cameras making sure we'd never forget that day</p><p><strong>SEGMENT6</strong><br>Now I'm the one who's taking pictures in the middle of the night. Of my own blonde headed dreamers that just can't wait until daylight. And in my sleepy eyes the spark still glows. I guess there's just some things a kid never outgrows</p><p><strong>SEGMENT7</strong><br>'Cause Christmas is all in the heart, that's where the feeling starts. And like a fire inside, it touches every part. 'Cause Christmas is all in the heart. And even if no white snow falls, that's all right because. The joy can still be found, wherever you are. 'Cause Christmas is all in the heart</p><p><strong>SEGMENT8</strong><br>No, it's not in the snow that may or may not fall. And it's not in the gifts around the tree. It's in the love heaven gave, the night our Savior came. And that same love can still be found wherever you are. 'Cause Christmas is all in the heart. And the joy can still be found, wherever you are. 'Cause Christmas is all, all in the heart. It's all in the heart.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

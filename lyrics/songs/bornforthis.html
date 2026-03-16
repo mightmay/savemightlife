@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Born For This - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Born For This - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Born For This</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Oh no I just keep on falling. (Back to the same old). And wheres hope when misery comes crawling?. (Oh my way, Ay). With your faith youll trigger a landslide. (victory). To kill off this common sense of mind</p><p><strong>SEGMENT2</strong><br>It takes acquired minds to taste, to taste, to taste this wine. You cant down it with your eyes. So we dont need the headlines. We dont need the headlines. We just want</p><p><strong>SEGMENT3</strong><br>(We want the airwaves back, we want the airwaves back)</p><p><strong>SEGMENT4</strong><br>Everybody sing like its the last song you will ever sing. Tell me, tell me, do you feel the pressure now?. Everybody live like its the last day you will ever see. Tell me, tell me, do you feel the pressure now?</p><p><strong>SEGMENT5</strong><br>Right now youre the only reason. (Im not letting go, oh). And time out if everyones worth pleasing. (Well ha-ha!). Youll trigger a landslide. (Victory). to kill off their finite state of mind</p><p><strong>SEGMENT6</strong><br>It takes acquired minds to taste, to taste, to taste this wine. You cant down it with your eyes. So we dont need the headlines. No, we dont want your headlines. We just want</p><p><strong>SEGMENT7</strong><br>(We want the airwaves back, we want the airwaves back)</p><p><strong>SEGMENT8</strong><br>Everybody sing like its the last song you will ever sing. Tell me, tell me, do you feel the pressure now?. Everybody live like its the last day you will ever see. Tell me, tell me, do you feel the pressure now?. Everybody sing like its the last song you will ever sing. Tell me, tell me, do you feel the pressure?</p><p><strong>SEGMENT9</strong><br>Alright, so you think youre ready?. Ok, then you say this with me. Go!. We were born for this. We were born for this. Alright, so you think youre ready?. OK, then you say this with me. Go!. We were born for this. We were born for this. We were born for this. We were born for this</p><p><strong>SEGMENT10</strong><br>We were born for. We were born for</p><p><strong>SEGMENT11</strong><br>Everybody sing like its the last song you will ever sing. Tell me, tell me, can you feel the pressure?. Everybody live like its the last day you will ever see. Tell me, tell me, can you feel the pressure now?. Everybody sing like its the last song you will ever sing. Tell me, tell me, can you feel the pressure?. Tell me, tell me, can you feel the pressure?</p><p><strong>SEGMENT12</strong><br>We were born for this. We were born for this. We were born for this</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Strength - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Strength - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Strength</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>In these remaining days, let us not be tangled in. Mankind's celebration of itself. Rather, let us live as children of God. For what fellowship hath light and darkness. Good with evil?. Shall grace be as pearls to swine. Or held higher than gold?</p><p><strong>SEGMENT2</strong><br>Let them know the difference</p><p><strong>SEGMENT3</strong><br>Keep your signs - hold your banners yourself. Send no "latest cause" this way. Need no factions, political distractions. Keep them out of my face. Spare the fashion codes and social pars. And the vanity of it all. To subscribe would be to sell-out. And to set up for a fall</p><p><strong>SEGMENT4</strong><br>Can't you see the road you travel down. Leads swiftly to your end. Sold as slaves for a place to hide. A temporary defense</p><p><strong>SEGMENT5</strong><br>Then he'll come, all will be lost. You'll be swept with the tide, your shelter of clay. He's calling, protection is here. Your grip will not hold when your world's laid to waste. Lord, grant me the strength, to follow your path. To not go astray i, alone in myself. I'm feeling the pull, Lord, grant me the strength</p><p><strong>SEGMENT6</strong><br>Once again breathing down my neck. The smell of the generous leach. The liberating hypocrite. Come to save, to teach, to preach. To save me from my slavery</p><p><strong>SEGMENT7</strong><br>From a God who doesn't know what's best. Look - keep your rebellion to yourself. You don't know me, my God, or the life I live</p><p><strong>SEGMENT8</strong><br>Not a patriot, revolutionist. Not a left or right wing voice. Don't need a liberal or conservative. To tell me about freedom of choice. My freedom comes from God above. Forgiveness beyond comprehension. Stregth not found in earthly powers. The only true deliverance</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

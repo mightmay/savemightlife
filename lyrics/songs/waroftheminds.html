@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for War of the Minds - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>War of the Minds - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>War of the Minds</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Verse 1: Sometimes I feel like Moses man I just want to run to Midian/ just to change my state but not the state where my citys in/ but my state of mind/ look for a sign like Gideon/ cause my faith is wavering Im forsaking dependence again/ you took me from Egypt just to make me a leader/ but like Moses Im not an eloquent speaker/ Im not eloquent either/ not before nor after youve spoken/ me in ministry youve gotta be jokin/ I feel like Jeremiah/ here are my bones Lord and here is my fire/ Im inadequate to represent the messiah/ call me the weepin rapper/I read a chapter then Im heapin up laughter/ because Im weak and I can see the disaster of me in ministry/ I feel Job I curse the day of my birth/ since I was born its only payin me hurt/ my insecurities worse/ sometimes I wish that that night was barren/ either that or Lord send me an Aaron</p><p><strong>SEGMENT2</strong><br>Verse 2: This song is for you my sisters and brothers who strugglin with depression/ not just the blues but a struggle with depression/ maybe its clinical and got you taking medicine/ or maybe not but you taking counseling session and/ thats excellent/ take your medicine/ if you need it cause this is pleasin to Jesus/ I write this song for the schizophrenic/ who only gets left alone and throne in a hospital only to panic/ and whose family doesnt understand/ so they treat you like an animal but never would the Son of Man/ for those who ask whats going inside of me/ who feels bound by fear bound by anxiety/ I write to you because I know the/ very God whos in control of bipolar/ I write to those who wrestle with thoughts of suicide/ dont do it cause Jesus loves you for you He died</p><p><strong>SEGMENT3</strong><br>Hook:(J.R.). For every tear that you cry for all of the wars in your mind and the fears that you hide know that Hes there know that Hes walking with you I know that its hard to press on when the nights seem so long remember His word is your hope so know that He cares know that Hes walking with you</p><p><strong>SEGMENT4</strong><br>Verse 3: The core problem is that Adam sinned/ and since then to now its 8 out of 10/ women and men and children who struggle with depression/ especially house wives and preachers theyre people who struggle with depression/ I write this song for that introverted/ insecure person thats training his thoughts into thinking hes worthless/ God made you/ God can save you/ in everything you can give Him worship/ youre not worthless/ Lord I pray for the mentally ill/ that in your ministry you mentally heal/ those who suffer with it/ if not now then you eventually will heal your children that are mentally ill/ for now they suffer with it/ give us the strength just deal with your will/ because we sinners and we wrestle with it/ just like Job did it/ I write this song for those who were sexually abused/ lookin for weaponry to use seek Jesus</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

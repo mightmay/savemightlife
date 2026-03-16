@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for This is my wonderful story - พระเยซูอยู่ในใจ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>This is my wonderful story - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>This is my wonderful story</h2>
+        <h3>พระเยซูอยู่ในใจ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>นี่เป็นเรื่องอัศจรรย์ยิ่งใหญ่  พระคริสต์อยู่ในใจข้าฯ พระคริสต์ทรงเป็นพระราชา  สถิตอยู่ในใจข้าฯ  ร้องรับ พระเยซู อยู่ในใจ อัศจรรย์ เป็นเรื่องยิ่งใหญ่นักหนา พระเยซู อยู่ในใจ เป็นความหวังอันยิ่งใหญ่ของข้าฯ</p><p><strong>VERSE2</strong><br>ข้าฯยินดีได้รับพระองค์ไว้  เป็นพระผู้ไถ่ของข้าฯ ขอกราบลงที่พระบาทา รับผิดต่อพระบิดา</p><p><strong>VERSE3</strong><br>ข้าฯจะไม่เปลี่ยวเปล่าหรือเศร้าใจ  พระคริสต์สถิตใจข้าฯ พระองค์ประทานสิ่งต้องการ  ทรงเป็นทุกสิ่งแก่ข้าฯ</p><p><strong>VERSE4</strong><br>ข้าฯมอบดวงใจไว้ในพระทรวง  เบิกบานร้องเพลงถวาย ข้าฯอยู่ในองค์พระเยซู  พระองค์อยู่ด้วยไม่ตาย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>This is my wonderful story, Christ to my heart has come; Jesus, the King of Glory, Finds in my heart a home. Christ in me, Christ in me, Christ in me, O wonderful story, Christ in me, Christ in me, Christ in me, the hope of glory.</p><p><strong>VERSE2</strong><br>I am so glad I received Him, Jesus my heart's dear King; I who so often have grieved Him,  All to His feet would bring.</p><p><strong>VERSE3</strong><br>How can I ever be lonely,  How can I ever fall; What can I want, if only Christ is my all in all?</p><p><strong>VERSE4</strong><br>Now in His bosom confiding, This my glad song shall be; I am in Christ abiding, And Christ abides in me.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

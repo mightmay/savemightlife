@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bring It All Together (w/Wynonna) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bring It All Together (w/Wynonna) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bring It All Together (w/Wynonna)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I HEAR YOU SAY. THAT YOU CANT GO ON. CAUSE YOU HAD IT ALL AND WATCHED IT FALL AWAY. YOU FEEL BETRAYED. CAUSE EVERYTHINGS GONE WRONG. CANT FIND THE STRENGTH TO HOPE FOR A BETTER DAY. WE MAY NOT UNDERSTAND THE REASONS. BUT HIS PROMISE WILL NEVER CHANGE</p><p><strong>SEGMENT2</strong><br>Chorus. HES GONNA TAKE YOUR PAIN. HES GONNA TAKE YOUR DOUBT. HES GONNA BRING IT ALL TOGETHER, BRING IT ALL TOGETHER. GONNA MAKE YOU HAPPY. HES GONNA MAKE YOU LAUGH OUT LOUD. HES GONNA BRING IT ALL TOGETHER. BRING IT ALL TOGETHER FOR GOOD</p><p><strong>SEGMENT3</strong><br>YOU SAY YOU LIVE YOU LIFE. DOING THE BEST YOU CAN. WONDERING IF THE STRUGGLE MEANS ANYTHING. IF YOU REALIZED THAT ITS IN HIS HANDS. YOULL FIND THE PEACE THAT SWEET SURRENDER BRINGS. WE MAY NOT UNDERSTAND THE REASONS. BUT I KNOW HIS PROMISE WILL NEVER CHANGE</p><p><strong>SEGMENT4</strong><br>HES GONNA TAKE YOUR PAIN. HES GONNA TAKE YOUR DOUBT. HES GONNA BRING IT ALL TOGETHER, BRING IT ALL TOGETHER. GONNA MAKE YOU HAPPY. HES GONNA MAKE YOU LAUGH OUT LOUD. HES GONNA BRING IT ALL TOGETHER. BRING IT ALL TOGETHER FOR GOOD</p><p><strong>SEGMENT5</strong><br>I KNOW THERE WILL COME A DAY OF HEALING. WE WILL SEE THE MASTER PLAN. WE WILL CELEBRATE HIS FAITHFULNESS. AND WELL SING (SING) AND WELL SHOUT (SHOUT). PRAISE HIS NAME</p><p><strong>SEGMENT6</strong><br>Repeat chorus 2x</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

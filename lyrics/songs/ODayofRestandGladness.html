@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for O Day of Rest and Gladness - วันนี้เป็นวันอันเปรมปรีดิ์ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>O Day of Rest and Gladness - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>O Day of Rest and Gladness</h2>
+        <h3>วันนี้เป็นวันอันเปรมปรีดิ์</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>วันนี้เป็นวันอันเปรมปรีดิ์ เป็นวันพระเจ้าตั้งไว้  วันหมดกังวลและห่วงใย  เป็นวันงดงามวิไล เชิญเราทั้งหลายมาบรรเลง เพลงสาธุการพระนาม สรรเสริญพระเจ้าด้วยจริงใจ  รักใคร่ภักดีติดตาม</p><p><strong>VERSE2</strong><br>เมื่อกาลพระเจ้าสร้างโลกล่าง ทรงสร้างสว่างขึ้นก่อน ประทานพระพรความรอดให้  โดยชัยพระคริสต์บวร พระองค์มีชัยไม่ม้วนมรณ์  พระจรจากฟ้ามาดิน ช่วยให้ชาวชนพ้นมลทิน  รับแสงสว่างอาจิณ</p><p><strong>VERSE3</strong><br>เรารับพระพรพระเมตตา เวลาหยุดพักวันนี้ เมื่อเราล่วงลับดับชีวี  ขอไปสู่ที่เปรมปรีดิ์ สรรเสริญพระเจ้าพระบิดา  พระบุตร และพระวิญญาณ องค์เดียวเรารักยิ่งชีวา  หาไหนไม่มีเปรียบปาน.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>O day of rest and gladness,  of day of joy and light, O balm of care and sadness,  most beautiful, most bright: On Thee, the high and lowly,  through ages joined in tune, Sing holy, holy, holy, to the great God Triune.</p><p><strong>VERSE2</strong><br>On Thee, at the creation,  the light first had its birth; On Thee, for our salvation, Christ rose from depths of earth;  On Thee, our Lord, victorious,  the Spirit sent from heaven, And thus on Thee, most glorious, a triple light was given.</p><p><strong>VERSE3</strong><br>New graces ever gaining from this our day of rest, We reach the rest remaining to spirits of the blessed. To Holy Ghost be praises, to Father, and to Son; The church her voice upraises to Thee, blessed Three in One.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Intro/Hateworld - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Intro/Hateworld - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Intro/Hateworld</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>A scream is heard from the street outside. Another soul that is ready to die. When hope is lost there's no need to go on. That soul is crushed by the dread of the thought. That life is no more than waiting for death. From the day of birth to the final breath. Where is the reason, the reason to life?. It's nowhere in sight, and I'd know it if I'd seen it</p><p><strong>SEGMENT2</strong><br>Searching..gotta find a point to it all. Nothing..no.. There's nothing it's empty. There's nothing it's empty. There's nothing it's dying. There's nothing - in hateworld</p><p><strong>SEGMENT3</strong><br>At every turn another light goes dim. All around me it's closing in. My life is fading but the pain goes on. It never stops - keeps pushing on. No choice but to be hard as life is itself. What else you gonna do when you've known nothing else?. But deep down inside that ain't no way to live. There has got to be something more to this</p><p><strong>SEGMENT4</strong><br>This world - empty. Though it's promises are many. Expectations so high that none can hope to fulfill. All these impossible standards that they've convinced us are real. Lead to nothing but anger, frustration and hate. But you don't have to live that life</p><p><strong>SEGMENT5</strong><br>There's hope with change. Children of the Son. In a world of hate. It's the only chance you've got. Call on his name..</p><p><strong>SEGMENT6</strong><br>Save me.. Oh Lord, save me. This place is evil. This world is headed for it's due demise. With mankind's corruption destruction lies. You can taste the tension, feel the strain. The world's weak foundations are giving way. Then this grand illusion, this immaculate lie. Will rot and crumble leaving nowhere to hide. God's call you've heard, and he is waiting. Do you want the change or will you die saying..</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Waiting (Nova Mix) - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Waiting (Nova Mix) - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Waiting (Nova Mix)</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Ooh..</p><p><strong>SEGMENT2</strong><br>You've come this far by yourself. Faced the world on your own. No one heard your cries for help. You thought you were all alone. I've got a different story to tell you. 'Cause I've been there before. I know you feel so much. But there is so much more</p><p><strong>SEGMENT3</strong><br>You could wait. But there may not be tomorrow. Can you take. A minute just to listen and to let it go</p><p><strong>SEGMENT4</strong><br>This is the time. This is the place. This is the love. That was given to us by grace. Don't turn away. Today is the day. Open up your heart. His love is waiting, waiting</p><p><strong>SEGMENT5</strong><br>(Forever waiting)</p><p><strong>SEGMENT6</strong><br>Now, I know that you have so many questions. Deep down you're wondering. But when you're driven by doubt. You question everything. And I know that you've been so disappointed. But you are not here alone. So let me show you that you don't have to be on your own, anymore</p><p><strong>SEGMENT7</strong><br>(No)</p><p><strong>SEGMENT8</strong><br>You could wait. But there may not tomorrow. Can you take. A minute just to listen gotta let it go</p><p><strong>SEGMENT9</strong><br>This is the time. This is the place. This is the love. That was given to us by grace. Don't turn away. Today is the day. Open up your heart. His love is waiting, waiting. (repeat twice)</p><p><strong>SEGMENT10</strong><br>(He's waiting He's waiting). He's reaching out to you with open arms. (So patienly waiting). So open up your mind. And open up you heart. (He's Waiting, He's waiting). All it takes is just a spark. (Oh yeah). You know he'll bring a way. A brand new day</p><p><strong>SEGMENT11</strong><br>He's waiting</p><p><strong>SEGMENT12</strong><br>This is the time. This is the place. This is the love. That was given to us by grace. Dont turn away. Today is the day. Open up your heart. His love is waiting, waiting</p><p><strong>SEGMENT13</strong><br>Waiting He's waiting. So patiently waiting [repeat]</p><p><strong>SEGMENT14</strong><br>He is love. He is love</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

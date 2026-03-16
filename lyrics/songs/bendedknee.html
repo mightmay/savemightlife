@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Bended Knee - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Bended Knee - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Bended Knee</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>This is serious, oh. So serious man, oh. We never needed You before, we need You right now. Need You right now, oh</p><p><strong>SEGMENT2</strong><br>People are dying, losing the faith. Even the chosen have fallen from grace, oh. We got the blind leading the blind. Lord knows I'm tryin' what I've been assigned, Lord. I'll say it all, oh Lord</p><p><strong>SEGMENT3</strong><br>I'm down on my bended knee, yeah. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking You to help us please). Down on my bended knees, yeah, whoo. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking You to help us please)</p><p><strong>SEGMENT4</strong><br>I'm praying on bended knees. Have mercy, Lord have mercy, oh. I said, Lord. I'm just tryin' to intercede, yeah</p><p><strong>SEGMENT5</strong><br>Sometimes I feel like I'm standing alone. But I know there are soldiers that's still holdin' on. Now what we really Lord, is help from up high. If You don't have mercy, so many souls will die</p><p><strong>SEGMENT6</strong><br>I'm sayin' oh, oh, yeah</p><p><strong>SEGMENT7</strong><br>I'm on my bended knees, yeah, hey, yeah. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking you to help us please). I'm on bended knees. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking you to help us please)</p><p><strong>SEGMENT8</strong><br>Oh, lord, I'm prayin'. (I'm praying on bended knees). Somebody's prayin. (Have mercy, Lord have mercy). Oh Lord, I'm just tryin' to intercede, yeah</p><p><strong>SEGMENT9</strong><br>I'm down on my bended knees. I'm asking You to have mercy. Somebody gotta intercede. We need Your help in a hurry. Got people in high places with their hands dirty. And the world can't get no help. Because they're taking all the money</p><p><strong>SEGMENT10</strong><br>I'm rocking in the wilderness. Only You can clean up the mess. Sin I know you refuse to bless. Got to get on my knees and confess. Oh Lord, I, I know You see. I'm on my, I'm on my bended knees</p><p><strong>SEGMENT11</strong><br>Oh, y'all let me preach. Yeah, lower than I've ever been, knees upon a concrete. Lord, I'm tryna fight this fight but ain't no one behind me. I just need a sound please Lord, it's getting dark here. Come just shine a Pentecost so I walk in no fear</p><p><strong>SEGMENT12</strong><br>And make me the hands, and You the only lifeline. Church comes in the morning but it's looking like it's May time. I'll never let him go, Celine Dion. He said, "I'm the light in the darkness", neon. And [?] bow way. And so bended knees, Lord I begin to pray. Yeah, Pray</p><p><strong>SEGMENT13</strong><br>Oh, Lord, I'm on bended knees. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking You to help us please). Come teach me, for nobody but me. (I'm on my bended knees, I'm on my bended knees. I'm on my bended knees asking You to help us please)</p><p><strong>SEGMENT14</strong><br>I'm prayin' for a family. I'm prayin' for the children</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

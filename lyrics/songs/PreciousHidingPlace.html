@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Precious Hiding Place - ที่คุ้มภัยประเสริฐ - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Precious Hiding Place - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Precious Hiding Place</h2>
+        <h3>ที่คุ้มภัยประเสริฐ</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p><strong>VERSE1</strong><br>เมื่อข้าฯหลงพระเยซูทรงหา เป็นเวลามือค่ำและหนาว เอาพระกรทรงโอบอุ้มข้าฯไว้ แล้วนำไปยังที่สุขสันต์</p><p><strong>CHORUS</strong><br>ที่คุ้มภัยประเสริฐ ที่คุ้มภัยดีเลิศ ในความรักข้าฯพักสบาย ไม่มีความสงสัย เมื่อพระองค์อยู่ใกล้ ความรักได้คุ้มครองข้าฯไว้</p><p><strong>VERSE2</strong><br>ด้วยพระหัตถ์ที่มีรอยตะปู  นำข้าฯสู่ความรักยิ่งใหญ่ สอนถึงน้ำพระทัยและพระคุณ สู่สวรรค์ที่พักสบาย</p><p><strong>CHORUS</strong><br>ที่คุ้มภัยประเสริฐ ที่คุ้มภัยดีเลิศ ในความรักข้าฯพักสบาย ไม่มีความสงสัย เมื่อพระองค์อยู่ใกล้ ความรักได้คุ้มครองข้าฯไว้</p><p><strong>VERSE3</strong><br>แม้กลางคืนมืดค่ำรอบตัวข้าฯ พระองค์ยังพิทักษ์รักษา ศัตรูไม่สามารถทำร้ายได้ เมื่อพระองค์สถิตอยู่ใกล้</p><p><strong>CHORUS</strong><br>ที่คุ้มภัยประเสริฐ ที่คุ้มภัยดีเลิศ ในความรักข้าฯพักสบาย ไม่มีความสงสัย เมื่อพระองค์อยู่ใกล้ ความรักได้คุ้มครองข้าฯไว้</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>VERSE1</strong><br>I was straying when Christ found me In the night so dark and cold; Tenderly His arm went round me, And He bore me to His fold.</p><p><strong>CHORUS</strong><br>Precious hiding place,Precious hiding place, In the shelter of His love; Not a doubt or fear,Since my Lord is near, And I'm sheltered in His love.</p><p><strong>VERSE2</strong><br>With His nail-scarred hand He bro't me To the shelter of His love; Of His grace and will He taught me, And of heav'nly rest above.</p><p><strong>CHORUS</strong><br>Precious hiding place,Precious hiding place, In the shelter of His love; Not a doubt or fear,Since my Lord is near, And I'm sheltered in His love.</p><p><strong>VERSE3</strong><br>Tho' the night be dark around me, I am safe, for He is near; Never shall my foes confound me, While the Savior's voice I hear.</p><p><strong>CHORUS</strong><br>Precious hiding place,Precious hiding place, In the shelter of His love; Not a doubt or fear,Since my Lord is near, And I'm sheltered in His love.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

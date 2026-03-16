@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Show Me Everything You've Got - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Show Me Everything You've Got - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Show Me Everything You've Got</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Slide your feet, create the shock. ouch another, watch it pop. live a little, live a lot. and show me everything you've got</p><p><strong>SEGMENT2</strong><br>Oh, cause it takes some time. and just a little bit good?. reality won't hurt, well, longer than it should. just talking about that it's there. face the fact, don't act like you don't care</p><p><strong>SEGMENT3</strong><br>Cause you gotta stop and show it, just so I know you know it. maybe just a little bit, oh come on admit it right now. cause I know that it won't be over til it's gone. so let it be gone</p><p><strong>SEGMENT4</strong><br>And show me everything you've got. I know you're scared. But let your words destruct. You gotta take that step, and your heart, just let it pour out</p><p><strong>SEGMENT5</strong><br>Now I know it's hard to be something that you don't think you are. but it's hard for me to even try to understand why you are beating your own heart. cause you gotta try, just try to be honest. and I'll be honest with all these things that say. now listen clear, whether break your modest, I'm here. don't hold back, don't hesitate, don't disappear</p><p><strong>SEGMENT6</strong><br>And show me everything you've got. I know you're scared. But let your words destruct. You gotta take that step, and your heart, just let it pour out</p><p><strong>SEGMENT7</strong><br>And show me everything you've got. I know you're scared. But it's time for you to start. You gotta take that step, and your heart, just let it make sound</p><p><strong>SEGMENT8</strong><br>So hey, just let it pour out. don't let your past begin to let you down. just sing it out, just let it make sound. and as heard, it will be healed and found. cause it's normal that emotional past can spot emotional something?. so show your face, no don't be afraid, no don't be afraid to show your face</p><p><strong>SEGMENT9</strong><br>After all these things I've learned. about things I do and don't deserve. can easily just shape my life. shape away, I start to die</p><p><strong>SEGMENT10</strong><br>No, cause it's up to me. if I dwell much longer than I should. and I'll hold my tears for years thinkin' it's doing me good. so let's start right now, and just make a vow, you'll let your heart, sing it out</p><p><strong>SEGMENT11</strong><br>And show me everything you've got. I know you're scared. But let your words destruct. You gotta take that step, and your heart, just let it pour out</p><p><strong>SEGMENT12</strong><br>And show me everything you've got. I know you're scared. But it's time for you to start. You gotta take that step, and your heart, just let it make sound</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

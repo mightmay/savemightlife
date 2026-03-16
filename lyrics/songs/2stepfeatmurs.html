@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for 2 Step Feat. Murs - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>2 Step Feat. Murs - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>2 Step Feat. Murs</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>At a time once upon it was MURS and pigeon john. Finally headed to studio to make this new song. J Beits was on production so of course it be the bomb. But they were kidnapped by two exotic women wearing thongs. Full figured with a switch they was sweet as liqourich. Of the red not the black but look back to my tale. They took their two favorite underground mcs to the 'tel. And what happen next I gave my word no to tell</p><p><strong>SEGMENT2</strong><br>I met her at the Bicycle Club last night. Yelling the card dealer trying to make a fight. I was in my Chucks and Dickies looking tight. I asked if we can talk and she said....?. Treated her like a boulevard looked both ways before crossing. Just to make sure what this was costing (ching). Cause I've been hurt before. And she looks innocent enough to settle the score come here</p><p><strong>SEGMENT3</strong><br>Chorus: Now when you see me talking to a lady - step away. Little bitty girls like nitty (?) - step away. When your conversation's getting crazy - step away. You don't know no Hawthorne City - step away. When the alchol starts to fade me - step away. she's coke up but looks so pretty - step away. When you smell the opposite of daises - step away. Step away..</p><p><strong>SEGMENT4</strong><br>Like boom i'm in my Lamborgini. Pink just to make fools think. Put your hands up all my buddies buck buck. Little shimmy shams at my show to bring luck. To all my San Diego nickles in the place. Tatted up sleeve work sharks and it's free steak. like lunch I'm having brunch with all you can eat punch. And MURS acting a fool</p><p><strong>SEGMENT5</strong><br>Wildin out about the place I slapped somebody in face. So we started slam dancing at a furious pace. Ah shhh mosh pit spread all around the club. giving clothes-lines and hugs to the people that I love. Even slapped the bartender in his grill with a mug. Got drug out by security in the end. In the alley up against the wall they all had me hemmed. I called to my friend grand master PJ. He came through with some karate. To make them no neck muscle head geeks step away</p><p><strong>SEGMENT6</strong><br>Chorus</p><p><strong>SEGMENT7</strong><br>When you see me talking to a lady - step away. Little bitty girls like nitty - step away. When your conversation's getting crazy - step away. You don't know no Hawthorne City - step away. When this alcohol starts to fade me - step away. She's drunk but she looks so pretty - step away. When your breathe smells the opposite of daises - step away. Step away</p><p><strong>SEGMENT8</strong><br>I'm not very young I used to always be sprung. On very chicks of them I wrote and sung. But know I'm fine and I'm a dime piece. Walk like a whale sit calm and increase like</p><p><strong>SEGMENT9</strong><br>Boom we took off in my Caddillac. Zoom headed to Hollywood to hit the. Room my mind is like a flower in. Bloom you make an a** of you and me when you. Assume me and John will take your chicks because. We are extremely well groomed</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

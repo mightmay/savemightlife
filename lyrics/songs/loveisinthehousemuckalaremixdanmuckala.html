@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Love Is In The House: Muckala Remix - Dan Muckala - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Love Is In The House: Muckala Remix - Dan Muckala - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Love Is In The House: Muckala Remix - Dan Muckala</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>I clear my throat before I grab the mic. I need uno momento. Them cynics gonna ride me like a pinto. No resentment do you comprehend my innuendo. You still can't leave the party til you drop your crucial info. Am I jaded in assuming that you're simply bound to do me. Like them other lyricists who's message ain't so gloomy. Pan my positivity cause love has let you down. Cuz if they taste the love you tasted. They'd be making sweeter sounds, 'T</p><p><strong>SEGMENT2</strong><br>Government checks they flex with no dollars. Two turntables and a plate full of collards. Royalty checks reflects with few dollars. But my DJ makes the people wanna holler</p><p><strong>SEGMENT3</strong><br>[CHORUS]. Love is in the house and the house is packed. So much so I left the back door cracked. Mama always said it's a matter of fact. that when love is in the house the house is packed. Love is in the house and the house is packed. So much so I left the back door cracked. Daddy always said that I wish I was black. cuz when love is in the house the house is packed</p><p><strong>SEGMENT4</strong><br>Packed like a baby nine months in the womb. Man it was packed like the closet full of Nike's in my room. Singin' Oh sweet Lord take me to the next level. Where the love's much thicker than the stares of my devils. So whether or not this is a dream or reality. Let me appeal to the graces of His majesty. Amazing it will be when this tree bears life. My roots run to the river and the Giver of Life</p><p><strong>SEGMENT5</strong><br>Corporate jets they flex with big dollars. Two palm pilots and a room full of bawlers. Royalty checks reflects with few dollars. But amazing grace makes the people wanna holler</p><p><strong>SEGMENT6</strong><br>[CHORUS]</p><p><strong>SEGMENT7</strong><br>Woke up this morning, didn't know what to do. There was people all around me tellin' me to sing the blues. Said they ain't seen no happy since 1992. Then they turned to me thinking I'd agree and I offered. this humble view.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

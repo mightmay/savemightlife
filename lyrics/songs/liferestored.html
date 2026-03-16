@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Life Restored - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Life Restored - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Life Restored</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Plug my life into Jesus. This gets my life restored. Such a cakewalk. No brainer. Don't need to fuss if I call on our savior. This gets my life restored. Plugged my life into Jesus. I've seen my life restored. Such a cakewalk. No brainer. Don't need to fuss since I called Him my savior. Do not even care if I die later. Cause I belong to Jesus Christ. If they took my life tonight chances are I'd arrive. In a place that's out of sight. And I'm confident I'm doin' fine. 'Cause I'm improving my life, renewing my mind. This all started with Romans 10:9. Doing what's right, doin' quite fine. This all started with Romans 10:9. I never realized I was meant to live. To live a new life if I would let Him within. Told me -- death is the payoff for living in sin. End the cycle when you're born again. It all started when I first discovered. The Book on the shelf and read cover to cover. Searching to find religion that held my attention. Finding something called Christian redemption. 'Cause I'm improving my life, renewing my mind. This all started with Romans 10:9. Doing what's right, doin' quite fine. This all started with Romans 10:9. I'll be all right. I'll be just fine. You're runnin' out of time. I'm fine, I'm fine, I'm fine, I'm fine. I can't go wrong living this way. Plug my life into Jesus. This gets my life restored. Selfish nature. Don't need it. Go give it up. You can conquer your demons. Would it be wrong for me to pry. If you give your life to Christ. Chances are dynamite. You will make it out alive. And I'm confident you'll do it right. 'Cause I'm improving my life, renewing my mind. This all started with Romans 10:9. Doing what's right, doin' quite fine. This all started with Romans 10:9. I'll be all right. I'll be just fine. You're runnin' out of time. I can't go wrong livin' His way!. I'll be alright</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Help Me Change - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Help Me Change - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Help Me Change</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>he walks in then he closed the door. he wanna quit but he cant cause he wants some more. now the way that he lives no one would know. he keeps it hid so the kids wont see it shown. now he trapped by his sin everywhere he goes. he addicted to skin so he overdosed. now the way that he lives and the chains that hold. leave him trapped in a prison that he cant control. now seeing these women but without they clothes. leaves him shamed but his brain just remains controlled. and every day its a strain but it seems to grow. he wanna change but he stays in his chains and froze. hes conflicted afraid feels alone. so he quits for a day but when hes back at home. then hes back to the same it claims his soul. he wants to break from his chains but it gains a hold he says.</p><p><strong>SEGMENT2</strong><br>now I seen too much take it all away. now I need youre touch to help me walk away. help me change I know I been living a lie. dont wanna be the same open up my eyes. open my up eyes.. open up my eyes.. open up my eyes. open up my eyes.</p><p><strong>SEGMENT3</strong><br>these things will infect your eyes. but dont think that its just gonna effect the guys. cause the girls in the world will ingest the lies. now it starts when the heart gets compromised. now the lust and the pride and everything inside. makes ya look anywhere anyplace to find. anything that will fill up a void in life. but when you tore up its sure aint hard to hide. next time when the boy shes texting. that texting turns into sexting. that sexting creates such a mess and. it leaves her mind in a state of depression. shes blind cant see that the lesson. every time theres a message shes sending. of exposing her body her flesh and. leaves her caught in a place of deception</p><p><strong>SEGMENT4</strong><br>used to be in the magazines. now its all just seen on computer screens. and it all just means that were sure to be. bombarded w/ the scenes we aint supposed to see. now supposedly it be stronger than cocaine. so we drawn like moths to slow flame. wind up with loss and no gain. try to stop but wind up w/ no change. no shame so we go full throttle. and feel the pain from the pill we swallow. girls get it from they romance novels. guys get it from they swimsuit models. yet we still feel broke and hollow. just living like theres no tomorrow. all shattered like a broken bottles. but there is a path that I hope they follow.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

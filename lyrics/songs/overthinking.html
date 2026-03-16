@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Over Thinking - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Over Thinking - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Over Thinking</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>i was thinking. over thinking. cause there's just too many scenarios. to analayze. look in my eyes. cause you're my dream please come true</p><p><strong>SEGMENT2</strong><br>i was thinking. over thinking. about exactly how i'm not exactly him. i'll break my heart in two. more times than you could ever do. cause you're my dream please come true</p><p><strong>SEGMENT3</strong><br>cause i think way too much. on a one track mind. and you're so out of touch. cause i'm so far behind</p><p><strong>SEGMENT4</strong><br>i can't deny this anymore, the facts ignored all done before. and if there's one in this world, you let me know you're not that girl</p><p><strong>SEGMENT5</strong><br>i was sinking. lower, sinking. cause i lost the things i held on to. they let me think a thought. a thought that i would know was not. of seeing my dream come true</p><p><strong>SEGMENT6</strong><br>i was thinking. over thinking. about how far i had let this go. one more guy/girl cliche. i know now you're just in the way. of me and my dream come true</p><p><strong>SEGMENT7</strong><br>cause i think way too much. on a one track mind. and you're so out of touch. cause i'm so far behind. i'm trying to make sense. out of all of this. while your fading scent. just slips through my grip</p><p><strong>SEGMENT8</strong><br>i can't deny this anymore, the facts ignored all done before. and if there's one in this world, you let me know you're not that girl</p><p><strong>SEGMENT9</strong><br>don't touch the positive with the negative end. don't touch the positive with the negative end. cause after all of the sparks you're still alone in the dark. cause after all of the sparks you're left alone in the dark</p><p><strong>SEGMENT10</strong><br>and while i'm able, i think i'll label. experience with you as a mistake. and while i'm at it, i'll say i've had it. experience with you is a mistake</p><p><strong>SEGMENT11</strong><br>cause i think way too much. on a one track mind. and you're so out of touch. cause i'm so far behind. i'm trying to make sense. out of all of this. while your fading scent. just slips through my grip</p><p><strong>SEGMENT12</strong><br>i was thinking. over thinking. cause there's just too many scenarios. to think about. to figure out. if you're my dream please come true</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

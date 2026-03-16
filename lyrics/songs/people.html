@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for People - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>People - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>People</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>James was caught by Herod, Herod captured Peter. They were sharin' Herod's outbreak of attacks upon believers. James would have to face the sword and Peter would escape it. They were not afraid of dyin'; they both knew that they could take it. Thomas preached in Babylon and India they claim. Then the local folks impaled him with a lance while he was prayin'. They were all about to die but they weren't thinking much about it. And their story didn't have a chance but none of 'em were doubtin'. Why oh why would someone die if it was just a hoax?. Why then take the awful risk to tell us Jesus rose?. Simple men from Galilee would not have spoken lies. To get enrolled in history books as martyrs for Jesus Christ. Simon died along with Jude from arrows, spears or crosses. Someone gave Bartholomew a skin-removal process. Some of them were stoned alive like James the son of Alphaeus. And their stories are the evidence that none of them were doubters. Why oh why would someone die if it was just a hoax?. Why then take the awful risk to tell us Jesus rose?. Simple men like you and me would not have spoken lies. To get well known in all the books as martyrs for Jesus Christ. A lot of guys were crucified for calling Him Messiah. Philip died and Andrew did and possibly Matthias. Peter's was a most unpleasant death for being Christian. They would turn him upside down and then go through with crucifixion. Paul he was beheaded probl'y Matthew did the same. Well, they threw off of the temple top the other guy named James. They were all about to die but they weren't thinking much about it. That's a gorey bunch of evidence that none of them were doubters. Why oh why would someone die if it was just a hoax?. Why then take the awful risk to tell us Jesus rose?. Simple men from Galilee would not have spoken lies. To get enrolled in history books as martyrs for Jesus Christ.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

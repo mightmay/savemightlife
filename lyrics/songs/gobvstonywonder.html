@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for G.O.B. Vs Tony Wonder - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>G.O.B. Vs Tony Wonder - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>G.O.B. Vs Tony Wonder</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Everybody knows. Everybody knows. Everybody knows she's a riot when she's striking a pose. Place your bets. Place your bets, on the girl in the short skirt showing off her assets. They call her home wrecker, but she's not a humble beggar. There's a closet full of skeletons an undertaker. couldn't spot with a keen sense of dark apparitions. Her lips are poisonous, but men'll die just to kiss 'em.</p><p><strong>SEGMENT2</strong><br>She works her magic with a devil's ability. She's a monster, a monster. She's got a fashion that could humble an enemy. She's a monster, a monster.</p><p><strong>SEGMENT3</strong><br>She needs help. (No doubt about it.). Sex can sell. (We won't allow it.). She needs help. (No doubt about it.). Who's gonna' be the one to break the news?</p><p><strong>SEGMENT4</strong><br>She's got the looks of a mystery, With a line and a hook of a century. Did she make your heart, make your heat skip a b-b-b-beat?. Don't be fooled by her innocent eyes. She's a wolf. She's a wolf in a sheepish disguise. C'mon, why don't you take a bit of good advice?. Why don't you take a bit of good advice?. Don't be fooled be her innocent eyes. She's a wolf. She's a wolf in a sheepish disguise. C'mon why don't you take a bit of good advice, before you're spinning in a never ending web of lies?</p><p><strong>SEGMENT5</strong><br>She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. She's a wolf. (She's a wolf.). She's a wolf.</p><p><strong>SEGMENT6</strong><br>She works her magic with the devil's ability. She's a monster, a monster. She's got a fashion that could humble an enemy. She's a monster, a monster. She works her magic with the devil's ability. She's a monster, a monster. She's got a fashion that could humble an enemy. She's a monster, a monster.</p><p><strong>SEGMENT7</strong><br>She needs help. No doubt about it. Sex can sell. We won't allow it. She needs help. No doubt about it. Who's gonna be the one to break the news?.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

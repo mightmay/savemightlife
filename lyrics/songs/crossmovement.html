@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Cross Movement - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Cross Movement - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Cross Movement</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>Verse 1: Im gonna go back way back like 99 when Christ exchanged my mind it was divine used to rap in the world before I rapped in the church heard gospel rap and said this could happen to work so first thing I got rid of my cds that were secular said that if I really wanted to see Jesus I would get rid of them replace them with these cds that were preachin and teachin promoting Jesus took a trip to the Christian bookstore just to get equipped so can look more like Christ in my listening choice didnt know enough scripts to consider His voice so I stepped to a smaller section even though it was small it had a broad selection of all cats spittin gospel rap was blown away dawg in the zone that day man</p><p><strong>SEGMENT2</strong><br>Verse 2: Had to have spent a hundred bucks unraveling wrappers of cds as I run to my truck really excited and happy as Im poppin them in drenched and drowning in verses full of doctrines of men but nothin that made me really wanna stop in my sin I was robbed my God they were pullin hostages in but yet this was all I knew so as far as I was concerned everything they said was cool but some cats I just knew wasnt spittin the truth it all changed when I heard this particular group something new but I couldnt really explain these dudes werent afraid of saying Jesus name and at the time this was considered as taboo rappers sayin Jesus name would make them a bad group Im from the Midwest we like our beats slow they rep Christ over beats that were East coast</p><p><strong>SEGMENT3</strong><br>Verse 3: I thank the Lord and I thank J.R. the two that introduced me to CMR in the store that day was a gorgeous day cause of that moment we are where we are today I went crazy when I put them headphones on in the store so long thought I was dead and gone matter a fact the cd was House of Reps it turned 3D teachin how to rep I wanted to follow the steps of Jesus more closer cause they gave the gospel more exposure than they did even in my church home for righteousness I hungered and got my thirst on though cats may come across and abuse it Lord you sparked the cross centered movement in my life you used the Cross Movement who always sticks close to cross centered music.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  

@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    <script>
+      fetch('/lyrics/config.json')
+        .then(response => response.json())
+        .then(config => {
+          const ga_tag = config.ga_tag;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga_tag;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga_tag);
+        });
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93DSBZTXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(js, new Date());
+
+  gtag(config, G-T93DSBZTXY);
+</script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Lyrics for Count Your Blessings The Martins - - - -. Find the full lyrics and chords for this Mien Christian song.">
+      <title>Count Your Blessings The Martins - Mien Christian Songs Lyrics</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/lyrics/style.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+          <h1><a href="/lyrics/index.html">Mien Christian Songs Lyrics</a></h1>
+          <h2><a href="/lyrics/index.html">เนื้อเพลงคริสเตียนภาษาเมี่ยน (ภาษาเย้า)</a></h2>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for a song... / ค้นหาเนื้อเพลง">
+          <button id="search-button">SEARCH</button>
+        </div>
+      </header>
+      <main>
+        <h2>Count Your Blessings The Martins</h2>
+        <h3>-</h3>
+        <h3>-</h3>
+
+        <div class="view-controls">
+            <button id="change-view-btn">Change View</button>
+        </div>
+
+        <div class="lyrics-container">
+            <div class="lyrics-section">
+                <h4>Mien</h4>
+                <p>No lyrics available for Mien.</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Thai</h4>
+                <p>ไม่มีเนื้อเพลงภาษาไทย</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>English</h4>
+                <p><strong>SEGMENT1</strong><br>(Verse 1). He had family friends and money, loved the lord with all his heart. So the devil went to God and said ole Job would fall apart. If you would take away his fortune, let me put him to the test. Soon poor Job had lost his health, and wealth, and all the rest. And as his troubles added up, he fell down on his knees. He said lord I still got one thing, and thats your love for me</p><p><strong>SEGMENT2</strong><br>(Chorus). You got to count your blessing, youll find one if you try. Count on the lord and watch that blessing multiply. All those might have, could have, should have beens, are nothing but distressing. When youre down and out, its time to count your blessing</p><p><strong>SEGMENT3</strong><br>(Verse 2). You might go through hard times, when you fall into despair. Remember youre surrounded by his blessings everywhere. Its in a neighbors helping hand, or in the sunshine of a smile. One blessing leads to one more, youll be counting for a while. Its best to look at what you have, forget what you have not. And just learn a lesson from ole Job and give thanks for what you got</p><p><strong>SEGMENT4</strong><br>(Chorus). You got to count your blessing, youll find one if you try. Count on the Lord and watch that blessing multiply. Those might have, could have, should have beens, are nothing but distressing. When youre down and out, its time to count your blessing</p><p><strong>SEGMENT5</strong><br>(Bridge). One risen savior, one perfect love, one holy promise, one is enough</p><p><strong>SEGMENT6</strong><br>(Chorus). You got to count your blessing, youll find one if you try. Count on the lord and watch that blessing multiply. All those might have, could have, should have beens, are nothing but distressing. When youre down and out, its time to count your blessing</p><p><strong>SEGMENT7</strong><br>Count your blessing, count your blessing name them one by one, Count your blessing</p>
+            </div>
+            <div class="lyrics-section">
+                <h4>Chords</h4>
+                <p>No chords available.</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+
+        const performSearch = () => {
+            const searchTerm = searchBar.value;
+            window.location.href = '/lyrics/index.html?search=' + encodeURIComponent(searchTerm);
+        };
+
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            performSearch();
+          }
+        });
+
+        const changeViewBtn = document.getElementById('change-view-btn');
+        const lyricsContainer = document.querySelector('.lyrics-container');
+
+        if (changeViewBtn && lyricsContainer) {
+            changeViewBtn.addEventListener('click', () => {
+                lyricsContainer.classList.toggle('grid-view');
+            });
+        }
+      </script>
+    </body>
+    </html>
+  
