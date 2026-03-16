@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iu Mien Dictionary - พจนานุกรมภาษาเมี่ยน (พจนานุกรมภาษาเย้า)</title>
+  <link href="./miendictionaryassets/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+    .footer { position: relative; width: 100%; white-space: nowrap; line-height: 60px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="https://savemightlife.com/mien-dictionary.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarSupportedContent">
+          <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="https://savemightlife.com/mien-dictionary.html">Mien Dictionary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid p-5">
+    <main role="main" class="pb-3">
+      <div class="text-center">
+        <h1 class="display-4">Iu Mien Dictionary</h1>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="text-center">
+        <form id="searchForm" class="form-inline justify-content-center" autocomplete="off">
+          <input id="searchInput" type="search" name="wordtosearch" class="form-control mr-2" placeholder="Enter word to here..." required>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <p class="text-center">You can search using Mien Thai/ Mien New Roman/ Mien Old Roman/ English</p>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <p class="text-center">
+        <small>Also known as: Yao - Mien - Mienh Dictionary</small>
+      </p>
+            <p class="text-center">
+        <small> พจนานุกรมภาษาเมี่ยน - พจนานุกรมภาษาเย้า</small>
+      </p>
+    </main>
+  </div>
+
+  <footer class="border-top footer text-muted">
+    <div class="container">
+      COMPLETELY FREE; 2022 - Mien Dictionary - <a href="https://savemightlife.com">Home</a>
+    </div>
+  </footer>
+
+  <script src="./miendictionaryassets/jquery.slim.min.js"></script>
+  <script src="./miendictionaryassets/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      var hosts = ["https://mien.azurewebsites.net", "https://yiumien.azurewebsites.net"];
+
+      function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var t = arr[i];
+          arr[i] = arr[j];
+          arr[j] = t;
+        }
+        return arr;
+      }
+
+      function probeHost(host, timeoutMs) {
+        return new Promise(function (resolve) {
+          var img = new Image();
+          var done = false;
+          var timer = setTimeout(function () {
+            if (done) return;
+            done = true;
+            resolve(false);
+          }, timeoutMs);
+
+          function finish(ok) {
+            if (done) return;
+            done = true;
+            clearTimeout(timer);
+            resolve(ok);
+          }
+
+          img.onload = function () { finish(true); };
+          img.onerror = function () { finish(false); };
+          img.src = host + "/favicon.ico?ts=" + Date.now() + "_" + Math.random().toString(16).slice(2);
+        });
+      }
+
+      function pickHost() {
+        var checks = hosts.map(function (h) { return probeHost(h, 1800); });
+        return Promise.all(checks).then(function (results) {
+          var available = [];
+          for (var i = 0; i < results.length; i++) {
+            if (results[i]) available.push(hosts[i]);
+          }
+          if (available.length === 0) return hosts[0];
+          if (available.length === 1) return available[0];
+          shuffle(available);
+          return available[0];
+        }).catch(function () {
+          return hosts[0];
+        });
+      }
+
+      function wireForm() {
+        var form = document.getElementById("searchForm");
+        var input = document.getElementById("searchInput");
+        if (!form || !input) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var q = (input.value || "").trim();
+          if (!q) return;
+          pickHost().then(function (host) {
+            var url = host + "/searchresult?wordtosearch=" + encodeURIComponent(q);
+            window.location.href = url;
+          });
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        wireForm();
+      });
+    })();
+  </script>
+</body>
+</html>
